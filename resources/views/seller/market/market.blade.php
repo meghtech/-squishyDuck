@@ -46,6 +46,7 @@
                             <input type="text">
                         </form>
                     </div>
+                    <div class="container-fluid">
                         <div class="row">
                             <div class="col-12">
                                 <p class="float-left">Buy Results</p>
@@ -102,6 +103,7 @@
                                 </a>
                             </div>
                         </div>
+                    </div>
                 </div>
         </div>
 	</div>

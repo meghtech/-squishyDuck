@@ -94,13 +94,6 @@
 				</div>
 			</div>
 
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 bg-danger" style="height:50px; width:50px">Hello</div>
-					<div class="col-md-6 bg-success" style="height:50px; width:50px">Hola</div>
-				</div>
-			</div>
-
 			<!-- Footer -->
 			<div class="dashboard-footer-spacer"></div>
 			<div class="small-footer margin-top-15">

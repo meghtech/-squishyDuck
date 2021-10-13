@@ -12,6 +12,8 @@
 <title>Squishy Duck</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 
 <link rel="icon" type="image/png" sizes="32x32" href="{{asset('storage/upload/logo')}}/{{$general->fav_icon}}" />
@@ -132,7 +134,7 @@
 
 <!-- Dashboard Container -->
 <div class="dashboard-container">
-
+	@if ( !Request::is('seller/market*'))
 	<!-- Dashboard Sidebar
 	================================================== -->
 	<div class="dashboard-sidebar">
@@ -184,6 +186,8 @@
 		</div>
 	</div>
 	<!-- Dashboard Sidebar / End -->
+	@endif
+
 
  @yield('content')
 </div>
@@ -200,6 +204,7 @@
 <script src="{{asset('content')}}/js/tippy.all.min.js"></script>
 <script src="{{asset('content')}}/js/simplebar.min.js"></script>
 <script src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('fontawesome/js/fontawesome.min.js')}}"></script>
 <script src="{{asset('content')}}/js/bootstrap-slider.min.js"></script>
 <script src="{{asset('content')}}/js/bootstrap-select.min.js"></script>
 <script src="{{asset('content')}}/js/snackbar.js"></script>

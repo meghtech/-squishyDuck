@@ -25,7 +25,7 @@
   <!-- Plugin styles -->
   <link href="{{asset('content/admin')}}/vendor\datatables\dataTables.bootstrap4.css" rel="stylesheet">
   <!-- Your custom styles -->
-  <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap/min.css')}}">
+  <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
   <link href="{{asset('content/admin')}}/css\custom.css" rel="stylesheet">
   @stack('css')
 

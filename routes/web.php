@@ -14,6 +14,7 @@ use App\Http\Controllers\Front\MainController;
 use App\Http\Controllers\Front\PaymentController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\Seller\MainController as SellerMainController;
+use App\Http\Controllers\Seller\MarketController as SellerMarketController;
 
 use App\Http\Controllers\Customer\MainController as BuyerMainController;
 use App\Http\Controllers\Customer\MassageController;
@@ -188,6 +189,7 @@ Route::get('/seller/setting', [SellerMainController::class, 'sellerSetting']);
 Route::post('/seller/setting-save', [SellerMainController::class, 'sellerSettingSave'])->name('sellerSetting.save');
 Route::post('/seller/change-password', [SellerMainController::class, 'sellerSettingSavepass']);
 
+Route::get('/seller/market', [SellerMarketController::class, 'index'])->name('seller.market');
 
 
 /// buyer
@@ -259,5 +261,3 @@ Route::get('/admin/general', [App\Http\Controllers\Admin\GeneralController::clas
 
 
 Route::post('/admin/generalSave', [App\Http\Controllers\Admin\GeneralController::class, 'genaralSave'])->name('general.save');
-
-

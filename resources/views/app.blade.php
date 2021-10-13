@@ -8,7 +8,7 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <link href="{{ asset('css/app.css') }}" type="text/css" rel="stylesheet"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-  <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap/min.css')}}">
+  <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
   <script src="https://source.zoom.us/1.7.9/lib/vendor/jquery.min.js"></script>
 
   <title>Squishy Duck</title>
@@ -52,8 +52,8 @@
   </div>
   <!-- built files will be auto injected -->
   <script src="{{ asset('js/app.js') }}" type="text/javascript"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
   <script src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
 </body>
 
 

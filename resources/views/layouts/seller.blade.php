@@ -18,7 +18,7 @@
 
 <!-- CSS
 ================================================== -->
-<link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap/min.css')}}">
+<link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
 <link rel="stylesheet" href="{{asset('content')}}/css/style.css">
 <link rel="stylesheet" href="{{asset('content')}}/css/colors/blue.css">
 @stack('css')
@@ -47,7 +47,7 @@
 
                 <nav id="navigation">
                     <ul id="responsive">
-                        <li><a href="">Market</a></li>
+                        <li><a href="{{ route('seller.market') }}" class="{{ Request::is('seller/market*') ? 'text-success' : '' }}">Market</a></li>
                         <li><a href="">Service</a></li>
                         <li><a href="">Listing</a></li>
                     </ul>
@@ -199,6 +199,7 @@
 <script src="{{asset('content')}}/js/mmenu.min.js"></script>
 <script src="{{asset('content')}}/js/tippy.all.min.js"></script>
 <script src="{{asset('content')}}/js/simplebar.min.js"></script>
+<script src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>
 <script src="{{asset('content')}}/js/bootstrap-slider.min.js"></script>
 <script src="{{asset('content')}}/js/bootstrap-select.min.js"></script>
 <script src="{{asset('content')}}/js/snackbar.js"></script>
@@ -206,7 +207,6 @@
 <script src="{{asset('content')}}/js/counterup.min.js"></script>
 <script src="{{asset('content')}}/js/magnific-popup.min.js"></script>
 <script src="{{asset('content')}}/js/slick.min.js"></script>
-<script src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>
 <script src="{{asset('content')}}/js/custom.js"></script>
 
 <!-- Snackbar // documentation: https://www.polonel.com/snackbar/ -->

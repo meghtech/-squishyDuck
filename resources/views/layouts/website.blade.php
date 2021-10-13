@@ -23,7 +23,7 @@
 
 <!-- CSS
 ================================================== -->
-<link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap/min.css')}}">
+<link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
 <link rel="stylesheet" href="{{asset('content')}}/css/style.css">
 <link rel="stylesheet" href="{{asset('content')}}/css/colors/blue.css">
 @livewireStyles

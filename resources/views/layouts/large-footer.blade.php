@@ -133,7 +133,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
-                    © 2021 <strong>Squishy Duck</strong>. All Rights Reserved.
+                    © {{date('Y')}} <strong>Squishy Duck</strong>. All Rights Reserved.
                 </div>
             </div>
         </div>

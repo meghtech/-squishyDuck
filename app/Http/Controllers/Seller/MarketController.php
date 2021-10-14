@@ -15,4 +15,8 @@ class MarketController extends Controller
     public function index(){
         return view('seller.market.market');
     }
+
+    public function viewDetail($slug){
+        return view('seller.market.detail');
+    }
 }

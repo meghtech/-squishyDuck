@@ -1,8 +1,4 @@
 @extends('layouts.seller')
-
-@push('css')
-@endpush
-
 @section('content')
 
 	<!-- Dashboard Content
@@ -36,7 +32,7 @@
                             <input class="star star-1" id="star-1" type="radio" name="star" />
                             <label class="star star-1" for="star-1"></label>
                         </form>
-                        <button type="button" class="btn btn-dark ml-6 mb-4 pl-5 pr-5">Apply</button>
+                        <button type="button" class="btn btn-navy ml-6 mb-4 pl-5 pr-5">Apply</button>
                     </div>
                 </div>
                 <div class="col-12 mt-4 mb-4">
@@ -69,7 +65,7 @@
                     </div>
                     <div class="listings-container grid-layout margin-top-35">
                         <!-- Job Listing -->
-                        <a href="#" class="job-listing">
+                        <a href="{{ route('seller.market.detail', 'office-chair-for-sale') }}" class="job-listing">
                             <!-- Job Listing Details -->
                             <div class="job-listing-details">
                                 <!-- Logo -->
@@ -91,16 +87,13 @@
                                 </ul>
                             </div>
                             <div style="background-color:#f9f9f9; padding-left:30px">
-                            <div>
-                                <img class="bg-primary border rounded-circle" alt="user" height="30px" width="30px">
-                                <span class="text-primary" style="font-size:14px">John Doe</span>
-                                <p class="d-inline" style="float:right; padding-right:25px; font-size:14px">More Details <i class="fa fa-greater-than"></i></p>
-                                <p style="font-size:10px; padding-left:35px; margin-top:-10px"><i class="icon-material-outline-access-time"></i>1 day</p>
-                            </div>
-
+                                <img class="bg-md-cyan border rounded-circle" alt="user" height="30px" width="30px">
+                                <span class="text-md-cyan" style="font-size:14px">John Doe</span>
+                                <p class="d-inline" style="float:right; padding-right:25px; color:gray; font-size:14px;">More Details <i class="fa fa-greater-than"></i></p>
+                                <p style="font-size:10px; padding-left:35px; margin-top:-10px;color:gray;"><i class="icon-material-outline-access-time"></i>1 day</p>
                             </div>
                         </a>
-                        <a href="#" class="job-listing">
+                        <a href="{{ route('seller.market.detail', 'office-chair-for-sale') }}" class="job-listing">
                             <!-- Job Listing Details -->
                             <div class="job-listing-details">
                                 <!-- Logo -->
@@ -122,16 +115,13 @@
                                 </ul>
                             </div>
                             <div style="background-color:#f9f9f9; padding-left:30px">
-                            <div>
-                                <img class="bg-primary border rounded-circle" alt="user" height="30px" width="30px">
-                                <span class="text-primary" style="font-size:14px">John Doe</span>
-                                <p class="d-inline" style="float:right; padding-right:25px; font-size:14px">More Details <i class="fa fa-greater-than"></i></p>
-                                <p style="font-size:10px; padding-left:35px; margin-top:-10px"><i class="icon-material-outline-access-time"></i>1 day</p>
-                            </div>
-
+                                <img class="bg-md-cyan border rounded-circle" alt="user" height="30px" width="30px">
+                                <span class="text-md-cyan" style="font-size:14px">John Doe</span>
+                                <p class="d-inline" style="float:right; padding-right:25px; color:gray; font-size:14px;">More Details <i class="fa fa-greater-than"></i></p>
+                                <p style="font-size:10px; padding-left:35px; margin-top:-10px;color:gray;"><i class="icon-material-outline-access-time"></i>1 day</p>
                             </div>
                         </a>
-                        <a href="#" class="job-listing">
+                        <a href="{{ route('seller.market.detail', 'office-chair-for-sale') }}" class="job-listing">
                             <!-- Job Listing Details -->
                             <div class="job-listing-details">
                                 <!-- Logo -->
@@ -153,16 +143,13 @@
                                 </ul>
                             </div>
                             <div style="background-color:#f9f9f9; padding-left:30px">
-                            <div>
-                                <img class="bg-primary border rounded-circle" alt="user" height="30px" width="30px">
-                                <span class="text-primary" style="font-size:14px">John Doe</span>
-                                <p class="d-inline" style="float:right; padding-right:25px; font-size:14px">More Details <i class="fa fa-greater-than"></i></p>
-                                <p style="font-size:10px; padding-left:35px; margin-top:-10px"><i class="icon-material-outline-access-time"></i>1 day</p>
-                            </div>
-
+                                <img class="bg-md-cyan border rounded-circle" alt="user" height="30px" width="30px">
+                                <span class="text-md-cyan" style="font-size:14px">John Doe</span>
+                                <p class="d-inline" style="float:right; padding-right:25px; color:gray; font-size:14px;">More Details <i class="fa fa-greater-than"></i></p>
+                                <p style="font-size:10px; padding-left:35px; margin-top:-10px;color:gray;"><i class="icon-material-outline-access-time"></i>1 day</p>
                             </div>
                         </a>
-                        <a href="#" class="job-listing">
+                        <a href="{{ route('seller.market.detail', 'office-chair-for-sale') }}" class="job-listing">
                             <!-- Job Listing Details -->
                             <div class="job-listing-details">
                                 <!-- Logo -->
@@ -184,16 +171,13 @@
                                 </ul>
                             </div>
                             <div style="background-color:#f9f9f9; padding-left:30px">
-                            <div>
-                                <img class="bg-primary border rounded-circle" alt="user" height="30px" width="30px">
-                                <span class="text-primary" style="font-size:14px">John Doe</span>
-                                <p class="d-inline" style="float:right; padding-right:25px; font-size:14px">More Details <i class="fa fa-greater-than"></i></p>
-                                <p style="font-size:10px; padding-left:35px; margin-top:-10px"><i class="icon-material-outline-access-time"></i>1 day</p>
-                            </div>
-
+                                <img class="bg-md-cyan border rounded-circle" alt="user" height="30px" width="30px">
+                                <span class="text-md-cyan" style="font-size:14px">John Doe</span>
+                                <p class="d-inline" style="float:right; padding-right:25px; color:gray; font-size:14px;">More Details <i class="fa fa-greater-than"></i></p>
+                                <p style="font-size:10px; padding-left:35px; margin-top:-10px;color:gray;"><i class="icon-material-outline-access-time"></i>1 day</p>
                             </div>
                         </a>
-                        <a href="#" class="job-listing">
+                        <a href="{{ route('seller.market.detail', 'office-chair-for-sale') }}" class="job-listing">
                             <!-- Job Listing Details -->
                             <div class="job-listing-details">
                                 <!-- Logo -->
@@ -215,16 +199,13 @@
                                 </ul>
                             </div>
                             <div style="background-color:#f9f9f9; padding-left:30px">
-                            <div>
-                                <img class="bg-primary border rounded-circle" alt="user" height="30px" width="30px">
-                                <span class="text-primary" style="font-size:14px">John Doe</span>
-                                <p class="d-inline" style="float:right; padding-right:25px; font-size:14px">More Details <i class="fa fa-greater-than"></i></p>
-                                <p style="font-size:10px; padding-left:35px; margin-top:-10px"><i class="icon-material-outline-access-time"></i>1 day</p>
-                            </div>
-
+                                <img class="bg-md-cyan border rounded-circle" alt="user" height="30px" width="30px">
+                                <span class="text-md-cyan" style="font-size:14px">John Doe</span>
+                                <p class="d-inline" style="float:right; padding-right:25px; color:gray; font-size:14px;">More Details <i class="fa fa-greater-than"></i></p>
+                                <p style="font-size:10px; padding-left:35px; margin-top:-10px;color:gray;"><i class="icon-material-outline-access-time"></i>1 day</p>
                             </div>
                         </a>
-                        <a href="#" class="job-listing">
+                        <a href="{{ route('seller.market.detail', 'office-chair-for-sale') }}" class="job-listing">
                             <!-- Job Listing Details -->
                             <div class="job-listing-details">
                                 <!-- Logo -->
@@ -246,13 +227,10 @@
                                 </ul>
                             </div>
                             <div style="background-color:#f9f9f9; padding-left:30px">
-                            <div>
-                                <img class="bg-primary border rounded-circle" alt="user" height="30px" width="30px">
-                                <span class="text-primary" style="font-size:14px">John Doe</span>
-                                <p class="d-inline" style="float:right; padding-right:25px; font-size:14px">More Details <i class="fa fa-greater-than"></i></p>
-                                <p style="font-size:10px; padding-left:35px; margin-top:-10px"><i class="icon-material-outline-access-time"></i>1 day</p>
-                            </div>
-
+                                <img class="bg-md-cyan border rounded-circle" alt="user" height="30px" width="30px">
+                                <span class="text-md-cyan" style="font-size:14px">John Doe</span>
+                                <p class="d-inline" style="float:right; padding-right:25px; color:gray; font-size:14px;">More Details <i class="fa fa-greater-than"></i></p>
+                                <p style="font-size:10px; padding-left:35px; margin-top:-10px;color:gray;"><i class="icon-material-outline-access-time"></i>1 day</p>
                             </div>
                         </a>
                     </div>

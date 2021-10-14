@@ -550,6 +550,31 @@ label.star:before {
 	margin-left: 4.5rem !important;
 }
 
+.btn-navy{
+	background-color: #0f1638;
+	color: white;
+	box-shadow: 0 4px 12px rgba(42,65,232,0.15);
+	transition: all 0.2s ease-in-out;
+}
+
+.btn-md-cyan{
+	background-color: #1B6171 !important;
+	transition: all 0.2s ease-in-out;
+}
+
+.bg-md-cyan{
+	background-color: #1B6171 !important;
+}
+
+.text-md-cyan{
+	color: #1B6171 !important;
+}
+
+.btn-navy:hover {
+    box-shadow: 0 4px 12px rgba(42,65,232,0.25);
+	transform: translateY(-2px);
+}
+
 /* Sign In Button Media Queries */
 @media (max-width: 768px) {
 	.header-widget .log-in-button span { display: none; }
@@ -3060,6 +3085,7 @@ body #backtotop a {
 	margin-bottom: 65px;
 	padding: 60px 0;
 	position: relative;
+	width: 100%;
 }
 
 .single-page-header .container {
@@ -3111,6 +3137,11 @@ body #backtotop a {
 
 .single-page-header .right-side {
 	max-width: 35%;
+}
+
+.single-page-header .bookmark-icon {
+	right: 200px;
+	top: 20px;
 }
 
 @media (min-width: 1365px) {
@@ -3381,6 +3412,11 @@ body #backtotop a {
 	}
 	.single-page-header.freelancer-header .header-details h3 {
 		margin-left: 90px;
+	}
+
+	.single-page-header .bookmark-icon {
+		right: 50px;
+		top: 10px;
 	}
 }
 
@@ -12975,12 +13011,14 @@ a.apply-now-button:hover {
 	box-shadow: 0 2px 8px rgba(102,103,107,0.35);
 }
 
-a.apply-now-button i {
+a.apply-now-button i, a.apply-now-button svg {
 	font-size: 22px;
 	position: relative;
 	line-height: 0;
 	top: 3px;
-	margin-left: 5px;
+	margin: 0 5px 0 5px;
+	color: white;
+
 }
 
 /* Single Job Map */

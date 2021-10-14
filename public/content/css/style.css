@@ -172,6 +172,7 @@ textarea:focus {
 
 input:-webkit-autofill:focus,
 input:-webkit-autofill {
+    box-shadow: 0 0 0 30px #fff inset !important;
     -webkit-box-shadow: 0 0 0 30px #fff inset !important;
     -webkit-text-fill-color: #808080 !important;
 }
@@ -215,7 +216,7 @@ input[type="radio"] {
 
 /* Input Placeholder Color */
 ::placeholder {
-	color: #808080;
+	color: #a8a7a7;
 	opacity: 1;
 }
 
@@ -541,8 +542,8 @@ label.star:before {
     font-family: FontAwesome
 }
 
-.ml-10, .mx-10 {
-	margin-left: 6rem !important;
+.ml-6, .mx-6 {
+	margin-left: 4rem !important;
 }
 
 /* Sign In Button Media Queries */

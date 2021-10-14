@@ -20,6 +20,7 @@
 
 <!-- CSS
 ================================================== -->
+<link rel="stylesheet" href="{{asset('fontawesome/css/fontawesome.min.css')}}">
 <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
 <link rel="stylesheet" href="{{asset('content')}}/css/style.css">
 <link rel="stylesheet" href="{{asset('content')}}/css/colors/blue.css">

@@ -7,7 +7,7 @@
 
 	<!-- Dashboard Content
 	================================================== -->
-	<div class="container-fluid">
+	<div class="container-fluid full-page-content-inner">
 		<div class="row">
             <div class="col-sm-3 col-md-3 col-lg-3 bg-light">
                 <div class="col-12 pt-5">
@@ -20,7 +20,7 @@
                 <div class="col-12 pt-2">
                     <p>Rating</p>
                     <div class="stars">
-                        <form>
+                        <form class="ml-7 ml-lg-4">
                             <input class="star star-5" id="star-5" type="radio" name="star" />
                             <label class="star star-5" for="star-5"></label>
 
@@ -36,15 +36,22 @@
                             <input class="star star-1" id="star-1" type="radio" name="star" />
                             <label class="star star-1" for="star-1"></label>
                         </form>
-                        <button type="button" class="btn btn-dark btn-lg ml-6 pl-5 pr-5">Apply</button>
+                        <button type="button" class="btn btn-dark ml-6 mb-4 pl-5 pr-5">Apply</button>
+                    </div>
+                </div>
+                <div class="col-12 mt-4 mb-4">
+                    <div class="input-with-icon">
+                            <input id="autocomplete-input" type="text" placeholder="Search City of Zip Code">
+                            <i style="font-size: 25px;" class="text-dark icon-material-outline-search"></i>
                     </div>
                 </div>
             </div>
             <div class="col-sm-9 col-md-9 col-lg-9 bg-white">
                     <div class="col-12 pt-5 pb-4">
-                        <form>
-                            <input type="text" placeholder="What are you looking for?">
-                        </form>
+                        <div class="input-with-icon">
+                            <input id="autocomplete-input" type="text" placeholder="What are you looking for?">
+                            <i style="font-size: 25px;" class="text-dark icon-material-outline-search"></i>
+                        </div>
                     </div>
                     <div class="container-fluid">
                         <div class="row">
@@ -59,72 +66,198 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-3 col-sm-3 col-md-3 col-lg-3 m-3 mr-5 p-0 border rounded" style="margin-right:5% !important;">
-                                <a href="#" class="text-decoration-none">
-                                    <img class="d-flex text-center" src="https://i.picsum.photos/id/223/200/200.jpg?hmac=CNNyWbBcEAJ7TPkTmEEwdGrLFEYkxpTeVwJ7U0LB30Y" alt="" height="100px" width="100%">
-                                    <div class="p-2">
-                                        <h4 class="pt-4">Office chair for sale</h4>
-                                        <h3 class="pt-2 pb-3 text-success">$123.00</h3>
-                                        <a class="float-left" href="">
-                                            <img class="bg-primary border rounded-circle float-left mr-3" alt="user" height="30px" width="30px">
-                                            <h5 class="float-right text-primary">John Doe</h5>
-                                        </a>
-                                        <a class="float-right text-secondary mb-3" href="#" style="font-size:12px;">More Details <i class="fa fa-greater-than"></i></a>
-                                    </div>
-                                </a>
+                    </div>
+                    <div class="listings-container grid-layout margin-top-35">
+                        <!-- Job Listing -->
+                        <a href="#" class="job-listing">
+                            <!-- Job Listing Details -->
+                            <div class="job-listing-details">
+                                <!-- Logo -->
+                                <div class="job-listing-company-logo">
+                                    <img src="{{asset('storage/upload/Gig/Gig-1619457919.png')}}" alt="">
+                                </div>
                             </div>
-                            <div class="col-3 col-sm-3 col-md-3 col-lg-3 m-3 mr-5 p-0 border rounded" style="margin-right:5% !important;">
-                                <a href="#" class="text-decoration-none">
-                                    <img class="d-flex text-center" src="https://i.picsum.photos/id/223/200/200.jpg?hmac=CNNyWbBcEAJ7TPkTmEEwdGrLFEYkxpTeVwJ7U0LB30Y" alt="" height="100px" width="100%">
-                                    <div class="p-2">
-                                        <h4 class="pt-4">Office chair for sale</h4>
-                                        <h3 class="pt-2 pb-3 text-success">$123.00</h3>
-                                        <a class="float-left" href="">
-                                            <img class="bg-primary border rounded-circle float-left mr-3" alt="user" height="30px" width="30px">
-                                            <h5 class="float-right text-primary">John Doe</h5>
-                                        </a>
-                                        <a class="float-right text-secondary mb-3" href="#" style="font-size:12px;">More Details <i class="fa fa-greater-than"></i></a>
-                                    </div>
-                                </a>
+                            <!-- Job Listing Footer -->
+                            <div class="job-listing-footer">
+                                <span class="bookmark-icon"></span>
+                                <ul>
+                                    <li>
+                                        <h5>DO Web Design &amp; Develop</h5>
+                                    </li>
+                                    <li>
+                                        <h3 class="text-success">$123.00</h3>
+                                    </li>
+                                    <br>
+                                </ul>
                             </div>
-                            <div class="col-3 col-sm-3 col-md-3 col-lg-3 m-3 mr-5 p-0 border rounded" style="margin-right:5% !important;">
-                                <a href="#" class="text-decoration-none">
-                                    <img class="d-flex text-center" src="https://i.picsum.photos/id/223/200/200.jpg?hmac=CNNyWbBcEAJ7TPkTmEEwdGrLFEYkxpTeVwJ7U0LB30Y" alt="" height="100px" width="100%">
-                                    <div class="p-2">
-                                        <h4 class="pt-4">Office chair for sale</h4>
-                                        <h3 class="pt-2 pb-3 text-success">$123.00</h3>
-                                        <a class="float-left" href="">
-                                            <img class="bg-primary border rounded-circle float-left mr-3" alt="user" height="30px" width="30px">
-                                            <h5 class="float-right text-primary">John Doe</h5>
-                                        </a>
-                                        <a class="float-right text-secondary mb-3" href="#" style="font-size:12px;">More Details <i class="fa fa-greater-than"></i></a>
-                                    </div>
-                                </a>
+                            <div style="background-color:#f9f9f9; padding-left:30px">
+                            <div>
+                                <img class="bg-primary border rounded-circle" alt="user" height="30px" width="30px">
+                                <span class="text-primary" style="font-size:14px">John Doe</span>
+                                <p class="d-inline" style="float:right; padding-right:25px; font-size:14px">More Details <i class="fa fa-greater-than"></i></p>
+                                <p style="font-size:10px; padding-left:35px; margin-top:-10px"><i class="icon-material-outline-access-time"></i>1 day</p>
                             </div>
-                            <div class="col-3 col-sm-3 col-md-3 col-lg-3 m-3 mr-5 p-0 border rounded" style="margin-right:5% !important;">
-                                <a href="#" class="text-decoration-none">
-                                    <img class="d-flex text-center" src="https://i.picsum.photos/id/223/200/200.jpg?hmac=CNNyWbBcEAJ7TPkTmEEwdGrLFEYkxpTeVwJ7U0LB30Y" alt="" height="100px" width="100%">
-                                    <div class="p-2">
-                                        <h4 class="pt-4">Office chair for sale</h4>
-                                        <h3 class="pt-2 pb-3 text-success">$123.00</h3>
-                                        <a class="float-left" href="">
-                                            <img class="bg-primary border rounded-circle float-left mr-3" alt="user" height="30px" width="30px">
-                                            <h5 class="float-right text-primary">John Doe</h5>
-                                        </a>
-                                        <a class="float-right text-secondary mb-3" href="#" style="font-size:12px;">More Details <i class="fa fa-greater-than"></i></a>
-                                    </div>
-                                </a>
+
                             </div>
-                        </div>
+                        </a>
+                        <a href="#" class="job-listing">
+                            <!-- Job Listing Details -->
+                            <div class="job-listing-details">
+                                <!-- Logo -->
+                                <div class="job-listing-company-logo">
+                                    <img src="{{asset('storage/upload/Gig/Gig-1619457919.png')}}" alt="">
+                                </div>
+                            </div>
+                            <!-- Job Listing Footer -->
+                            <div class="job-listing-footer">
+                                <span class="bookmark-icon"></span>
+                                <ul>
+                                    <li>
+                                        <h5>DO Web Design &amp; Develop</h5>
+                                    </li>
+                                    <li>
+                                        <h3 class="text-success">$123.00</h3>
+                                    </li>
+                                    <br>
+                                </ul>
+                            </div>
+                            <div style="background-color:#f9f9f9; padding-left:30px">
+                            <div>
+                                <img class="bg-primary border rounded-circle" alt="user" height="30px" width="30px">
+                                <span class="text-primary" style="font-size:14px">John Doe</span>
+                                <p class="d-inline" style="float:right; padding-right:25px; font-size:14px">More Details <i class="fa fa-greater-than"></i></p>
+                                <p style="font-size:10px; padding-left:35px; margin-top:-10px"><i class="icon-material-outline-access-time"></i>1 day</p>
+                            </div>
+
+                            </div>
+                        </a>
+                        <a href="#" class="job-listing">
+                            <!-- Job Listing Details -->
+                            <div class="job-listing-details">
+                                <!-- Logo -->
+                                <div class="job-listing-company-logo">
+                                    <img src="{{asset('storage/upload/Gig/Gig-1619457919.png')}}" alt="">
+                                </div>
+                            </div>
+                            <!-- Job Listing Footer -->
+                            <div class="job-listing-footer">
+                                <span class="bookmark-icon"></span>
+                                <ul>
+                                    <li>
+                                        <h5>DO Web Design &amp; Develop</h5>
+                                    </li>
+                                    <li>
+                                        <h3 class="text-success">$123.00</h3>
+                                    </li>
+                                    <br>
+                                </ul>
+                            </div>
+                            <div style="background-color:#f9f9f9; padding-left:30px">
+                            <div>
+                                <img class="bg-primary border rounded-circle" alt="user" height="30px" width="30px">
+                                <span class="text-primary" style="font-size:14px">John Doe</span>
+                                <p class="d-inline" style="float:right; padding-right:25px; font-size:14px">More Details <i class="fa fa-greater-than"></i></p>
+                                <p style="font-size:10px; padding-left:35px; margin-top:-10px"><i class="icon-material-outline-access-time"></i>1 day</p>
+                            </div>
+
+                            </div>
+                        </a>
+                        <a href="#" class="job-listing">
+                            <!-- Job Listing Details -->
+                            <div class="job-listing-details">
+                                <!-- Logo -->
+                                <div class="job-listing-company-logo">
+                                    <img src="{{asset('storage/upload/Gig/Gig-1619457919.png')}}" alt="">
+                                </div>
+                            </div>
+                            <!-- Job Listing Footer -->
+                            <div class="job-listing-footer">
+                                <span class="bookmark-icon"></span>
+                                <ul>
+                                    <li>
+                                        <h5>DO Web Design &amp; Develop</h5>
+                                    </li>
+                                    <li>
+                                        <h3 class="text-success">$123.00</h3>
+                                    </li>
+                                    <br>
+                                </ul>
+                            </div>
+                            <div style="background-color:#f9f9f9; padding-left:30px">
+                            <div>
+                                <img class="bg-primary border rounded-circle" alt="user" height="30px" width="30px">
+                                <span class="text-primary" style="font-size:14px">John Doe</span>
+                                <p class="d-inline" style="float:right; padding-right:25px; font-size:14px">More Details <i class="fa fa-greater-than"></i></p>
+                                <p style="font-size:10px; padding-left:35px; margin-top:-10px"><i class="icon-material-outline-access-time"></i>1 day</p>
+                            </div>
+
+                            </div>
+                        </a>
+                        <a href="#" class="job-listing">
+                            <!-- Job Listing Details -->
+                            <div class="job-listing-details">
+                                <!-- Logo -->
+                                <div class="job-listing-company-logo">
+                                    <img src="{{asset('storage/upload/Gig/Gig-1619457919.png')}}" alt="">
+                                </div>
+                            </div>
+                            <!-- Job Listing Footer -->
+                            <div class="job-listing-footer">
+                                <span class="bookmark-icon"></span>
+                                <ul>
+                                    <li>
+                                        <h5>DO Web Design &amp; Develop</h5>
+                                    </li>
+                                    <li>
+                                        <h3 class="text-success">$123.00</h3>
+                                    </li>
+                                    <br>
+                                </ul>
+                            </div>
+                            <div style="background-color:#f9f9f9; padding-left:30px">
+                            <div>
+                                <img class="bg-primary border rounded-circle" alt="user" height="30px" width="30px">
+                                <span class="text-primary" style="font-size:14px">John Doe</span>
+                                <p class="d-inline" style="float:right; padding-right:25px; font-size:14px">More Details <i class="fa fa-greater-than"></i></p>
+                                <p style="font-size:10px; padding-left:35px; margin-top:-10px"><i class="icon-material-outline-access-time"></i>1 day</p>
+                            </div>
+
+                            </div>
+                        </a>
+                        <a href="#" class="job-listing">
+                            <!-- Job Listing Details -->
+                            <div class="job-listing-details">
+                                <!-- Logo -->
+                                <div class="job-listing-company-logo">
+                                    <img src="{{asset('storage/upload/Gig/Gig-1619457919.png')}}" alt="">
+                                </div>
+                            </div>
+                            <!-- Job Listing Footer -->
+                            <div class="job-listing-footer">
+                                <span class="bookmark-icon"></span>
+                                <ul>
+                                    <li>
+                                        <h5>DO Web Design &amp; Develop</h5>
+                                    </li>
+                                    <li>
+                                        <h3 class="text-success">$123.00</h3>
+                                    </li>
+                                    <br>
+                                </ul>
+                            </div>
+                            <div style="background-color:#f9f9f9; padding-left:30px">
+                            <div>
+                                <img class="bg-primary border rounded-circle" alt="user" height="30px" width="30px">
+                                <span class="text-primary" style="font-size:14px">John Doe</span>
+                                <p class="d-inline" style="float:right; padding-right:25px; font-size:14px">More Details <i class="fa fa-greater-than"></i></p>
+                                <p style="font-size:10px; padding-left:35px; margin-top:-10px"><i class="icon-material-outline-access-time"></i>1 day</p>
+                            </div>
+
+                            </div>
+                        </a>
                     </div>
                 </div>
         </div>
 	</div>
-	<!-- Dashboard Content / End -->
-
-
-
-
-
+    @include('layouts.large-footer')
 @endsection

@@ -4,7 +4,7 @@
 	================================================== -->
 	<div class="container-fluid full-page-content-inner">
 		<div class="row">
-            <div class="col-sm-3 col-md-3 col-lg-3 pl-0 pr-0" style="background-color:black; color:white;">
+            <div class="col-sm-3 col-md-3 col-lg-3 pl-0 pr-0 pb-5" style="background-color:black; color:white;">
                 <div class="col-12 mt-4 mb-4 search-message">
                     <div class="input-with-icon">
                             <input id="autocomplete-input" type="text" placeholder="Search Messages ...">

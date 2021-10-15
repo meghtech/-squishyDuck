@@ -575,6 +575,19 @@ label.star:before {
 	transform: translateY(-2px);
 }
 
+.search-message {
+	border-bottom: 1px solid gray;
+}
+.search-message #autocomplete-input {
+	background-color: black;
+	border: 1px solid gray;
+}
+
+.chat-top-section {
+	border-bottom: 1px solid rgb(201, 201, 201);
+}
+
+
 /* Sign In Button Media Queries */
 @media (max-width: 768px) {
 	.header-widget .log-in-button span { display: none; }
@@ -6141,6 +6154,27 @@ span.bookmark-icon {
 
 }
 
+.chat-top-section .bookmark-icon {
+	font-size: 20px;
+	position: relative;
+	z-index: 101;
+	left: 0;
+	top: 12px;
+	box-shadow: unset;
+	background-color: unset;
+}
+
+.chat-top-section .bookmark-icon:hover {
+	box-shadow: unset;
+	background-color: unset;
+	color: #feb342;
+}
+
+.chat-top-section .bookmark-icon.bookmarked {
+	color: #feb342;
+	background-color: unset;
+}
+
 
 /* ---------------------------------- */
 /* Button with sliding icon
@@ -7137,7 +7171,6 @@ table.basic-table { margin-bottom: 0; }
 .keyword {
 	background-color: rgba(102,103,107,0.07);
 	color: #66676b;
-	display: inline-block;
 	float: left;
 	padding: 0;
 	border-radius: 4px;

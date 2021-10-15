@@ -1,54 +1,29 @@
 @extends('layouts.seller')
 @section('content')
-
-	<!-- Market Content
+<!-- Chat Content
 	================================================== -->
 	<div class="container-fluid full-page-content-inner">
 		<div class="row">
-            <div class="col-sm-3 col-md-3 col-lg-3 bg-light">
-                <div class="col-12 pt-5">
-                    <p>Price</p>
-                    <select name="sortByPrice" id="sortByPrice">
-                        <option value="0" selected>Lowest to Highest</option>
-                        <option value="1">Highest to Lowest</option>
-                    </select>
-                </div>
-                <div class="col-12 pt-2">
-                    <p>Rating</p>
-                    <div class="stars">
-                        <form class="ml-7 ml-lg-4">
-                            <input class="star star-5" id="star-5" type="radio" name="star" />
-                            <label class="star star-5" for="star-5"></label>
-
-                            <input class="star star-4" id="star-4" type="radio" name="star" />
-                            <label class="star star-4" for="star-4"></label>
-
-                            <input class="star star-3" id="star-3" type="radio" name="star" />
-                            <label class="star star-3" for="star-3"></label>
-
-                            <input class="star star-2" id="star-2" type="radio" name="star" />
-                            <label class="star star-2" for="star-2"></label>
-
-                            <input class="star star-1" id="star-1" type="radio" name="star" />
-                            <label class="star star-1" for="star-1"></label>
-                        </form>
-                        <button type="button" class="btn btn-navy ml-6 mb-4 pl-5 pr-5">Apply</button>
-                    </div>
-                </div>
-                <div class="col-12 mt-4 mb-4">
+            <div class="col-sm-3 col-md-3 col-lg-3 pl-0 pr-0" style="background-color:black; color:white;">
+                <div class="col-12 mt-4 mb-4 search-message">
                     <div class="input-with-icon">
-                            <input id="autocomplete-input" type="text" placeholder="Search City of Zip Code">
+                            <input id="autocomplete-input" type="text" placeholder="Search Messages ...">
                             <i style="font-size: 25px;" class="text-dark icon-material-outline-search"></i>
                     </div>
+                </div>
+                <div class="col-12 chat-to-list">
+                        <div class="user-avatar status-online"><img src="{{ asset('storage/upload/profile') }}" alt=""></div>
                 </div>
             </div>
-            <div class="col-sm-9 col-md-9 col-lg-9 bg-white">
-                    <div class="col-12 pt-5 pb-4">
-                        <div class="input-with-icon">
-                            <input id="autocomplete-input" type="text" placeholder="What are you looking for?">
-                            <i style="font-size: 25px;" class="text-dark icon-material-outline-search"></i>
-                        </div>
+            <div class="col-sm-9 col-md-9 col-lg-9 pr-0 pl-0 bg-white">
+                <div class="col-12 m-0 mt-4 mb-4 chat-top-section row">
+                    <div class="col-10 mb-3">
+                        <span class="d-inline-block bookmark-icon"></span><h3 class="d-inline-block">John Doe</h3>
                     </div>
+                    <div class="col-2">
+
+                    </div>
+                </div>
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-12">
@@ -237,5 +212,8 @@
                 </div>
         </div>
 	</div>
-    @include('layouts.large-footer')
+	<!-- Chat Content / End -->
+
+
+
 @endsection

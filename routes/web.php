@@ -22,6 +22,8 @@ use App\Http\Controllers\Customer\MassageController;
 use App\Http\Controllers\Seller\MsgController as SellerMsgController;
 use App\Http\Controllers\Seller\ServiceController;
 
+use App\Http\Controllers\ChatController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -191,6 +193,8 @@ Route::post('/seller/change-password', [SellerMainController::class, 'sellerSett
 
 Route::get('/seller/market', [SellerMarketController::class, 'index'])->name('seller.market');
 Route::get('/seller/market/{slug}', [SellerMarketController::class, 'viewDetail'])->name('seller.market.detail');
+
+Route::get('/chat', [ChatController::class, 'index'])->name('chat');
 
 
 /// buyer

@@ -95,8 +95,35 @@
                                 <p class="d-inline" style="float:right; padding-right:25px; color:gray; font-size:14px;">More Details <i class="fa fa-greater-than"></i></p>
                                 <p style="font-size:10px; padding-left:35px; margin-top:-10px;color:gray;"><i class="icon-material-outline-access-time"></i>1 day</p>
                             </div>
-                        </a>
-
+                    </a>
+                    <a href="{{ route('seller.market.detail', 'office-chair-for-sale') }}" class="job-listing">
+                            <!-- Job Listing Details -->
+                            <div class="job-listing-details">
+                                <!-- Logo -->
+                                <div class="job-listing-company-logo">
+                                    <img src="{{asset('storage/upload/Gig/Gig-1619457919.png')}}" alt="">
+                                </div>
+                            </div>
+                            <!-- Job Listing Footer -->
+                            <div class="job-listing-footer">
+                                <span class="bookmark-icon"></span>
+                                <ul>
+                                    <li>
+                                        <h5>Do Web Design &amp; Development</h5>
+                                    </li>
+                                    <li>
+                                        <h3 class="text-success">$123.00</h3>
+                                    </li>
+                                    <br>
+                                </ul>
+                            </div>
+                            <div style="background-color:#f9f9f9; padding-left:30px">
+                                <img class="bg-md-cyan border rounded-circle" alt="user" height="30px" width="30px">
+                                <span class="text-md-cyan" style="font-size:14px">John Doe</span>
+                                <p class="d-inline" style="float:right; padding-right:25px; color:gray; font-size:14px;">More Details <i class="fa fa-greater-than"></i></p>
+                                <p style="font-size:10px; padding-left:35px; margin-top:-10px;color:gray;"><i class="icon-material-outline-access-time"></i>1 day</p>
+                            </div>
+                    </a>
                 </div>
                 <!-- Listings Container / End -->
 

@@ -3,11 +3,11 @@
 <!-- Chat Content
 	================================================== -->
 	<div class="container-fluid full-page-content-inner pt-0 pl-0 pr-0 chat-page" style="max-height:100%; max-width:100%;">
-        <section class="col-sm-12 col-md-3 col-lg-3 pl-0 pr-0 pb-5" style="background-color:black; color:white;float:left;">
+        <section class="col-sm-12 col-md-3 col-lg-3 pl-0 pr-0 pb-0" style="background-color:black; color:white;float:left;">
                 <div class="col-12 col-md-3 col-lg-3 mt-4 mb-4 search-message"  style="position:fixed;">
                     <div class="input-with-icon">
                             <input id="autocomplete-input" type="text" placeholder="Search Messages ...">
-                            <i style="font-size: 25px;" class="text-dark icon-material-outline-search"></i>
+                            <i style="font-size: 25px;" class="textchat-page-dark icon-material-outline-search"></i>
                     </div>
                 </div>
                 <div class="chat-list">
@@ -26,7 +26,7 @@
 
                 </div>
         </section>
-        <section class="col-sm-12 col-md-9 col-lg-9 pr-0 pl-0 bg-white" style="float:right;">
+        <section class="col-sm-12 col-md-9 col-lg-9 pr-0 pl-0 bg-white" style="float:right;overflow:hidden;">
                 <div class="col-12 m-0 mt-3 mb-0 chat-top-section row pr-0">
                     <div class="col-10 mb-3">
                         <span class="d-inline-block bookmark-icon"></span><h3 class="d-inline-block ml-3"><b>John Doe</b></h3>
@@ -35,7 +35,7 @@
 
                     </div>
                 </div>
-                <div class="container-fluid" style="overflow-y:scroll;max-height:59.3vh; background-color:#ccc">
+                <div class="container-fluid messages" style="">
                     @for ($i = 0; $i<100; $i++)
                         <div class="col-sm-12 row m-0 p-3 pl-4">
                             <div class="user-avatar status-online d-inline m-0 mt-2"><img src="{{ asset('storage/upload/profile') }}" alt=""></div>
@@ -46,7 +46,7 @@
                         </div>
                     @endfor
                 </div>
-                <div style="width:92%; margin-left:40px; margin-bottom:0">
+                <div class="pl-4 pr-4" style="width:100%; margin-bottom:0;background-color:#f2f2f2;">
                     @include('layouts.small-footer')
                 </div>
             </section>

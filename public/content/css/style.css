@@ -597,13 +597,19 @@ label.star:before {
 .chat-list {
 	overflow-y:scroll;
 	position:relative;
-	max-height:59.3vh;
+	max-height:67.2vh;
 	width:100%;
 	margin-top:35%;
 	background-color: black;
 }
 .chat-to-list:hover, .selected-chat {
 	background-color: rgb(31, 30, 30);
+}
+
+.chat-page .messages{
+	overflow-y:scroll;
+	max-height:60.5vh;
+	background-color:#f2f2f2;
 }
 
 /* Sign In Button Media Queries */
@@ -15867,5 +15873,8 @@ ul.dashboard-box-list > li:hover {
 		.chat-list {
 			margin-top:25%;
 			max-height:100vh;
+		}
+		.chat-page .messages{
+			max-height:96vh;
 		}
 	}

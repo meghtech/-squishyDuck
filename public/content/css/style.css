@@ -575,18 +575,36 @@ label.star:before {
 	transform: translateY(-2px);
 }
 
+.chat-page .user-avatar {
+	width: 35px;
+	height: 35px;
+}
+
 .search-message {
 	border-bottom: 1px solid gray;
 }
 .search-message #autocomplete-input {
 	background-color: black;
 	border: 1px solid gray;
+	height: 40px;
+	line-height: 40px;
 }
 
 .chat-top-section {
 	border-bottom: 1px solid rgb(201, 201, 201);
 }
 
+.chat-list {
+	overflow-y:scroll;
+	position:relative;
+	max-height:59.3vh;
+	width:100%;
+	margin-top:35%;
+	background-color: black;
+}
+.chat-to-list:hover, .selected-chat {
+	background-color: rgb(31, 30, 30);
+}
 
 /* Sign In Button Media Queries */
 @media (max-width: 768px) {
@@ -620,6 +638,10 @@ label.star:before {
 
 	div.stars .ml-6 {
 		margin-left: 7.5rem !important;
+	}
+
+	.chat-list {
+		margin-top:25%;
 	}
 
 }
@@ -15840,3 +15862,10 @@ ul.dashboard-box-list > li:hover {
     margin: 124px;
     border-bottom: 1px solid #d2d2d2;}
 	.tableRow td{padding: 14px;}
+
+	@media (min-width: 1920px){
+		.chat-list {
+			margin-top:25%;
+			max-height:100vh;
+		}
+	}

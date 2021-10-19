@@ -31,8 +31,8 @@
                     <div class="col-10 mb-3">
                         <span class="d-inline-block bookmark-icon"></span><h3 class="d-inline-block ml-3"><b>John Doe</b></h3>
                     </div>
-                    <div class="col-2">
-
+                    <div class="col-2 text-right mt-3 pr-5">
+                        <i class="fa fa-ellipsis-v" style="font-size:24px; color:#aaa;"></i>
                     </div>
                 </div>
                 <div class="container-fluid messages" style="">
@@ -45,6 +45,23 @@
                             </div>
                         </div>
                     @endfor
+                </div>
+                <div class="row m-0" style="width:100%; margin-bottom:0;background-color:#f2f2f2;">
+                    <div class="uploadButton col-1 col-sm-1 mb-0 p-0" style="float:left;">
+						<input name="image" class="uploadButton-input" type="file" accept="image/*, application/pdf" id="upload">
+						<label class="uploadButton-button ripple-effect mb-0 text-center" for="upload">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" fill="currentColor"
+                            class="bi bi-paperclip" viewBox="0 0 16 16">
+                                <path
+                                d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z" />
+                            </svg>
+                        </label>
+					</div>
+                    <!-- <span class="uploadButton-file-name mb-0 col-10 col-sm-10 pl-4"></span> -->
+                    <input type="text" class="message-box mb-0 col-10 col-sm-10 pl-4" style="float:left;" placeholder="Start typing ...">
+                    <div class="col-1 col-sm-1 mb-0 p-0 text-center send-button">
+                    <img class="mt-3" height="25px" src="{{ asset('content/images/send.svg') }}" alt="Send">
+                    </div>
                 </div>
                 <div class="pl-4 pr-4" style="width:100%; margin-bottom:0;background-color:#f2f2f2;">
                     @include('layouts.small-footer')

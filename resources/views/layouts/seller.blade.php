@@ -20,7 +20,6 @@
 
 <!-- CSS
 ================================================== -->
-<link rel="stylesheet" href="{{asset('fontawesome/css/fontawesome.min.css')}}">
 <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
 <link rel="stylesheet" href="{{asset('content')}}/css/style.css">
 <link rel="stylesheet" href="{{asset('content')}}/css/colors/blue.css">
@@ -205,7 +204,6 @@
 <script src="{{asset('content')}}/js/tippy.all.min.js"></script>
 <script src="{{asset('content')}}/js/simplebar.min.js"></script>
 <script src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>
-<script src="{{asset('fontawesome/js/fontawesome.min.js')}}"></script>
 <script src="{{asset('content')}}/js/bootstrap-slider.min.js"></script>
 <script src="{{asset('content')}}/js/bootstrap-select.min.js"></script>
 <script src="{{asset('content')}}/js/snackbar.js"></script>

@@ -608,8 +608,41 @@ label.star:before {
 
 .chat-page .messages{
 	overflow-y:scroll;
-	max-height:60.5vh;
+	max-height:52.5vh;
 	background-color:#f2f2f2;
+}
+
+.chat-page .uploadButton .uploadButton-button {
+	color: #555;
+	background-color: white;
+	border: none;
+	border-radius: unset;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	box-shadow: -10px 3px 10px rgba(102,103,107,0.1);
+}
+
+.chat-page .uploadButton .uploadButton-button:hover{
+	color: #333;
+	background-color: #f2f2f2;
+	box-shadow: -10px 3px 10px rgba(102,103,107,0.1);
+}
+
+.chat-page .send-button {
+	background-color: white;
+	box-shadow: 10px -3px 10px rgba(102,103,107,0.1);
+}
+
+.chat-page .send-button:hover {
+	background-color: #f2f2f2;
+}
+
+.chat-page .message-box {
+	height: 54px;
+	border: none;
+	border-radius: unset;
+	box-shadow: -10px 3px 10px rgba(102,103,107,0.1);
 }
 
 /* Sign In Button Media Queries */
@@ -15875,6 +15908,6 @@ ul.dashboard-box-list > li:hover {
 			max-height:100vh;
 		}
 		.chat-page .messages{
-			max-height:96vh;
+			max-height:91.5vh;
 		}
 	}

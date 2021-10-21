@@ -184,6 +184,8 @@ Route::get('/seller/services-status/{id}', [ServiceController::class, 'servicesS
 //SellerMainController
 Route::get('/seller/SellerPayment', [SellerMainController::class, 'SellerPayment'])->name('seller.payment');
 
+Route::get('/seller/incoming-requests', [SellerMainController::class, 'incomingRequests'])->name('seller.incomingRequests');
+
 
 
 

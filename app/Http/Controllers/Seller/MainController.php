@@ -69,6 +69,15 @@ class MainController extends Controller
 
         return view('seller.dashboard', compact('data','getUser'));
     }
+
+    public function incomingRequests()
+    {
+        $paymentCustomer = PaymentSeller::where('seller_id', auth()->id())
+            ->orderBy('id', 'DESC')
+            ->get();
+        return view('seller.incomingRequests', compact('paymentCustomer'));
+    }
+
     public function sellerOrder()
     {
         $allorder = Order::where('seller_id', auth()->id())

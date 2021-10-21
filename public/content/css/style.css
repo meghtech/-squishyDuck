@@ -541,6 +541,9 @@ label.star:before {
     font-family: FontAwesome
 }
 
+.incoming-request .input-with-icon input {
+	border-radius: unset;
+}
 
 .ml-6 {
 	margin-left: 4rem !important;
@@ -6557,28 +6560,33 @@ table.basic-table {
 	border-collapse: separate;
 	border-spacing: 0;
 	border:none;
-	margin-bottom: 15px;
+	margin: 30px 0 15px 0;
 }
 
 table.basic-table th {
-	background-color: #66676b;
+	background-color: #e0e0e0 !important;
 	text-align: left;
-	color: #fff;
+	color: gray;
 	vertical-align: top;
 	font-weight: 500;
 }
 
-table.basic-table th:first-child { border-radius: 4px 0 0 4px; }
-table.basic-table th:last-child { border-radius: 0 4px 4px 0; }
+table.dataTable thead th {
+	border-bottom: none !important;
+}
 
+table.basic-table tr {
+	border-left: 50px solid white;
+}
+
+table.basic-table td {
+	border-bottom: 1px solid #c2c2c2 !important;
+	margin: 0 10px 0 10px;
+}
 
 table.basic-table th,
 table.basic-table td {
 	padding: 15px 28px;
-}
-
-table.basic-table tr:nth-child(odd) {
-	background-color: #f4f4f4;
 }
 
 table.basic-table { margin-bottom: 0; }

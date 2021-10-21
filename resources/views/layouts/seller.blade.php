@@ -161,7 +161,7 @@
 							<li><a href="#"><i class="icon-material-outline-assignment"></i>View Schedule</a></li>
 						</ul>
 						<ul data-submenu-title="Requests">
-							<li><a href="#"><i class="icon-material-outline-assignment"></i>Incoming Requests</a></li>
+							<li><a href="{{ route('seller.incomingRequests') }}"><i class="icon-material-outline-assignment"></i>Incoming Requests</a></li>
 						</ul>
 						<ul data-submenu-title="Inventory">
 							<li><a href="#"><i class="icon-material-outline-assignment"></i>Current Inventory</a></li>

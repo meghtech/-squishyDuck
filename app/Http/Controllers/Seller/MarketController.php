@@ -19,4 +19,8 @@ class MarketController extends Controller
     public function viewDetail($slug){
         return view('seller.market.detail');
     }
+
+    public function createSchedule(){
+       return view('seller.market.createSchedule');
+    }
 }

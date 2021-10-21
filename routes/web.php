@@ -192,6 +192,7 @@ Route::post('/seller/setting-save', [SellerMainController::class, 'sellerSetting
 Route::post('/seller/change-password', [SellerMainController::class, 'sellerSettingSavepass']);
 
 Route::get('/seller/market', [SellerMarketController::class, 'index'])->name('seller.market');
+Route::get('/seller/create-schedule', [SellerMarketController::class, 'createSchedule'])->name('seller.createSchedule');
 Route::get('/seller/market/{slug}', [SellerMarketController::class, 'viewDetail'])->name('seller.market.detail');
 
 Route::get('/chat', [ChatController::class, 'index'])->name('chat');

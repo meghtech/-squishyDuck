@@ -134,7 +134,7 @@
 
 <!-- Dashboard Container -->
 <div class="dashboard-container">
-	@if ( !Request::is('seller/market*') && !Request::is('chat*'))
+	@if ( !Request::is('seller/market*') && !Request::is('chat*') && !Request::is('seller/create-schedule*'))
 	<!-- Dashboard Sidebar
 	================================================== -->
 	<div class="dashboard-sidebar">

@@ -10,7 +10,7 @@
     'locale' => 'en',
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
-    'key' => 'base64:DOAGitdrX2ngDmP3tJvB582F78T6GcdcLc/z/X6hfzU=',
+    'key' => 'base64:iKdKlU2P+lB7tcG7yY/TUnredzlGjEkufik854V7iiI=',
     'cipher' => 'AES-256-CBC',
     'providers' => 
     array (
@@ -180,15 +180,15 @@
   ),
   'broadcasting' => 
   array (
-    'default' => 'pusher',
+    'default' => 'log',
     'connections' => 
     array (
       'pusher' => 
       array (
         'driver' => 'pusher',
-        'key' => 'anyKey',
-        'secret' => 'anySecret',
-        'app_id' => 'anyID',
+        'key' => '',
+        'secret' => '',
+        'app_id' => '',
         'options' => 
         array (
           'cluster' => 'mt1',
@@ -242,7 +242,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => '/opt/lampp/htdocs/squishyduckT/storage/framework/cache/data',
+        'path' => 'C:\\xampp\\htdocs\\squishyDuck\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -321,7 +321,7 @@
       array (
         'driver' => 'sqlite',
         'url' => NULL,
-        'database' => 'sdadmin_marketplace',
+        'database' => 'squishyDuck',
         'prefix' => '',
         'foreign_key_constraints' => true,
       ),
@@ -331,7 +331,7 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'sdadmin_marketplace',
+        'database' => 'squishyDuck',
         'username' => 'root',
         'password' => '',
         'unix_socket' => '',
@@ -351,7 +351,7 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'sdadmin_marketplace',
+        'database' => 'squishyDuck',
         'username' => 'root',
         'password' => '',
         'charset' => 'utf8',
@@ -366,7 +366,7 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'sdadmin_marketplace',
+        'database' => 'squishyDuck',
         'username' => 'root',
         'password' => '',
         'charset' => 'utf8',
@@ -409,12 +409,12 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => '/opt/lampp/htdocs/squishyduckT/storage/app',
+        'root' => 'C:\\xampp\\htdocs\\squishyDuck\\storage\\app',
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => '/opt/lampp/htdocs/squishyduckT/storage/app/public',
+        'root' => 'C:\\xampp\\htdocs\\squishyDuck\\storage\\app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
       ),
@@ -431,7 +431,7 @@
     ),
     'links' => 
     array (
-      '/opt/lampp/htdocs/squishyduckT/public/storage' => '/opt/lampp/htdocs/squishyduckT/storage/app/public',
+      'C:\\xampp\\htdocs\\squishyDuck\\public\\storage' => 'C:\\xampp\\htdocs\\squishyDuck\\storage\\app/public',
     ),
   ),
   'geoip' => 
@@ -444,7 +444,7 @@
       'maxmind_database' => 
       array (
         'class' => 'Torann\\GeoIP\\Services\\MaxMindDatabase',
-        'database_path' => '/opt/lampp/htdocs/squishyduckT/storage/app/geoip.mmdb',
+        'database_path' => 'C:\\xampp\\htdocs\\squishyDuck\\storage\\app/geoip.mmdb',
         'update_url' => 'https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-City&license_key=&suffix=tar.gz',
         'locales' => 
         array (
@@ -466,7 +466,7 @@
         'class' => 'Torann\\GeoIP\\Services\\IPApi',
         'secure' => true,
         'key' => NULL,
-        'continent_path' => '/opt/lampp/htdocs/squishyduckT/storage/app/continents.json',
+        'continent_path' => 'C:\\xampp\\htdocs\\squishyDuck\\storage\\app/continents.json',
         'lang' => 'en',
       ),
       'ipgeolocation' => 
@@ -474,7 +474,7 @@
         'class' => 'Torann\\GeoIP\\Services\\IPGeoLocation',
         'secure' => true,
         'key' => NULL,
-        'continent_path' => '/opt/lampp/htdocs/squishyduckT/storage/app/continents.json',
+        'continent_path' => 'C:\\xampp\\htdocs\\squishyDuck\\storage\\app/continents.json',
         'lang' => 'en',
       ),
       'ipdata' => 
@@ -551,13 +551,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => '/opt/lampp/htdocs/squishyduckT/storage/logs/laravel.log',
+        'path' => 'C:\\xampp\\htdocs\\squishyDuck\\storage\\logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => '/opt/lampp/htdocs/squishyduckT/storage/logs/laravel.log',
+        'path' => 'C:\\xampp\\htdocs\\squishyDuck\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -607,7 +607,7 @@
       ),
       'emergency' => 
       array (
-        'path' => '/opt/lampp/htdocs/squishyduckT/storage/logs/laravel.log',
+        'path' => 'C:\\xampp\\htdocs\\squishyDuck\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -664,7 +664,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => '/opt/lampp/htdocs/squishyduckT/resources/views/vendor/mail',
+        0 => 'C:\\xampp\\htdocs\\squishyDuck\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -770,7 +770,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => '/opt/lampp/htdocs/squishyduckT/storage/framework/sessions',
+    'files' => 'C:\\xampp\\htdocs\\squishyDuck\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -790,9 +790,9 @@
   array (
     'paths' => 
     array (
-      0 => '/opt/lampp/htdocs/squishyduckT/resources/views',
+      0 => 'C:\\xampp\\htdocs\\squishyDuck\\resources\\views',
     ),
-    'compiled' => '/opt/lampp/htdocs/squishyduckT/storage/framework/views',
+    'compiled' => 'C:\\xampp\\htdocs\\squishyDuck\\storage\\framework\\views',
   ),
   'websockets' => 
   array (
@@ -804,10 +804,10 @@
     array (
       0 => 
       array (
-        'id' => 'anyID',
+        'id' => '',
         'name' => 'Laravel',
-        'key' => 'anyKey',
-        'secret' => 'anySecret',
+        'key' => '',
+        'secret' => '',
         'path' => NULL,
         'capacity' => NULL,
         'enable_client_messages' => false,
@@ -884,7 +884,7 @@
   'livewire' => 
   array (
     'class_namespace' => 'App\\Http\\Livewire',
-    'view_path' => '/opt/lampp/htdocs/squishyduckT/resources/views/livewire',
+    'view_path' => 'C:\\xampp\\htdocs\\squishyDuck\\resources\\views/livewire',
     'layout' => 'layouts.app',
     'asset_url' => NULL,
     'middleware_group' => 'web',

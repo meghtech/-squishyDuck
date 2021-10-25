@@ -92,7 +92,7 @@
                             <div style="background-color:#f9f9f9; padding-left:30px">
                                 <img class="bg-md-cyan border rounded-circle" alt="user" height="30px" width="30px">
                                 <span class="text-md-cyan" style="font-size:14px">John Doe</span>
-                                <p class="d-inline" style="float:right; padding-right:25px; color:gray; font-size:14px;">More Details <i class="fa fa-greater-than"></i></p>
+                                <p class="d-inline" style="float:right; padding-right:25px; color:gray; font-size:14px;">More Details <i class="fa fa-angle-right"></i></p>
                                 <p style="font-size:10px; padding-left:35px; margin-top:-10px;color:gray;"><i class="icon-material-outline-access-time"></i>1 day</p>
                             </div>
                     </a>
@@ -120,7 +120,7 @@
                             <div style="background-color:#f9f9f9; padding-left:30px">
                                 <img class="bg-md-cyan border rounded-circle" alt="user" height="30px" width="30px">
                                 <span class="text-md-cyan" style="font-size:14px">John Doe</span>
-                                <p class="d-inline" style="float:right; padding-right:25px; color:gray; font-size:14px;">More Details <i class="fa fa-greater-than"></i></p>
+                                <p class="d-inline" style="float:right; padding-right:25px; color:gray; font-size:14px;">More Details <i class="fa fa-angle-right"></i></p>
                                 <p style="font-size:10px; padding-left:35px; margin-top:-10px;color:gray;"><i class="icon-material-outline-access-time"></i>1 day</p>
                             </div>
                     </a>

@@ -60,7 +60,7 @@
                         d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
                 </svg> 9/17/2021</td>
 							<td>Abigail Rechards</td>
-							<td><input style="height:24px;" type="checkbox" name="action" id="action"></td>
+							<td class="text-center"><input type="checkbox" name="action" id="action"></td>
 						</tr>
 						<tr>
 							<td>Air for sale</td>
@@ -71,7 +71,7 @@
                         d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
                 </svg> 9/17/2021</td>
 							<td>Abigail Rechards</td>
-							<td><input style="height:24px;" type="checkbox" name="action" id="action"></td>
+							<td><input style="height:20px;" type="checkbox" name="action" id="action"></td>
 						</tr>
 						<tr>
 							<td>Air for sale</td>
@@ -82,7 +82,7 @@
                         d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
                 </svg> 9/17/2021</td>
 							<td>Abigail Rechards</td>
-							<td><input style="height:24px;" type="checkbox" name="action" id="action"></td>
+							<td><input style="height:20px; width:50%;" type="checkbox" name="action" id="action"></td>
 						</tr>
 						<tr>
 							<td>Air for sale</td>
@@ -93,7 +93,7 @@
                         d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
                 </svg> 9/17/2021</td>
 							<td>Abigail Rechards</td>
-							<td><input style="height:24px;" type="checkbox" name="action" id="action"></td>
+							<td><input style="height:20px; width:50%;" type="checkbox" name="action" id="action"></td>
 						</tr>
 					</tbody>
     			</table>
@@ -104,35 +104,9 @@
       <!-- Row / End -->
 
       <!-- Footer -->
-      <div class="dashboard-footer-spacer"></div>
-      <div class="small-footer margin-top-15">
-        <div class="small-footer-copyrights">
-        © 2021 <strong>Squishy Duck</strong>. All Rights Reserved.
-        </div>
-        <ul class="footer-social-links">
-          <li>
-            <a href="#" title="Facebook" data-tippy-placement="top">
-              <i class="icon-brand-facebook-f"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#" title="Twitter" data-tippy-placement="top">
-              <i class="icon-brand-twitter"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#" title="Google Plus" data-tippy-placement="top">
-              <i class="icon-brand-google-plus-g"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#" title="LinkedIn" data-tippy-placement="top">
-              <i class="icon-brand-linkedin-in"></i>
-            </a>
-          </li>
-        </ul>
-        <div class="clearfix"></div>
+      <div class="dashboard-footer-spacer">
       </div>
+      @include('layouts.small-footer')
       <!-- Footer / End -->
 
     </div>
@@ -140,7 +114,6 @@
   <!-- Dashboard Content / End -->
 @endsection
 @push('js')
-        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
 @endpush

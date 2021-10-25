@@ -15,6 +15,7 @@ use App\Http\Controllers\Front\PaymentController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\Seller\MainController as SellerMainController;
 use App\Http\Controllers\Seller\MarketController as SellerMarketController;
+use App\Http\Controllers\Seller\ServiceController as SellerServiceController;
 
 use App\Http\Controllers\Customer\MainController as BuyerMainController;
 use App\Http\Controllers\Customer\MassageController;
@@ -196,6 +197,9 @@ Route::post('/seller/change-password', [SellerMainController::class, 'sellerSett
 Route::get('/seller/market', [SellerMarketController::class, 'index'])->name('seller.market');
 Route::get('/seller/create-schedule', [SellerMarketController::class, 'createSchedule'])->name('seller.createSchedule');
 Route::get('/seller/market/{slug}', [SellerMarketController::class, 'viewDetail'])->name('seller.market.detail');
+
+Route::get('/seller/service', [SellerServiceController::class, 'index'])->name('seller.service');
+Route::get('/seller/create-service', [SellerServiceController::class, 'createService'])->name('seller.createService');
 
 Route::get('/chat', [ChatController::class, 'index'])->name('chat');
 

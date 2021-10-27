@@ -19,16 +19,9 @@
 @endpush
 
 @section('content')
-
-    <?php
-
-    $gigExists = \App\Models\Gig::where('seller_id', auth()->id())->exists();
-
-    ?>
-
     <!-- Dashboard Content
 	================================================== -->
-    <div class="dashboard-content-container create-service pl-5 pr-5 ml-6 mr-5" data-simplebar>
+    <div id="app" class="dashboard-content-container create-service pl-5 pr-5 ml-6 mr-5" data-simplebar>
         <div class="dashboard-content-inner">
             <section>
                 <div class="row">
@@ -56,16 +49,21 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <input class="tags" type="text" placeholder="#EnterTagsHere">
+                    <input type="text" value="" data-role="tagsinput" id="tags" placeholder="#EnterTagsHere"/>
                     </div>
                 </div>
                 <div class="row pt-5 mt-5 mb-5">
                     <div class="col-6 text-right">
-                        <button type="button" class="btn btn-outline-primary pl-5 pr-5">Cancel</button>
+                        <button type="button" class="btn outline-md-cyan pl-5 pr-5">Cancel</button>
                     </div>
-                    <div class="col-6 text-left">
-                        <button type="button" class="btn0 btn-primary pl-5 pr-5">Next</button>
+                    <div class="col-6 text-left" @click="changeSection">
+                        <button class="btn btn-md-cyan pl-5 pr-5">Next</button>
                     </div>
+                </div>
+            </section>
+            <section>
+                <div>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, quisquam esse nam est, numquam quia consequatur neque eum illum maiores a praesentium perspiciatis, quasi porro magnam aperiam provident iste natus!</p>
                 </div>
             </section>
         </div>
@@ -73,5 +71,17 @@
     </div>
     <!-- Dashboard Content / End -->
     @include('layouts.large-footer')
-
+<script src="{{ asset('js/app.js') }}"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            section = 'first',
+        },
+        methods: {
+        },
+        mounted() {
+        },
+    });
+</script>
 @endsection

@@ -11,24 +11,23 @@
 |
 */
 
-
 app('router')->setCompiledRoutes(
     array (
-  'compiled' =>
+  'compiled' => 
   array (
     0 => false,
-    1 =>
+    1 => 
     array (
-      '/laravel-websockets' =>
+      '/laravel-websockets' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::xynJaFHA3F01ZDxr',
+            '_route' => 'generated::G1KDtHdHo6LfhhbX',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -39,16 +38,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/laravel-websockets/auth' =>
+      '/laravel-websockets/auth' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::OIovBoy74jMoP4IS',
+            '_route' => 'generated::0bZEuU1iwwbYIWgN',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -58,16 +57,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/laravel-websockets/event' =>
+      '/laravel-websockets/event' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::Tr9Liu1NwXE4FqKi',
+            '_route' => 'generated::26UhILhVLY7tf4ni',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -77,16 +76,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/laravel-websockets/statistics' =>
+      '/laravel-websockets/statistics' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::NhHsz4v8jewBf3F2',
+            '_route' => 'generated::GFlvS2Cn6CPcDRuL',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -96,16 +95,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/livewire/upload-file' =>
+      '/livewire/upload-file' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'livewire.upload-file',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -115,16 +114,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/livewire/livewire.js' =>
+      '/livewire/livewire.js' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::FCxEFxFho8gaB4O4',
+            '_route' => 'generated::9AFeKlmQ4EoiCEJI',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -135,16 +134,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/livewire/livewire.js.map' =>
+      '/livewire/livewire.js.map' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::4RcHR9qN5sE8uk6V',
+            '_route' => 'generated::BZCo2ULEa1ZINxoP',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -155,16 +154,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/api/user' =>
+      '/api/user' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::Nq0BGULeKJ3hRBnm',
+            '_route' => 'generated::eDiPVVl7IlFc4AQ3',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -175,16 +174,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/login' =>
+      '/login' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'login',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -194,14 +193,14 @@ app('router')->setCompiledRoutes(
           5 => false,
           6 => NULL,
         ),
-        1 =>
+        1 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::YIOAmfMP417cK8yN',
+            '_route' => 'generated::mjJyGQhEDoYykwzl',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -211,16 +210,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/logout' =>
+      '/logout' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'logout',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -230,16 +229,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/register' =>
+      '/register' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'register',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -249,14 +248,14 @@ app('router')->setCompiledRoutes(
           5 => false,
           6 => NULL,
         ),
-        1 =>
+        1 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::Vfk5z4ozOGT1wdVv',
+            '_route' => 'generated::T4UpxtkkC6Z5lFWA',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -266,16 +265,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/password/reset' =>
+      '/password/reset' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'password.request',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -285,14 +284,14 @@ app('router')->setCompiledRoutes(
           5 => false,
           6 => NULL,
         ),
-        1 =>
+        1 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'password.update',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -302,16 +301,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/password/email' =>
+      '/password/email' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'password.email',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -321,16 +320,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/password/confirm' =>
+      '/password/confirm' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'password.confirm',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -340,14 +339,14 @@ app('router')->setCompiledRoutes(
           5 => false,
           6 => NULL,
         ),
-        1 =>
+        1 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::veM35yHvWDeXogRp',
+            '_route' => 'generated::YADsyQ1dnrtHOAQh',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -357,16 +356,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/zoom-call-user' =>
+      '/zoom-call-user' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'zoom.callJoin',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -377,16 +376,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/' =>
+      '/' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'main',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -397,16 +396,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/user-register' =>
+      '/user-register' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'user.register',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -416,16 +415,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/payment-page' =>
+      '/payment-page' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::scwp6287wLqlRy0N',
+            '_route' => 'generated::9JkqJSqsw1QppAxG',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -436,16 +435,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/payment-conform' =>
+      '/payment-conform' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'payment.conform',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -456,16 +455,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/payment-invoice' =>
+      '/payment-invoice' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::VsvWTrv8evmOLBGG',
+            '_route' => 'generated::C8nCUGjVZ80aCEeD',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -476,16 +475,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/search-store' =>
+      '/search-store' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'search.store',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -495,16 +494,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/contact-us' =>
+      '/contact-us' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'contact.us',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -515,16 +514,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/contactSave' =>
+      '/contactSave' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'contactSave',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -534,16 +533,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/term-and-condition' =>
+      '/term-and-condition' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'termCondition',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -554,16 +553,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/buyer-job-post' =>
+      '/buyer-job-post' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::WIx7JoC4LqD8KqLs',
+            '_route' => 'generated::TYpS6q4X3eAHd4uB',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -574,16 +573,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/bid-request' =>
+      '/bid-request' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'bid.request',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -593,16 +592,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/sendMsg' =>
+      '/sendMsg' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::Y5XgLGPtMARNb3uy',
+            '_route' => 'generated::QVROsoW5eWWm22v5',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -612,16 +611,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/home' =>
+      '/home' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'home',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -632,16 +631,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/admin' =>
+      '/admin' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'login.admin',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -651,14 +650,14 @@ app('router')->setCompiledRoutes(
           5 => false,
           6 => NULL,
         ),
-        1 =>
+        1 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::B3fY2nxS4yjtx6Iq',
+            '_route' => 'generated::JDbgXmqoq9j9LXdB',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -668,16 +667,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/admin/dashboard' =>
+      '/admin/dashboard' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::omhkKZ87qH6pHn5O',
+            '_route' => 'generated::3tPHXSBVFvzeR3kC',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -688,16 +687,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/admin/category' =>
+      '/admin/category' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'category.index',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -707,14 +706,14 @@ app('router')->setCompiledRoutes(
           5 => false,
           6 => NULL,
         ),
-        1 =>
+        1 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'category.store',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -724,16 +723,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/admin/category/create' =>
+      '/admin/category/create' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'category.create',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -744,16 +743,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/admin/categorySave' =>
+      '/admin/categorySave' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::k16mwyp5NGFgkYZi',
+            '_route' => 'generated::WS4vAQgy3IstJKUh',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -763,16 +762,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/admin/manage-seller' =>
+      '/admin/manage-seller' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::9wKkFH2kCGzmcrzY',
+            '_route' => 'generated::Mff9EqrwyL7cSU87',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -783,16 +782,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/admin/manage-buyer' =>
+      '/admin/manage-buyer' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::pb7c0OI8fLGIXc5X',
+            '_route' => 'generated::VJBkkDzYMrCQXLZF',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -803,16 +802,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/admin/manage-buyer-details' =>
+      '/admin/manage-buyer-details' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'customer.view',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -823,16 +822,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/admin/order' =>
+      '/admin/order' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::SOjNauDQXXZf3s8c',
+            '_route' => 'generated::3fnkSSWRNRhLN9Lv',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -843,16 +842,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/admin/msg-list' =>
+      '/admin/msg-list' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::lhPJZzzAsLMJp90M',
+            '_route' => 'generated::QULKFmDKgB9vXxtf',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -863,16 +862,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/admin/terms' =>
+      '/admin/terms' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::JF9JhtHUyyASlz5a',
+            '_route' => 'generated::klNfhj64bFLP4GBd',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -883,16 +882,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/admin/termsSave' =>
+      '/admin/termsSave' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'terms.save',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -902,16 +901,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/admin/payment-buyer' =>
+      '/admin/payment-buyer' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'payment.buyer',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -922,16 +921,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/admin/payment-seller' =>
+      '/admin/payment-seller' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'payment.seller',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -942,16 +941,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/rider' =>
+      '/rider' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'login.rider',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -961,14 +960,14 @@ app('router')->setCompiledRoutes(
           5 => false,
           6 => NULL,
         ),
-        1 =>
+        1 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::Rx9oXTEVrEJyyQ55',
+            '_route' => 'generated::wp2Elu81Nrizqvzh',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -978,16 +977,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/rider/dashboard' =>
+      '/rider/dashboard' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::pEL1gkqjshcfSKYm',
+            '_route' => 'generated::GMpb7wPWml6ntceV',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -998,16 +997,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/buyer' =>
+      '/buyer' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'login.customer',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1017,14 +1016,14 @@ app('router')->setCompiledRoutes(
           5 => false,
           6 => NULL,
         ),
-        1 =>
+        1 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::rA4W3zQlNtZMjM6V',
+            '_route' => 'generated::Z3kUmxJn82pry5Ba',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -1034,16 +1033,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/customer/dashboard' =>
+      '/customer/dashboard' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::gt1BtEjvUu4TvyAo',
+            '_route' => 'generated::bn8yeXriVOJ643sg',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1054,16 +1053,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/seller' =>
+      '/seller' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'login.seller',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1073,14 +1072,14 @@ app('router')->setCompiledRoutes(
           5 => false,
           6 => NULL,
         ),
-        1 =>
+        1 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::eF6TD9JmJYchy5af',
+            '_route' => 'generated::52hMLVHuK27z9hUJ',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -1090,16 +1089,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/seller/dashboard' =>
+      '/seller/dashboard' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'seller.dashboard',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1110,16 +1109,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/seller/fileShare' =>
+      '/seller/fileShare' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::qN5kIVTdQTaIdzxO',
+            '_route' => 'generated::8nCC1Y9ZdKUwQmvY',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1130,16 +1129,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/seller/fileShareStore' =>
+      '/seller/fileShareStore' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'file.shareStoreSeller',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -1149,16 +1148,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/seller/zoom-call' =>
+      '/seller/zoom-call' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'seller.dashboardzoom.seller',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1169,16 +1168,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/seller/order' =>
+      '/seller/order' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::zeWl1dXws7TgWQtZ',
+            '_route' => 'generated::50uCYpIOJWNnBLmX',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1189,16 +1188,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/seller/custom-offer' =>
+      '/seller/custom-offer' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'custom.offer',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1209,16 +1208,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/seller/storeCustomOffer' =>
+      '/seller/storeCustomOffer' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'storeCustom.offer',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -1228,16 +1227,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/seller/reviews' =>
+      '/seller/reviews' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::mhXA6dJ3XnBFpnIH',
+            '_route' => 'generated::a4ttNNvM32ZG1Yi6',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1248,16 +1247,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/seller/messages' =>
+      '/seller/messages' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::he4YboHZeaX7W7S0',
+            '_route' => 'generated::sciBuKJtC8FVRZpG',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1268,16 +1267,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/seller/services' =>
+      '/seller/services' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'services.index',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1287,14 +1286,14 @@ app('router')->setCompiledRoutes(
           5 => false,
           6 => NULL,
         ),
-        1 =>
+        1 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'services.store',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -1304,16 +1303,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/seller/services/create' =>
+      '/seller/services/create' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'services.create',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1324,16 +1323,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/seller/SellerPayment' =>
+      '/seller/SellerPayment' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'seller.payment',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1344,16 +1343,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/seller/setting' =>
+      '/seller/incoming-requests' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::l3zK4R555xNX8MxC',
+            '_route' => 'seller.incomingRequests',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1364,16 +1363,36 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/seller/setting-save' =>
+      '/seller/setting' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::6qcDY68uQFyXyB9a',
+            '_route' => 'generated::Ra3WnMfvII2p88bW',
           ),
           1 => NULL,
-          2 =>
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/seller/setting-save' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'sellerSetting.save',
+          ),
+          1 => NULL,
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -1383,16 +1402,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/seller/change-password' =>
+      '/seller/change-password' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::PuWsfFQd4aiUrYVk',
+            '_route' => 'generated::3uTgH4HduTY6fIAf',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -1402,24 +1421,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/seller/market' =>
+      '/seller/market' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-            '_route' => 'generated::49uO2sl4M5vJ1mE8',
-=======
-            '_route' => 'generated::6qcDY68uQFyXyB9a',
->>>>>>> Stashed changes
-=======
-            '_route' => 'generated::49uO2sl4M5vJ1mE8',
->>>>>>> Stashed changes
+            '_route' => 'seller.market',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1430,29 +1441,6 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/seller/create-schedule' =>
-      array (
-        0 =>
-        array (
-          0 =>
-          array (
-            '_route' => 'seller.createSchedule',
-          ),
-          1 => NULL,
-          2 =>
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-<<<<<<< Updated upstream
-      '/seller/create-schedule' =>
-=======
       '/seller/create-schedule' => 
       array (
         0 => 
@@ -1514,276 +1502,15 @@ app('router')->setCompiledRoutes(
         ),
       ),
       '/chat' => 
->>>>>>> Stashed changes
-      array (
-        0 =>
-        array (
-          0 =>
-          array (
-            '_route' => 'generated::49uO2sl4M5vJ1mE8',
-          ),
-          1 => NULL,
-          2 =>
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      '/seller/service' =>
-      array (
-        0 =>
-        array (
-          0 =>
-          array (
-            '_route' => 'seller.service',
-          ),
-          1 => NULL,
-          2 =>
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      '/seller/create-service' =>
-      array (
-        0 =>
-        array (
-          0 =>
-          array (
-<<<<<<< Updated upstream
-            '_route' => 'seller.createService',
-=======
-            '_route' => 'generated::8Ey7CDlhblm4ImC4',
->>>>>>> Stashed changes
-          ),
-          1 => NULL,
-          2 =>
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      '/seller/create-schedule' =>
-      array (
-        0 =>
-        array (
-          0 =>
-          array (
-            '_route' => 'seller.createSchedule',
-          ),
-          1 => NULL,
-          2 =>
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      '/seller/service' =>
-      array (
-        0 =>
-        array (
-          0 =>
-          array (
-<<<<<<< Updated upstream
-            '_route' => 'seller.service',
-=======
-            '_route' => 'generated::BdLfzbITmC50flBy',
->>>>>>> Stashed changes
-          ),
-          1 => NULL,
-          2 =>
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      '/seller/create-service' =>
-      array (
-        0 =>
-        array (
-          0 =>
-          array (
-            '_route' => 'seller.createService',
-          ),
-          1 => NULL,
-          2 =>
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      '/seller/create-schedule' =>
-      array (
-        0 =>
-        array (
-          0 =>
-          array (
-            '_route' => 'seller.createSchedule',
-          ),
-          1 => NULL,
-          2 =>
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      '/seller/service' =>
-      array (
-        0 =>
-        array (
-          0 =>
-          array (
-            '_route' => 'seller.service',
-          ),
-          1 => NULL,
-          2 =>
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-<<<<<<< Updated upstream
-      '/seller/create-service' =>
-=======
-      '/seller/create-schedule' => 
       array (
         0 => 
         array (
           0 => 
-          array (
-            '_route' => 'seller.createSchedule',
-          ),
-          1 => NULL,
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      '/seller/service' => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-<<<<<<< Updated upstream
-            '_route' => 'seller.service',
-=======
-            '_route' => 'generated::sntIt0gtfAHOih1J',
->>>>>>> Stashed changes
-          ),
-          1 => NULL,
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      '/seller/create-service' => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'seller.createService',
-          ),
-          1 => NULL,
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      '/chat' => 
->>>>>>> Stashed changes
-      array (
-        0 =>
-        array (
-          0 =>
-          array (
-<<<<<<< Updated upstream
-            '_route' => 'seller.createService',
-=======
-            '_route' => 'generated::kHiC7AJLZd718QUb',
->>>>>>> Stashed changes
-          ),
-          1 => NULL,
-          2 =>
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      '/chat' =>
-      array (
-        0 =>
-        array (
-          0 =>
           array (
             '_route' => 'chat',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1794,16 +1521,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/buyer/dashboard' =>
+      '/buyer/dashboard' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'buyer.dashboard',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1814,16 +1541,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/buyer/job-post' =>
+      '/buyer/job-post' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::8Ey7CDlhblm4ImC4',
+            '_route' => 'generated::CPc9j3FPlKveKifg',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1834,16 +1561,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/buyer/job-post-save' =>
+      '/buyer/job-post-save' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'job.postSave',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -1853,16 +1580,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/buyer/messages' =>
+      '/buyer/messages' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::BdLfzbITmC50flBy',
+            '_route' => 'generated::KGU8lm6zxlmDZ8we',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1873,20 +1600,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/buyer/file-share' =>
+      '/buyer/file-share' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-<<<<<<< Updated upstream
             '_route' => 'file.share',
-=======
-            '_route' => 'generated::etPZtfyS4uVR6DPl',
->>>>>>> Stashed changes
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1897,16 +1620,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/buyer/file-share-store' =>
+      '/buyer/file-share-store' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'file.shareStore',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -1916,20 +1639,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/buyer/store-order-bidder' =>
+      '/buyer/store-order-bidder' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-<<<<<<< Updated upstream
             '_route' => 'order.acceptBider',
-=======
-            '_route' => 'generated::Q7HBphL87YDiVIUX',
->>>>>>> Stashed changes
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -1939,20 +1658,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/buyer/bidderSendMsg' =>
+      '/buyer/bidderSendMsg' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-<<<<<<< Updated upstream
             '_route' => 'bidderSendMsg',
-=======
-            '_route' => 'generated::4z9WfoK1FiBCX1fv',
->>>>>>> Stashed changes
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -1962,20 +1677,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/buyer/reviews' =>
+      '/buyer/reviews' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-<<<<<<< Updated upstream
-            '_route' => 'generated::sntIt0gtfAHOih1J',
-=======
-            '_route' => 'generated::pyg8S4HaxQrCqkS4',
->>>>>>> Stashed changes
+            '_route' => 'generated::goZe269SF7KnMnT3',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -1986,20 +1697,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/buyer/reviewsStore' =>
+      '/buyer/reviewsStore' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-<<<<<<< Updated upstream
             '_route' => 'buyer.review',
-=======
-            '_route' => 'generated::x6fPuaWyxtMvhz9m',
->>>>>>> Stashed changes
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -2009,20 +1716,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/buyer/order' =>
+      '/buyer/order' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-<<<<<<< Updated upstream
-            '_route' => 'generated::kHiC7AJLZd718QUb',
-=======
-            '_route' => 'generated::QicH66xtL6IOsRfy',
->>>>>>> Stashed changes
+            '_route' => 'generated::oi5tWwVJgFQYhCTL',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2032,14 +1735,14 @@ app('router')->setCompiledRoutes(
           5 => false,
           6 => NULL,
         ),
-        1 =>
+        1 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'order.acceptBuyer',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -2049,24 +1752,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/buyer/custom-offer-store' =>
+      '/buyer/custom-offer-store' => 
       array (
-        0 =>
+        0 => 
         array (
-<<<<<<< Updated upstream
-          0 =>
-=======
           0 => 
-          array (
-            '_route' => 'generated::dnkOYySO5Dg1TKzb',
-          ),
-          1 => 
->>>>>>> Stashed changes
           array (
             '_route' => 'customOrder.store',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -2076,16 +1771,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/buyer/custom-offer' =>
+      '/buyer/custom-offer' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'buyer.customOffer',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2096,16 +1791,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/buyer/payment' =>
+      '/buyer/payment' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'buyer.payment',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2116,16 +1811,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/buyer/setting' =>
+      '/buyer/setting' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::etPZtfyS4uVR6DPl',
+            '_route' => 'generated::tp0y2A94sgYryEko',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2136,24 +1831,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/buyer/setting-save' =>
+      '/buyer/setting-save' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-<<<<<<< Updated upstream
             '_route' => 'setting.save',
-=======
-            '_route' => 'generated::Vo4Wmi7FC4E2EFAG',
-          ),
-          1 => 
-          array (
-            0 => 'any',
->>>>>>> Stashed changes
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -2163,24 +1850,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/buyer/change-password' =>
+      '/buyer/change-password' => 
       array (
-        0 =>
+        0 => 
         array (
-<<<<<<< Updated upstream
-          0 =>
-=======
           0 => 
           array (
-            '_route' => 'generated::kWMNmsOxyfFGddH5',
-          ),
-          1 => 
->>>>>>> Stashed changes
-          array (
-            '_route' => 'generated::Q7HBphL87YDiVIUX',
+            '_route' => 'generated::h3by7mvp6ZpYfRd1',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -2190,24 +1869,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/admin/profile' =>
+      '/admin/profile' => 
       array (
-        0 =>
+        0 => 
         array (
-<<<<<<< Updated upstream
-          0 =>
-=======
           0 => 
           array (
-            '_route' => 'generated::6e5Cum2BprLNLVg8',
-          ),
-          1 => 
->>>>>>> Stashed changes
-          array (
-            '_route' => 'generated::4z9WfoK1FiBCX1fv',
+            '_route' => 'generated::uyurlYZTadoXUvZn',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2218,43 +1889,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/admin/change-password' =>
+      '/admin/change-password' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
-          array (
-            '_route' => 'generated::pyg8S4HaxQrCqkS4',
-          ),
-          1 => NULL,
-          2 =>
-          array (
-            'POST' => 0,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      '/admin/change-info' =>
-      array (
-        0 =>
-        array (
-<<<<<<< Updated upstream
-          0 =>
-=======
           0 => 
           array (
-            '_route' => 'generated::buzWKkXflqrRYRGT',
-          ),
-          1 => 
->>>>>>> Stashed changes
-          array (
-            '_route' => 'generated::x6fPuaWyxtMvhz9m',
+            '_route' => 'generated::s14IXWoaXPBJBcXR',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -2264,16 +1908,35 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/admin/general' =>
+      '/admin/change-info' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::QicH66xtL6IOsRfy',
+            '_route' => 'generated::5tliRTjn7TUFeOTb',
           ),
           1 => NULL,
-          2 =>
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/admin/general' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'generated::14uJ7Of9FosRcTtD',
+          ),
+          1 => NULL,
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2284,16 +1947,16 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/admin/generalSave' =>
+      '/admin/generalSave' => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'general.save',
           ),
           1 => NULL,
-          2 =>
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -2304,25 +1967,25 @@ app('router')->setCompiledRoutes(
         ),
       ),
     ),
-    2 =>
+    2 => 
     array (
       0 => '{^(?|/l(?|aravel\\-websockets/api/([^/]++)/statistics(*:54)|ivewire/(?|message/([^/]++)(*:88)|preview\\-file/([^/]++)(*:117)))|/password/reset/([^/]++)(*:151)|/zoom\\-call\\-user/(.*)(*:181)|/s(?|e(?|rvice\\-(?|show/([^/]++)(*:221)|details/([^/]++)(*:245))|ller/(?|fileShareUser/([^/]++)(*:284)|m(?|essages\\-details/([^/]++)(*:321)|arket/([^/]++)(*:343))|services(?|/([^/]++)(?|(*:375)|/edit(*:388)|(*:396))|\\-status/([^/]++)(*:422))))|tripe\\-payment/([^/]++)(?|(*:459)))|/download/([^/]++)(*:487)|/user/([^/]++)(*:509)|/admin/(?|category/([^/]++)(?|(*:547)|/edit(*:560)|(*:568))|statusChage/([^/]++)(*:597)|m(?|anage\\-seller\\-details/([^/]++)(*:640)|sg\\-details/([^/]++)(*:668))|payment\\-seller\\-paid/([^/]++)(*:707))|/buyer/(?|jobPostDelete/([^/]++)(*:748)|file\\-share\\-user/([^/]++)(*:782)|m(?|essages\\-details/([^/]++)(*:819)|anage\\-bidder/([^/]++)(*:849))))/?$}sDu',
     ),
-    3 =>
+    3 => 
     array (
-      54 =>
+      54 => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::dnkOYySO5Dg1TKzb',
+            '_route' => 'generated::rRGXd9av0u0qgQo6',
           ),
-          1 =>
+          1 => 
           array (
             0 => 'appId',
           ),
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2333,19 +1996,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      88 =>
+      88 => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'livewire.message',
           ),
-          1 =>
+          1 => 
           array (
             0 => 'name',
           ),
-          2 =>
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -2355,19 +2018,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      117 =>
+      117 => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'livewire.preview-file',
           ),
-          1 =>
+          1 => 
           array (
             0 => 'filename',
           ),
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2378,19 +2041,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      151 =>
+      151 => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'password.reset',
           ),
-          1 =>
+          1 => 
           array (
             0 => 'token',
           ),
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2401,19 +2064,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      181 =>
+      181 => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::Vo4Wmi7FC4E2EFAG',
+            '_route' => 'generated::f5uhbFpfzkysjNq3',
           ),
-          1 =>
+          1 => 
           array (
             0 => 'any',
           ),
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2424,19 +2087,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      221 =>
+      221 => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::kWMNmsOxyfFGddH5',
+            '_route' => 'generated::o5V5wHnBFljzNWaA',
           ),
-          1 =>
+          1 => 
           array (
             0 => 'slug',
           ),
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2447,19 +2110,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      245 =>
+      245 => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::6e5Cum2BprLNLVg8',
+            '_route' => 'generated::YsQv1eccsDrPuCdI',
           ),
-          1 =>
+          1 => 
           array (
             0 => 'slug',
           ),
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2470,19 +2133,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      284 =>
+      284 => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'file.shareUserSeller',
           ),
-          1 =>
+          1 => 
           array (
             0 => 'id',
           ),
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2493,19 +2156,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      321 =>
+      321 => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::buzWKkXflqrRYRGT',
+            '_route' => 'generated::De8V7J1pzijtSOZn',
           ),
-          1 =>
+          1 => 
           array (
             0 => 'id',
           ),
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2516,19 +2179,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      343 =>
+      343 => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'seller.market.detail',
           ),
-          1 =>
+          1 => 
           array (
             0 => 'slug',
           ),
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2539,19 +2202,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      375 =>
+      375 => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'services.show',
           ),
-          1 =>
+          1 => 
           array (
             0 => 'service',
           ),
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2562,19 +2225,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      388 =>
+      388 => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'services.edit',
           ),
-          1 =>
+          1 => 
           array (
             0 => 'service',
           ),
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2585,19 +2248,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      396 =>
+      396 => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'services.update',
           ),
-          1 =>
+          1 => 
           array (
             0 => 'service',
           ),
-          2 =>
+          2 => 
           array (
             'PUT' => 0,
             'PATCH' => 1,
@@ -2607,17 +2270,17 @@ app('router')->setCompiledRoutes(
           5 => true,
           6 => NULL,
         ),
-        1 =>
+        1 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'services.destroy',
           ),
-          1 =>
+          1 => 
           array (
             0 => 'service',
           ),
-          2 =>
+          2 => 
           array (
             'DELETE' => 0,
           ),
@@ -2627,19 +2290,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      422 =>
+      422 => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'services.status',
           ),
-          1 =>
+          1 => 
           array (
             0 => 'id',
           ),
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2650,19 +2313,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      459 =>
+      459 => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'payment.index.stripe',
           ),
-          1 =>
+          1 => 
           array (
             0 => 'order',
           ),
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2672,17 +2335,17 @@ app('router')->setCompiledRoutes(
           5 => true,
           6 => NULL,
         ),
-        1 =>
+        1 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'stripe.payment',
           ),
-          1 =>
+          1 => 
           array (
             0 => 'order',
           ),
-          2 =>
+          2 => 
           array (
             'POST' => 0,
           ),
@@ -2692,19 +2355,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      487 =>
+      487 => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'download.file',
           ),
-          1 =>
+          1 => 
           array (
             0 => 'id',
           ),
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2715,19 +2378,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      509 =>
+      509 => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'user.info',
           ),
-          1 =>
+          1 => 
           array (
             0 => 'userName',
           ),
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2738,19 +2401,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      547 =>
+      547 => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'category.show',
           ),
-          1 =>
+          1 => 
           array (
             0 => 'category',
           ),
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2761,19 +2424,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      560 =>
+      560 => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'category.edit',
           ),
-          1 =>
+          1 => 
           array (
             0 => 'category',
           ),
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2784,19 +2447,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      568 =>
+      568 => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'category.update',
           ),
-          1 =>
+          1 => 
           array (
             0 => 'category',
           ),
-          2 =>
+          2 => 
           array (
             'PUT' => 0,
             'PATCH' => 1,
@@ -2806,17 +2469,17 @@ app('router')->setCompiledRoutes(
           5 => true,
           6 => NULL,
         ),
-        1 =>
+        1 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'category.destroy',
           ),
-          1 =>
+          1 => 
           array (
             0 => 'category',
           ),
-          2 =>
+          2 => 
           array (
             'DELETE' => 0,
           ),
@@ -2826,19 +2489,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      597 =>
+      597 => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'category.statusChage',
           ),
-          1 =>
+          1 => 
           array (
             0 => 'id',
           ),
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2849,19 +2512,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      640 =>
+      640 => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'seller.view',
           ),
-          1 =>
+          1 => 
           array (
             0 => 'id',
           ),
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2872,19 +2535,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      668 =>
+      668 => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::z1jX6VsDEuERxsPD',
+            '_route' => 'generated::oK97IveL0FLryHGb',
           ),
-          1 =>
+          1 => 
           array (
             0 => 'id',
           ),
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2895,19 +2558,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      707 =>
+      707 => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'seller.paymentGive',
           ),
-          1 =>
+          1 => 
           array (
             0 => 'id',
           ),
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2918,19 +2581,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      748 =>
+      748 => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'job.jobPostDelete',
           ),
-          1 =>
+          1 => 
           array (
             0 => 'id',
           ),
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2941,19 +2604,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      782 =>
+      782 => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
             '_route' => 'file.shareUser',
           ),
-          1 =>
+          1 => 
           array (
             0 => 'id',
           ),
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2964,19 +2627,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      819 =>
+      819 => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::Mjhl0xDCemT5SfCV',
+            '_route' => 'generated::bjLULDnO7aXmHLn4',
           ),
-          1 =>
+          1 => 
           array (
             0 => 'id',
           ),
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -2987,19 +2650,19 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      849 =>
+      849 => 
       array (
-        0 =>
+        0 => 
         array (
-          0 =>
+          0 => 
           array (
-            '_route' => 'generated::vJtbHJELefGnTAHo',
+            '_route' => 'generated::ZLRQ1LBZ2XsDPfYu',
           ),
-          1 =>
+          1 => 
           array (
             0 => 'id',
           ),
-          2 =>
+          2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
@@ -3009,7 +2672,7 @@ app('router')->setCompiledRoutes(
           5 => true,
           6 => NULL,
         ),
-        1 =>
+        1 => 
         array (
           0 => NULL,
           1 => NULL,
@@ -3023,27 +2686,19 @@ app('router')->setCompiledRoutes(
     ),
     4 => NULL,
   ),
-  'attributes' =>
+  'attributes' => 
   array (
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::xynJaFHA3F01ZDxr' =>
-=======
-    'generated::xynJaFHA3F01ZDxr' => 
->>>>>>> Stashed changes
-=======
-    'generated::xynJaFHA3F01ZDxr' => 
->>>>>>> Stashed changes
+    'generated::G1KDtHdHo6LfhhbX' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'laravel-websockets',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
           1 => 'BeyondCode\\LaravelWebSockets\\Dashboard\\Http\\Middleware\\Authorize',
@@ -3052,44 +2707,36 @@ app('router')->setCompiledRoutes(
         'controller' => 'BeyondCode\\LaravelWebSockets\\Dashboard\\Http\\Controllers\\ShowDashboard',
         'namespace' => NULL,
         'prefix' => 'laravel-websockets',
-        'where' =>
+        'where' => 
         array (
         ),
-        'as' => 'generated::xynJaFHA3F01ZDxr',
+        'as' => 'generated::G1KDtHdHo6LfhhbX',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::dnkOYySO5Dg1TKzb' =>
-=======
-    'generated::dnkOYySO5Dg1TKzb' => 
->>>>>>> Stashed changes
-=======
-    'generated::dnkOYySO5Dg1TKzb' => 
->>>>>>> Stashed changes
+    'generated::rRGXd9av0u0qgQo6' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'laravel-websockets/api/{appId}/statistics',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
           1 => 'BeyondCode\\LaravelWebSockets\\Dashboard\\Http\\Middleware\\Authorize',
@@ -3098,43 +2745,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'BeyondCode\\LaravelWebSockets\\Dashboard\\Http\\Controllers\\DashboardApiController@getStatistics',
         'namespace' => NULL,
         'prefix' => 'laravel-websockets',
-        'where' =>
+        'where' => 
         array (
         ),
-        'as' => 'generated::dnkOYySO5Dg1TKzb',
+        'as' => 'generated::rRGXd9av0u0qgQo6',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::OIovBoy74jMoP4IS' =>
-=======
-    'generated::OIovBoy74jMoP4IS' => 
->>>>>>> Stashed changes
-=======
-    'generated::OIovBoy74jMoP4IS' => 
->>>>>>> Stashed changes
+    'generated::0bZEuU1iwwbYIWgN' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'laravel-websockets/auth',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
           1 => 'BeyondCode\\LaravelWebSockets\\Dashboard\\Http\\Middleware\\Authorize',
@@ -3143,43 +2782,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'BeyondCode\\LaravelWebSockets\\Dashboard\\Http\\Controllers\\AuthenticateDashboard',
         'namespace' => NULL,
         'prefix' => 'laravel-websockets',
-        'where' =>
+        'where' => 
         array (
         ),
-        'as' => 'generated::OIovBoy74jMoP4IS',
+        'as' => 'generated::0bZEuU1iwwbYIWgN',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::Tr9Liu1NwXE4FqKi' =>
-=======
-    'generated::Tr9Liu1NwXE4FqKi' => 
->>>>>>> Stashed changes
-=======
-    'generated::Tr9Liu1NwXE4FqKi' => 
->>>>>>> Stashed changes
+    'generated::26UhILhVLY7tf4ni' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'laravel-websockets/event',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
           1 => 'BeyondCode\\LaravelWebSockets\\Dashboard\\Http\\Middleware\\Authorize',
@@ -3188,43 +2819,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'BeyondCode\\LaravelWebSockets\\Dashboard\\Http\\Controllers\\SendMessage',
         'namespace' => NULL,
         'prefix' => 'laravel-websockets',
-        'where' =>
+        'where' => 
         array (
         ),
-        'as' => 'generated::Tr9Liu1NwXE4FqKi',
+        'as' => 'generated::26UhILhVLY7tf4ni',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::NhHsz4v8jewBf3F2' =>
-=======
-    'generated::NhHsz4v8jewBf3F2' => 
->>>>>>> Stashed changes
-=======
-    'generated::NhHsz4v8jewBf3F2' => 
->>>>>>> Stashed changes
+    'generated::GFlvS2Cn6CPcDRuL' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'laravel-websockets/statistics',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'BeyondCode\\LaravelWebSockets\\Statistics\\Http\\Middleware\\Authorize',
         ),
@@ -3232,1387 +2855,1291 @@ app('router')->setCompiledRoutes(
         'controller' => 'BeyondCode\\LaravelWebSockets\\Statistics\\Http\\Controllers\\WebSocketStatisticsEntriesController@store',
         'namespace' => NULL,
         'prefix' => 'laravel-websockets',
-        'where' =>
+        'where' => 
         array (
         ),
-        'as' => 'generated::NhHsz4v8jewBf3F2',
+        'as' => 'generated::GFlvS2Cn6CPcDRuL',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'livewire.message' =>
+    'livewire.message' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'livewire/message/{name}',
-      'action' =>
+      'action' => 
       array (
         'uses' => 'Livewire\\Controllers\\HttpConnectionHandler@__invoke',
         'controller' => 'Livewire\\Controllers\\HttpConnectionHandler',
         'as' => 'livewire.message',
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'livewire.upload-file' =>
+    'livewire.upload-file' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'livewire/upload-file',
-      'action' =>
+      'action' => 
       array (
         'uses' => 'Livewire\\Controllers\\FileUploadHandler@handle',
         'controller' => 'Livewire\\Controllers\\FileUploadHandler@handle',
         'as' => 'livewire.upload-file',
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'livewire.preview-file' =>
+    'livewire.preview-file' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'livewire/preview-file/{filename}',
-      'action' =>
+      'action' => 
       array (
         'uses' => 'Livewire\\Controllers\\FilePreviewHandler@handle',
         'controller' => 'Livewire\\Controllers\\FilePreviewHandler@handle',
         'as' => 'livewire.preview-file',
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::FCxEFxFho8gaB4O4' =>
-=======
-    'generated::FCxEFxFho8gaB4O4' => 
->>>>>>> Stashed changes
-=======
-    'generated::FCxEFxFho8gaB4O4' => 
->>>>>>> Stashed changes
+    'generated::9AFeKlmQ4EoiCEJI' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'livewire/livewire.js',
-      'action' =>
+      'action' => 
       array (
         'uses' => 'Livewire\\Controllers\\LivewireJavaScriptAssets@source',
         'controller' => 'Livewire\\Controllers\\LivewireJavaScriptAssets@source',
-        'as' => 'generated::FCxEFxFho8gaB4O4',
+        'as' => 'generated::9AFeKlmQ4EoiCEJI',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::4RcHR9qN5sE8uk6V' =>
-=======
-    'generated::4RcHR9qN5sE8uk6V' => 
->>>>>>> Stashed changes
-=======
-    'generated::4RcHR9qN5sE8uk6V' => 
->>>>>>> Stashed changes
+    'generated::BZCo2ULEa1ZINxoP' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'livewire/livewire.js.map',
-      'action' =>
+      'action' => 
       array (
         'uses' => 'Livewire\\Controllers\\LivewireJavaScriptAssets@maps',
         'controller' => 'Livewire\\Controllers\\LivewireJavaScriptAssets@maps',
-        'as' => 'generated::4RcHR9qN5sE8uk6V',
+        'as' => 'generated::BZCo2ULEa1ZINxoP',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::Nq0BGULeKJ3hRBnm' =>
-=======
-    'generated::Nq0BGULeKJ3hRBnm' => 
->>>>>>> Stashed changes
-=======
-    'generated::Nq0BGULeKJ3hRBnm' => 
->>>>>>> Stashed changes
+    'generated::eDiPVVl7IlFc4AQ3' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'api/user',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'api',
           1 => 'auth:api',
         ),
-        'uses' => 'C:32:"Opis\\Closure\\SerializableClosure":291:{@3ZMhKsClX9iaNR+Bgtp7cGARLf5I1caF2wUzGjYM41A=.a:5:{s:3:"use";a:0:{}s:8:"function";s:79:"function (\\Illuminate\\Http\\Request $request) {
+        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:295:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:77:"function (\\Illuminate\\Http\\Request $request) {
     return $request->user();
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000248e1f3b0000000071bf6e66";}";s:4:"hash";s:44:"U28FTYjtzz9INJKs78umbLm/P9IMpjDuBTuCDtYgkVQ=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"0000000030bbb3ef0000000073feef69";}";s:4:"hash";s:44:"UpivIzMgp8RSx4dJ5miDCKo54C96vW1zRuIi2JoAHT0=";}}',
         'namespace' => NULL,
         'prefix' => 'api',
-        'where' =>
+        'where' => 
         array (
         ),
-        'as' => 'generated::Nq0BGULeKJ3hRBnm',
+        'as' => 'generated::eDiPVVl7IlFc4AQ3',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'login' =>
+    'login' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'login',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
-        'uses' => 'C:32:"Opis\\Closure\\SerializableClosure":252:{@ZYrutYpj+87oWYbzJj3mTr/+pJa1qwVHuQk9JxB1k5o=.a:5:{s:3:"use";a:0:{}s:8:"function";s:40:"function(){
+        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:258:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:40:"function(){
     return \\redirect(\'/\');
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000248e1f390000000071bf6e66";}";s:4:"hash";s:44:"LEi6ltKBhH+93B7SA8Fua7wb4068rkFV/U5My2BkRXA=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"0000000030bbb3ed0000000073feef69";}";s:4:"hash";s:44:"nBJryDtd3fR4ZvuthOI0F+q1YteknkAwRxXCQw+LP2M=";}}',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'login',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::YIOAmfMP417cK8yN' =>
-=======
-    'generated::YIOAmfMP417cK8yN' => 
->>>>>>> Stashed changes
-=======
-    'generated::YIOAmfMP417cK8yN' => 
->>>>>>> Stashed changes
+    'generated::mjJyGQhEDoYykwzl' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'login',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Auth\\LoginController@login',
         'controller' => 'App\\Http\\Controllers\\Auth\\LoginController@login',
         'namespace' => 'App\\Http\\Controllers',
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::YIOAmfMP417cK8yN',
+        'as' => 'generated::mjJyGQhEDoYykwzl',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'logout' =>
+    'logout' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'logout',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Auth\\LoginController@logout',
         'controller' => 'App\\Http\\Controllers\\Auth\\LoginController@logout',
         'namespace' => 'App\\Http\\Controllers',
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'logout',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'register' =>
+    'register' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'register',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Auth\\RegisterController@showRegistrationForm',
         'controller' => 'App\\Http\\Controllers\\Auth\\RegisterController@showRegistrationForm',
         'namespace' => 'App\\Http\\Controllers',
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'register',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::Vfk5z4ozOGT1wdVv' =>
-=======
-    'generated::Vfk5z4ozOGT1wdVv' => 
->>>>>>> Stashed changes
-=======
-    'generated::Vfk5z4ozOGT1wdVv' => 
->>>>>>> Stashed changes
+    'generated::T4UpxtkkC6Z5lFWA' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'register',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Auth\\RegisterController@register',
         'controller' => 'App\\Http\\Controllers\\Auth\\RegisterController@register',
         'namespace' => 'App\\Http\\Controllers',
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::Vfk5z4ozOGT1wdVv',
+        'as' => 'generated::T4UpxtkkC6Z5lFWA',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'password.request' =>
+    'password.request' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'password/reset',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Auth\\ForgotPasswordController@showLinkRequestForm',
         'controller' => 'App\\Http\\Controllers\\Auth\\ForgotPasswordController@showLinkRequestForm',
         'namespace' => 'App\\Http\\Controllers',
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'password.request',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'password.email' =>
+    'password.email' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'password/email',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Auth\\ForgotPasswordController@sendResetLinkEmail',
         'controller' => 'App\\Http\\Controllers\\Auth\\ForgotPasswordController@sendResetLinkEmail',
         'namespace' => 'App\\Http\\Controllers',
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'password.email',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'password.reset' =>
+    'password.reset' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'password/reset/{token}',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Auth\\ResetPasswordController@showResetForm',
         'controller' => 'App\\Http\\Controllers\\Auth\\ResetPasswordController@showResetForm',
         'namespace' => 'App\\Http\\Controllers',
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'password.reset',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'password.update' =>
+    'password.update' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'password/reset',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Auth\\ResetPasswordController@reset',
         'controller' => 'App\\Http\\Controllers\\Auth\\ResetPasswordController@reset',
         'namespace' => 'App\\Http\\Controllers',
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'password.update',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'password.confirm' =>
+    'password.confirm' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'password/confirm',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Auth\\ConfirmPasswordController@showConfirmForm',
         'controller' => 'App\\Http\\Controllers\\Auth\\ConfirmPasswordController@showConfirmForm',
         'namespace' => 'App\\Http\\Controllers',
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'password.confirm',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::veM35yHvWDeXogRp' =>
-=======
-    'generated::veM35yHvWDeXogRp' => 
->>>>>>> Stashed changes
-=======
-    'generated::veM35yHvWDeXogRp' => 
->>>>>>> Stashed changes
+    'generated::YADsyQ1dnrtHOAQh' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'password/confirm',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Auth\\ConfirmPasswordController@confirm',
         'controller' => 'App\\Http\\Controllers\\Auth\\ConfirmPasswordController@confirm',
         'namespace' => 'App\\Http\\Controllers',
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::veM35yHvWDeXogRp',
+        'as' => 'generated::YADsyQ1dnrtHOAQh',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'zoom.callJoin' =>
+    'zoom.callJoin' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'zoom-call-user',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
-        'uses' => 'C:32:"Opis\\Closure\\SerializableClosure":247:{@Bce+6l5nRfrPed5Pug8i00PdTJa+HgnmGU/QUI7Z+3M=.a:5:{s:3:"use";a:0:{}s:8:"function";s:35:"function(){
+        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:253:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:35:"function(){
 	return \\view(\'app\');
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000248e1f200000000071bf6e66";}";s:4:"hash";s:44:"cWbhknB/TF6+b4HhNxa8Y0x1w93mOX0YfPMpx3XIdhU=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"0000000030bbb3f40000000073feef69";}";s:4:"hash";s:44:"dSRJzodBjcXOhG5E+Ye+D6TsG0XkJbbs9yPdgUV4ZUM=";}}',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'zoom.callJoin',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::Vo4Wmi7FC4E2EFAG' =>
-=======
-    'generated::Vo4Wmi7FC4E2EFAG' => 
->>>>>>> Stashed changes
-=======
-    'generated::Vo4Wmi7FC4E2EFAG' => 
->>>>>>> Stashed changes
+    'generated::f5uhbFpfzkysjNq3' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'zoom-call-user/{any}',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
-        'uses' => 'C:32:"Opis\\Closure\\SerializableClosure":252:{@G6FvF5ccESXB1C05QsDyZkRrw8h77kE+uyWATrIjKN8=.a:5:{s:3:"use";a:0:{}s:8:"function";s:40:"function () {
+        'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:258:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:40:"function () {
     return \\view(\'app\');
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000248e1f280000000071bf6e66";}";s:4:"hash";s:44:"s0VTM4pXzz/gUtZF/d/SpTbYMjfqMcgti4rNqghVF78=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"0000000030bbb3fc0000000073feef69";}";s:4:"hash";s:44:"CaVByiy4EORrud149myN8bRlzeVAFh1Q3XzL24NOoWE=";}}',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::Vo4Wmi7FC4E2EFAG',
+        'as' => 'generated::f5uhbFpfzkysjNq3',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
         'any' => '.*',
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'main' =>
+    'main' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => '/',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Front\\MainController@index',
         'controller' => 'App\\Http\\Controllers\\Front\\MainController@index',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'main',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::kWMNmsOxyfFGddH5' =>
-=======
-    'generated::kWMNmsOxyfFGddH5' => 
->>>>>>> Stashed changes
-=======
-    'generated::kWMNmsOxyfFGddH5' => 
->>>>>>> Stashed changes
+    'generated::o5V5wHnBFljzNWaA' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'service-show/{slug}',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Front\\MainController@serviceShow',
         'controller' => 'App\\Http\\Controllers\\Front\\MainController@serviceShow',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::kWMNmsOxyfFGddH5',
+        'as' => 'generated::o5V5wHnBFljzNWaA',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::6e5Cum2BprLNLVg8' =>
-=======
-    'generated::6e5Cum2BprLNLVg8' => 
->>>>>>> Stashed changes
-=======
-    'generated::6e5Cum2BprLNLVg8' => 
->>>>>>> Stashed changes
+    'generated::YsQv1eccsDrPuCdI' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'service-details/{slug}',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Front\\MainController@serviceDetails',
         'controller' => 'App\\Http\\Controllers\\Front\\MainController@serviceDetails',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::6e5Cum2BprLNLVg8',
+        'as' => 'generated::YsQv1eccsDrPuCdI',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'user.register' =>
+    'user.register' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'user-register',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\RegisterController@storeData',
         'controller' => 'App\\Http\\Controllers\\RegisterController@storeData',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'user.register',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::scwp6287wLqlRy0N' =>
-=======
-    'generated::scwp6287wLqlRy0N' => 
->>>>>>> Stashed changes
-=======
-    'generated::scwp6287wLqlRy0N' => 
->>>>>>> Stashed changes
+    'generated::9JkqJSqsw1QppAxG' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'payment-page',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Front\\PaymentController@paymnetIndex',
         'controller' => 'App\\Http\\Controllers\\Front\\PaymentController@paymnetIndex',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::scwp6287wLqlRy0N',
+        'as' => 'generated::9JkqJSqsw1QppAxG',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'payment.conform' =>
+    'payment.conform' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'payment-conform',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Front\\PaymentController@paymentConform',
         'controller' => 'App\\Http\\Controllers\\Front\\PaymentController@paymentConform',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'payment.conform',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::VsvWTrv8evmOLBGG' =>
-=======
-    'generated::VsvWTrv8evmOLBGG' => 
->>>>>>> Stashed changes
-=======
-    'generated::VsvWTrv8evmOLBGG' => 
->>>>>>> Stashed changes
+    'generated::C8nCUGjVZ80aCEeD' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'payment-invoice',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Front\\PaymentController@paymentInvoice',
         'controller' => 'App\\Http\\Controllers\\Front\\PaymentController@paymentInvoice',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::VsvWTrv8evmOLBGG',
+        'as' => 'generated::C8nCUGjVZ80aCEeD',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'search.store' =>
+    'search.store' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'search-store',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Front\\MainController@searchStore',
         'controller' => 'App\\Http\\Controllers\\Front\\MainController@searchStore',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'search.store',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'contact.us' =>
+    'contact.us' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'contact-us',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Front\\MainController@contactUs',
         'controller' => 'App\\Http\\Controllers\\Front\\MainController@contactUs',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'contact.us',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'contactSave' =>
+    'contactSave' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'contactSave',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Front\\MainController@contactSave',
         'controller' => 'App\\Http\\Controllers\\Front\\MainController@contactSave',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'contactSave',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'termCondition' =>
+    'termCondition' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'term-and-condition',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Front\\MainController@termCondition',
         'controller' => 'App\\Http\\Controllers\\Front\\MainController@termCondition',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'termCondition',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'download.file' =>
+    'download.file' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'download/{id}',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Front\\MainController@downloadFile',
         'controller' => 'App\\Http\\Controllers\\Front\\MainController@downloadFile',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'download.file',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'payment.index.stripe' =>
+    'payment.index.stripe' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'stripe-payment/{order}',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\StripeController@handleGet',
         'controller' => 'App\\Http\\Controllers\\StripeController@handleGet',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'payment.index.stripe',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'stripe.payment' =>
+    'stripe.payment' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'stripe-payment/{order}',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\StripeController@handlePost',
         'controller' => 'App\\Http\\Controllers\\StripeController@handlePost',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'stripe.payment',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::WIx7JoC4LqD8KqLs' =>
-=======
-    'generated::WIx7JoC4LqD8KqLs' => 
->>>>>>> Stashed changes
-=======
-    'generated::WIx7JoC4LqD8KqLs' => 
->>>>>>> Stashed changes
+    'generated::TYpS6q4X3eAHd4uB' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'buyer-job-post',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Seller\\MainController@buyerJobPost',
         'controller' => 'App\\Http\\Controllers\\Seller\\MainController@buyerJobPost',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::WIx7JoC4LqD8KqLs',
+        'as' => 'generated::TYpS6q4X3eAHd4uB',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'bid.request' =>
+    'bid.request' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'bid-request',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Seller\\MainController@bidRequest',
         'controller' => 'App\\Http\\Controllers\\Seller\\MainController@bidRequest',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'bid.request',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'user.info' =>
+    'user.info' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'user/{userName}',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
           1 => 'auth:seller,customer',
@@ -4620,244 +4147,220 @@ app('router')->setCompiledRoutes(
         'uses' => 'App\\Http\\Controllers\\Front\\MainController@userInfo',
         'controller' => 'App\\Http\\Controllers\\Front\\MainController@userInfo',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'user.info',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::Y5XgLGPtMARNb3uy' =>
-=======
-    'generated::Y5XgLGPtMARNb3uy' => 
->>>>>>> Stashed changes
-=======
-    'generated::Y5XgLGPtMARNb3uy' => 
->>>>>>> Stashed changes
+    'generated::QVROsoW5eWWm22v5' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'sendMsg',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Front\\MainController@sendMsg',
         'controller' => 'App\\Http\\Controllers\\Front\\MainController@sendMsg',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::Y5XgLGPtMARNb3uy',
+        'as' => 'generated::QVROsoW5eWWm22v5',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'home' =>
+    'home' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'home',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\HomeController@index',
         'controller' => 'App\\Http\\Controllers\\HomeController@index',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'home',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'login.admin' =>
+    'login.admin' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'admin',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Admin\\LoginController@showLoginForm',
         'controller' => 'App\\Http\\Controllers\\Admin\\LoginController@showLoginForm',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'login.admin',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::B3fY2nxS4yjtx6Iq' =>
-=======
-    'generated::B3fY2nxS4yjtx6Iq' => 
->>>>>>> Stashed changes
-=======
-    'generated::B3fY2nxS4yjtx6Iq' => 
->>>>>>> Stashed changes
+    'generated::JDbgXmqoq9j9LXdB' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'admin',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Admin\\LoginController@login',
         'controller' => 'App\\Http\\Controllers\\Admin\\LoginController@login',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::B3fY2nxS4yjtx6Iq',
+        'as' => 'generated::JDbgXmqoq9j9LXdB',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::omhkKZ87qH6pHn5O' =>
-=======
-    'generated::omhkKZ87qH6pHn5O' => 
->>>>>>> Stashed changes
-=======
-    'generated::omhkKZ87qH6pHn5O' => 
->>>>>>> Stashed changes
+    'generated::3tPHXSBVFvzeR3kC' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'admin/dashboard',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Admin\\MainController@index',
         'controller' => 'App\\Http\\Controllers\\Admin\\MainController@index',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::omhkKZ87qH6pHn5O',
+        'as' => 'generated::3tPHXSBVFvzeR3kC',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'category.index' =>
+    'category.index' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'admin/category',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
@@ -4866,35 +4369,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\Admin\\CategoryController@index',
         'namespace' => NULL,
         'prefix' => '/admin',
-        'where' =>
+        'where' => 
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'category.create' =>
+    'category.create' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'admin/category/create',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
@@ -4903,34 +4406,34 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\Admin\\CategoryController@create',
         'namespace' => NULL,
         'prefix' => '/admin',
-        'where' =>
+        'where' => 
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'category.store' =>
+    'category.store' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'admin/category',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
@@ -4939,35 +4442,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\Admin\\CategoryController@store',
         'namespace' => NULL,
         'prefix' => '/admin',
-        'where' =>
+        'where' => 
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'category.show' =>
+    'category.show' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'admin/category/{category}',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
@@ -4976,35 +4479,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\Admin\\CategoryController@show',
         'namespace' => NULL,
         'prefix' => '/admin',
-        'where' =>
+        'where' => 
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'category.edit' =>
+    'category.edit' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'admin/category/{category}/edit',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
@@ -5013,35 +4516,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\Admin\\CategoryController@edit',
         'namespace' => NULL,
         'prefix' => '/admin',
-        'where' =>
+        'where' => 
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'category.update' =>
+    'category.update' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'PUT',
         1 => 'PATCH',
       ),
       'uri' => 'admin/category/{category}',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
@@ -5050,34 +4553,34 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\Admin\\CategoryController@update',
         'namespace' => NULL,
         'prefix' => '/admin',
-        'where' =>
+        'where' => 
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'category.destroy' =>
+    'category.destroy' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'DELETE',
       ),
       'uri' => 'admin/category/{category}',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
@@ -5086,1369 +4589,1249 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\Admin\\CategoryController@destroy',
         'namespace' => NULL,
         'prefix' => '/admin',
-        'where' =>
+        'where' => 
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::k16mwyp5NGFgkYZi' =>
-=======
-    'generated::k16mwyp5NGFgkYZi' => 
->>>>>>> Stashed changes
-=======
-    'generated::k16mwyp5NGFgkYZi' => 
->>>>>>> Stashed changes
+    'generated::WS4vAQgy3IstJKUh' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'admin/categorySave',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Admin\\CategoryController@categorySave',
         'controller' => 'App\\Http\\Controllers\\Admin\\CategoryController@categorySave',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::k16mwyp5NGFgkYZi',
+        'as' => 'generated::WS4vAQgy3IstJKUh',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'category.statusChage' =>
+    'category.statusChage' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'admin/statusChage/{id}',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Admin\\CategoryController@statusChage',
         'controller' => 'App\\Http\\Controllers\\Admin\\CategoryController@statusChage',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'category.statusChage',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::9wKkFH2kCGzmcrzY' =>
-=======
-    'generated::9wKkFH2kCGzmcrzY' => 
->>>>>>> Stashed changes
-=======
-    'generated::9wKkFH2kCGzmcrzY' => 
->>>>>>> Stashed changes
+    'generated::Mff9EqrwyL7cSU87' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'admin/manage-seller',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Admin\\MainController@manageSeller',
         'controller' => 'App\\Http\\Controllers\\Admin\\MainController@manageSeller',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::9wKkFH2kCGzmcrzY',
+        'as' => 'generated::Mff9EqrwyL7cSU87',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'seller.view' =>
+    'seller.view' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'admin/manage-seller-details/{id}',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Admin\\MainController@manageDetails',
         'controller' => 'App\\Http\\Controllers\\Admin\\MainController@manageDetails',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'seller.view',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::pb7c0OI8fLGIXc5X' =>
-=======
-    'generated::pb7c0OI8fLGIXc5X' => 
->>>>>>> Stashed changes
-=======
-    'generated::pb7c0OI8fLGIXc5X' => 
->>>>>>> Stashed changes
+    'generated::VJBkkDzYMrCQXLZF' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'admin/manage-buyer',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Admin\\MainController@manageBuyer',
         'controller' => 'App\\Http\\Controllers\\Admin\\MainController@manageBuyer',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::pb7c0OI8fLGIXc5X',
+        'as' => 'generated::VJBkkDzYMrCQXLZF',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'customer.view' =>
+    'customer.view' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'admin/manage-buyer-details',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Admin\\MainController@manageBuyer',
         'controller' => 'App\\Http\\Controllers\\Admin\\MainController@manageBuyer',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'customer.view',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::SOjNauDQXXZf3s8c' =>
-=======
-    'generated::SOjNauDQXXZf3s8c' => 
->>>>>>> Stashed changes
-=======
-    'generated::SOjNauDQXXZf3s8c' => 
->>>>>>> Stashed changes
+    'generated::3fnkSSWRNRhLN9Lv' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'admin/order',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Admin\\MainController@adminOrder',
         'controller' => 'App\\Http\\Controllers\\Admin\\MainController@adminOrder',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::SOjNauDQXXZf3s8c',
+        'as' => 'generated::3fnkSSWRNRhLN9Lv',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::lhPJZzzAsLMJp90M' =>
-=======
-    'generated::lhPJZzzAsLMJp90M' => 
->>>>>>> Stashed changes
-=======
-    'generated::lhPJZzzAsLMJp90M' => 
->>>>>>> Stashed changes
+    'generated::QULKFmDKgB9vXxtf' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'admin/msg-list',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Admin\\MainController@msgList',
         'controller' => 'App\\Http\\Controllers\\Admin\\MainController@msgList',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::lhPJZzzAsLMJp90M',
+        'as' => 'generated::QULKFmDKgB9vXxtf',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::z1jX6VsDEuERxsPD' =>
-=======
-    'generated::z1jX6VsDEuERxsPD' => 
->>>>>>> Stashed changes
-=======
-    'generated::z1jX6VsDEuERxsPD' => 
->>>>>>> Stashed changes
+    'generated::oK97IveL0FLryHGb' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'admin/msg-details/{id}',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Admin\\MainController@msgDetails',
         'controller' => 'App\\Http\\Controllers\\Admin\\MainController@msgDetails',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::z1jX6VsDEuERxsPD',
+        'as' => 'generated::oK97IveL0FLryHGb',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::JF9JhtHUyyASlz5a' =>
-=======
-    'generated::JF9JhtHUyyASlz5a' => 
->>>>>>> Stashed changes
-=======
-    'generated::JF9JhtHUyyASlz5a' => 
->>>>>>> Stashed changes
+    'generated::klNfhj64bFLP4GBd' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'admin/terms',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Admin\\MainController@termsConstion',
         'controller' => 'App\\Http\\Controllers\\Admin\\MainController@termsConstion',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::JF9JhtHUyyASlz5a',
+        'as' => 'generated::klNfhj64bFLP4GBd',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'terms.save' =>
+    'terms.save' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'admin/termsSave',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Admin\\MainController@termsSave',
         'controller' => 'App\\Http\\Controllers\\Admin\\MainController@termsSave',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'terms.save',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'payment.buyer' =>
+    'payment.buyer' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'admin/payment-buyer',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Admin\\PaymentController@paymentBuyer',
         'controller' => 'App\\Http\\Controllers\\Admin\\PaymentController@paymentBuyer',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'payment.buyer',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'payment.seller' =>
+    'payment.seller' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'admin/payment-seller',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Admin\\PaymentController@paymentSeller',
         'controller' => 'App\\Http\\Controllers\\Admin\\PaymentController@paymentSeller',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'payment.seller',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'seller.paymentGive' =>
+    'seller.paymentGive' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'admin/payment-seller-paid/{id}',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Admin\\PaymentController@SellerpaymentGive',
         'controller' => 'App\\Http\\Controllers\\Admin\\PaymentController@SellerpaymentGive',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'seller.paymentGive',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'login.rider' =>
+    'login.rider' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'rider',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Rider\\LoginController@showLoginForm',
         'controller' => 'App\\Http\\Controllers\\Rider\\LoginController@showLoginForm',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'login.rider',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::Rx9oXTEVrEJyyQ55' =>
-=======
-    'generated::Rx9oXTEVrEJyyQ55' => 
->>>>>>> Stashed changes
-=======
-    'generated::Rx9oXTEVrEJyyQ55' => 
->>>>>>> Stashed changes
+    'generated::wp2Elu81Nrizqvzh' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'rider',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Rider\\LoginController@login',
         'controller' => 'App\\Http\\Controllers\\Rider\\LoginController@login',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::Rx9oXTEVrEJyyQ55',
+        'as' => 'generated::wp2Elu81Nrizqvzh',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::pEL1gkqjshcfSKYm' =>
-=======
-    'generated::pEL1gkqjshcfSKYm' => 
->>>>>>> Stashed changes
-=======
-    'generated::pEL1gkqjshcfSKYm' => 
->>>>>>> Stashed changes
+    'generated::GMpb7wPWml6ntceV' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'rider/dashboard',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Rider\\MainController@index',
         'controller' => 'App\\Http\\Controllers\\Rider\\MainController@index',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::pEL1gkqjshcfSKYm',
+        'as' => 'generated::GMpb7wPWml6ntceV',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'login.customer' =>
+    'login.customer' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'buyer',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Customer\\LoginController@showLoginFormCustomer',
         'controller' => 'App\\Http\\Controllers\\Customer\\LoginController@showLoginFormCustomer',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'login.customer',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::rA4W3zQlNtZMjM6V' =>
-=======
-    'generated::rA4W3zQlNtZMjM6V' => 
->>>>>>> Stashed changes
-=======
-    'generated::rA4W3zQlNtZMjM6V' => 
->>>>>>> Stashed changes
+    'generated::Z3kUmxJn82pry5Ba' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'buyer',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Customer\\LoginController@login',
         'controller' => 'App\\Http\\Controllers\\Customer\\LoginController@login',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::rA4W3zQlNtZMjM6V',
+        'as' => 'generated::Z3kUmxJn82pry5Ba',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::gt1BtEjvUu4TvyAo' =>
-=======
-    'generated::gt1BtEjvUu4TvyAo' => 
->>>>>>> Stashed changes
-=======
-    'generated::gt1BtEjvUu4TvyAo' => 
->>>>>>> Stashed changes
+    'generated::bn8yeXriVOJ643sg' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'customer/dashboard',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Customer\\MainController@BuyerIndex',
         'controller' => 'App\\Http\\Controllers\\Customer\\MainController@BuyerIndex',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::gt1BtEjvUu4TvyAo',
+        'as' => 'generated::bn8yeXriVOJ643sg',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'login.seller' =>
+    'login.seller' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'seller',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Seller\\LoginController@showLoginFormSeller',
         'controller' => 'App\\Http\\Controllers\\Seller\\LoginController@showLoginFormSeller',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'login.seller',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::eF6TD9JmJYchy5af' =>
-=======
-    'generated::eF6TD9JmJYchy5af' => 
->>>>>>> Stashed changes
-=======
-    'generated::eF6TD9JmJYchy5af' => 
->>>>>>> Stashed changes
+    'generated::52hMLVHuK27z9hUJ' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'seller',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Seller\\LoginController@login',
         'controller' => 'App\\Http\\Controllers\\Seller\\LoginController@login',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::eF6TD9JmJYchy5af',
+        'as' => 'generated::52hMLVHuK27z9hUJ',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'seller.dashboard' =>
+    'seller.dashboard' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'seller/dashboard',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Seller\\MainController@sellerIndex',
         'controller' => 'App\\Http\\Controllers\\Seller\\MainController@sellerIndex',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'seller.dashboard',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::qN5kIVTdQTaIdzxO' =>
-=======
-    'generated::qN5kIVTdQTaIdzxO' => 
->>>>>>> Stashed changes
-=======
-    'generated::qN5kIVTdQTaIdzxO' => 
->>>>>>> Stashed changes
+    'generated::8nCC1Y9ZdKUwQmvY' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'seller/fileShare',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Seller\\MsgController@fileShare',
         'controller' => 'App\\Http\\Controllers\\Seller\\MsgController@fileShare',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::qN5kIVTdQTaIdzxO',
+        'as' => 'generated::8nCC1Y9ZdKUwQmvY',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'file.shareUserSeller' =>
+    'file.shareUserSeller' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'seller/fileShareUser/{id}',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Seller\\MsgController@fileShareUser',
         'controller' => 'App\\Http\\Controllers\\Seller\\MsgController@fileShareUser',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'file.shareUserSeller',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'file.shareStoreSeller' =>
+    'file.shareStoreSeller' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'seller/fileShareStore',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Seller\\MsgController@fileShareStore',
         'controller' => 'App\\Http\\Controllers\\Seller\\MsgController@fileShareStore',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'file.shareStoreSeller',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'seller.dashboardzoom.seller' =>
+    'seller.dashboardzoom.seller' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'seller/zoom-call',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Seller\\MsgController@zoomCall',
         'controller' => 'App\\Http\\Controllers\\Seller\\MsgController@zoomCall',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'seller.dashboardzoom.seller',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-    'generated::zeWl1dXws7TgWQtZ' =>
-=======
-    'generated::zeWl1dXws7TgWQtZ' => 
->>>>>>> Stashed changes
+    'generated::50uCYpIOJWNnBLmX' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'seller/order',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Seller\\MainController@sellerOrder',
         'controller' => 'App\\Http\\Controllers\\Seller\\MainController@sellerOrder',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::zeWl1dXws7TgWQtZ',
+        'as' => 'generated::50uCYpIOJWNnBLmX',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'custom.offer' =>
+    'custom.offer' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'seller/custom-offer',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Seller\\MainController@sellerCustomOffer',
         'controller' => 'App\\Http\\Controllers\\Seller\\MainController@sellerCustomOffer',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'custom.offer',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'storeCustom.offer' =>
+    'storeCustom.offer' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'seller/storeCustomOffer',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Seller\\MainController@storeCustomOffer',
         'controller' => 'App\\Http\\Controllers\\Seller\\MainController@storeCustomOffer',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'storeCustom.offer',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-    'generated::mhXA6dJ3XnBFpnIH' =>
-=======
-    'generated::mhXA6dJ3XnBFpnIH' => 
->>>>>>> Stashed changes
+    'generated::a4ttNNvM32ZG1Yi6' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'seller/reviews',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Seller\\MainController@sellerReviews',
         'controller' => 'App\\Http\\Controllers\\Seller\\MainController@sellerReviews',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::mhXA6dJ3XnBFpnIH',
+        'as' => 'generated::a4ttNNvM32ZG1Yi6',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-    'generated::he4YboHZeaX7W7S0' =>
-=======
-    'generated::he4YboHZeaX7W7S0' => 
->>>>>>> Stashed changes
+    'generated::sciBuKJtC8FVRZpG' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'seller/messages',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Seller\\MsgController@index',
         'controller' => 'App\\Http\\Controllers\\Seller\\MsgController@index',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::he4YboHZeaX7W7S0',
+        'as' => 'generated::sciBuKJtC8FVRZpG',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-    'generated::buzWKkXflqrRYRGT' =>
-=======
-    'generated::buzWKkXflqrRYRGT' => 
->>>>>>> Stashed changes
+    'generated::De8V7J1pzijtSOZn' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'seller/messages-details/{id}',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Seller\\MsgController@msgDetails',
         'controller' => 'App\\Http\\Controllers\\Seller\\MsgController@msgDetails',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::buzWKkXflqrRYRGT',
+        'as' => 'generated::De8V7J1pzijtSOZn',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'services.index' =>
+    'services.index' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'seller/services',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
@@ -6457,35 +5840,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\Seller\\ServiceController@index',
         'namespace' => NULL,
         'prefix' => '/seller',
-        'where' =>
+        'where' => 
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'services.create' =>
+    'services.create' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'seller/services/create',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
@@ -6494,34 +5877,34 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\Seller\\ServiceController@create',
         'namespace' => NULL,
         'prefix' => '/seller',
-        'where' =>
+        'where' => 
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'services.store' =>
+    'services.store' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'seller/services',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
@@ -6530,35 +5913,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\Seller\\ServiceController@store',
         'namespace' => NULL,
         'prefix' => '/seller',
-        'where' =>
+        'where' => 
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'services.show' =>
+    'services.show' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'seller/services/{service}',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
@@ -6567,35 +5950,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\Seller\\ServiceController@show',
         'namespace' => NULL,
         'prefix' => '/seller',
-        'where' =>
+        'where' => 
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'services.edit' =>
+    'services.edit' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'seller/services/{service}/edit',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
@@ -6604,35 +5987,35 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\Seller\\ServiceController@edit',
         'namespace' => NULL,
         'prefix' => '/seller',
-        'where' =>
+        'where' => 
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'services.update' =>
+    'services.update' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'PUT',
         1 => 'PATCH',
       ),
       'uri' => 'seller/services/{service}',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
@@ -6641,38 +6024,34 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\Seller\\ServiceController@update',
         'namespace' => NULL,
         'prefix' => '/seller',
-        'where' =>
+        'where' => 
         array (
         ),
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-    'services.destroy' =>
-=======
-    'generated::zeWl1dXws7TgWQtZ' => 
->>>>>>> Stashed changes
+    'services.destroy' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'DELETE',
       ),
       'uri' => 'seller/services/{service}',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
@@ -6681,435 +6060,281 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\Seller\\ServiceController@destroy',
         'namespace' => NULL,
         'prefix' => '/seller',
-        'where' =>
+        'where' => 
         array (
         ),
-<<<<<<< Updated upstream
-=======
-        'as' => 'generated::zeWl1dXws7TgWQtZ',
->>>>>>> Stashed changes
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'services.status' =>
+    'services.status' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'seller/services-status/{id}',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Seller\\ServiceController@servicesStatus',
         'controller' => 'App\\Http\\Controllers\\Seller\\ServiceController@servicesStatus',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'services.status',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'seller.payment' =>
+    'seller.payment' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'seller/SellerPayment',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Seller\\MainController@SellerPayment',
         'controller' => 'App\\Http\\Controllers\\Seller\\MainController@SellerPayment',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'seller.payment',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-    'generated::l3zK4R555xNX8MxC' =>
-=======
-    'generated::mhXA6dJ3XnBFpnIH' => 
->>>>>>> Stashed changes
+    'seller.incomingRequests' => 
     array (
-      'methods' =>
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'seller/incoming-requests',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\Seller\\MainController@incomingRequests',
+        'controller' => 'App\\Http\\Controllers\\Seller\\MainController@incomingRequests',
+        'namespace' => NULL,
+        'prefix' => NULL,
+        'where' => 
+        array (
+        ),
+        'as' => 'seller.incomingRequests',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'generated::Ra3WnMfvII2p88bW' => 
+    array (
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'seller/setting',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Seller\\MainController@sellerSetting',
         'controller' => 'App\\Http\\Controllers\\Seller\\MainController@sellerSetting',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-<<<<<<< Updated upstream
-        'as' => 'generated::l3zK4R555xNX8MxC',
-=======
-        'as' => 'generated::mhXA6dJ3XnBFpnIH',
->>>>>>> Stashed changes
+        'as' => 'generated::Ra3WnMfvII2p88bW',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-    'generated::6qcDY68uQFyXyB9a' =>
-=======
-    'generated::he4YboHZeaX7W7S0' => 
->>>>>>> Stashed changes
+    'sellerSetting.save' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'seller/setting-save',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Seller\\MainController@sellerSettingSave',
         'controller' => 'App\\Http\\Controllers\\Seller\\MainController@sellerSettingSave',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-<<<<<<< Updated upstream
-        'as' => 'generated::6qcDY68uQFyXyB9a',
-=======
-        'as' => 'generated::he4YboHZeaX7W7S0',
->>>>>>> Stashed changes
+        'as' => 'sellerSetting.save',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::6qcDY68uQFyXyB9a' =>
-=======
-    'generated::6qcDY68uQFyXyB9a' => 
->>>>>>> Stashed changes
-=======
-    'generated::buzWKkXflqrRYRGT' => 
->>>>>>> Stashed changes
+    'generated::3uTgH4HduTY6fIAf' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'seller/change-password',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Seller\\MainController@sellerSettingSavepass',
         'controller' => 'App\\Http\\Controllers\\Seller\\MainController@sellerSettingSavepass',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-<<<<<<< Updated upstream
-        'as' => 'generated::PuWsfFQd4aiUrYVk',
-=======
-        'as' => 'generated::buzWKkXflqrRYRGT',
->>>>>>> Stashed changes
+        'as' => 'generated::3uTgH4HduTY6fIAf',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::49uO2sl4M5vJ1mE8' =>
+    'seller.market' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'seller/market',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Seller\\MarketController@index',
         'controller' => 'App\\Http\\Controllers\\Seller\\MarketController@index',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
-        array (
-        ),
-        'as' => 'generated::6qcDY68uQFyXyB9a',
-      ),
-      'fallback' => false,
-      'defaults' =>
-      array (
-      ),
-      'wheres' =>
-      array (
-      ),
-      'bindingFields' =>
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'seller.createSchedule' =>
-    array (
-      'methods' =>
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'seller/create-schedule',
-      'action' =>
-      array (
-        'middleware' =>
-        array (
-          0 => 'web',
-        ),
-        'uses' => 'App\\Http\\Controllers\\Seller\\MarketController@createSchedule',
-        'controller' => 'App\\Http\\Controllers\\Seller\\MarketController@createSchedule',
-        'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
-        array (
-        ),
-        'as' => 'seller.createSchedule',
-      ),
-      'fallback' => false,
-      'defaults' =>
-      array (
-      ),
-      'wheres' =>
-      array (
-      ),
-      'bindingFields' =>
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'generated::49uO2sl4M5vJ1mE8' =>
-    array (
-      'methods' =>
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'seller/create-schedule',
-      'action' =>
-      array (
-        'middleware' =>
-        array (
-          0 => 'web',
-        ),
-        'uses' => 'App\\Http\\Controllers\\Seller\\MarketController@createSchedule',
-        'controller' => 'App\\Http\\Controllers\\Seller\\MarketController@createSchedule',
-        'namespace' => NULL,
         'prefix' => NULL,
-        'where' =>
+        'where' => 
         array (
         ),
-        'as' => 'generated::49uO2sl4M5vJ1mE8',
+        'as' => 'seller.market',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-    'seller.createSchedule' =>
-=======
-    'generated::49uO2sl4M5vJ1mE8' => 
->>>>>>> Stashed changes
-    array (
-      'methods' =>
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'seller/create-schedule',
-      'action' =>
-      array (
-        'middleware' =>
-        array (
-          0 => 'web',
-        ),
-        'uses' => 'App\\Http\\Controllers\\Seller\\MarketController@createSchedule',
-        'controller' => 'App\\Http\\Controllers\\Seller\\MarketController@createSchedule',
-        'namespace' => NULL,
-        'prefix' => NULL,
-        'where' =>
-        array (
-        ),
-<<<<<<< Updated upstream
-        'as' => 'seller.createSchedule',
-=======
-        'as' => 'generated::49uO2sl4M5vJ1mE8',
->>>>>>> Stashed changes
-      ),
-      'fallback' => false,
-      'defaults' =>
-      array (
-      ),
-      'wheres' =>
-      array (
-      ),
-      'bindingFields' =>
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'seller.createSchedule' =>
-    array (
-      'methods' =>
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'seller/create-schedule',
-      'action' =>
-      array (
-        'middleware' =>
-        array (
-          0 => 'web',
-        ),
-        'uses' => 'App\\Http\\Controllers\\Seller\\MarketController@createSchedule',
-        'controller' => 'App\\Http\\Controllers\\Seller\\MarketController@createSchedule',
-        'namespace' => NULL,
-        'prefix' => NULL,
-        'where' =>
-        array (
-        ),
-        'as' => 'seller.createSchedule',
-      ),
-      'fallback' => false,
-      'defaults' =>
-      array (
-      ),
-      'wheres' =>
-      array (
-      ),
-      'bindingFields' =>
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-<<<<<<< Updated upstream
-    'seller.market.detail' =>
-=======
     'seller.createSchedule' => 
     array (
       'methods' => 
@@ -7148,384 +6373,27 @@ app('router')->setCompiledRoutes(
       'withTrashed' => false,
     ),
     'seller.market.detail' => 
->>>>>>> Stashed changes
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'seller/market/{slug}',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Seller\\MarketController@viewDetail',
         'controller' => 'App\\Http\\Controllers\\Seller\\MarketController@viewDetail',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'seller.market.detail',
-      ),
-      'fallback' => false,
-      'defaults' =>
-      array (
-      ),
-      'wheres' =>
-      array (
-      ),
-      'bindingFields' =>
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'seller.service' =>
-    array (
-      'methods' =>
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'seller/service',
-      'action' =>
-      array (
-        'middleware' =>
-        array (
-          0 => 'web',
-        ),
-        'uses' => 'App\\Http\\Controllers\\Seller\\ServiceController@index',
-        'controller' => 'App\\Http\\Controllers\\Seller\\ServiceController@index',
-        'namespace' => NULL,
-        'prefix' => NULL,
-        'where' =>
-        array (
-        ),
-        'as' => 'seller.service',
-      ),
-      'fallback' => false,
-      'defaults' =>
-      array (
-      ),
-      'wheres' =>
-      array (
-      ),
-      'bindingFields' =>
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'seller.createService' =>
-    array (
-      'methods' =>
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'seller/create-service',
-      'action' =>
-      array (
-        'middleware' =>
-        array (
-          0 => 'web',
-        ),
-        'uses' => 'App\\Http\\Controllers\\Seller\\ServiceController@createService',
-        'controller' => 'App\\Http\\Controllers\\Seller\\ServiceController@createService',
-        'namespace' => NULL,
-        'prefix' => NULL,
-        'where' =>
-        array (
-        ),
-        'as' => 'seller.createService',
-      ),
-      'fallback' => false,
-      'defaults' =>
-      array (
-      ),
-      'wheres' =>
-      array (
-      ),
-      'bindingFields' =>
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'chat' =>
-    array (
-      'methods' =>
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'seller/service',
-      'action' =>
-      array (
-        'middleware' =>
-        array (
-          0 => 'web',
-        ),
-        'uses' => 'App\\Http\\Controllers\\Seller\\ServiceController@index',
-        'controller' => 'App\\Http\\Controllers\\Seller\\ServiceController@index',
-        'namespace' => NULL,
-        'prefix' => NULL,
-        'where' =>
-        array (
-        ),
-        'as' => 'seller.service',
-      ),
-      'fallback' => false,
-      'defaults' =>
-      array (
-      ),
-      'wheres' =>
-      array (
-      ),
-      'bindingFields' =>
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-<<<<<<< Updated upstream
-    'seller.createService' =>
-=======
-    'generated::6qcDY68uQFyXyB9a' => 
->>>>>>> Stashed changes
-    array (
-      'methods' =>
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'seller/create-service',
-      'action' =>
-      array (
-        'middleware' =>
-        array (
-          0 => 'web',
-        ),
-        'uses' => 'App\\Http\\Controllers\\Seller\\ServiceController@createService',
-        'controller' => 'App\\Http\\Controllers\\Seller\\ServiceController@createService',
-        'namespace' => NULL,
-        'prefix' => NULL,
-        'where' =>
-        array (
-        ),
-<<<<<<< Updated upstream
-        'as' => 'seller.createService',
-=======
-        'as' => 'generated::6qcDY68uQFyXyB9a',
->>>>>>> Stashed changes
-      ),
-      'fallback' => false,
-      'defaults' =>
-      array (
-      ),
-      'wheres' =>
-      array (
-      ),
-      'bindingFields' =>
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'seller.service' =>
-    array (
-      'methods' =>
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'seller/service',
-      'action' =>
-      array (
-        'middleware' =>
-        array (
-          0 => 'web',
-        ),
-        'uses' => 'App\\Http\\Controllers\\Seller\\ServiceController@index',
-        'controller' => 'App\\Http\\Controllers\\Seller\\ServiceController@index',
-        'namespace' => NULL,
-        'prefix' => NULL,
-        'where' =>
-        array (
-        ),
-        'as' => 'seller.service',
-      ),
-      'fallback' => false,
-      'defaults' =>
-      array (
-      ),
-      'wheres' =>
-      array (
-      ),
-      'bindingFields' =>
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-<<<<<<< Updated upstream
-    'seller.createService' =>
-=======
-    'generated::49uO2sl4M5vJ1mE8' => 
->>>>>>> Stashed changes
-    array (
-      'methods' =>
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'seller/create-service',
-      'action' =>
-      array (
-        'middleware' =>
-        array (
-          0 => 'web',
-        ),
-        'uses' => 'App\\Http\\Controllers\\Seller\\ServiceController@createService',
-        'controller' => 'App\\Http\\Controllers\\Seller\\ServiceController@createService',
-        'namespace' => NULL,
-        'prefix' => NULL,
-        'where' =>
-        array (
-        ),
-<<<<<<< Updated upstream
-        'as' => 'seller.createService',
-=======
-        'as' => 'generated::49uO2sl4M5vJ1mE8',
->>>>>>> Stashed changes
-      ),
-      'fallback' => false,
-      'defaults' =>
-      array (
-      ),
-      'wheres' =>
-      array (
-      ),
-      'bindingFields' =>
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-<<<<<<< Updated upstream
-    'chat' =>
-=======
-    'seller.service' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'seller/service',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'web',
-        ),
-        'uses' => 'App\\Http\\Controllers\\Seller\\ServiceController@index',
-        'controller' => 'App\\Http\\Controllers\\Seller\\ServiceController@index',
-        'namespace' => NULL,
-        'prefix' => NULL,
-        'where' => 
-        array (
-        ),
-        'as' => 'seller.service',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-<<<<<<< Updated upstream
-    'seller.createService' => 
-=======
-    'seller.createSchedule' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'seller/create-schedule',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'web',
-        ),
-        'uses' => 'App\\Http\\Controllers\\Seller\\MarketController@createSchedule',
-        'controller' => 'App\\Http\\Controllers\\Seller\\MarketController@createSchedule',
-        'namespace' => NULL,
-        'prefix' => NULL,
-        'where' => 
-        array (
-        ),
-        'as' => 'seller.createSchedule',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'seller.market.detail' => 
->>>>>>> Stashed changes
-    array (
-      'methods' => 
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'seller/create-service',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'web',
-        ),
-        'uses' => 'App\\Http\\Controllers\\Seller\\ServiceController@createService',
-        'controller' => 'App\\Http\\Controllers\\Seller\\ServiceController@createService',
-        'namespace' => NULL,
-        'prefix' => NULL,
-        'where' => 
-        array (
-        ),
-        'as' => 'seller.createService',
       ),
       'fallback' => false,
       'defaults' => 
@@ -7616,1120 +6484,1023 @@ app('router')->setCompiledRoutes(
       'withTrashed' => false,
     ),
     'chat' => 
->>>>>>> Stashed changes
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'chat',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\ChatController@index',
         'controller' => 'App\\Http\\Controllers\\ChatController@index',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'chat',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'buyer.dashboard' =>
+    'buyer.dashboard' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'buyer/dashboard',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Customer\\MainController@BuyerIndex',
         'controller' => 'App\\Http\\Controllers\\Customer\\MainController@BuyerIndex',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'buyer.dashboard',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::8Ey7CDlhblm4ImC4' =>
-=======
-    'generated::8Ey7CDlhblm4ImC4' => 
->>>>>>> Stashed changes
-=======
-    'generated::8Ey7CDlhblm4ImC4' => 
->>>>>>> Stashed changes
+    'generated::CPc9j3FPlKveKifg' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'buyer/job-post',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Customer\\MainController@jobPost',
         'controller' => 'App\\Http\\Controllers\\Customer\\MainController@jobPost',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::8Ey7CDlhblm4ImC4',
+        'as' => 'generated::CPc9j3FPlKveKifg',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'job.postSave' =>
+    'job.postSave' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'buyer/job-post-save',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Customer\\MainController@jobPostSave',
         'controller' => 'App\\Http\\Controllers\\Customer\\MainController@jobPostSave',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'job.postSave',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'job.jobPostDelete' =>
+    'job.jobPostDelete' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'buyer/jobPostDelete/{id}',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Customer\\MainController@jobPostDelete',
         'controller' => 'App\\Http\\Controllers\\Customer\\MainController@jobPostDelete',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'job.jobPostDelete',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::BdLfzbITmC50flBy' =>
-=======
-    'generated::BdLfzbITmC50flBy' => 
->>>>>>> Stashed changes
-=======
-    'generated::BdLfzbITmC50flBy' => 
->>>>>>> Stashed changes
+    'generated::KGU8lm6zxlmDZ8we' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'buyer/messages',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Customer\\MassageController@index',
         'controller' => 'App\\Http\\Controllers\\Customer\\MassageController@index',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::BdLfzbITmC50flBy',
+        'as' => 'generated::KGU8lm6zxlmDZ8we',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'file.share' =>
+    'file.share' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'buyer/file-share',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Customer\\MassageController@fileShare',
         'controller' => 'App\\Http\\Controllers\\Customer\\MassageController@fileShare',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'file.share',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'file.shareUser' =>
+    'file.shareUser' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'buyer/file-share-user/{id}',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Customer\\MassageController@fileShareUser',
         'controller' => 'App\\Http\\Controllers\\Customer\\MassageController@fileShareUser',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'file.shareUser',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'file.shareStore' =>
+    'file.shareStore' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'buyer/file-share-store',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Customer\\MassageController@fileShareStore',
         'controller' => 'App\\Http\\Controllers\\Customer\\MassageController@fileShareStore',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'file.shareStore',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::Mjhl0xDCemT5SfCV' =>
-=======
-    'generated::Mjhl0xDCemT5SfCV' => 
->>>>>>> Stashed changes
-=======
-    'generated::Mjhl0xDCemT5SfCV' => 
->>>>>>> Stashed changes
+    'generated::bjLULDnO7aXmHLn4' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'buyer/messages-details/{id}',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Customer\\MassageController@msgDetails',
         'controller' => 'App\\Http\\Controllers\\Customer\\MassageController@msgDetails',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::Mjhl0xDCemT5SfCV',
+        'as' => 'generated::bjLULDnO7aXmHLn4',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::vJtbHJELefGnTAHo' =>
-=======
-    'generated::vJtbHJELefGnTAHo' => 
->>>>>>> Stashed changes
-=======
-    'generated::vJtbHJELefGnTAHo' => 
->>>>>>> Stashed changes
+    'generated::ZLRQ1LBZ2XsDPfYu' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'buyer/manage-bidder/{id}',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Customer\\MainController@manageBidder',
         'controller' => 'App\\Http\\Controllers\\Customer\\MainController@manageBidder',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::vJtbHJELefGnTAHo',
+        'as' => 'generated::ZLRQ1LBZ2XsDPfYu',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'order.acceptBider' =>
+    'order.acceptBider' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'buyer/store-order-bidder',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Customer\\MainController@bidOrderAccept',
         'controller' => 'App\\Http\\Controllers\\Customer\\MainController@bidOrderAccept',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'order.acceptBider',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'bidderSendMsg' =>
+    'bidderSendMsg' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'buyer/bidderSendMsg',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Customer\\MainController@bidderSendMsg',
         'controller' => 'App\\Http\\Controllers\\Customer\\MainController@bidderSendMsg',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'bidderSendMsg',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::sntIt0gtfAHOih1J' =>
-=======
-    'generated::sntIt0gtfAHOih1J' => 
->>>>>>> Stashed changes
-=======
-    'generated::sntIt0gtfAHOih1J' => 
->>>>>>> Stashed changes
+    'generated::goZe269SF7KnMnT3' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'buyer/reviews',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Customer\\MainController@buyerReviews',
         'controller' => 'App\\Http\\Controllers\\Customer\\MainController@buyerReviews',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::sntIt0gtfAHOih1J',
+        'as' => 'generated::goZe269SF7KnMnT3',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'buyer.review' =>
+    'buyer.review' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'buyer/reviewsStore',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Customer\\MainController@buyerReviewStore',
         'controller' => 'App\\Http\\Controllers\\Customer\\MainController@buyerReviewStore',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'buyer.review',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::kHiC7AJLZd718QUb' =>
-=======
-    'generated::kHiC7AJLZd718QUb' => 
->>>>>>> Stashed changes
-=======
-    'generated::kHiC7AJLZd718QUb' => 
->>>>>>> Stashed changes
+    'generated::oi5tWwVJgFQYhCTL' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'buyer/order',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Customer\\MainController@buyerOrder',
         'controller' => 'App\\Http\\Controllers\\Customer\\MainController@buyerOrder',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::kHiC7AJLZd718QUb',
+        'as' => 'generated::oi5tWwVJgFQYhCTL',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'order.acceptBuyer' =>
+    'order.acceptBuyer' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'buyer/order',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Customer\\MainController@buyerOrderAccept',
         'controller' => 'App\\Http\\Controllers\\Customer\\MainController@buyerOrderAccept',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'order.acceptBuyer',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'customOrder.store' =>
+    'customOrder.store' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'buyer/custom-offer-store',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Customer\\MainController@buyerOrderCustomStore',
         'controller' => 'App\\Http\\Controllers\\Customer\\MainController@buyerOrderCustomStore',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'customOrder.store',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'buyer.customOffer' =>
+    'buyer.customOffer' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'buyer/custom-offer',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Customer\\MainController@BuyerCustomOffer',
         'controller' => 'App\\Http\\Controllers\\Customer\\MainController@BuyerCustomOffer',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'buyer.customOffer',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'buyer.payment' =>
+    'buyer.payment' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'buyer/payment',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Customer\\MainController@BuyerPayment',
         'controller' => 'App\\Http\\Controllers\\Customer\\MainController@BuyerPayment',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'buyer.payment',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::etPZtfyS4uVR6DPl' =>
-=======
-    'generated::etPZtfyS4uVR6DPl' => 
->>>>>>> Stashed changes
-=======
-    'generated::etPZtfyS4uVR6DPl' => 
->>>>>>> Stashed changes
+    'generated::tp0y2A94sgYryEko' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'buyer/setting',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Customer\\MainController@buyersetting',
         'controller' => 'App\\Http\\Controllers\\Customer\\MainController@buyersetting',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::etPZtfyS4uVR6DPl',
+        'as' => 'generated::tp0y2A94sgYryEko',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'setting.save' =>
+    'setting.save' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'buyer/setting-save',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Customer\\MainController@buyerSettingSave',
         'controller' => 'App\\Http\\Controllers\\Customer\\MainController@buyerSettingSave',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'setting.save',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::Q7HBphL87YDiVIUX' =>
-=======
-    'generated::Q7HBphL87YDiVIUX' => 
->>>>>>> Stashed changes
-=======
-    'generated::Q7HBphL87YDiVIUX' => 
->>>>>>> Stashed changes
+    'generated::h3by7mvp6ZpYfRd1' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'buyer/change-password',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Customer\\MainController@buyerSettingSavepass',
         'controller' => 'App\\Http\\Controllers\\Customer\\MainController@buyerSettingSavepass',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::Q7HBphL87YDiVIUX',
+        'as' => 'generated::h3by7mvp6ZpYfRd1',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::4z9WfoK1FiBCX1fv' =>
-=======
-    'generated::4z9WfoK1FiBCX1fv' => 
->>>>>>> Stashed changes
-=======
-    'generated::4z9WfoK1FiBCX1fv' => 
->>>>>>> Stashed changes
+    'generated::uyurlYZTadoXUvZn' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'admin/profile',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Admin\\MainController@profileIndex',
         'controller' => 'App\\Http\\Controllers\\Admin\\MainController@profileIndex',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::4z9WfoK1FiBCX1fv',
+        'as' => 'generated::uyurlYZTadoXUvZn',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::pyg8S4HaxQrCqkS4' =>
-=======
-    'generated::pyg8S4HaxQrCqkS4' => 
->>>>>>> Stashed changes
-=======
-    'generated::pyg8S4HaxQrCqkS4' => 
->>>>>>> Stashed changes
+    'generated::s14IXWoaXPBJBcXR' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'admin/change-password',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Admin\\MainController@changePassword',
         'controller' => 'App\\Http\\Controllers\\Admin\\MainController@changePassword',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::pyg8S4HaxQrCqkS4',
+        'as' => 'generated::s14IXWoaXPBJBcXR',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::x6fPuaWyxtMvhz9m' =>
-=======
-    'generated::x6fPuaWyxtMvhz9m' => 
->>>>>>> Stashed changes
-=======
-    'generated::x6fPuaWyxtMvhz9m' => 
->>>>>>> Stashed changes
+    'generated::5tliRTjn7TUFeOTb' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'admin/change-info',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Admin\\MainController@changeInfo',
         'controller' => 'App\\Http\\Controllers\\Admin\\MainController@changeInfo',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::x6fPuaWyxtMvhz9m',
+        'as' => 'generated::5tliRTjn7TUFeOTb',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    'generated::QicH66xtL6IOsRfy' =>
-=======
-    'generated::QicH66xtL6IOsRfy' => 
->>>>>>> Stashed changes
-=======
-    'generated::QicH66xtL6IOsRfy' => 
->>>>>>> Stashed changes
+    'generated::14uJ7Of9FosRcTtD' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
       'uri' => 'admin/general',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Admin\\GeneralController@index',
         'controller' => 'App\\Http\\Controllers\\Admin\\GeneralController@index',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
-        'as' => 'generated::QicH66xtL6IOsRfy',
+        'as' => 'generated::14uJ7Of9FosRcTtD',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'general.save' =>
+    'general.save' => 
     array (
-      'methods' =>
+      'methods' => 
       array (
         0 => 'POST',
       ),
       'uri' => 'admin/generalSave',
-      'action' =>
+      'action' => 
       array (
-        'middleware' =>
+        'middleware' => 
         array (
           0 => 'web',
         ),
         'uses' => 'App\\Http\\Controllers\\Admin\\GeneralController@genaralSave',
         'controller' => 'App\\Http\\Controllers\\Admin\\GeneralController@genaralSave',
         'namespace' => NULL,
-        'prefix' => '',
-        'where' =>
+        'prefix' => NULL,
+        'where' => 
         array (
         ),
         'as' => 'general.save',
       ),
       'fallback' => false,
-      'defaults' =>
+      'defaults' => 
       array (
       ),
-      'wheres' =>
+      'wheres' => 
       array (
       ),
-      'bindingFields' =>
+      'bindingFields' => 
       array (
       ),
       'lockSeconds' => NULL,

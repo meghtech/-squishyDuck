@@ -560,13 +560,32 @@ label.star:before {
 	transition: all 0.2s ease-in-out;
 }
 
-.btn-md-cyan{
+.btn-md-cyan, .btn-md-cyan:hover{
 	background-color: #1B6171 !important;
 	transition: all 0.2s ease-in-out;
+	border: 1px solid #1B6171;
+	color: white;
 }
 
 .bg-md-cyan{
 	background-color: #1B6171 !important;
+}
+
+.outline-md-cyan {
+	border: 1px solid #1B6171;
+	transition: all 0.2s ease-in-out;
+	color:#1B6171
+}
+
+.outline-md-cyan:hover {
+	border: 1px solid #1B6171;
+	transition: all 0.2s ease-in-out;
+	background-color: #1B6171;
+	color: white !important;
+}
+
+.outline-md-cyan:focus, .btn-md-cyan:focus {
+	box-shadow: unset;
 }
 
 .text-md-cyan{

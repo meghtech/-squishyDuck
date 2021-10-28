@@ -708,6 +708,25 @@ label.star:before {
 	font-size: 20px;
 }
 
+
+.available-days li {
+	list-style: none;
+	display: inline-flex;
+	margin-right: 10px;
+}
+.available-days input[type="checkbox"]:checked {
+    line-height: 20px;
+}
+.available-days input[type="checkbox"] {
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 0;
+}
+
+.call-text input[type="checkbox"] {
+    background-color: white;
+}
+
 /* Sign In Button Media Queries */
 @media (max-width: 768px) {
 	.header-widget .log-in-button span { display: none; }

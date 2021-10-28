@@ -232,7 +232,7 @@ $('#snackbar-user-status label').click(function() {
 </script>
 
 <!-- Chart.js // documentation: http://www.chartjs.org/docs/latest/ -->
-<script src="js/chart.min.js"></script>
+<!-- <script src="js/chart.min.js"></script>
 <script>
 	Chart.defaults.global.defaultFontFamily = "Nunito";
 	Chart.defaults.global.defaultFontColor = '#888';
@@ -305,7 +305,7 @@ $('#snackbar-user-status label').click(function() {
 
 });
 
-</script>
+</script> -->
 @stack('js')
 @livewireScripts
 </body>

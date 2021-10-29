@@ -200,6 +200,7 @@ Route::get('/seller/market/{slug}', [SellerMarketController::class, 'viewDetail'
 
 Route::get('/seller/service', [SellerServiceController::class, 'index'])->name('seller.service');
 Route::get('/seller/create-service', [SellerServiceController::class, 'createService'])->name('seller.createService');
+Route::post('/seller/post-service', [SellerServiceController::class, 'postService'])->name('seller.postService');
 
 Route::get('/chat', [ChatController::class, 'index'])->name('chat');
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Seller;
+namespace App\Http\Controllers\Freelancer;
 
 use Intervention\Image\Facades\Image;
 use App\Http\Controllers\Controller;
@@ -17,15 +17,15 @@ class ServiceController extends Controller
     }
 
     public function index(){
-        return view('seller.service.service');
+        return view('freelancer.service.service');
     }
 
     public function viewDetail($slug){
-        return view('seller.service.detail');
+        return view('freelancer.service.detail');
     }
 
     public function createService(){
-       return view('seller.service.create');
+       return view('freelancer.service.create');
     }
 
     public function postService(Request $request){

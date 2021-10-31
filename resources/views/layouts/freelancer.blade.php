@@ -1,8 +1,3 @@
-<?php
-
-    $general = App\Models\General::find(1)->first();
-
- ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -135,7 +130,7 @@
 
 <!-- Dashboard Container -->
 <div class="dashboard-container">
-	@if ( !Request::is('seller/market*') && !Request::is('chat*') && !Request::is('seller/create-schedule*') && !Request::is('seller/create-service*') && !Request::is('seller/create-inventory*') && !Request::is('seller/create-listing*'))
+	@if ( !Request::is('seller/market*') && !Request::is('chat*') && !Request::is('seller/create-schedule*') && !Request::is('seller/create-service*') && !Request::is('seller/create-inventory*'))
 	<!-- Dashboard Sidebar
 	================================================== -->
 	<div class="dashboard-sidebar">
@@ -156,7 +151,7 @@
 				<div class="dashboard-nav">
 					<div class="dashboard-nav-inner">
 						<ul>
-							<li><a href="{{url('/seller/dashboard')}}" class="{{ Request::is('seller/dashboard*') ? 'text-primary' : '' }}"><i class="icon-material-outline-dashboard {{ Request::is('seller/dashboard*') ? 'text-primary' : '' }}"></i> Dashboard</a></li>
+							<li><a href="{{url('/seller/dashboard')}}"><i class="icon-material-outline-dashboard"></i> Dashboard</a></li>
                         </ul>
 						<ul data-submenu-title="Schedule">
 							<li><a href="#"><i class="icon-material-outline-assignment"></i>View Schedule</a></li>
@@ -164,20 +159,16 @@
 						<ul data-submenu-title="Requests">
 							<li><a href="{{ route('seller.incomingRequests') }}"><i class="icon-material-outline-assignment"></i>Incoming Requests</a></li>
 						</ul>
-						<ul data-submenu-title="Inventory">
-							<li><a href="{{ route('seller.inventory') }}" class="{{ Request::is('seller/inventory*') ? 'text-primary' : '' }}"><i class="icon-material-outline-assignment {{ Request::is('seller/inventory*') ? 'text-primary' : '' }}"></i>Current Inventory</a></li>
-							<li><a href="{{ route('seller.listing') }}" class="{{ Request::is('seller/listing*') ? 'text-primary' : '' }}"><i class="icon-material-outline-assignment {{ Request::is('seller/listing*') ? 'text-primary' : '' }}"></i>Current Listing</a></li>
-							<li><a href="#"><i class="icon-material-outline-assignment"></i>Manages</a></li>
-						</ul>
-						<ul data-submenu-title="Services">
-							<li><a href="#"><i class="icon-material-outline-assignment"></i>Received Services</a></li>
-						</ul>
-						<ul data-submenu-title="Orders">
-							<li><a href="#"><i class="icon-material-outline-assignment"></i>Recent Orders</a></li>
+						<ul data-submenu-title="Organize and Manage Services">
+							<li><a href="{{ route('seller.inventory') }}"><i class="icon-material-outline-assignment"></i>Services</a></li>
+							<li><a href="#"><i class="icon-material-outline-assignment"></i>Service History</a></li>
 						</ul>
 						<ul data-submenu-title="Account">
 							<li><a href="{{url('/seller/setting')}}"><i class="icon-material-outline-settings"></i> Settings</a></li>
 							<li><a href="#"><i class="icon-material-outline-power-settings-new"></i> Logout</a></li>
+						</ul>
+						<ul data-submenu-title="Other">
+							<li><a href="{{ route('seller.incomingRequests') }}"><i class="icon-material-outline-assignment"></i>Report Incident</a></li>
 						</ul>
 					</div>
 				</div>

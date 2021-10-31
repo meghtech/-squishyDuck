@@ -3,6 +3,7 @@
 /public/storage
 /public/content/images/service
 /public/content/images/inventory
+/public/content/images/listing
 /bootstrap/cache
 /storage/*.key
 /vendor

@@ -29,7 +29,13 @@
                 <h4 class="col-md-5 col-sm-12 text-right pr-2 ml-5">
                     <a href="{{ route('seller.createInventory') }}" style="color:gray">Add Something</a>
                 </h4>
-                <div class="col-1 p-0 text-center" style="max-height:20px; max-width:20px; border:1px solid #28a745; border-radius:4px;"><a href="{{ route('seller.createService') }}"><i class="fa fa-plus text-success" style="font-size: 10px; vertical-align: middle; margin-top: -9.5px; margin-left: -0.5px;"></i></a></div>
+                <a href="{{ route('seller.createInventory') }}">
+                    <div class="col-1 p-0 text-center"
+                        style="max-height:20px; max-width:20px; border:1px solid #28a745; border-radius:4px;">
+                        <i class="fa fa-plus text-success"
+                            style="font-size: 10px; vertical-align: middle; margin-top: -9.5px; margin-left: -1px; padding: 5px;"></i>
+                    </div>
+                </a>
             </div>
 
             <div class="input-with-icon">

@@ -35,6 +35,7 @@ class CreateListingsTable extends Migration
             $table->string('contact_phone')->nullable();
             $table->boolean('viaCall')->default(0);
             $table->boolean('viaText')->default(0);
+            $table->text('listing_address')->nullable();
             $table->text('street')->nullable();
             $table->string('city')->nullable();
             $table->string('state')->nullable();

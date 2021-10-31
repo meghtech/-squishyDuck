@@ -26,7 +26,7 @@
             <section v-if="section == 'first'">
                 <div class="row">
                     <div class="col-sm-12 col-md-10">
-                        <input type="text" placeholder="Posting Title..." v-model="title">
+                        <input type="text" placeholder="Listing Title..." v-model="title">
                     </div>
                     <div class="col-sm-12 col-md-2">
                         <span class="input-symbol-dollar">
@@ -45,23 +45,20 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6 col-sm-12">
-                        <input type="text" placeholder="Make/Manufacturer (if applicable)" v-model="manufacturer"/>
-                    </div>
-                    <div class="col-md-6 col-sm-12">
-                        <input type="text" placeholder="Model Name/Number (if applicable)" v-model="model"/>
+                    <div class="col-12">
+                        <input type="text" placeholder="Street Address" v-model="listingAddress"/>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-sm-12">
-                        <input type="text" placeholder="Length x Width x Height" v-model="dimension"/>
+                        <input type="text" placeholder="sqft" v-model="size"/>
                     </div>
                     <div class="col-md-6 col-sm-12">
-                        <select name="condition" v-model="condition">
-                            <option disabled value="">Select Condition</option>
-                            <option value="new">New</option>
-                            <option value="used">Used</option>
-                            <option value="restored">Restored</option>
+                        <select name="for_type" v-model="for_type">
+                            <option disabled value="">For</option>
+                            <option value="rent">For Rent</option>
+                            <option value="sell">Sell</option>
+                            <option value="renovated">Renovated</option>
                         </select>
                     </div>
                 </div>
@@ -204,10 +201,9 @@
             price: '',
             description: '',
             tags: [],
-            manufacturer: '',
-            model: '',
-            dimension: '',
-            condition: '',
+            listingAddress: '',
+            size: '',
+            for_type: '',
             contactEmail: '',
             contactName: '',
             phoneNumber: '',
@@ -217,7 +213,7 @@
             city: '',
             state: '',
             zip: '',
-            type: 'market',
+            type: 'listing',
             deliveryDetails: '',
             images: [],
         },
@@ -268,10 +264,9 @@
                 formData.append('price', this.price);
                 formData.append('description', this.description);
                 formData.append('tags', JSON.stringify(this.tags));
-                formData.append('manufacturer', this.manufacturer);
-                formData.append('model', this.model);
-                formData.append('dimension', this.dimension);
-                formData.append('condition', this.condition);
+                formData.append('listingAddress', this.listingAddress);
+                formData.append('size', this.size);
+                formData.append('for_type', this.for_type);
                 formData.append('contactEmail', this.contactEmail);
                 formData.append('contactName', this.contactName);
                 formData.append('phoneNumber', this.phoneNumber);
@@ -291,7 +286,7 @@
                     formData.append('photoLength', this.images.length);
                 }
 
-                axios.post('/seller/post-inventory', formData, {
+                axios.post('/seller/post-listing', formData, {
                     headers: {
                     'Content-Type': 'multipart/form-data'
                     }

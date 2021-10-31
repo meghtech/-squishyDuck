@@ -16,6 +16,10 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\Seller\MainController as SellerMainController;
 use App\Http\Controllers\Seller\MarketController as SellerMarketController;
 use App\Http\Controllers\Seller\ServiceController as SellerServiceController;
+use App\Http\Controllers\Seller\ListingController as SellerListingController;
+
+use App\Http\Controllers\Freelancer\MainController as FreelancerMainController;
+use App\Http\Controllers\Freelancer\ServiceController as FreelancerServiceController;
 
 use App\Http\Controllers\Customer\MainController as BuyerMainController;
 use App\Http\Controllers\Customer\MassageController;
@@ -160,6 +164,7 @@ Route::get('/seller', [App\Http\Controllers\Seller\LoginController::class, 'show
 Route::post('/seller', [App\Http\Controllers\Seller\LoginController::class, 'login']);
 
 Route::get('/seller/dashboard', [SellerMainController::class, 'sellerIndex'])->name('seller.dashboard');
+Route::get('/freelancer/dashboard', [FreelancerMainController::class, 'freelancerIndex'])->name('seller.freelancer');
 
 Route::get('/seller/fileShare', [SellerMsgController::class, 'fileShare']);
 
@@ -202,11 +207,17 @@ Route::get('/seller/inventory', [SellerMarketController::class, 'inventory'])->n
 Route::get('/seller/create-inventory', [SellerMarketController::class, 'createInventory'])->name('seller.createInventory');
 Route::post('/seller/post-inventory', [SellerMarketController::class, 'postInventory'])->name('seller.postInventory');
 
-
+Route::get('/seller/listing', [SellerListingController::class, 'index'])->name('seller.listing');
+Route::get('/seller/create-listing', [SellerListingController::class, 'createListing'])->name('seller.createListing');
+Route::post('/seller/post-listing', [SellerListingController::class, 'postListing'])->name('seller.postListing');
 
 Route::get('/seller/service', [SellerServiceController::class, 'index'])->name('seller.service');
 Route::get('/seller/create-service', [SellerServiceController::class, 'createService'])->name('seller.createService');
 Route::post('/seller/post-service', [SellerServiceController::class, 'postService'])->name('seller.postService');
+
+Route::get('/freelancer/service', [FreelancerServiceController::class, 'index'])->name('freelancer.service');
+Route::get('/freelancer/create-service', [FreelancerServiceController::class, 'createService'])->name('freelancer.createService');
+Route::post('/freelancer/post-service', [FreelancerServiceController::class, 'postService'])->name('freelancer.postService');
 
 Route::get('/chat', [ChatController::class, 'index'])->name('chat');
 

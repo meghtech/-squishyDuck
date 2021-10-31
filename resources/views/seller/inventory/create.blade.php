@@ -122,6 +122,68 @@
                         <button type="button" class="btn outline-md-cyan pl-5 pr-5" @click="goBack">Cancel</button>
                     </div>
                     <div class="col-md-6 text-left">
+                        <button class="btn btn-md-cyan pl-5 pr-5" @click="changeSection">Next</button>
+                    </div>
+                </div>
+            </section>
+            <section v-else-if="section == 'third'">
+                <h3 class="mt-5 text-center">Upload 1-10 Images</h3>
+                <div class="row p-0 m-0">
+                    <div class="col-md-2 col-sm-12">
+                        <div class="ad-image text-center" id="viewImage_0">
+                            <img src="{{ asset('content/images/duck.svg') }}"/>
+                            <input id="files" type='file' style="display:none" @change="showImage" accept="image/png, image/gif, image/jpeg, image/jpg" multiple/>
+                        </div>
+                        <img id="displayImage_0" class="ad-image d-none"/>
+                        <button class="btn btn-success uploadImage mt-4 text-center" @click="uploadImage"><i class="fa fa-long-arrow-up uploadIcon"></i>Upload Image</button>
+                    </div>
+                    <div class="col-md-1 col-sm-12 mr-5 viewImages">
+                        <div class="ad-image text-center" id="viewImage_1"></div>
+                        <img id="displayImage_1" class="ad-image d-none"/>
+                    </div>
+                    <div class="col-md-1 col-sm-12 mr-5 viewImages">
+                        <div class="ad-image text-center" id="viewImage_2"></div>
+                        <img id="displayImage_2" class="ad-image d-none"/>
+                    </div>
+                    <div class="col-md-1 col-sm-12 mr-5 viewImages">
+                        <div class="ad-image text-center" id="viewImage_3"></div>
+                        <img id="displayImage_3" class="ad-image d-none"/>
+                    </div>
+                    <div class="col-md-1 col-sm-12 mr-5 viewImages">
+                        <div class="ad-image text-center" id="viewImage_4"></div>
+                        <img id="displayImage_4" class="ad-image d-none"/>
+                    </div>
+
+                </div>
+                <div class="row p-0 m-0 ml-5" style="margin-top: -6% !important;">
+                    <div class="col-md-2 col-sm-12"></div>
+                    <div class="col-md-1 col-sm-12 mr-5 viewImages">
+                        <div class="ad-image text-center" id="viewImage_5"></div>
+                        <img id="displayImage_5" class="ad-image d-none"/>
+                    </div>
+                    <div class="col-md-1 col-sm-12 mr-5 viewImages">
+                        <div class="ad-image text-center" id="viewImage_6"></div>
+                        <img id="displayImage_6" class="ad-image d-none"/>
+                    </div>
+                    <div class="col-md-1 col-sm-12 mr-5 viewImages">
+                        <div class="ad-image text-center" id="viewImage_7"></div>
+                        <img id="displayImage_7" class="ad-image d-none"/>
+                    </div>
+                    <div class="col-md-1 col-sm-12 mr-5 viewImages">
+                        <div class="ad-image text-center" id="viewImage_8"></div>
+                        <img id="displayImage_8" class="ad-image d-none"/>
+                    </div>
+                    <div class="col-md-1 col-sm-12 mr-5 viewImages">
+                        <div class="ad-image text-center" id="viewImage_9"></div>
+                        <img id="displayImage_9" class="ad-image d-none"/>
+                    </div>
+                </div>
+
+                <div class="row pt-5 mt-5 mb-5">
+                    <div class="col-md-6 col-sm-12 text-right">
+                        <button type="button" class="btn outline-md-cyan pl-5 pr-5" @click="goBack">Cancel</button>
+                    </div>
+                    <div class="col-md-6 col-sm-12 text-left">
                         <button class="btn btn-md-cyan pl-5 pr-5" @click="postData">Next</button>
                     </div>
                 </div>
@@ -157,6 +219,7 @@
             zip: '',
             type: 'market',
             deliveryDetails: '',
+            images: [],
         },
         methods: {
             changeSection(){
@@ -165,12 +228,39 @@
                     this.tags = document.getElementById('tags').value.split(',');
                     this.section = 'second';
                 }
+                if (this.section == 'second') {
+                    this.section = 'third';
+                }
             },
 
             goBack(){
                 window.scrollTo(0,0);
                 if (this.section == 'second') {
                     this.section = 'first';
+                }
+                if (this.section == 'third') {
+                    this.section = 'second';
+                }
+            },
+
+            uploadImage(){
+                document.getElementById('files').click();
+            },
+
+            showImage() {
+                var src = document.getElementById("files").files;
+                src.length > 10 ? src.length = 10 : '';
+                for (let index = 0; index < src.length; index++) {
+                    var displayImage = document.getElementById('displayImage_'+index);
+                    var fr=new FileReader();
+                    // when image is loaded, set the src of the image where you want to display it
+                    fr.onload = function(e) {
+                        displayImage.src = e.target.result;
+                    };
+                    fr.readAsDataURL(src[index]);
+                    this.images[index] = src[index];
+                    displayImage.classList.remove('d-none');
+                    document.getElementById('viewImage_'+index).classList.add('d-none');
                 }
             },
 
@@ -195,6 +285,13 @@
                 formData.append('zip', this.zip);
                 formData.append('type', this.type);
                 formData.append('deliveryDetails', this.deliveryDetails);
+
+                if(this.images.length > 0){
+                    this.images.forEach((value, key) => {
+                        formData.append('image-'+key, value);
+                    });
+                    formData.append('photoLength', this.images.length);
+                }
 
                 axios.post('/seller/post-inventory', formData, {
                     headers: {

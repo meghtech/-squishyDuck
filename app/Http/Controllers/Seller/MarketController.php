@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Seller;
 
+use Intervention\Image\Facades\Image;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Http\Request;
 use App\Models\Listings;
@@ -36,6 +38,29 @@ class MarketController extends Controller
 
     public function postInventory(Request $request){
         log::info($request);
+
+        $imageList = [];
+        for ($i=0; $i < $request->photoLength; $i++) {
+            $fileNo = "image-".$i;
+            $image = $request->$fileNo;
+            $filenamewithextension = $request->$fileNo->getClientOriginalName();
+            //get filename without extension
+            $filename = pathinfo($filenamewithextension, PATHINFO_FILENAME);
+            //get file extension
+            $extension = $request->$fileNo->getClientOriginalExtension();
+            //filename to store
+            $filenametostore = $filename . '_' . time() . '.webp' ;
+            if (!File::exists(public_path() . "/content/images/inventory")) {
+                File::makeDirectory(public_path() . "/content/images/inventory", 0777, true);
+            }
+            $originalPath = public_path() . '/content/images/inventory';
+            $thumbnailImage = Image::make($image)->encode('webp', 100);
+            $thumbnailImage->resize(500, 500, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save($originalPath.'/'. $filenametostore);
+            $imageList[] = $filenametostore;
+        }
+
         $list = new Listings();
         $list->user_id = auth()->user()->id;
         $list->title = $request->title;
@@ -57,6 +82,7 @@ class MarketController extends Controller
         $list->zip_code = $request->zip_code;
         $list->delivery_detail = $request->deliveryDetails;
         $list->type = $request->type;
+        $list->photos = json_encode($imageList);
         $list->save();
 
         return "Success!";

@@ -2,6 +2,7 @@
 /public/hot
 /public/storage
 /public/content/images/service
+/public/content/images/inventory
 /bootstrap/cache
 /storage/*.key
 /vendor

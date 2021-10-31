@@ -198,6 +198,12 @@ Route::get('/seller/market', [SellerMarketController::class, 'index'])->name('se
 Route::get('/seller/create-schedule', [SellerMarketController::class, 'createSchedule'])->name('seller.createSchedule');
 Route::get('/seller/market/{slug}', [SellerMarketController::class, 'viewDetail'])->name('seller.market.detail');
 
+Route::get('/seller/inventory', [SellerMarketController::class, 'inventory'])->name('seller.inventory');
+Route::get('/seller/create-inventory', [SellerMarketController::class, 'createInventory'])->name('seller.createInventory');
+Route::post('/seller/post-inventory', [SellerMarketController::class, 'postInventory'])->name('seller.postInventory');
+
+
+
 Route::get('/seller/service', [SellerServiceController::class, 'index'])->name('seller.service');
 Route::get('/seller/create-service', [SellerServiceController::class, 'createService'])->name('seller.createService');
 Route::post('/seller/post-service', [SellerServiceController::class, 'postService'])->name('seller.postService');

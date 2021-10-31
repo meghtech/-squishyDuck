@@ -135,7 +135,7 @@
 
 <!-- Dashboard Container -->
 <div class="dashboard-container">
-	@if ( !Request::is('seller/market*') && !Request::is('chat*') && !Request::is('seller/create-schedule*')&& !Request::is('seller/create-service*'))
+	@if ( !Request::is('seller/market*') && !Request::is('chat*') && !Request::is('seller/create-schedule*') && !Request::is('seller/create-service*') && !Request::is('seller/create-inventory*'))
 	<!-- Dashboard Sidebar
 	================================================== -->
 	<div class="dashboard-sidebar">
@@ -165,7 +165,7 @@
 							<li><a href="{{ route('seller.incomingRequests') }}"><i class="icon-material-outline-assignment"></i>Incoming Requests</a></li>
 						</ul>
 						<ul data-submenu-title="Inventory">
-							<li><a href="#"><i class="icon-material-outline-assignment"></i>Current Inventory</a></li>
+							<li><a href="{{ route('seller.inventory') }}"><i class="icon-material-outline-assignment"></i>Current Inventory</a></li>
 							<li><a href="#"><i class="icon-material-outline-assignment"></i>Current Listing</a></li>
 							<li><a href="#"><i class="icon-material-outline-assignment"></i>Manages</a></li>
 						</ul>

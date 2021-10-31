@@ -72,6 +72,7 @@ class ServiceController extends Controller
         $list->city = $request->city;
         $list->state = $request->state;
         $list->zip_code = $request->zip_code;
+        $list->type = $request->type;
         $list->photos = json_encode($imageList);
         $list->save();
 

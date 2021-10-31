@@ -25,9 +25,9 @@ class CreateListingsTable extends Migration
             $table->text('tags')->nullable();
             $table->string('size')->nullable();
             $table->string('for_type')->nullable();
-            $table->string('manufacture')->nullable();
+            $table->string('manufacturer')->nullable();
             $table->string('model_name')->nullable();
-            $table->string('length')->nullable();
+            $table->string('dimension')->nullable();
             $table->string('condition')->nullable();
             $table->string('company_name')->nullable();
             $table->string('contact_email')->nullable();

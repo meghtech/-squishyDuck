@@ -17,7 +17,8 @@ class MarketController extends Controller
     }
 
     public function index(){
-        return view('seller.market.market');
+        $data = Listings::where('type', 'market')->paginate(2);
+        return view('seller.market.market', compact('data'));
     }
 
     public function viewDetail($slug){

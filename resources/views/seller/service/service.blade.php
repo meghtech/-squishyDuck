@@ -38,169 +38,41 @@
 
             <div class="input-with-icon">
                 <input id="autocomplete-input" type="text" placeholder="Search service...">
-                    <i style="font-size: 25px;" class="text-dark icon-material-outline-search"></i>
+                <i style="font-size: 25px;" class="text-dark icon-material-outline-search"></i>
             </div>
             <!-- Fun Facts Container -->
 
             <div class="listings-container grid-layout margin-top-35">
-                        <!-- Job Listing -->
-                        <a href="{{ route('seller.market.detail', 'office-chair-for-sale') }}" class="job-listing p-0">
-                            <!-- Job Listing Details -->
-                            <div class="job-listing-details">
-                                <!-- Logo -->
-                                <div class="job-listing-company-logo">
-                                    <img src="{{asset('storage/upload/Gig/Gig-1619457919.png')}}" alt="">
-                                </div>
+                <!-- Job Listing -->
+                @foreach($data as $s_data)
+                    <a href="{{ route('seller.market.detail', $s_data->id) }}" class="job-listing p-0">
+                        <!-- Job Listing Details -->
+                        <div class="job-listing-details">
+                            <!-- Logo -->
+                            <div class="job-listing-company-logo">
+                                <img src="{{asset('/content/images/service/'.\GuzzleHttp\json_decode($s_data->photos, true)[0])}}" alt="">
                             </div>
-                            <!-- Job Listing Footer -->
-                            <div class="job-listing-footer">
-                                <span class="bookmark-icon"></span>
-                                <ul>
-                                    <li>
-                                        <h5>DO Web Design &amp; Develop</h5>
-                                    </li>
-                                    <li>
-                                        <h3 class="text-success d-inline">$14.00</h3><span style="font-size: 22px;"> /hr</span>
-                                    </li>
-                                    <li class="d-block">
-                                        <p style="font-size: 12px;" class="d-inline"><i class="icon-material-outline-access-time"></i>1 day</p>
-                                        <p class="d-inline" style="float:right; padding-right:25px; color:gray; font-size:14px;">More Details <i class="fa fa-angle-right"></i></p>
-                                    </li>
-                                    <br>
-                                </ul>
-                            </div>
-                        </a>
-                        <a href="{{ route('seller.market.detail', 'office-chair-for-sale') }}" class="job-listing p-0">
-                            <!-- Job Listing Details -->
-                            <div class="job-listing-details">
-                                <!-- Logo -->
-                                <div class="job-listing-company-logo">
-                                    <img src="{{asset('storage/upload/Gig/Gig-1619457919.png')}}" alt="">
-                                </div>
-                            </div>
-                            <!-- Job Listing Footer -->
-                            <div class="job-listing-footer">
-                                <span class="bookmark-icon"></span>
-                                <ul>
-                                    <li>
-                                        <h5>DO Web Design &amp; Develop</h5>
-                                    </li>
-                                    <li>
-                                        <h3 class="text-success d-inline">$14.00</h3><span style="font-size: 22px;"> /hr</span>
-                                    </li>
-                                    <li class="d-block">
-                                        <p style="font-size: 12px;" class="d-inline"><i class="icon-material-outline-access-time"></i>1 day</p>
-                                        <p class="d-inline" style="float:right; padding-right:25px; color:gray; font-size:14px;">More Details <i class="fa fa-angle-right"></i></p>
-                                    </li>
-                                    <br>
-                                </ul>
-                            </div>
-                        </a>
-                        <a href="{{ route('seller.market.detail', 'office-chair-for-sale') }}" class="job-listing p-0">
-                            <!-- Job Listing Details -->
-                            <div class="job-listing-details">
-                                <!-- Logo -->
-                                <div class="job-listing-company-logo">
-                                    <img src="{{asset('storage/upload/Gig/Gig-1619457919.png')}}" alt="">
-                                </div>
-                            </div>
-                            <!-- Job Listing Footer -->
-                            <div class="job-listing-footer">
-                                <span class="bookmark-icon"></span>
-                                <ul>
-                                    <li>
-                                        <h5>DO Web Design &amp; Develop</h5>
-                                    </li>
-                                    <li>
-                                        <h3 class="text-success d-inline">$14.00</h3><span style="font-size: 22px;"> /hr</span>
-                                    </li>
-                                    <li class="d-block">
-                                        <p style="font-size: 12px;" class="d-inline"><i class="icon-material-outline-access-time"></i>1 day</p>
-                                        <p class="d-inline" style="float:right; padding-right:25px; color:gray; font-size:14px;">More Details <i class="fa fa-angle-right"></i></p>
-                                    </li>
-                                    <br>
-                                </ul>
-                            </div>
-                        </a>
-                        <a href="{{ route('seller.market.detail', 'office-chair-for-sale') }}" class="job-listing p-0">
-                            <!-- Job Listing Details -->
-                            <div class="job-listing-details">
-                                <!-- Logo -->
-                                <div class="job-listing-company-logo">
-                                    <img src="{{asset('storage/upload/Gig/Gig-1619457919.png')}}" alt="">
-                                </div>
-                            </div>
-                            <!-- Job Listing Footer -->
-                            <div class="job-listing-footer">
-                                <span class="bookmark-icon"></span>
-                                <ul>
-                                    <li>
-                                        <h5>DO Web Design &amp; Develop</h5>
-                                    </li>
-                                    <li>
-                                        <h3 class="text-success d-inline">$14.00</h3><span style="font-size: 22px;"> /hr</span>
-                                    </li>
-                                    <li class="d-block">
-                                        <p style="font-size: 12px;" class="d-inline"><i class="icon-material-outline-access-time"></i>1 day</p>
-                                        <p class="d-inline" style="float:right; padding-right:25px; color:gray; font-size:14px;">More Details <i class="fa fa-angle-right"></i></p>
-                                    </li>
-                                    <br>
-                                </ul>
-                            </div>
-                        </a>
-                        <a href="{{ route('seller.market.detail', 'office-chair-for-sale') }}" class="job-listing p-0">
-                            <!-- Job Listing Details -->
-                            <div class="job-listing-details">
-                                <!-- Logo -->
-                                <div class="job-listing-company-logo">
-                                    <img src="{{asset('storage/upload/Gig/Gig-1619457919.png')}}" alt="">
-                                </div>
-                            </div>
-                            <!-- Job Listing Footer -->
-                            <div class="job-listing-footer">
-                                <span class="bookmark-icon"></span>
-                                <ul>
-                                    <li>
-                                        <h5>DO Web Design &amp; Develop</h5>
-                                    </li>
-                                    <li>
-                                        <h3 class="text-success d-inline">$14.00</h3><span style="font-size: 22px;"> /hr</span>
-                                    </li>
-                                    <li class="d-block">
-                                        <p style="font-size: 12px;" class="d-inline"><i class="icon-material-outline-access-time"></i>1 day</p>
-                                        <p class="d-inline" style="float:right; padding-right:25px; color:gray; font-size:14px;">More Details <i class="fa fa-angle-right"></i></p>
-                                    </li>
-                                    <br>
-                                </ul>
-                            </div>
-                        </a>
-                        <a href="{{ route('seller.market.detail', 'office-chair-for-sale') }}" class="job-listing p-0">
-                            <!-- Job Listing Details -->
-                            <div class="job-listing-details">
-                                <!-- Logo -->
-                                <div class="job-listing-company-logo">
-                                    <img src="{{asset('storage/upload/Gig/Gig-1619457919.png')}}" alt="">
-                                </div>
-                            </div>
-                            <!-- Job Listing Footer -->
-                            <div class="job-listing-footer">
-                                <span class="bookmark-icon"></span>
-                                <ul>
-                                    <li>
-                                        <h5>DO Web Design &amp; Develop</h5>
-                                    </li>
-                                    <li>
-                                        <h3 class="text-success d-inline">$14.00</h3><span style="font-size: 22px;"> /hr</span>
-                                    </li>
-                                    <li class="d-block">
-                                        <p style="font-size: 12px;" class="d-inline"><i class="icon-material-outline-access-time"></i>1 day</p>
-                                        <p class="d-inline" style="float:right; padding-right:25px; color:gray; font-size:14px;">More Details <i class="fa fa-angle-right"></i></p>
-                                    </li>
-                                    <br>
-                                </ul>
-                            </div>
-                        </a>
-                    </div>
+                        </div>
+                        <!-- Job Listing Footer -->
+                        <div class="job-listing-footer">
+                            <span class="bookmark-icon"></span>
+                            <ul>
+                                <li>
+                                    <h5>{{ $s_data->title }}</h5>
+                                </li>
+                                <li>
+                                    <h3 class="text-success d-inline">{{ $s_data->price }}</h3><span style="font-size: 22px;"> /hr</span>
+                                </li>
+                                <li class="d-block">
+                                    <p style="font-size: 12px;" class="d-inline"><i class="icon-material-outline-access-time"></i>1 day</p>
+                                    <p class="d-inline" style="float:right; padding-right:25px; color:gray; font-size:14px;">More Details <i class="fa fa-angle-right"></i></p>
+                                </li>
+                                <br>
+                            </ul>
+                        </div>
+                    </a>
+                @endforeach
+            </div>
 
         </div>
         <div class="ml-4 mr-4 pl-3 pr-3">

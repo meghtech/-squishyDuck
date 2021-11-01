@@ -17,7 +17,8 @@ class ServiceController extends Controller
     }
 
     public function index(){
-        return view('seller.service.service');
+        $data = Listings::where('type', 'service')->paginate(6);
+        return view('seller.service.service', compact('data'));
     }
 
     public function viewDetail($slug){

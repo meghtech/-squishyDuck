@@ -20,12 +20,6 @@
 
 @section('content')
 
-    <?php
-
-    $gigExists = \App\Models\Gig::where('seller_id', auth()->id())->exists();
-
-    ?>
-
     <!-- Dashboard Content
 	================================================== -->
     <div class="dashboard-content-container" data-simplebar>

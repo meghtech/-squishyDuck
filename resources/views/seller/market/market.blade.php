@@ -3,7 +3,7 @@
 
     <!-- Market Content
 	================================================== -->
-    <div class="container-fluid full-page-content-inner">
+    <div class="container-fluid full-page-content-inner" id="app">
         <div class="row">
             <div class="col-sm-3 col-md-3 col-lg-3 bg-light">
                 <div class="col-12 pt-5">
@@ -59,13 +59,12 @@
                 </div>
                 <div class="listings-container grid-layout margin-top-35">
                     <!-- Job Listing -->
-                    @foreach($data as $s_data)
-                        <a href="{{ route('seller.market.detail', $s_data->id) }}" class="job-listing">
+                        <a :href="getUrl(item.id)" class="job-listing" v-for="(item, index) in items" :key="index">
                             <!-- Job Listing Details -->
                             <div class="job-listing-details">
                                 <!-- Logo -->
                                 <div class="job-listing-company-logo">
-                                    <img src="{{asset('/content/images/service/'.\GuzzleHttp\json_decode($s_data->photos, true)[0])}}" alt="">
+                                    <img :src="getImage(index)" alt="">
                                 </div>
                             </div>
                             <!-- Job Listing Footer -->
@@ -73,10 +72,10 @@
                                 <span class="bookmark-icon"></span>
                                 <ul>
                                     <li>
-                                        <h5>{{ $s_data->title }}</h5>
-                                    </li>
+                                        <h5>@{{ item.title }}</h5>
+                                    </li><br>
                                     <li>
-                                        <h3 class="text-success">{{ $s_data->price }}</h3>
+                                        <h3 class="text-success">$@{{ item.price }}</h3>
                                     </li>
                                     <br>
                                 </ul>
@@ -88,10 +87,34 @@
                                 <p style="font-size:10px; padding-left:35px; margin-top:-10px;color:gray;"><i class="icon-material-outline-access-time"></i>1 day</p>
                             </div>
                         </a>
-                    @endforeach
                 </div>
             </div>
         </div>
     </div>
     @include('layouts.large-footer')
+<script src="{{ asset('js/app.js') }}"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            data: '',
+            items: '',
+        },
+        methods: {
+            getImage(index){
+                var asset = <?php echo json_encode(asset('content/images/service\/')); ?>;
+                return asset+JSON.parse(this.items[index].photos)[0];
+            },
+
+            getUrl(id){
+                return "{{route('seller.market.detail', '')}}"+"/"+id;
+            }
+        },
+        mounted() {
+            this.data = <?php echo json_encode($data); ?>;
+            this.items = this.data.data;
+            console.log(this.items);
+        },
+    });
+</script>
 @endsection

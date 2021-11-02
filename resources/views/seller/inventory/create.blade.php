@@ -178,7 +178,34 @@
                         <img id="displayImage_9" class="ad-image d-none"/>
                     </div>
                 </div>
-
+                <div class="row pt-5 mt-5 mb-5">
+                    <div class="col-md-6 col-sm-12 text-right">
+                        <button type="button" class="btn outline-md-cyan pl-5 pr-5" @click="goBack">Cancel</button>
+                    </div>
+                    <div class="col-md-6 col-sm-12 text-left">
+                        <button class="btn btn-md-cyan pl-5 pr-5" @click="changeSection">Next</button>
+                    </div>
+                </div>
+            </section>
+            <section v-else-if="section == 'forth'">
+                <h3 class="mt-4 text-center">Submit This Post?</h3>
+                <div class="row mt-5 p-5 bg-white productView">
+                    <div class="col-md-2 col-sm-12 p-0 mr-4">
+                        <img @load="addSrc" id="displayImage_11" class="ad-image"/>
+                    </div>
+                    <div class="col-4 p-0">
+                        <h4 class='pt-1 pb-1'>@{{title}}</h4>
+                        <h1 class="mb-3"><span class="text-success">$@{{price}}</span></h1>
+                        <div>
+                            <img class="bg-md-cyan border rounded-circle" alt="user" height="30px" width="30px">
+                            <span class="text-md-cyan" style="font-size:14px">{{Auth::user()->name}}</span>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-3 p-0">
+                        <p style="font-size: 12px;" class=" ml-2">Description</p>
+                        <p style="font-size: 14px;" class="mt-3">@{{description}}</p>
+                    </div>
+                </div>
                 <div class="row pt-5 mt-5 mb-5">
                     <div class="col-md-6 col-sm-12 text-right">
                         <button type="button" class="btn outline-md-cyan pl-5 pr-5" @click="goBack">Cancel</button>
@@ -220,6 +247,7 @@
             type: 'market',
             deliveryDetails: '',
             images: [],
+            thumbnail: '',
         },
         methods: {
             changeSection(){
@@ -229,6 +257,8 @@
                     this.section = 'second';
                 } else if (this.section == 'second') {
                     this.section = 'third';
+                } else if (this.section == 'third') {
+                    this.section = 'forth';
                 }
             },
 
@@ -238,6 +268,8 @@
                     this.section = 'first';
                 } else if (this.section == 'third') {
                     this.section = 'second';
+                } else if (this.section == 'forth') {
+                    this.section = 'third';
                 }
             },
 
@@ -246,20 +278,32 @@
             },
 
             showImage() {
+                this.images = [];
                 var src = document.getElementById("files").files;
                 src.length > 10 ? src.length = 10 : '';
+                if(src.length < 10) {
+                    for (let i=src.length; i < 10; i++) {
+                        document.getElementById('displayImage_'+i).removeAttribute("src");
+                    }
+                }
                 for (let index = 0; index < src.length; index++) {
-                    var displayImage = document.getElementById('displayImage_'+index);
                     var fr=new FileReader();
-                    // when image is loaded, set the src of the image where you want to display it
-                    fr.onload = function(e) {
-                        displayImage.src = e.target.result;
-                    };
                     fr.readAsDataURL(src[index]);
+                    fr.onload = (function(index, event) {
+                        var displayImage = document.getElementById('displayImage_'+index);
+                        displayImage.src = event.target.result;
+                        displayImage.classList.remove('d-none');
+                        if(index=='0') {
+                            this.thumbnail = event.target.result;
+                        }
+                    }).bind(event, index);
                     this.images[index] = src[index];
-                    displayImage.classList.remove('d-none');
                     document.getElementById('viewImage_'+index).classList.add('d-none');
                 }
+            },
+
+            addSrc() {
+                document.getElementById('displayImage_11').src = this.thumbnail;
             },
 
             postData(){

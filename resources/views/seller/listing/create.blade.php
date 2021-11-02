@@ -196,7 +196,7 @@
                         <h1 class="text-success mb-3">$@{{price}}/mo</h1>
                         <div>
                             <img class="bg-md-cyan border rounded-circle" alt="user" height="30px" width="30px">
-                            <span class="text-md-cyan" style="font-size:14px">John Doe</span>
+                            <span class="text-md-cyan" style="font-size:14px">{{Auth::user()->name}}</span>
                         </div>
                     </div>
                     <div class="col-5 p-0 ml-5 text-right">

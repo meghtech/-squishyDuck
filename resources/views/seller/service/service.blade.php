@@ -50,7 +50,7 @@
                         <div class="job-listing-details">
                             <!-- Logo -->
                             <div class="job-listing-company-logo">
-                                <img src="{{asset('/content/images/service/'.\GuzzleHttp\json_decode($s_data->photos, true)[0])}}" alt="">
+                                <img src="{{asset('/content/images/service/'.json_decode($s_data->photos, true)[0])}}" alt="">
                             </div>
                         </div>
                         <!-- Job Listing Footer -->

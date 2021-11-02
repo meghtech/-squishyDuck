@@ -9,10 +9,13 @@
             <div class="col-md-12">
                 <div class="single-page-header-inner">
                     <div class="left-side">
-                        <div class="header-image"><a href="single-company-profile.html"><img
-                                    src="asset('content')/images/company-logo-03a.png" alt=""></a></div>
+                        <div class="header-image">
+                            <a href="single-company-profile.html">
+                                <img src="{{asset('/content/images/service/'.\GuzzleHttp\json_decode($data->photos, true)[0])}}" alt="">
+                            </a>
+                        </div>
                         <div class="header-details">
-                            <h3>Office chair for sale</h3><i style="font-size:14px;" class="ml-2 icon-material-outline-access-time"></i>1 day
+                            <h3>{{ $data->title }}</h3><i style="font-size:14px;" class="ml-2 icon-material-outline-access-time"></i>1 day
                             <div>
                                 <img class="bg-md-cyan border rounded-circle" alt="user" height="30px" width="30px">
                                 <span class="text-md-cyan" style="font-size:18px">John Doe</span>
@@ -30,7 +33,7 @@
                         <span class="bookmark-icon"></span>
                         <div class="salary-box">
                             <div class="salary-type text-center">Price</div>
-                            <div class="salary-amount text-success">$123.00</div>
+                            <div class="salary-amount text-success">${{ $data->price }}</div>
                         </div>
                     </div>
                 </div>
@@ -49,14 +52,14 @@
         <div class="col-xl-8 col-lg-8 content-right-offset">
 
             <div class="single-page-section">
-                <p class="margin-bottom-25">Condition: <span class="text-success">Like New</span></p>
-                <p>20"x19"x48"</p>
+                <p class="margin-bottom-25">Condition: <span class="text-success">{{ $data->condition }}</span></p>
+                <p>{{ $data->size }}</p>
             </div>
 
             <div class="single-page-section">
                 <h3 class="margin-bottom-25">Item Description</h3>
                 <p>
-                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus voluptates esse porro! Molestiae officia, alias corrupti harum numquam, placeat exercitationem necessitatibus laborum labore at quaerat quidem asperiores veniam error ut.
+                   {{ $data->description }}
                 </p>
             </div>
 

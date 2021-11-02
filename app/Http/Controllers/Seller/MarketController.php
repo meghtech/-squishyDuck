@@ -21,8 +21,9 @@ class MarketController extends Controller
         return view('seller.market.market', compact('data'));
     }
 
-    public function viewDetail($slug){
-        return view('seller.market.detail');
+    public function viewDetail($id){
+        $data = Listings::where('id', $id)->first();
+        return view('seller.market.detail', compact('data'));
     }
 
     public function createSchedule(){

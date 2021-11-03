@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Freelancer;
+namespace App\Http\Controllers\Customer;
 
 use Intervention\Image\Facades\Image;
 use App\Http\Controllers\Controller;
@@ -9,27 +9,33 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Http\Request;
 use App\Models\Listings;
 
-class ServiceController extends Controller
+class ListingController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth:seller');
+        $this->middleware('auth:customer');
     }
 
     public function index(){
-        return view('freelancer.service.service');
+        $data = Listings::where('type', 'listing')
+        ->where('user_id', auth()->user()->id)
+        ->latest()
+        ->paginate(1)
+        ->appends(request()->query());
+        return view('customer.listing.listing', compact('data'));
     }
 
     public function viewDetail($slug){
-        return view('freelancer.service.detail');
+        return view('customer.listing.detail');
     }
 
-    public function createService(){
-       return view('freelancer.service.create');
+    public function createListing(){
+       return view('customer.listing.create');
     }
 
-    public function postService(Request $request){
+    public function postListing(Request $request){
         log::info($request);
+
         $imageList = [];
         for ($i=0; $i < $request->photoLength; $i++) {
             $fileNo = "image-".$i;
@@ -41,10 +47,10 @@ class ServiceController extends Controller
             $extension = $request->$fileNo->getClientOriginalExtension();
             //filename to store
             $filenametostore = $filename . '_' . time() . '.webp' ;
-            if (!File::exists(public_path() . "/content/images/service")) {
-                File::makeDirectory(public_path() . "/content/images/service", 0777, true);
+            if (!File::exists(public_path() . "/content/images/listing")) {
+                File::makeDirectory(public_path() . "/content/images/listing", 0777, true);
             }
-            $originalPath = public_path() . '/content/images/service';
+            $originalPath = public_path() . '/content/images/listing';
             $thumbnailImage = Image::make($image)->encode('webp', 100);
             $thumbnailImage->resize(500, 500, function ($constraint) {
                 $constraint->aspectRatio();
@@ -56,11 +62,11 @@ class ServiceController extends Controller
         $list->user_id = auth()->user()->id;
         $list->title = $request->title;
         $list->price = $request->price;
-        $list->service_type = $request->itemType;
-        $list->availability_days_with_time = $request->dayAndTime;
         $list->description = $request->description;
         $list->tags = $request->tags;
-        $list->company_name = $request->companyName;
+        $list->listing_address = $request->listingAddress;
+        $list->size = $request->size;
+        $list->for_type = $request->for_type;
         $list->contact_email = $request->contactEmail;
         $list->contact_name = $request->contactName;
         $list->contact_phone = $request->phoneNumber;
@@ -70,6 +76,7 @@ class ServiceController extends Controller
         $list->city = $request->city;
         $list->state = $request->state;
         $list->zip_code = $request->zip_code;
+        $list->delivery_detail = $request->deliveryDetails;
         $list->type = $request->type;
         $list->photos = json_encode($imageList);
         $list->save();

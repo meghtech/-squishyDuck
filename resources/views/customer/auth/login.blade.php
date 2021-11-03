@@ -39,7 +39,7 @@
                     <h3>We're glad to see you again!</h3>
                     <span>Don't have an account? <a href="pages-register.html">Sign Up!</a></span>
                 </div>
-                    
+
                 <!-- Form -->
                 <form method="POST" id="login-form" action="{{ route('login.customer') }}">
                         @csrf
@@ -61,9 +61,9 @@
                     <!-- Button -->
                 <button class="button full-width button-sliding-icon ripple-effect margin-top-10" type="submit" form="login-form">Log In <i class="icon-material-outline-arrow-right-alt"></i></button>
                 </form>
-                
-                
-                
+
+
+
             </div>
 
         </div>

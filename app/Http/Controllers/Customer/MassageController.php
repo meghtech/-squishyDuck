@@ -52,9 +52,9 @@ class MassageController extends Controller
         ]);
 
        $title = time().'.'.request()->file->getClientOriginalExtension();
-  
+
        $request->file->move(base_path('public/storage/upload/file/'), $title);
- 
+
        $storeFile = new FileUpload;
        $storeFile->customer_id = $request->customer_id;
        $storeFile->user_id = $request->customer_id;
@@ -63,7 +63,7 @@ class MassageController extends Controller
        $storeFile->save();
         return back();
      //    return response()->json(['success'=>'File Uploaded Successfully']);
-      
+
      // return $request->all();
     }
 

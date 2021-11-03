@@ -5,22 +5,24 @@ namespace App\Http\Controllers\Customer;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Http\Request;
-use App\Models\Category;
 use App\Models\PaymentCustomer;
-use App\Models\JobPost;
-use App\Models\Customer;
-use App\Models\Order;
-use App\Models\BidderPost;
-use App\Models\Message;
-use App\Models\User;
-use App\Models\CustomOffer;
-use App\Models\Seller;
 use App\Models\PaymentSeller;
-use App\Models\Review;
+use Illuminate\Http\Request;
+use App\Models\CustomOffer;
+use App\Models\BidderPost;
+use App\Models\Category;
+use App\Models\Customer;
+use App\Models\JobPost;
+use App\Models\Message;
 use App\Models\General;
+use App\Models\Seller;
+use App\Models\Review;
+use App\Models\Order;
+use App\Models\User;
 use Carbon\Carbon;
 use Image;
+
+
 class MainController extends Controller
 {
      public function __construct()
@@ -47,6 +49,16 @@ class MainController extends Controller
 
     	return view('customer.dashboard', compact('data', 'getUser'));
     }
+
+    public function incomingRequests()
+    {
+        $paymentCustomer = PaymentSeller::where('seller_id', auth()->id())
+            ->orderBy('id', 'DESC')
+            ->get();
+        return view('buyer.incomingRequests', compact('paymentCustomer'));
+    }
+
+
     public function jobPost()
     {
         $category = Category::where('status',1)->get();
@@ -69,7 +81,7 @@ class MainController extends Controller
     }
     public function jobPostDelete($id)
     {
-    
+
         $jobPost = JobPost::findOrfail($id)->update([
           'status' => 0
         ]);
@@ -80,7 +92,7 @@ class MainController extends Controller
 
     public function bidderSendMsg(Request $request)
     {
-      
+
 
 
       $customer = User::where('customer_id', $request->user_id)->first();
@@ -249,7 +261,7 @@ class MainController extends Controller
 
 
     }
-    
+
     public function BuyerCustomOffer()
     {
       $getCustomOffer = CustomOffer::where('customer_id', auth()->id())
@@ -270,7 +282,7 @@ class MainController extends Controller
     }
 
 
-///fileShare 
+///fileShare
 
 
 
@@ -331,7 +343,7 @@ class MainController extends Controller
         $this->validate($request,[
             'old_password' => 'required',
             'password' => 'required|confirmed'
-          
+
         ]);
 
      $hashPassword = Auth::user()->password;
@@ -352,7 +364,6 @@ class MainController extends Controller
 
         return view('admin.profile');
     }
-
 
 
 

@@ -21,7 +21,6 @@ class RouteServiceProvider extends ServiceProvider
     public const CUSTOMER = '/buyer/dashboard';
     public const ADMIN = '/admin/dashboard';
     public const SELLER = '/seller/dashboard';
-    public const Freelancer = '/freelancer/dashboard';
 
     /**
      * The controller namespace for the application.

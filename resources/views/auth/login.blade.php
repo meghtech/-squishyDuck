@@ -31,7 +31,7 @@
                                     <div class="p-section-title text-center">
                                         <h4>Create A new Account / Login </h4>
                                     </div>
-                                    <form action="{{ route("login") }}" method="POST">
+                                    <form action="{{ route('login') }}" method="POST">
                                         @csrf
                                         <div class="form-group input-group">
                                             <div class="input-group-prepend">
@@ -74,6 +74,3 @@
             </div>
     </section>
 @endsection
-
-
-

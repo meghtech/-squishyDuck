@@ -18,11 +18,12 @@ use App\Http\Controllers\Seller\MarketController as SellerMarketController;
 use App\Http\Controllers\Seller\ServiceController as SellerServiceController;
 use App\Http\Controllers\Seller\ListingController as SellerListingController;
 
-use App\Http\Controllers\Freelancer\MainController as FreelancerMainController;
-use App\Http\Controllers\Freelancer\ServiceController as FreelancerServiceController;
 
 use App\Http\Controllers\Customer\MainController as BuyerMainController;
 use App\Http\Controllers\Customer\MassageController;
+use App\Http\Controllers\Customer\MarketController as BuyerMarketController;
+use App\Http\Controllers\Customer\ListingController as BuyerListingController;
+use App\Http\Controllers\Customer\ServiceController as BuyerServiceController;
 
 use App\Http\Controllers\Seller\MsgController as SellerMsgController;
 use App\Http\Controllers\Seller\ServiceController;
@@ -219,23 +220,32 @@ Route::get('/seller/create-service', [SellerServiceController::class, 'createSer
 Route::get('/seller/services', [SellerServiceController::class, 'viewServices'])->name('seller.viewServices');
 Route::post('/seller/post-service', [SellerServiceController::class, 'postService'])->name('seller.postService');
 
-Route::get('/freelancer/service', [FreelancerServiceController::class, 'index'])->name('freelancer.service');
-Route::get('/freelancer/create-service', [FreelancerServiceController::class, 'createService'])->name('freelancer.createService');
-Route::post('/freelancer/post-service', [FreelancerServiceController::class, 'postService'])->name('freelancer.postService');
-
 Route::get('/chat', [ChatController::class, 'index'])->name('chat');
 
 
 /// buyer
 
 Route::get('/buyer/dashboard', [BuyerMainController::class, 'BuyerIndex'])->name('buyer.dashboard');
-
+Route::get('/buyer/incoming-requests', [BuyerMainController::class, 'incomingRequests'])->name('buyer.incomingRequests');
 
 Route::get('/buyer/job-post', [BuyerMainController::class, 'jobPost']);
 Route::post('/buyer/job-post-save', [BuyerMainController::class, 'jobPostSave'])->name('job.postSave');
 Route::get('/buyer/jobPostDelete/{id}', [BuyerMainController::class, 'jobPostDelete'])->name('job.jobPostDelete');
 
+Route::get('/buyer/inventory', [BuyerMarketController::class, 'inventory'])->name('buyer.inventory');
+Route::get('/buyer/create-inventory', [BuyerMarketController::class, 'createInventory'])->name('buyer.createInventory');
+Route::post('/buyer/post-inventory', [BuyerMarketController::class, 'postInventory'])->name('buyer.postInventory');
 
+Route::get('/buyer/listing', [BuyerListingController::class, 'index'])->name('buyer.listing');
+Route::get('/buyer/create-listing', [BuyerListingController::class, 'createListing'])->name('buyer.createListing');
+Route::post('/buyer/post-listing', [BuyerListingController::class, 'postListing'])->name('buyer.postListing');
+Route::get('/buyer/service/search', [BuyerServiceController::class, 'searchService'])->name('buyer.service.search');
+Route::get('/buyer/service', [BuyerServiceController::class, 'index'])->name('buyer.service');
+
+Route::get('/buyer/market/search', [BuyerMarketController::class, 'searchProduct'])->name('buyer.market.search');
+Route::get('/buyer/market', [BuyerMarketController::class, 'index'])->name('buyer.market');
+Route::get('/buyer/create-schedule', [BuyerMarketController::class, 'createSchedule'])->name('buyer.createSchedule');
+Route::get('/buyer/market/{slug}', [BuyerMarketController::class, 'viewDetail'])->name('buyer.market.detail');
 
 Route::get('/buyer/messages', [MassageController::class, 'index']);
 Route::get('/buyer/file-share', [MassageController::class, 'fileShare'])->name('file.share');

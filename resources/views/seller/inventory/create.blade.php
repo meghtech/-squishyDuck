@@ -59,9 +59,9 @@
                     <div class="col-md-6 col-sm-12">
                         <select name="condition" v-model="condition">
                             <option disabled value="">Select Condition</option>
-                            <option value="new">New</option>
-                            <option value="used">Used</option>
-                            <option value="restored">Restored</option>
+                            <option value="New">New</option>
+                            <option value="Used">Used</option>
+                            <option value="Restored">Restored</option>
                         </select>
                     </div>
                 </div>
@@ -101,10 +101,10 @@
                         <div class="col-md-2 col-sm-12">
                             <select name="state" v-model="state">
                                 <option value="" disabled>State</option>
-                                <option value="co">CO</option>
-                                <option value="ca">CA</option>
-                                <option value="la">LA</option>
-                                <option value="fl">FL</option>
+                                <option value="CO">CO</option>
+                                <option value="CA">CA</option>
+                                <option value="LA">LA</option>
+                                <option value="FL">FL</option>
                             </select>
                         </div>
                         <div class="col-md-2">

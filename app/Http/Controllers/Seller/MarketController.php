@@ -17,8 +17,14 @@ class MarketController extends Controller
     }
 
     public function index(){
-        $data = Listings::where('type', 'market')->paginate(2);
-        return view('seller.market.market', compact('data'));
+        $sortBy="asc";
+        $seachCity="";
+        $seachItem="";
+        $data = Listings::where('type', 'market')
+        ->orderBy('price', $sortBy)
+        ->paginate(1)
+        ->appends(request()->query());
+        return view('seller.market.market', compact('data', 'sortBy', 'seachCity', 'seachItem'));
     }
 
     public function viewDetail($id){
@@ -88,5 +94,43 @@ class MarketController extends Controller
         $list->save();
 
         return "Success!";
+    }
+
+    public function searchProduct(Request $request){
+        log::info($request->sortBy);
+        $sortBy = $request->sortBy;
+        $seachCity = $request->seachCity;
+        $seachItem =  $request->seachItem;
+
+        if($seachCity && !$seachItem){
+            $data = Listings::where('type', 'market')
+            ->where('city', 'LIKE', "%{$seachCity}%")
+            ->orWhere('zip_code', 'LIKE', "%{$seachCity}%")
+            ->orderBy('price', $sortBy)
+            ->paginate(1)
+            ->appends(request()->query());
+        } elseif(!$seachCity && $seachItem){
+            $data = Listings::where('type', 'market')
+            ->where('title', 'LIKE', "%{$seachItem}%")
+            ->orderBy('price', $sortBy)
+            ->paginate(1)
+            ->appends(request()->query());
+        } elseif($seachCity && $seachItem) {
+            $data = Listings::where('type', 'market')
+            ->where('title', 'LIKE', "%{$seachItem}%")
+            ->where(function($query) use ($seachCity) {
+                $query->where('city', 'LIKE', "%{$seachCity}%")
+                ->orWhere('zip_code', 'LIKE', "%{$seachCity}%");
+            })
+            ->orderBy('price', $sortBy)
+            ->paginate(1)
+            ->appends(request()->query());
+        } else {
+            $data = Listings::where('type', 'market')
+            ->orderBy('price', $sortBy)
+            ->paginate(1)
+            ->appends(request()->query());
+        }
+        return view('seller.market.market', compact('data', 'sortBy', 'seachCity', 'seachItem'));
     }
 }

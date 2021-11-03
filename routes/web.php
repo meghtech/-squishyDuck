@@ -199,9 +199,12 @@ Route::get('/seller/setting', [SellerMainController::class, 'sellerSetting']);
 Route::post('/seller/setting-save', [SellerMainController::class, 'sellerSettingSave'])->name('sellerSetting.save');
 Route::post('/seller/change-password', [SellerMainController::class, 'sellerSettingSavepass']);
 
+Route::match(['get', 'post'], '/seller/market/search', [SellerMarketController::class, 'searchProduct'])->name('seller.market.search');
 Route::get('/seller/market', [SellerMarketController::class, 'index'])->name('seller.market');
 Route::get('/seller/create-schedule', [SellerMarketController::class, 'createSchedule'])->name('seller.createSchedule');
 Route::get('/seller/market/{slug}', [SellerMarketController::class, 'viewDetail'])->name('seller.market.detail');
+
+
 
 Route::get('/seller/inventory', [SellerMarketController::class, 'inventory'])->name('seller.inventory');
 Route::get('/seller/create-inventory', [SellerMarketController::class, 'createInventory'])->name('seller.createInventory');
@@ -213,6 +216,7 @@ Route::post('/seller/post-listing', [SellerListingController::class, 'postListin
 
 Route::get('/seller/service', [SellerServiceController::class, 'index'])->name('seller.service');
 Route::get('/seller/create-service', [SellerServiceController::class, 'createService'])->name('seller.createService');
+Route::get('/seller/services', [SellerServiceController::class, 'viewServices'])->name('seller.viewServices');
 Route::post('/seller/post-service', [SellerServiceController::class, 'postService'])->name('seller.postService');
 
 Route::get('/freelancer/service', [FreelancerServiceController::class, 'index'])->name('freelancer.service');

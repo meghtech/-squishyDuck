@@ -36,10 +36,10 @@
                     <div class="col-md-2 col-sm-12">
                         <select name="item" v-model="itemType">
                             <option value="" disabled>Type</option>
-                            <option value="flat">Flat</option>
-                            <option value="electronics">Electronics</option>
-                            <option value="car">Car</option>
-                            <option value="food">Food</option>
+                            <option value="Flat">Flat</option>
+                            <option value="Electronics">Electronics</option>
+                            <option value="Car">Car</option>
+                            <option value="Food">Food</option>
                         </select>
                     </div>
                 </div>

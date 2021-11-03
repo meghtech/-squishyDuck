@@ -6,7 +6,6 @@
     <div class="container-fluid full-page-content-inner" id="app">
         <div class="row">
             <form action="{{ route('seller.market.search') }}" method="GET" id="searchForm">
-                @csrf
                 <input type="hidden" :value="sortBy" name="sortBy">
                 <input type="hidden" :value="seachCity" name="seachCity">
                 <input type="hidden" :value="seachItem" name="seachItem">
@@ -14,7 +13,7 @@
             <div class="col-sm-3 col-md-3 col-lg-3 bg-light">
                 <div class="col-12 pt-5">
                     <p>Price</p>
-                    <select name="sortBy" id="sortBy" v-model="sortBy" @change="search($event)">
+                    <select name="sortBy" id="sortBy" v-model="sortBy" @change="search">
                         <option value="asc">Lowest to Highest</option>
                         <option value="desc">Highest to Lowest</option>
                     </select>
@@ -59,7 +58,7 @@
                     <div class="row">
                         <div class="col-12">
                             <p class="float-left">Buy Results</p>
-                            {{ $data->appends(request()->query())->links('seller/market/pagination') }}
+                            {{ $data->links('seller/market/pagination') }}
                         </div>
                     </div>
                 </div>
@@ -105,19 +104,18 @@
     new Vue({
         el: '#app',
         data: {
-            sortBy: '',
+            sortBy: 'asc',
             seachCity: '',
             seachItem: '',
         },
         methods: {
             search(){
-                setTimeout(function(){
-                    document.getElementById('searchForm').submit();
-                }, 0.00000001);
+                if(this.seachCity || this.seachItem)
+                document.getElementById('searchForm').submit();
             },
         },
         mounted() {
-            this.sortBy = <?php echo json_encode($sortBy);?>;
+            this.srotBy = <?php echo json_encode($sortBy);?>;
             this.seachCity = <?php echo json_encode($seachCity);?>;
             this.seachItem = <?php echo json_encode($seachItem);?>;
         },

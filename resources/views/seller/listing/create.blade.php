@@ -56,9 +56,9 @@
                     <div class="col-md-6 col-sm-12">
                         <select name="for_type" v-model="for_type">
                             <option disabled value="">For</option>
-                            <option value="rent">For Rent</option>
+                            <option value="rent">Rent</option>
                             <option value="sell">Sell</option>
-                            <option value="renovated">Renovated</option>
+                            <option value="renovated">Renovation</option>
                         </select>
                     </div>
                 </div>
@@ -98,10 +98,10 @@
                         <div class="col-md-2 col-sm-12">
                             <select name="state" v-model="state">
                                 <option value="" disabled>State</option>
-                                <option value="co">CO</option>
-                                <option value="ca">CA</option>
-                                <option value="la">LA</option>
-                                <option value="fl">FL</option>
+                                <option value="CO">CO</option>
+                                <option value="CA">CA</option>
+                                <option value="LA">LA</option>
+                                <option value="FL">FL</option>
                             </select>
                         </div>
                         <div class="col-md-2">

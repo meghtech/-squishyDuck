@@ -51,7 +51,7 @@
                 <nav id="navigation">
                     <ul id="responsive">
                         <li><a href="{{ route('seller.market') }}" class="{{ Request::is('seller/market*') ? 'text-success' : '' }}">Market</a></li>
-                        <li><a href="{{ route('seller.service') }}" class="{{ Request::is('seller/service*') ? 'text-success' : '' }}">Service</a></li>
+                        <li><a href="{{ route('seller.viewServices') }}" class="{{ Request::is('seller/services*') ? 'text-success' : '' }}">Service</a></li>
                         <li><a href="">Listing</a></li>
                     </ul>
                 </nav>
@@ -135,7 +135,7 @@
 
 <!-- Dashboard Container -->
 <div class="dashboard-container">
-	@if ( !Request::is('seller/market*') && !Request::is('chat*') && !Request::is('seller/create-schedule*') && !Request::is('seller/create-service*') && !Request::is('seller/create-inventory*') && !Request::is('seller/create-listing*'))
+	@if ( !Request::is('seller/market*') && !Request::is('chat*') && !Request::is('seller/create-schedule*') && !Request::is('seller/create-service*') && !Request::is('seller/create-inventory*') && !Request::is('seller/create-listing*') && !Request::is('seller/services*'))
 	<!-- Dashboard Sidebar
 	================================================== -->
 	<div class="dashboard-sidebar">

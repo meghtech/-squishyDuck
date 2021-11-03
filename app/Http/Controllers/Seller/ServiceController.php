@@ -77,4 +77,12 @@ class ServiceController extends Controller
 
         return "Success!";
     }
+
+    public function viewServices(){
+        $data = Listings::where('type', 'service')->orderBy('price', 'asc')->paginate(1);
+        $sortBy="asc";
+        $seachCity="";
+        $seachItem="";
+        return view('seller.service.viewServices', compact('data', 'sortBy', 'seachCity', 'seachItem'));
+    }
 }

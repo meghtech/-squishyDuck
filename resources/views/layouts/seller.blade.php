@@ -52,7 +52,7 @@
                     <ul id="responsive">
                         <li><a href="{{ route('seller.market') }}" class="{{ Request::is('seller/market*') ? 'text-success' : '' }}">Market</a></li>
                         <li><a href="{{ route('seller.viewServices') }}" class="{{ Request::is('seller/services*') ? 'text-success' : '' }}">Service</a></li>
-                        <li><a href="">Listing</a></li>
+                        <li><a href="{{ route('seller.listing') }}" class="{{ Request::is('seller/listing*') ? 'text-success' : '' }}">Listing</a></li>
                     </ul>
                 </nav>
 				<div class="clearfix"></div>
@@ -135,7 +135,7 @@
 
 <!-- Dashboard Container -->
 <div class="dashboard-container">
-	@if ( !Request::is('seller/market*') && !Request::is('chat*') && !Request::is('seller/create-schedule*') && !Request::is('seller/create-service*') && !Request::is('seller/create-inventory*') && !Request::is('seller/create-listing*') && !Request::is('seller/services*'))
+	@if ( !Request::is('seller/market*') && !Request::is('chat*') && !Request::is('seller/create-schedule*') && !Request::is('seller/create-service*') && !Request::is('seller/services*') && !Request::is('seller/listing*'))
 	<!-- Dashboard Sidebar
 	================================================== -->
 	<div class="dashboard-sidebar">
@@ -167,10 +167,10 @@
 								</svg>View Schedule</a></li>
 						</ul>
 						<ul data-submenu-title="Requests">
-							<li><a href="{{ route('seller.incomingRequests') }}"><i class="icon-material-outline-assignment"></i> Incoming Requests</a></li>
+							<li><a href="{{ route('seller.incomingRequests') }}" class="{{ Request::is('seller/incoming-requests*') ? 'text-primary' : '' }}"><i class="icon-material-outline-assignment {{ Request::is('seller/incoming-requests*') ? 'text-primary' : '' }}"></i> Incoming Requests</a></li>
 						</ul>
 						<ul data-submenu-title="Organize and Manage Services">
-							<li><a href="#"><i class="icon-material-outline-assignment"></i> Services</a></li>
+							<li><a href="{{ route('seller.service') }}" class="{{ Request::is('seller/service*') ? 'text-primary' : '' }}"><i class="icon-material-outline-assignment {{ Request::is('seller/service*') ? 'text-primary' : '' }}"></i> Services</a></li>
 							<li><a href="#">
 								<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-up-right pt-1 mr-2" width="18" height="18" viewBox="0 0 18 13">
 								    <path fill-rule="evenodd"

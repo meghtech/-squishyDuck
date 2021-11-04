@@ -92,7 +92,7 @@ class MarketController extends Controller
         $list->street = $request->streetAddress;
         $list->city = $request->city;
         $list->state = $request->state;
-        $list->zip_code = $request->zip_code;
+        $list->zip_code = $request->zip;
         $list->delivery_detail = $request->deliveryDetails;
         $list->type = $request->type;
         $list->photos = json_encode($imageList);

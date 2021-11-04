@@ -211,9 +211,8 @@ Route::get('/seller/inventory', [SellerMarketController::class, 'inventory'])->n
 Route::get('/seller/create-inventory', [SellerMarketController::class, 'createInventory'])->name('seller.createInventory');
 Route::post('/seller/post-inventory', [SellerMarketController::class, 'postInventory'])->name('seller.postInventory');
 
+Route::get('/seller/listing/search', [SellerListingController::class, 'searchListing'])->name('seller.listing.search');
 Route::get('/seller/listing', [SellerListingController::class, 'index'])->name('seller.listing');
-Route::get('/seller/create-listing', [SellerListingController::class, 'createListing'])->name('seller.createListing');
-Route::post('/seller/post-listing', [SellerListingController::class, 'postListing'])->name('seller.postListing');
 
 Route::get('/seller/service', [SellerServiceController::class, 'index'])->name('seller.service');
 Route::get('/seller/create-service', [SellerServiceController::class, 'createService'])->name('seller.createService');
@@ -236,6 +235,8 @@ Route::get('/buyer/inventory', [BuyerMarketController::class, 'inventory'])->nam
 Route::get('/buyer/create-inventory', [BuyerMarketController::class, 'createInventory'])->name('buyer.createInventory');
 Route::post('/buyer/post-inventory', [BuyerMarketController::class, 'postInventory'])->name('buyer.postInventory');
 
+Route::get('/buyer/listings/search', [BuyerListingController::class, 'searchListing'])->name('buyer.listings.search');
+Route::get('/buyer/listings', [BuyerListingController::class, 'viewListing'])->name('buyer.listings');
 Route::get('/buyer/listing', [BuyerListingController::class, 'index'])->name('buyer.listing');
 Route::get('/buyer/create-listing', [BuyerListingController::class, 'createListing'])->name('buyer.createListing');
 Route::post('/buyer/post-listing', [BuyerListingController::class, 'postListing'])->name('buyer.postListing');

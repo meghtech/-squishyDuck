@@ -5,7 +5,7 @@
 	================================================== -->
     <div class="container-fluid full-page-content-inner" id="app">
         <div class="row">
-            <form action="{{ route('buyer.service.search') }}" method="GET" id="searchForm">
+            <form action="{{ route('buyer.listings.search') }}" method="GET" id="searchForm">
                 <input type="hidden" :value="sortBy" name="sortBy">
                 <input type="hidden" :value="seachCity" name="seachCity">
                 <input type="hidden" :value="seachItem" name="seachItem">
@@ -112,7 +112,7 @@
             search(){
                 setTimeout(function(){
                     document.getElementById('searchForm').submit();
-                }, 0.000001);
+                }, 0.00000001);
             },
         },
         mounted() {

@@ -104,18 +104,19 @@
     new Vue({
         el: '#app',
         data: {
-            sortBy: 'asc',
+            sortBy: '',
             seachCity: '',
             seachItem: '',
         },
         methods: {
             search(){
-                if(this.seachCity || this.seachItem)
-                document.getElementById('searchForm').submit();
+                setTimeout(function(){
+                    document.getElementById('searchForm').submit();
+                }, 0.00000001);
             },
         },
         mounted() {
-            this.srotBy = <?php echo json_encode($sortBy);?>;
+            this.sortBy = <?php echo json_encode($sortBy);?>;
             this.seachCity = <?php echo json_encode($seachCity);?>;
             this.seachItem = <?php echo json_encode($seachItem);?>;
         },

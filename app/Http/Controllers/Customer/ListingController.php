@@ -25,6 +25,55 @@ class ListingController extends Controller
         return view('customer.listing.listing', compact('data'));
     }
 
+    public function viewListing(){
+        $sortBy="asc";
+        $seachCity="";
+        $seachItem="";
+        $data = Listings::where('type', 'listing')
+        ->orderBy('price', $sortBy)
+        ->paginate(1)
+        ->appends(request()->query());
+        return view('customer.listing.viewListing', compact('data', 'sortBy', 'seachCity', 'seachItem'));
+    }
+
+    public function searchListing(Request $request){
+        log::info($request->sortBy);
+        $sortBy = $request->sortBy;
+        $seachCity = $request->seachCity;
+        $seachItem =  $request->seachItem;
+
+        if($seachCity && !$seachItem){
+            $data = Listings::where('type', 'listing')
+            ->where('city', 'LIKE', "%{$seachCity}%")
+            ->orWhere('zip_code', 'LIKE', "%{$seachCity}%")
+            ->orderBy('price', $sortBy)
+            ->paginate(1)
+            ->appends(request()->query());
+        } elseif(!$seachCity && $seachItem){
+            $data = Listings::where('type', 'listing')
+            ->where('title', 'LIKE', "%{$seachItem}%")
+            ->orderBy('price', $sortBy)
+            ->paginate(1)
+            ->appends(request()->query());
+        } elseif($seachCity && $seachItem) {
+            $data = Listings::where('type', 'listing')
+            ->where('title', 'LIKE', "%{$seachItem}%")
+            ->where(function($query) use ($seachCity) {
+                $query->where('city', 'LIKE', "%{$seachCity}%")
+                ->orWhere('zip_code', 'LIKE', "%{$seachCity}%");
+            })
+            ->orderBy('price', $sortBy)
+            ->paginate(1)
+            ->appends(request()->query());
+        } else {
+            $data = Listings::where('type', 'listing')
+            ->orderBy('price', $sortBy)
+            ->paginate(1)
+            ->appends(request()->query());
+        }
+        return view('customer.listing.viewListing', compact('data', 'sortBy', 'seachCity', 'seachItem'));
+    }
+
     public function viewDetail($slug){
         return view('customer.listing.detail');
     }
@@ -75,7 +124,7 @@ class ListingController extends Controller
         $list->street = $request->streetAddress;
         $list->city = $request->city;
         $list->state = $request->state;
-        $list->zip_code = $request->zip_code;
+        $list->zip_code = $request->zip;
         $list->delivery_detail = $request->deliveryDetails;
         $list->type = $request->type;
         $list->photos = json_encode($imageList);

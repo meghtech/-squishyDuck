@@ -52,7 +52,7 @@
                     <ul id="responsive">
                         <li><a href="{{ route('buyer.market') }}" class="{{ Request::is('buyer/market*') ? 'text-success' : '' }}">Market</a></li>
                         <li><a href="{{ route('buyer.service') }}" class="{{ Request::is('buyer/service*') ? 'text-success' : '' }}">Service</a></li>
-                        <li><a href="">Listing</a></li>
+                        <li><a href="{{ route('buyer.listings') }}" class="{{ Request::is('buyer/listings*') ? 'text-success' : '' }}">Listing</a></li>
                     </ul>
                 </nav>
 				<div class="clearfix"></div>
@@ -135,7 +135,7 @@
 
 <!-- Dashboard Container -->
 <div class="dashboard-container">
-	@if ( !Request::is('buyer/market*') && !Request::is('chat*') && !Request::is('buyer/create-schedule*') && !Request::is('buyer/create-inventory*') && !Request::is('buyer/create-listing*') && !Request::is('buyer/service*'))
+	@if ( !Request::is('buyer/market*') && !Request::is('chat*') && !Request::is('buyer/create-schedule*') && !Request::is('buyer/create-inventory*') && !Request::is('buyer/create-listing*') && !Request::is('buyer/service*') && !Request::is('buyer/listings*'))
 	<!-- Dashboard Sidebar
 	================================================== -->
 	<div class="dashboard-sidebar">
@@ -167,7 +167,7 @@
 								</svg>View Schedule</a></li>
 						</ul>
 						<ul data-submenu-title="Requests">
-							<li><a href="{{ route('buyer.incomingRequests') }}"><i class="icon-material-outline-assignment"></i>Incoming Requests</a></li>
+							<li><a href="{{ route('buyer.incomingRequests') }}" class="{{ Request::is('buyer/incoming-requests*') ? 'text-primary' : '' }}"><i class="icon-material-outline-assignment {{ Request::is('buyer/incoming-requests*') ? 'text-primary' : '' }}"></i>Incoming Requests</a></li>
 						</ul>
 						<ul data-submenu-title="Inventory">
 							<li><a href="{{ route('buyer.inventory') }}" class="{{ Request::is('buyer/inventory*') ? 'text-primary' : '' }}">

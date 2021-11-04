@@ -1,11 +1,11 @@
-@extends('layouts.customer')
+@extends('layouts.seller')
 @section('content')
 
     <!-- Market Content
 	================================================== -->
     <div class="container-fluid full-page-content-inner" id="app">
         <div class="row">
-            <form action="{{ route('buyer.service.search') }}" method="GET" id="searchForm">
+            <form action="{{ route('seller.listing.search') }}" method="GET" id="searchForm">
                 <input type="hidden" :value="sortBy" name="sortBy">
                 <input type="hidden" :value="seachCity" name="seachCity">
                 <input type="hidden" :value="seachItem" name="seachItem">
@@ -58,14 +58,14 @@
                     <div class="row">
                         <div class="col-12">
                             <p class="float-left">Buy Results</p>
-                            {{ $data->links('customer/market/pagination') }}
+                            {{ $data->links('seller/market/pagination') }}
                         </div>
                     </div>
                 </div>
                 <div class="listings-container grid-layout margin-top-35">
                     <!-- Job Listing -->
                     @foreach($data as $s_data)
-                        <a href="{{ route('buyer.market.detail', $s_data->id) }}" class="job-listing">
+                        <a href="{{ route('seller.market.detail', $s_data->id) }}" class="job-listing">
                             <!-- Job Listing Details -->
                             <div class="job-listing-details">
                                 <!-- Logo -->
@@ -112,7 +112,7 @@
             search(){
                 setTimeout(function(){
                     document.getElementById('searchForm').submit();
-                }, 0.000001);
+                }, 0.00000001);
             },
         },
         mounted() {

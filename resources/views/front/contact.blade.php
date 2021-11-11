@@ -52,8 +52,8 @@
 						    </div>
 						@endif
 
-<?php 
-	
+<?php
+
 	$general = \App\Models\General::find(1);
 
  ?>
@@ -75,7 +75,7 @@
 			<section id="contact" class="margin-bottom-60">
 				<h3 class="headline margin-top-15 margin-bottom-35">Any questions? Feel free to contact us!</h3>
 
-				<form method="post" name="contactform" id="contactform" action="{{url('contactSave')}}" autocomplete="on">
+				<form method="post" name="contactform" id="contactform" action="#" autocomplete="on">
 					@csrf
 					<div class="row">
 						<div class="col-md-6">
@@ -114,4 +114,3 @@
 <!-- Container / End -->
 
 @endsection
-

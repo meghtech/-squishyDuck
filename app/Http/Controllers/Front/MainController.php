@@ -16,7 +16,10 @@ use App\Models\FileUpload;
 use App\Models\Review;
 use App\Models\Contact;
 use Illuminate\Support\Str;
+use App\Models\Order;
+use App\Models\Listings;
 use Response;
+use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
 class MainController extends Controller
 {
@@ -25,7 +28,7 @@ class MainController extends Controller
         $setting = General::find(1);
         $getAllCategory = Category::where('status',1)->withCount('gigs')->get();
         return view('front.index', compact('getAllCategory','setting'));
-    } 
+    }
 
 
     public function searchStore(Request $request)
@@ -44,16 +47,14 @@ class MainController extends Controller
        }
         return view('front.serviceShow', compact('getGig'));
 
-       
-
     }
 
- 
+
      function serviceShow($slug)
     {
          $category = Category::where('slug',$slug)->with('gigs')->withCount('gigs')->first();
         return view('front.serviceShow', compact('category'));
-    } 
+    }
 
      function serviceDetails($slug)
     {
@@ -62,7 +63,7 @@ class MainController extends Controller
         $gig = Gig::where('slug',$slug)->first();
         return view('front.serviceDetails', compact('gig','gigRandom'));
     }
-    
+
 
     public function userInfo($userName)
     {
@@ -78,18 +79,18 @@ class MainController extends Controller
         if ($data['buyerReviewCount'] == 0) {
           $data['getAvarage'] = 0;
         }else{
-          
+
         $data['getAvarage'] = $data['buyerRevieSum'] / $data['buyerReviewCount'];
         }
-        
+
 
         return view('front.userInfo', compact('seller', 'buyerReview','data'));
-            
+
 
         }elseif($buyerExists){
 
         $buyer = Customer::where('user_name', $userName)->first();
-        // 
+        //
 
         return view('front.userInfo', compact('buyer'));
 
@@ -125,7 +126,7 @@ class MainController extends Controller
 
         $sendMsg = new Message();
         $sendMsg->user_id = $customerUserID->id;
-        $sendMsg->receiver_id = $sellerUserID->id; 
+        $sendMsg->receiver_id = $sellerUserID->id;
         $sendMsg->msg = $request->msg;
         $sendMsg->save();
 
@@ -137,7 +138,7 @@ class MainController extends Controller
 
       // return Contact::all();
       return view('front.contact');
-    }  
+    }
 
     public function contactSave(Request $request)
     {
@@ -152,7 +153,7 @@ class MainController extends Controller
       $getConatct = Contact::create($request->all());
 
       return back()->with('status', 'Your Message Will Be Send We Will Get in Touch Soon');
-    } 
+    }
      public function termCondition()
     {
       $gn = General::find(1);
@@ -162,7 +163,7 @@ class MainController extends Controller
     public function downloadFile($id)
     {
         $getFile = FileUpload::find($id);
-                
+
          $file= base_path('public/storage/upload/file/'.$getFile->file);
          // $file= public_path(). "/download/info.pdf";
 
@@ -175,6 +176,19 @@ class MainController extends Controller
 
 
         // return FileUpload::find($id);
+    }
+
+    public function saveSchedule(Request $request){
+      $product = Listings::where('id', $request->product_id)->select('user_id', 'price', 'type')->first();
+      $order = Order::create([
+        'seller_id' => $product->user_id,
+        'customer_id' => $request->user_id,
+        'gig_id' => $request->product_id,
+        'des' => $request->msg,
+        'amount' => $product->price,
+        'schedule_date' => date('Y-m-d', strtotime($request->date)),
+      ]);
+      return redirect()->back();
     }
 
 }

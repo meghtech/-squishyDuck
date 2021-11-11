@@ -70,7 +70,7 @@ Route::get('/payment-invoice', [PaymentController::class, 'paymentInvoice']);
 Route::post('/search-store', [MainController::class, 'searchStore'])->name('search.store');
 
 Route::get('/contact-us', [MainController::class, 'contactUs'])->name('contact.us');
-Route::post('/contactSave', [MainController::class, 'contactSave'])->name('contactSave');
+Route::post('/saveSchedule', [MainController::class, 'saveSchedule'])->name('saveSchedule');
 Route::get('/term-and-condition', [MainController::class, 'termCondition'])->name('termCondition');
 
 
@@ -202,7 +202,7 @@ Route::post('/seller/change-password', [SellerMainController::class, 'sellerSett
 
 Route::match(['get', 'post'], '/seller/market/search', [SellerMarketController::class, 'searchProduct'])->name('seller.market.search');
 Route::get('/seller/market', [SellerMarketController::class, 'index'])->name('seller.market');
-Route::get('/seller/create-schedule', [SellerMarketController::class, 'createSchedule'])->name('seller.createSchedule');
+Route::get('/seller/create-schedule/{id}', [SellerMarketController::class, 'createSchedule'])->name('seller.createSchedule');
 Route::get('/seller/market/{slug}', [SellerMarketController::class, 'viewDetail'])->name('seller.market.detail');
 
 
@@ -245,7 +245,7 @@ Route::get('/buyer/service', [BuyerServiceController::class, 'index'])->name('bu
 
 Route::get('/buyer/market/search', [BuyerMarketController::class, 'searchProduct'])->name('buyer.market.search');
 Route::get('/buyer/market', [BuyerMarketController::class, 'index'])->name('buyer.market');
-Route::get('/buyer/create-schedule', [BuyerMarketController::class, 'createSchedule'])->name('buyer.createSchedule');
+Route::get('/buyer/create-schedule/{id}', [BuyerMarketController::class, 'createSchedule'])->name('buyer.createSchedule');
 Route::get('/buyer/market/{slug}', [BuyerMarketController::class, 'viewDetail'])->name('buyer.market.detail');
 
 Route::get('/buyer/messages', [MassageController::class, 'index']);

@@ -18,13 +18,18 @@ class CreateOrdersTable extends Migration
             $table->foreignIdFor(\App\Models\Seller::class);
             $table->foreignIdFor(\App\Models\Customer::class);
             $table->foreignIdFor(\App\Models\Gig::class);
-            $table->text('des');
-            $table->integer('amount');
-            $table->integer('totalDay');
-            $table->integer('is_accept_buyer')->default(0);
-            $table->integer('is_accept_seller')->default(0);
-            $table->integer('payment_status')->default(0);
-            $table->integer('status')->default(0);
+            $table->text('des')->nullable();
+            $table->integer('amount')->nullable();
+            $table->integer('totalDay')->nullable();
+            $table->timestamp('schedule_date')->nullable();
+            $table->boolean('is_accept_buyer')->default(0);
+            $table->boolean('is_accept_seller')->default(0);
+            $table->boolean('payment_status')->default(0);
+            $table->boolean('status')->default(0);
+            $table->string('morningTime')->nullable();
+            $table->string('afternoonTime')->nullable();
+            $table->text('address')->nullable();
+            $table->string('city')->nullable();
             $table->timestamps();
         });
     }

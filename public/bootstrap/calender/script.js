@@ -1810,7 +1810,7 @@ $.fn.notes = function(name){
 			if(field.val() != '' && field.val() != prevHtml) {
 				var html = "<li><span>"+ (time.val() ? time.val() : "00:00") +"</span>"+field.val()+"</li>";
 				prevHtml = field.val();
-				
+
 				list.append(html);
 
 				setInterval(function(){
@@ -1820,7 +1820,7 @@ $.fn.notes = function(name){
 
 			return false;
 		});
-	});	
+	});
 }
 
 $(function(){
@@ -1836,7 +1836,6 @@ $(function(){
 			if(typeof(e.date) == "undefined") return false;
 
 			var milliseconds = Date.parse(e.date);
-
 			setCelendarDay(milliseconds);
 		}
 
@@ -1848,7 +1847,8 @@ $(function(){
 	setCelendarDay(milliseconds);
 
 	function setCelendarDay(milliseconds){
-		var date = new Date(milliseconds).format("dd/mm/yyyy");
+		var date = new Date(milliseconds).format("yyyy/mm/dd");
+		document.getElementById('selectedDate').value = date;
 		var formatTitle = new Date(milliseconds).format("dddd, <b>d mmmm</b>");
 		var list = $(".b-notes__list");
 		var title = $(".b-app__title");
@@ -1857,10 +1857,10 @@ $(function(){
 
 			$.each(data.days, function(){
 				var obj = this;
-				
+
 				if(date == obj.day) {
 					var items = obj.data;
-					
+
 					list.html('');
 
 					$.each(items, function(){

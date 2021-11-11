@@ -4,6 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Customer;
+use App\Models\Seller;
+use App\Models\Listings;
 
 class Order extends Model
 {
@@ -11,16 +14,16 @@ class Order extends Model
 
     protected $guarded = [];
 
-    public function gig()
+    public function listing()
     {
-    	return $this->hasOne(Gig::class, "id", "gig_id");
-    } 
+    	return $this->belongsTo(Listings::class, "gig_id");
+    }
     public function seller()
     {
-    	return $this->hasOne(Seller::class, "id", "seller_id");
+    	return $this->belongsTo(Seller::class, "seller_id");
     }
     public function customer()
     {
-    	return $this->hasOne(Customer::class, "id", "customer_id");
+    	return $this->belongsTo(Customer::class, "customer_id");
     }
 }

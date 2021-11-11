@@ -72,10 +72,10 @@ class MainController extends Controller
 
     public function incomingRequests()
     {
-        $paymentCustomer = PaymentSeller::where('seller_id', auth()->id())
+        $requests = Order::where('seller_id', auth()->id())->with('customer', 'listing')
             ->orderBy('id', 'DESC')
             ->get();
-        return view('seller.incomingRequests', compact('paymentCustomer'));
+        return view('seller.incomingRequests', compact('requests'));
     }
 
     public function sellerOrder()

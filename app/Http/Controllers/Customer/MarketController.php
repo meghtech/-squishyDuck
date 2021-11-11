@@ -32,8 +32,8 @@ class MarketController extends Controller
         return view('customer.market.detail', compact('data'));
     }
 
-    public function createSchedule(){
-       return view('customer.market.createSchedule');
+    public function createSchedule($id){
+       return view('customer.market.createSchedule', compact('id'));
     }
 
     public function inventory(){

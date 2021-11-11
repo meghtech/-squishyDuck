@@ -6,7 +6,7 @@
 @section('content')
     <div class="col-xl-8 col-lg-8 offset-xl-2 offset-lg-2">
         <section id="contact" class="margin-bottom-60">
-            <form method="post" name="contactform" id="contactform" action="{{url('contactSave')}}" autocomplete="on">
+            <form method="POST" name="contactform" id="contactform" action="{{ route('saveSchedule')}}" autocomplete="on">
                 @csrf
                 <div class="col-12" id="myContent2" style="display: block">
                     <div class="pt-lg-5">
@@ -14,7 +14,7 @@
                         <textarea class="with-border" name="msg" cols="40" rows="10" id="comments" placeholder="Write a message..." spellcheck="true" required="required"></textarea>
                     </div>
                     <div class="text-center">
-                        <a href="#" class="submit button margin-top-15 px-lg-5" id="submit" onclick="myfunction()">Next</a>
+                        <a class="submit button margin-top-15 px-lg-5 text-white" id="submit" onclick="myfunction()">Next</a>
                     </div>
                 </div>
                 <div class="pt-lg-5" id="myContent" style="display: none">
@@ -29,15 +29,18 @@
                     </div>
                     <div class="col-6 float-left">
                         <div class="mb-3">
+                            <input type="hidden" id="selectedDate" name="date" value="">
+                            <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
+                            <input type="hidden" name="product_id" value="{{$id}}">
                             <label for="exampleFormControlInput1" class="form-label">Select Timeframe</label>
-                            <select class="form-select" aria-label="Default select example">
+                            <select class="form-select" name="morningTime" aria-label="Default select example">
                                 <option selected>Morning Times</option>
                                 <option value="1">One</option>
                                 <option value="2">Two</option>
                                 <option value="3">Three</option>
                             </select>
                             <br>
-                            <select class="form-select" aria-label="Default select example">
+                            <select class="form-select" name="afternoonTime" aria-label="Default select example">
                                 <option selected>Afternoon Times</option>
                                 <option value="1">One</option>
                                 <option value="2">Two</option>
@@ -46,10 +49,10 @@
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Address</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Street Address">
+                            <input type="text" class="form-control" name="address" id="exampleFormControlInput1" placeholder="Street Address">
                         </div>
                         <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Denver">
+                            <input type="text" class="form-control" name="city" placeholder="Denver">
                         </div>
                     </div>
                     <div class="text-center">

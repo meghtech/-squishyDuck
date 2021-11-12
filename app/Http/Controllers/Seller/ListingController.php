@@ -27,6 +27,11 @@ class ListingController extends Controller
         return view('seller.listing.viewListing', compact('data', 'sortBy', 'seachCity', 'seachItem'));
     }
 
+    public function viewDetail($id){
+        $data = Listings::where('id', $id)->first();
+        return view('seller.listing.detail', compact('data'));
+    }
+
     public function searchListing(Request $request){
         log::info($request->sortBy);
         $sortBy = $request->sortBy;

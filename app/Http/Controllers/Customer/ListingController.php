@@ -74,8 +74,9 @@ class ListingController extends Controller
         return view('customer.listing.viewListing', compact('data', 'sortBy', 'seachCity', 'seachItem'));
     }
 
-    public function viewDetail($slug){
-        return view('customer.listing.detail');
+    public function viewDetail($id){
+        $data = Listings::where('id', $id)->first();
+        return view('customer.listing.detail', compact('data'));
     }
 
     public function createListing(){

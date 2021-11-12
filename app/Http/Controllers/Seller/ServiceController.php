@@ -21,8 +21,9 @@ class ServiceController extends Controller
         return view('seller.service.service', compact('data'));
     }
 
-    public function viewDetail($slug){
-        return view('seller.service.detail');
+    public function viewDetail($id){
+        $data = Listings::where('id', $id)->first();
+        return view('seller.service.detail', compact('data'));
     }
 
     public function createService(){

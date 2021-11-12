@@ -18,11 +18,19 @@ class Order extends Model
     {
     	return $this->belongsTo(Listings::class, "gig_id");
     }
-    public function seller()
+    public function seller1()
     {
     	return $this->belongsTo(Seller::class, "seller_id");
     }
-    public function customer()
+    public function seller2()
+    {
+    	return $this->belongsTo(Customer::class, "seller_id");
+    }
+    public function customer1()
+    {
+    	return $this->belongsTo(Seller::class, "customer_id");
+    }
+    public function customer2()
     {
     	return $this->belongsTo(Customer::class, "customer_id");
     }

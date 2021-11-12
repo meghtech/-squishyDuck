@@ -27,6 +27,12 @@ class ServiceController extends Controller
         return view('customer.service.viewServices', compact('data', 'sortBy', 'seachCity', 'seachItem'));
     }
 
+
+    public function viewDetail($id){
+        $data = Listings::where('id', $id)->first();
+        return view('customer.service.detail', compact('data'));
+    }
+
     public function searchService(Request $request){
         log::info($request->sortBy);
         $sortBy = $request->sortBy;

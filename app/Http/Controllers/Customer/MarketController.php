@@ -32,10 +32,6 @@ class MarketController extends Controller
         return view('customer.market.detail', compact('data'));
     }
 
-    public function createSchedule($id){
-       return view('customer.market.createSchedule', compact('id'));
-    }
-
     public function inventory(){
         $data = Listings::where('type', 'market')
         ->where('user_id', auth()->user()->id)

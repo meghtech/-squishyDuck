@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Gig;
@@ -179,7 +180,7 @@ class MainController extends Controller
     }
 
     public function saveSchedule(Request $request){
-      $product = Listings::where('id', $request->product_id)->select('user_id', 'price', 'type')->first();
+      $product = Listings::where('id', $request->product_id)->select('user_id', 'price', 'title')->first();
       $order = Order::create([
         'seller_id' => $product->user_id,
         'customer_id' => $request->user_id,
@@ -188,6 +189,17 @@ class MainController extends Controller
         'amount' => $product->price,
         'schedule_date' => date('Y-m-d', strtotime($request->date)),
       ]);
+      $user = User::where('seller_id', $order->customer_id)->orWhere('customer_id', $order->customer_id)->first();
+      Mail::send('orderEmail', [
+        'product' => $product,
+        'title' => "New order from ".$user->name,
+        'type' => "newOrder",
+        'user' => $user,
+        'order' => $order,
+      ], function ($mail) use ($user) {
+          $mail->from('bashar@mtl.com');
+          $mail->to($user->email)->subject('New order received.');
+      });
       return redirect()->back();
     }
 

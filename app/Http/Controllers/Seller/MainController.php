@@ -72,7 +72,7 @@ class MainController extends Controller
 
     public function incomingRequests()
     {
-        $requests = Order::where('seller_id', auth()->id())->with('customer', 'listing')
+        $requests = Order::where('seller_id', auth()->id())->with('customer1', 'customer2', 'listing')
             ->orderBy('id', 'DESC')
             ->get();
         return view('seller.incomingRequests', compact('requests'));
@@ -198,5 +198,9 @@ class MainController extends Controller
 
         return view('admin.profile');
     }
+
+    public function createSchedule($id){
+        return view('seller.createSchedule', compact('id'));
+     }
 
 }

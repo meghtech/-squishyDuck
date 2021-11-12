@@ -202,7 +202,7 @@ Route::post('/seller/change-password', [SellerMainController::class, 'sellerSett
 
 Route::match(['get', 'post'], '/seller/market/search', [SellerMarketController::class, 'searchProduct'])->name('seller.market.search');
 Route::get('/seller/market', [SellerMarketController::class, 'index'])->name('seller.market');
-Route::get('/seller/create-schedule/{id}', [SellerMarketController::class, 'createSchedule'])->name('seller.createSchedule');
+Route::get('/seller/create-schedule/{id}', [SellerMainController::class, 'createSchedule'])->name('seller.createSchedule');
 Route::get('/seller/market/{slug}', [SellerMarketController::class, 'viewDetail'])->name('seller.market.detail');
 
 
@@ -245,7 +245,7 @@ Route::get('/buyer/service', [BuyerServiceController::class, 'index'])->name('bu
 
 Route::get('/buyer/market/search', [BuyerMarketController::class, 'searchProduct'])->name('buyer.market.search');
 Route::get('/buyer/market', [BuyerMarketController::class, 'index'])->name('buyer.market');
-Route::get('/buyer/create-schedule/{id}', [BuyerMarketController::class, 'createSchedule'])->name('buyer.createSchedule');
+Route::get('/buyer/create-schedule/{id}', [BuyerMainController::class, 'createSchedule'])->name('buyer.createSchedule');
 Route::get('/buyer/market/{slug}', [BuyerMarketController::class, 'viewDetail'])->name('buyer.market.detail');
 
 Route::get('/buyer/messages', [MassageController::class, 'index']);
@@ -275,6 +275,10 @@ Route::post('/buyer/custom-offer-store', [BuyerMainController::class, 'buyerOrde
 Route::get('/buyer/custom-offer', [BuyerMainController::class, 'BuyerCustomOffer'])->name('buyer.customOffer');
 
 Route::get('/buyer/payment', [BuyerMainController::class, 'BuyerPayment'])->name('buyer.payment');
+
+Route::get('/buyer/recent-orders', [BuyerMainController::class, 'recentOrder'])->name('buyer.recentOrder');
+Route::post('/buyer/getOrder', [BuyerMainController::class, 'getOrder'])->name('buyer.getOrder');
+Route::post('/buyer/updateOrder', [BuyerMainController::class, 'updateOrder'])->name('buyer.updateOrder');
 
 
 

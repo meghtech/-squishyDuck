@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Customer;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Auth;
 use App\Models\PaymentCustomer;
 use App\Models\PaymentSeller;
@@ -52,10 +54,62 @@ class MainController extends Controller
 
     public function incomingRequests()
     {
-        $paymentCustomer = PaymentSeller::where('seller_id', auth()->id())
+        $requests = Order::where('seller_id', auth()->id())
+			->with('seller1', 'seller2', 'customer1', 'customer2', 'listing')
+			->orderBy('id', 'DESC')
+            ->get();
+        return view('customer.incomingRequests', compact('requests'));
+    }
+
+    public function recentOrder()
+    {
+        $bought = Order::where('customer_id', auth()->id())
+			->with('seller1', 'seller2', 'customer1', 'customer2', 'listing')
+			->orderBy('id', 'DESC')
+            ->get();
+        return view('customer.recentOrder', compact('bought'));
+    }
+
+    public function updateOrder(Request $request)
+    {
+		$key = $request->field;
+		$update = Order::where('id',$request->id)->with('seller1', 'seller2', 'customer1', 'customer2', 'listing')->first();
+		$update->$key = $request->value;
+		$update->save();
+		if($request->field == 'is_accept_seller'){
+			$varTitle = 'Your order is confirmed';
+			$type = "sellerConfirm";
+		} else {
+			$varTitle = 'Payment confirmed';
+			$type = "paymentConfirm";
+		}
+		// Mail::send('orderEmail', [
+		// 	'product' => $update->listing,
+		// 	'title' => $varTitle,
+		// 	'type' => $type,
+		// 	'user' => null,
+		// 	'order' => $update,
+		// ], function ($mail) use ($user) {
+		// 	$mail->from('bashar@mtl.com');
+		// 	$mail->to($user->email)->subject($varTitle);
+		// });
+        return $update;
+    }
+
+    public function getOrder(Request $request)
+    {
+		if($request->type == 2){
+			$data =  Order::where('seller_id', auth()->id())
+            ->with('seller1', 'seller2', 'customer1', 'customer2', 'listing')
             ->orderBy('id', 'DESC')
             ->get();
-        return view('customer.incomingRequests', compact('paymentCustomer'));
+		} else {
+			$data = Order::where('customer_id', auth()->id())
+			->with('seller1', 'seller2', 'customer1', 'customer2', 'listing')
+            ->orderBy('id', 'DESC')
+            ->get();
+		}
+		return $data;
     }
 
 
@@ -365,6 +419,9 @@ class MainController extends Controller
         return view('admin.profile');
     }
 
+    public function createSchedule($id){
+      return view('customer.createSchedule', compact('id'));
+   }
 
 
 }

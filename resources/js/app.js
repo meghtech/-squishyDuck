@@ -5,7 +5,8 @@
  */
 
  require('./bootstrap');
-
+ window.axios = require('axios');
+ window.moment = require('moment');
  window.Vue = require('vue').default;
 
  /**

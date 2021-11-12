@@ -179,7 +179,7 @@
 							<li><a href="#"><i class="icon-material-outline-assignment"></i>Received Services</a></li>
 						</ul>
 						<ul data-submenu-title="Orders">
-							<li><a href="#"><i class="icon-material-outline-assignment"></i>Recent Orders</a></li>
+							<li><a href="{{ route('buyer.recentOrder') }}" class="{{ Request::is('buyer/recent-order*') ? 'text-primary' : '' }}"><i class="icon-material-outline-assignment {{ Request::is('buyer/recent-order*') ? 'text-primary' : '' }}"></i>Recent Orders</a></li>
 						</ul>
 						<ul data-submenu-title="Account">
 							<li><a href="{{url('/buyer/setting')}}"><i class="icon-material-outline-settings mr-2"></i>Settings</a></li>

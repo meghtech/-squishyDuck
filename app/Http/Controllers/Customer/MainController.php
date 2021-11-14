@@ -12,6 +12,7 @@ use App\Models\PaymentSeller;
 use Illuminate\Http\Request;
 use App\Models\CustomOffer;
 use App\Models\BidderPost;
+use App\Mail\OrderEmail;
 use App\Models\Category;
 use App\Models\Customer;
 use App\Models\JobPost;
@@ -75,25 +76,22 @@ class MainController extends Controller
 		$key = $request->field;
 		$update = Order::where('id',$request->id)->with('seller1', 'seller2', 'customer1', 'customer2', 'listing')->first();
 		$update->$key = $request->value;
+		if($request->field == 'is_accept_seller' && $request->orderConfirmed == 0){
+			$update->payment_status = 0;
+		}
 		$update->save();
+    $update->customer1 ? $user = $update->customer1 : $user = $update->customer2;
 		if($request->field == 'is_accept_seller'){
-			$varTitle = 'Your order is confirmed';
+			$title = 'Your order is confirmed';
 			$type = "sellerConfirm";
 		} else {
-			$varTitle = 'Payment confirmed';
+			$title = 'Payment confirmed';
 			$type = "paymentConfirm";
 		}
-		// Mail::send('orderEmail', [
-		// 	'product' => $update->listing,
-		// 	'title' => $varTitle,
-		// 	'type' => $type,
-		// 	'user' => null,
-		// 	'order' => $update,
-		// ], function ($mail) use ($user) {
-		// 	$mail->from('bashar@mtl.com');
-		// 	$mail->to($user->email)->subject($varTitle);
-		// });
-        return $update;
+    if($request->orderConfirmed || $request->paymentConfirmed){
+    	Mail::send(new OrderEmail($order = $update, $user, $product = $update->listing,  $title, $type));
+    }
+    return $update;
     }
 
     public function getOrder(Request $request)

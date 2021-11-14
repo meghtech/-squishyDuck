@@ -104,6 +104,8 @@
             renderComponent: true,
             datas: '',
             dataOf: '1',
+            orderConfirmed: 0,
+            paymentConfirmed: 0,
         },
         methods: {
 
@@ -139,13 +141,17 @@
             },
 
             updateData(id, field, index, event){
+                var value =  event.target.value;
+                field == "is_accept_seller" ?  this.orderConfirmed = value :  this.paymentConfirmed = value;
                 var update = {
                     method: 'post',
                     url: '/buyer/updateOrder',
                     data: {
                         field: field,
-                        value: event.target.value,
+                        value: value,
                         id: id,
+                        orderConfirmed: this.orderConfirmed,
+                        paymentConfirmed: this.paymentConfirmed,
                     }
                 };
                 axios(update).then((response) => {

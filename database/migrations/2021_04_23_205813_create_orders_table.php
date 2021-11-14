@@ -21,7 +21,7 @@ class CreateOrdersTable extends Migration
             $table->text('des')->nullable();
             $table->integer('amount')->nullable();
             $table->integer('totalDay')->nullable();
-            $table->timestamp('schedule_date')->nullable();
+            $table->date('schedule_date')->nullable();
             $table->boolean('is_accept_buyer')->default(0);
             $table->boolean('is_accept_seller')->default(0);
             $table->boolean('payment_status')->default(0);

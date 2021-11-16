@@ -25,6 +25,7 @@ class OrderEmail extends Mailable implements ShouldQueue
         $this->product = $product;
         $this->title = $title;
         $this->type = $type;
+        log::info($order);
     }
 
     /**

@@ -42,6 +42,8 @@
                                         Order Received
                                         @elseif($type == 'sellerConfirm')
                                         Seller confirmed your order
+                                        @else
+                                        Seller confirmed your payment
                                         @endif
                                     </h1>
                                         <span
@@ -67,7 +69,7 @@
                                         <span style="background:#16982D;text-decoration:none !important; font-weight:500; margin-top:5px; color:#fff;text-transform:uppercase; font-size:14px;padding:10px 24px;display:inline-block;border-radius:50px;">{{$order->schedule_date}}</span><br><br><br>
                                         @else
                                         <br><h3>Confirmed At</h3>
-                                        <span style="background:#16982D;text-decoration:none !important; font-weight:500; margin-top:5px; color:#fff;text-transform:uppercase; font-size:14px;padding:10px 24px;display:inline-block;border-radius:50px;">{{date('m/d/Y', strtotime(now()))}}</span><br><br><br>
+                                        <span style="background:#16982D;text-decoration:none !important; font-weight:500; margin-top:5px; color:#fff;text-transform:uppercase; font-size:14px;padding:10px 24px;display:inline-block;border-radius:50px;">{{date('m/d/Y H:i:s', strtotime(now()))}}</span><br><br><br>
                                         @endif
 
                                     </td>

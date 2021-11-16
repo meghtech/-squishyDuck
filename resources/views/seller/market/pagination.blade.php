@@ -1,10 +1,10 @@
 @if($paginator->hasPages())
     <p class="float-right">
         @if ($paginator->onFirstPage())
-            <i class="fa fa-caret-left" style="position: relative; top: 3px; font-size: 24px; padding-right: 5px"></i>
+            <i class="fa fa-caret-left" style="position: relative; top: 3px; font-size: 24px; padding-right: 5px; color:#d6d6d6 !important;"></i>
         @else
             <a class="active my-active" href="{{ $paginator->previousPageUrl() }}" rel="prev">
-                <i class="fa fa-caret-left" style="position: relative; top: 3px; font-size: 24px; padding-right: 5px"></i>
+                <i class="fa fa-caret-left" style="position: relative; top: 3px; font-size: 24px; padding-right: 5px; color:#666 !important;"></i>
             </a>
         @endif
         @foreach ($elements as $element)
@@ -22,12 +22,12 @@
                 of {{ $paginator->lastPage() }}
             @endif
         @endforeach
-        @if ($paginator->hasMorePages())
-            <a class="active my-active" href="{{ $paginator->nextPageUrl() }}" rel="next">
-                <i class="fa fa-caret-right" style="position: relative; top: 3px; font-size: 24px; padding-left: 5px"></i>
-            </a>
+        @if ($paginator->currentPage() == $paginator->lastPage())
+            <i  class="fa fa-caret-right" style="position: relative; top: 3px; font-size: 24px; padding-left: 5px; color:#d6d6d6 !important;"></i>
         @else
-            <i  class="fa fa-caret-right" style="position: relative; top: 3px; font-size: 24px; padding-left: 5px"></i>
+            <a class="active my-active" href="{{ $paginator->nextPageUrl() }}" rel="next">
+                <i class="fa fa-caret-right" style="position: relative; top: 3px; font-size: 24px; padding-left: 5px; color:#666 !important;"></i>
+            </a>
         @endif
     </p>
 @endif

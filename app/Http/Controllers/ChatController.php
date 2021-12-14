@@ -9,6 +9,11 @@ class ChatController extends Controller
 {
     public function index(Request $request)
     {
-    	return view('chat');
+        if(auth()->guard('seller')->check()){
+            return view('seller.chat');
+        }
+        else{
+            return view('customer.chat');
+        }
     }
 }

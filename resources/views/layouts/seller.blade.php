@@ -12,6 +12,7 @@
 <title>Squishy Duck</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="csrf-token" content="{{ csrf_token() }}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
@@ -25,12 +26,11 @@
 <link rel="stylesheet" href="{{asset('content')}}/css/style.css">
 <link rel="stylesheet" href="{{asset('content')}}/css/colors/blue.css">
 @stack('css')
-@livewireStyles
 </head>
 <body class="gray">
 
 <!-- Wrapper -->
-<div id="wrapper">
+<div id="wrapper" id="app">
 
 <!-- Header Container
 ================================================== -->
@@ -135,7 +135,7 @@
 
 <!-- Dashboard Container -->
 <div class="dashboard-container">
-	@if ( !Request::is('seller/market*') && !Request::is('chat*') && !Request::is('seller/create-schedule*') && !Request::is('seller/create-service*') && !Request::is('seller/services*') && !Request::is('seller/listing*'))
+	@if ( !Request::is('seller/market*') && !Request::is('chat') && !Request::is('seller/create-schedule*') && !Request::is('seller/create-service*') && !Request::is('seller/services*') && !Request::is('seller/listing*'))
 	<!-- Dashboard Sidebar
 	================================================== -->
 	<div class="dashboard-sidebar">
@@ -223,8 +223,8 @@
 <script src="{{asset('content')}}/js/counterup.min.js"></script>
 <script src="{{asset('content')}}/js/magnific-popup.min.js"></script>
 <script src="{{asset('content')}}/js/slick.min.js"></script>
+<script src="{{ asset('js/app.js') }}"></script>
 <script src="{{asset('content')}}/js/custom.js"></script>
-
 <!-- Snackbar // documentation: https://www.polonel.com/snackbar/ -->
 <script>
 // Snackbar for user status switcher
@@ -316,7 +316,17 @@ $('#snackbar-user-status label').click(function() {
 });
 
 </script> -->
+
+
 @stack('js')
-@livewireScripts
 </body>
+<script src="{{ asset('js/app.js') }}"></script>
+<script type="text/javascript">
+    new Vue({
+        el: '#app',
+        mounted() {
+            Echo.join('chat')
+        },
+    })
+</script>
 </html>

@@ -41,8 +41,9 @@
     37 => 'Srmklive\\PayPal\\Providers\\PayPalServiceProvider',
     38 => 'App\\Providers\\AppServiceProvider',
     39 => 'App\\Providers\\AuthServiceProvider',
-    40 => 'App\\Providers\\EventServiceProvider',
-    41 => 'App\\Providers\\RouteServiceProvider',
+    40 => 'App\\Providers\\BroadcastServiceProvider',
+    41 => 'App\\Providers\\EventServiceProvider',
+    42 => 'App\\Providers\\RouteServiceProvider',
   ),
   'eager' => 
   array (
@@ -72,8 +73,9 @@
     23 => 'Srmklive\\PayPal\\Providers\\PayPalServiceProvider',
     24 => 'App\\Providers\\AppServiceProvider',
     25 => 'App\\Providers\\AuthServiceProvider',
-    26 => 'App\\Providers\\EventServiceProvider',
-    27 => 'App\\Providers\\RouteServiceProvider',
+    26 => 'App\\Providers\\BroadcastServiceProvider',
+    27 => 'App\\Providers\\EventServiceProvider',
+    28 => 'App\\Providers\\RouteServiceProvider',
   ),
   'deferred' => 
   array (

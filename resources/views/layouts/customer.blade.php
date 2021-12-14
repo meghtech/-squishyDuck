@@ -12,6 +12,7 @@
 <title>Squishy Duck</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="csrf-token" content="{{ csrf_token() }}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
@@ -25,12 +26,11 @@
 <link rel="stylesheet" href="{{asset('content')}}/css/style.css">
 <link rel="stylesheet" href="{{asset('content')}}/css/colors/blue.css">
 @stack('css')
-@livewireStyles
 </head>
 <body class="gray">
 
 <!-- Wrapper -->
-<div id="wrapper">
+<div id="wrapper" id="app">
 
 <!-- Header Container
 ================================================== -->
@@ -135,7 +135,7 @@
 
 <!-- Dashboard Container -->
 <div class="dashboard-container">
-	@if ( !Request::is('buyer/market*') && !Request::is('chat*') && !Request::is('buyer/create-schedule*') && !Request::is('buyer/create-inventory*') && !Request::is('buyer/create-listing*') && !Request::is('buyer/service*') && !Request::is('buyer/listings*'))
+	@if ( !Request::is('buyer/market*') && !Request::is('customerChat') && !Request::is('buyer/create-schedule*') && !Request::is('buyer/create-inventory*') && !Request::is('buyer/create-listing*') && !Request::is('buyer/service*') && !Request::is('buyer/listings*'))
 	<!-- Dashboard Sidebar
 	================================================== -->
 	<div class="dashboard-sidebar">
@@ -321,6 +321,14 @@ $('#snackbar-user-status label').click(function() {
 
 </script> -->
 @stack('js')
-@livewireScripts
 </body>
+<script src="{{ asset('js/app.js') }}"></script>
+<script type="text/javascript">
+    new Vue({
+        el: '#app',
+        mounted() {
+            Echo.join('chat')
+        },
+    })
+</script>
 </html>

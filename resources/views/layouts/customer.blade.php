@@ -135,7 +135,7 @@
 
 <!-- Dashboard Container -->
 <div class="dashboard-container">
-	@if ( !Request::is('buyer/market*') && !Request::is('customerChat') && !Request::is('buyer/create-schedule*') && !Request::is('buyer/create-inventory*') && !Request::is('buyer/create-listing*') && !Request::is('buyer/service*') && !Request::is('buyer/listings*'))
+	@if ( !Request::is('buyer/market*') && !Request::is('customerChat/*') && !Request::is('buyer/create-schedule*') && !Request::is('buyer/create-inventory*') && !Request::is('buyer/create-listing*') && !Request::is('buyer/service*') && !Request::is('buyer/listings*'))
 	<!-- Dashboard Sidebar
 	================================================== -->
 	<div class="dashboard-sidebar">

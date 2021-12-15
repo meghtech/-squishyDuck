@@ -137,7 +137,7 @@
         <!-- Sidebar -->
         <div class="col-xl-4 col-lg-4">
             <div class="sidebar-container">
-                <a href="url('/user')/John Doe" class="apply-now-button btn-md-cyan">
+                <a href="{{ route('customerChat', $data->user_id) }}" class="apply-now-button btn-md-cyan">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                     class="bi bi-envelope" viewBox="0 0 16 16">
                     <path

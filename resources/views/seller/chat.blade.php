@@ -3,7 +3,7 @@
 <!-- Chat Content
 	================================================== -->
 	<div class="container-fluid full-page-content-inner pt-0 pl-0 pr-0 chat-page" style="max-height:100%; max-width:100%;" id="chatPage">
-        <section class="col-sm-12 col-md-3 col-lg-3 pl-0 pr-0 pb-0" style="background-color:black; color:white;float:left;">
+        <section class="col-sm-12 col-md-3 col-lg-3 pl-0 pr-0 pb-0 chatSection">
                 <div class="col-12 col-md-3 col-lg-3 mt-4 mb-4 search-message"  style="position:fixed;">
                     <div class="input-with-icon">
                             <input id="autocomplete-input" type="text" placeholder="Search Messages ...">
@@ -11,25 +11,23 @@
                     </div>
                 </div>
                 <div class="chat-list">
-                    @for ($i = 0; $i<100; $i++)
-                        <div class="col-sm-12 chat-to-list row m-0 p-3 pl-4 {{$i == 0 ? 'selected-chat': ''}}">
-                            <div class="user-avatar status-online d-inline m-0"><img src="{{ asset('storage/upload/profile') }}" alt=""></div>
+                        <div v-for="(list, index) in chatList" class="col-sm-12 chat-to-list row m-0 p-3 pl-4">
+                            <div class="user-avatar d-inline m-0" :class="{ 'status-online': checkIfOnline(list) }"><img src="{{ asset('storage/upload/profile') }}" alt=""></div>
                             <div class="col-8 col-sm-7 pr-0">
-                                <h4 class="text-white"><b>{{$i}} John Doe</b></h4>
-                                <h5 class="text-white">Did you receive the payment?</h5>
+                                <h4 class="text-white"><b>@{{getChatUserInfo(list, 'name')}}</b></h4>
+                                <h5 class="text-white">@{{list.msg}}</h5>
                             </div>
                             <div class="col-2 col-sm-2 ml-3">
-                                <h5 class="text-gray">Yesterday</h5>
+                                <h5 class="text-gray">@{{list.msg ? list.created_at : ''}}</h5>
                             </div>
                         </div>
-                    @endfor
 
                 </div>
         </section>
         <section class="col-sm-12 col-md-9 col-lg-9 pr-0 pl-0 bg-white" style="float:right;overflow:hidden;">
                 <div class="col-12 m-0 mt-3 mb-0 chat-top-section row pr-0">
                     <div class="col-10 mb-3">
-                        <span class="d-inline-block bookmark-icon"></span><h3 class="d-inline-block ml-3"><b>John Doe</b></h3>
+                        <span class="d-inline-block bookmark-icon"></span><h3 class="d-inline-block ml-3"><b>@{{getChatUserInfo(chatTo, 'name')}}</b></h3>
                     </div>
                     <div class="col-2 text-right mt-3 pr-5">
                         <i class="fa fa-ellipsis-v" style="font-size:24px; color:#aaa;"></i>
@@ -79,27 +77,50 @@
         data: {
             users: [],
             messages: [],
+            chatList: [],
+            message: '',
+            chatTo: '',
+            authUser:'',
+            activeUser: false,
+            typingTimer: false,
         },
         methods: {
-            checkIfOnline(){
-                this.users.map(item => {
-                    item.id == @json(Auth::guard('seller')->user()->id)) ? : ;
+            getChatUserInfo(list, param){
+                if(list.user_id == this.authUser.id){
+                    return list.receiver1 ? list.receiver1[param] : list.receiver2[param];
+                } else {
+                    return list.user1 ? list.user1[param] : list.user2[param];
+                }
+            },
+            checkIfOnline(list){
+                const id = this.getChatUserInfo(list, 'id');
+                this.users.map(user => {
+                    if(user.id == id){
+                        console.log(id);
+                        return true;
+                    }
                 })
+            },
+            convertDate(){
+                this.chatList.forEach(item => {
+                    item.created_at = moment(item.created_at).fromNow();
+                });
             },
         },
         mounted() {
-            console.log(@json(Auth::guard('seller')->user()));
+            this.chatList = @json($chatList);
+            this.chatTo = this.chatList[0];
+            this.authUser = @json($authUser);
+            this.convertDate();
             Echo.join('chat')
                 .here(user => {
                     this.users = user;
-                    console.log(user);
                 })
                 .joining(user => {
                     this.users.push(user);
                 })
                 .leaving(user => {
                     this.users = this.users.filter(u => u.id != user.id);
-                    this.checkIfOnline();
                 })
                 .listen('.NewMessage',(event) => {
                     event.message.user = event.user;

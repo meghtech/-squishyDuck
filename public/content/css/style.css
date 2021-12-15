@@ -15263,6 +15263,11 @@ ul.dashboard-box-list > li:hover {
 	border-radius: 50%;
 	opacity: 0.4;
 }
+.chatSection{
+	background-color:black;
+	color:white;float:left;
+	min-height:86.7vh;
+}
 
 .typing-indicator span:nth-of-type(1) { animation: 1s blink infinite 0.33333s; }
 .typing-indicator span:nth-of-type(2) { animation: 1s blink infinite 0.66666s; }
@@ -16086,5 +16091,8 @@ ul.dashboard-box-list > li:hover {
 		}
 		.chat-page .messages{
 			max-height:91.5vh;
+		}
+		.chatSection{
+			min-height:100vh;
 		}
 	}

@@ -219,8 +219,8 @@ Route::get('/seller/create-service', [SellerServiceController::class, 'createSer
 Route::get('/seller/services', [SellerServiceController::class, 'viewServices'])->name('seller.viewServices');
 Route::post('/seller/post-service', [SellerServiceController::class, 'postService'])->name('seller.postService');
 
-Route::get('/chat', [ChatController::class, 'index'])->middleware('auth:seller')->name('chat');
-Route::get('/customerChat', [ChatController::class, 'index'])->middleware('auth:customer')->name('customerChat');
+Route::get('/chat/{id}', [ChatController::class, 'index'])->middleware('auth:seller')->name('sellerChat');
+Route::get('/customerChat/{id}', [ChatController::class, 'index'])->middleware('auth:customer')->name('customerChat');
 
 
 /// buyer

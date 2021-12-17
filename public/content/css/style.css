@@ -336,7 +336,6 @@ display: inline-block;
     vertical-align: top;
     padding-right: 35px;
     margin-right: 20px;
-    border-bottom: 1px solid #32323
 }
 
 #logo img {
@@ -626,11 +625,12 @@ label.star:before {
 }
 .chat-to-list:hover, .selected-chat {
 	background-color: rgb(31, 30, 30);
+	cursor: pointer;
 }
 
 .chat-page .messages{
 	overflow-y:scroll;
-	max-height:52.5vh;
+	height:52.5vh;
 	background-color:#f2f2f2;
 }
 
@@ -16090,7 +16090,7 @@ ul.dashboard-box-list > li:hover {
 			max-height:100vh;
 		}
 		.chat-page .messages{
-			max-height:91.5vh;
+			height:80.5vh;
 		}
 		.chatSection{
 			min-height:100vh;

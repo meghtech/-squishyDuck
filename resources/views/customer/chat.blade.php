@@ -11,14 +11,14 @@
                     </div>
                 </div>
                 <div class="chat-list">
-                        <div v-for="(list, index) in chatList" class="col-sm-12 chat-to-list row m-0 p-3 pl-4">
+                        <div v-for="(list, listIndex) in chatList" class="col-sm-12 chat-to-list row m-0 p-3 pl-4" :class="{'selected-chat': checkSelection(list)}" @click="changeChatTo(list)">
                             <div class="user-avatar d-inline m-0" :class="{ 'status-online': checkIfOnline(list) }"><img src="{{ asset('storage/upload/profile') }}" alt=""></div>
                             <div class="col-8 col-sm-7 pr-0">
                                 <h4 class="text-white"><b>@{{getChatUserInfo(list, 'name')}}</b></h4>
                                 <h5 class="text-white">@{{list.msg}}</h5>
                             </div>
                             <div class="col-2 col-sm-2 ml-3">
-                                <h5 class="text-gray">@{{list.msg ? list.created_at : ''}}</h5>
+                                <h5 class="text-gray">@{{list.msg ? convertDate(list.created_at) : ''}}</h5>
                             </div>
                         </div>
 
@@ -34,15 +34,13 @@
                     </div>
                 </div>
                 <div class="container-fluid messages" style="">
-                    @for ($i = 0; $i<100; $i++)
-                        <div class="col-sm-12 row m-0 p-3 pl-4">
-                            <div class="user-avatar status-online d-inline m-0 mt-2"><img src="{{ asset('storage/upload/profile') }}" alt=""></div>
+                        <div class="col-sm-12 row m-0 p-3 pl-4" v-for="(message, messageIndex) in messages">
+                            <div class="user-avatar d-inline m-0 mt-2" :class="{ 'status-online': checkIfOnline(chatTo) }"><img src="{{ asset('storage/upload/profile') }}" alt=""></div>
                             <div class="col-10 col-sm-10 pr-0">
-                                <h5 class="text-black d-inline mr-4"><b>{{$i}} John Doe</b></h5><span class="text-gray" style="font-size:.8rem">11:54 AM</span>
-                                <h6 class="text-black">Did you receive the payment?</h6>
+                                <h5 class="text-black d-inline mr-4"><b>@{{getMsgSenderInfo(message, 'name')}}</b></h5><span class="text-gray" style="font-size:.8rem">11:54 AM</span>
+                                <h6 class="text-black">@{{message.msg}}</h6>
                             </div>
                         </div>
-                    @endfor
                 </div>
                 <div class="row m-0 p-0" style="width:100%; margin-bottom:0;background-color:#f2f2f2;">
                     <div class="auto-respond col-1 col-sm-1 mb-0 p-0 text-center">
@@ -59,8 +57,8 @@
                         </label>
 					</div>
                     <!-- <span class="uploadButton-file-name mb-0 col-9 col-sm-9 pl-4"></span> -->
-                    <input type="text" class="message-box mb-0 col-10 col-sm-10 pl-4" placeholder="Start typing ...">
-                    <div class="send-button col-1 col-sm-1 mb-0 p-0 text-center">
+                    <input type="text" class="message-box mb-0 col-10 col-sm-10 pl-4" placeholder="Start typing ..." v-model="message">
+                    <div class="send-button col-1 col-sm-1 mb-0 p-0 text-center" @click="sendMessage()">
                     <img class="mt-3" height="25px" src="{{ asset('content/images/send.svg') }}" alt="Send">
                     </div>
                 </div>
@@ -80,39 +78,114 @@
             chatList: [],
             message: '',
             chatTo: '',
+            chatToId: '',
             authUser:'',
+            messageType: 1,
             activeUser: false,
             typingTimer: false,
         },
         methods: {
+            orderChatList(){
+                this.chatList.sort( (b,a) => {
+                    return new Date(a.created_at) - new Date(b.created_at);
+                });
+            },
             getChatUserInfo(list, param){
                 if(list.user_id == this.authUser.id){
-                    return list.receiver1 ? list.receiver1[param] : list.receiver2[param];
+                    return list.receiver1 != null ? list.receiver1[param] : list.receiver2[param];
                 } else {
-                    return list.user1 ? list.user1[param] : list.user2[param];
+                    return list.user1 != null ? list.user1[param] : list.user2[param];
                 }
+            },
+            getMsgSenderInfo(list, param){
+                return list.user1 != null ? list.user1[param] : list.user2[param];
             },
             checkIfOnline(list){
                 const id = this.getChatUserInfo(list, 'id');
-                this.users.map(user => {
-                    if(user.id == id){
+                var online = false;
+                console.log(id);
+                if(id == this.authUser.id){
+                    console.log(id);
+                    online = true;
+                }else{
+                    this.users.map(user => {
+                        if(user.id == id){
+                            online = true;
+                        }
+                    })
+                }
+                return online;
+            },
+            checkSelection(user){
+                if(user.receiver_id == this.authUser.id){
+                    if((this.chatTo.user_id == user.user_id || this.chatTo.receiver_id == user.user_id)){
                         return true;
                     }
-                })
-                return false;
+                } else {
+                    if((this.chatTo.user_id == user.receiver_id || this.chatTo.receiver_id == user.receiver_id)){
+                        return true;
+                    }
+                }
             },
-            convertDate(){
-                this.chatList.forEach(item => {
-                    item.created_at = moment(item.created_at).fromNow();
+            changeChatTo(user){
+                this.chatTo = user;
+                if(user.receiver_id == this.authUser.id){
+                    this.chatToId = user.user_id;
+                    this.fetchMessage(this.chatToId,  this.authUser.id);
+                } else {
+                    this.chatToId = user.receiver_id;
+                    this.fetchMessage(this.chatToId,  this.authUser.id);
+                }
+            },
+            convertDate(date){
+                return moment(date).fromNow();
+            },
+            fetchMessage(chatTo, userId){
+                var options = {
+                        method: 'post',
+                        url: '/fetchCustomerMessage',
+                        data: {
+                            a: chatTo,
+                            b: userId,
+                        }
+                };
+                axios(options).then( (response) => {
+                    this.messages = response.data;
                 });
+            },
+            sendMessage(){
+                var options = {
+                    method: 'post',
+                    url: '/sendCustomerMessage',
+                    data: {
+                        msg: this.message,
+                        receiver_id: this.chatToId,
+                        user_id: this.authUser.id,
+                        message_type: this.messageType,
+                    }
+                };
+                axios(options).then( (response) => {
+                    this.message = '';
+                })
             },
         },
         mounted() {
             this.chatList = @json($chatList);
-            this.chatTo = this.chatList[0];
             this.authUser = @json($authUser);
-            this.convertDate();
-            console.log(this.chatList)
+            this.messages = @json($messages);
+            this.chatToId = @json($chatTo->id);
+            this.chatList.map(user => {
+                if(user.user_id == this.authUser.id){
+                    if(user.receiver_id == this.chatToId){
+                        this.chatTo = user;
+                    }
+                } else {
+                    if(user.user_id == this.chatToId){
+                        this.chatTo = user;
+                    }
+                }
+            });
+            this.orderChatList();
             Echo.join('chat')
                 .here(user => {
                     this.users = user;
@@ -121,8 +194,9 @@
                     this.users.push(user);
                 })
                 .leaving(user => {
+                    var left = this.users.filter(u => u.id == user.id);
                     this.users = this.users.filter(u => u.id != user.id);
-                    this.checkIfOnline();
+                    checkIfOnline(left[0]);
                 })
                 .listen('.NewMessage',(event) => {
                     event.message.user = event.user;

@@ -2,8 +2,7 @@
 
 namespace App\Events;
 
-use App\Models\User;
-use App\Models\Message;
+
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Broadcasting\PrivateChannel;
@@ -23,7 +22,7 @@ class NewMessage implements ShouldBroadcast
      *
      * @return void
      */
-    public function __construct(User $user, Message $message)
+    public function __construct($user, $message)
     {
         $this->user = $user;
         $this->message = $message;
@@ -37,7 +36,7 @@ class NewMessage implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new Channel('chat');
+        return new PresenceChannel('chat');
     }
 
     public function broadcastAs()

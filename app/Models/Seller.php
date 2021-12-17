@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Models\Message;
 
 
 
@@ -29,7 +30,7 @@ class Seller extends Authenticatable
      protected $guarded = [];
 
     protected $guard = 'sellers';
-  
+
 
     /**
      * The attributes that should be hidden for arrays.
@@ -62,6 +63,9 @@ class Seller extends Authenticatable
     public function order()
     {
         return $this->belongsTo(Order::class);
+    }
+    public function messages(){
+        return $this->hasMany(Message::class, 'user_id', 'id');
     }
 
 }

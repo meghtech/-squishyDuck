@@ -12,7 +12,7 @@
                 </div>
                 <div class="chat-list">
                         <div v-for="(list, listIndex) in chatList" class="col-sm-12 chat-to-list row m-0 p-3 pl-4" :class="{'selected-chat': checkSelection(list)}" @click="changeChatTo(list)">
-                            <div class="user-avatar d-inline m-0" :class="{ 'status-online': checkIfOnline(list) }"><img src="{{ asset('storage/upload/profile') }}" alt=""></div>
+                            <div class="user-avatar d-inline m-0" :class="{ 'status-online': checkIfOnline(list, 'chatList') }"><img src="{{ asset('storage/upload/profile') }}" alt=""></div>
                             <div class="col-8 col-sm-7 pr-0">
                                 <h4 class="text-white"><b>@{{getChatUserInfo(list, 'name')}}</b></h4>
                                 <h5 class="text-white">@{{list.msg}}</h5>
@@ -35,7 +35,7 @@
                 </div>
                 <div class="container-fluid messages" style="">
                         <div class="col-sm-12 row m-0 p-3 pl-4" v-for="(message, messageIndex) in messages">
-                            <div class="user-avatar d-inline m-0 mt-2" :class="{ 'status-online': checkIfOnline(chatTo) }"><img src="{{ asset('storage/upload/profile') }}" alt=""></div>
+                            <div class="user-avatar d-inline m-0 mt-2" :class="{ 'status-online': checkIfOnline(message, 'chat')}"><img src="{{ asset('storage/upload/profile') }}" alt=""></div>
                             <div class="col-10 col-sm-10 pr-0">
                                 <h5 class="text-black d-inline mr-4"><b>@{{getMsgSenderInfo(message, 'name')}}</b></h5><span class="text-gray" style="font-size:.8rem">11:54 AM</span>
                                 <h6 class="text-black">@{{message.msg}}</h6>
@@ -57,7 +57,7 @@
                         </label>
 					</div>
                     <!-- <span class="uploadButton-file-name mb-0 col-9 col-sm-9 pl-4"></span> -->
-                    <input type="text" class="message-box mb-0 col-10 col-sm-10 pl-4" placeholder="Start typing ..." v-model="message">
+                    <input type="text" class="message-box mb-0 col-10 col-sm-10 pl-4" placeholder="Start typing ..." v-model="message" @keyup.enter="sendMessage()">
                     <div class="send-button col-1 col-sm-1 mb-0 p-0 text-center" @click="sendMessage()">
                     <img class="mt-3" height="25px" src="{{ asset('content/images/send.svg') }}" alt="Send">
                     </div>
@@ -100,12 +100,14 @@
             getMsgSenderInfo(list, param){
                 return list.user1 != null ? list.user1[param] : list.user2[param];
             },
-            checkIfOnline(list){
-                const id = this.getChatUserInfo(list, 'id');
+            checkIfOnline(list, param){
+                if(param == 'chatList'){
+                    var id = this.getChatUserInfo(list, 'id');
+                } else if (param == 'chat'){
+                    var id = this.getMsgSenderInfo(list, 'id');
+                }
                 var online = false;
-                console.log(id);
                 if(id == this.authUser.id){
-                    console.log(id);
                     online = true;
                 }else{
                     this.users.map(user => {
@@ -115,6 +117,9 @@
                     })
                 }
                 return online;
+            },
+            isAuthUser(list){
+                return list.user_id == this.authUser.id
             },
             checkSelection(user){
                 if(user.receiver_id == this.authUser.id){
@@ -155,14 +160,14 @@
             },
             sendMessage(){
                 var options = {
-                    method: 'post',
-                    url: '/sendCustomerMessage',
-                    data: {
-                        msg: this.message,
-                        receiver_id: this.chatToId,
-                        user_id: this.authUser.id,
-                        message_type: this.messageType,
-                    }
+                        method: 'post',
+                        url: '/sendCustomerMessage',
+                        data: {
+                            msg: this.message,
+                            receiver_id: this.chatToId,
+                            user_id: this.authUser.id,
+                            message_type: this.messageType,
+                        }
                 };
                 axios(options).then( (response) => {
                     this.message = '';
@@ -170,8 +175,8 @@
             },
         },
         mounted() {
-            this.chatList = @json($chatList);
             this.authUser = @json($authUser);
+            this.chatList = @json($chatList);
             this.messages = @json($messages);
             this.chatToId = @json($chatTo->id);
             this.chatList.map(user => {
@@ -194,9 +199,7 @@
                     this.users.push(user);
                 })
                 .leaving(user => {
-                    var left = this.users.filter(u => u.id == user.id);
                     this.users = this.users.filter(u => u.id != user.id);
-                    checkIfOnline(left[0]);
                 })
                 .listen('.NewMessage',(event) => {
                     event.message.user = event.user;

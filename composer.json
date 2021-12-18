@@ -18,7 +18,7 @@
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.3",
         "livewire/livewire": "^2.4",
-        "pusher/pusher-php-server": "~5.0",
+        "pusher/pusher-php-server": "~3.0",
         "srmklive/paypal": "~1.0",
         "stripe/stripe-php": "^7.77",
         "torann/geoip": "^3.0"

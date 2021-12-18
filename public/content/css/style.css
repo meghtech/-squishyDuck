@@ -680,6 +680,10 @@ label.star:before {
 	box-shadow: -10px 3px 10px rgba(102,103,107,0.1);
 }
 
+.message-box-flex {
+	display: flex;
+	flex: 0 0 77.7%;
+}
 .chat-page .auto-respond.col-1, .chat-page .auto-respond.col-sm-1, .chat-page .uploadButton.col-sm-1, .chat-page .uploadButton.auto-respond.col-sm-1, .chat-page .send-button.col-sm-1 , .chat-page .send-button.col-sm-1 {
 	max-width: 5.5555%;
 }
@@ -809,10 +813,6 @@ label.star:before {
 
 	.chat-page .auto-respond.col-1, .chat-page .auto-respond.col-sm-1, .chat-page .uploadButton.col-sm-1, .chat-page .uploadButton.auto-respond.col-sm-1, .chat-page .send-button.col-sm-1 , .chat-page .send-button.col-sm-1 {
 		max-width: 8.333%;
-	}
-
-	.chat-page .message-box {
-		flex: 0 0 75%;
 	}
 
 }

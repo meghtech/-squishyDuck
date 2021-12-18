@@ -2,7 +2,8 @@
 
 namespace App\Events;
 
-
+use App\Models\Seller;
+use App\Models\Message;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Broadcasting\PrivateChannel;
@@ -10,9 +11,10 @@ use Illuminate\Broadcasting\PresenceChannel;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
+use Illuminate\Support\Facades\Log;
 
 
-class NewMessage implements ShouldBroadcast
+class NewSellerMessage implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
@@ -22,8 +24,9 @@ class NewMessage implements ShouldBroadcast
      *
      * @return void
      */
-    public function __construct($user, $message)
+    public function __construct(Seller $user, Message $message)
     {
+        log::info("Seller");
         $this->user = $user;
         $this->message = $message;
     }
@@ -36,6 +39,7 @@ class NewMessage implements ShouldBroadcast
      */
     public function broadcastOn()
     {
+        log::info("Seller");
         return new PresenceChannel('chat');
     }
 

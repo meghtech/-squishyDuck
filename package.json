@@ -16,6 +16,9 @@
         "laravel-mix": "^6.0.39",
         "lodash": "^4.17.19",
         "popper.js": "^1.12",
+        "laravel-echo": "^1.11.3",
+        "moment": "^2.29.1",
+        "pusher-js": "^7.0.3",
         "postcss": "^8.1.14",
         "resolve-url-loader": "^3.1.2",
         "sass": "^1.20.1",
@@ -24,9 +27,5 @@
         "vue-loader": "^15.9.5",
         "vue-template-compiler": "^2.6.12"
     },
-    "dependencies": {
-        "laravel-echo": "^1.11.3",
-        "moment": "^2.29.1",
-        "pusher-js": "^7.0.3"
-    }
+    "dependencies": {}
 }

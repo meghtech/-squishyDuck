@@ -4,6 +4,7 @@
 /public/content/images/service
 /public/content/images/inventory
 /public/content/images/listing
+/public/content/images/message
 /bootstrap/cache
 /storage/*.key
 /vendor

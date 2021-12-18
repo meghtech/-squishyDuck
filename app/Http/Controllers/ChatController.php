@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\File;
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
-use App\Events\NewMessage;
+use App\Events\NewCustomerMessage;
+use App\Events\NewSellerMessage;
+use Illuminate\Http\Request;
 use App\Models\Customer;
 use App\Models\Message;
 use App\Models\Seller;
@@ -73,7 +75,9 @@ class ChatController extends Controller
 
     public function sendMessage(Request $request){
         $user = auth()->guard('customer')->user();
+        $guardName = "customer";
         if(!$user){
+            $guardName = "seller";
             $user = auth()->guard('seller')->user();
         }
         if($request->message_type == 1){
@@ -83,9 +87,34 @@ class ChatController extends Controller
                 'message_type' => $request->message_type,
                 'msg' => $request->msg,
             ]);
+        } elseif($request->message_type == 2){
+            if($request->file()){
+                //get filename with extension
+                $filenamewithextension = $request->file->getClientOriginalName();
+                //get filename without extension
+                $filename = pathinfo($filenamewithextension, PATHINFO_FILENAME);
+                //get file extension
+                $extension = $request->file->getClientOriginalExtension();
+                //filename to store
+                $file_name = $filename . '_' . time() . '.' . $extension;
+                if (!File::exists(public_path() . "/content/images/message")) {
+                    File::makeDirectory(public_path() . "/content/images/message", 0777, true);
+                }
+                $request->file->move(public_path('/content/images/message'), $file_name);
+            }
+            $message = $user->messages()->create([
+                'user_id' => $request->user_id,
+                'receiver_id' => $request->receiver_id,
+                'message_type' => $request->message_type,
+                'file' => $file_name,
+            ]);
         }
 
-        broadcast(new NewMessage($user, $message))->toOthers();
+        if($guardName == "customer"){
+            broadcast(new NewCustomerMessage($user, $message))->toOthers();
+        } else {
+            broadcast(new NewSellerMessage($user, $message))->toOthers();
+        }
     }
 
     private function message($a, $b){

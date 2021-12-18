@@ -19,7 +19,7 @@ class CreateMessagesTable extends Migration
             $table->integer('receiver_id')->unsigned();
             $table->boolean('is_seen')->default(0);
             $table->boolean('message_type')->default(0);
-            $table->text('msg');
+            $table->text('msg')->nullable();
             $table->string('file')->nullable();
             $table->timestamps();
         });

@@ -316,10 +316,6 @@ $('#snackbar-user-status label').click(function() {
 });
 
 </script> -->
-
-
-@stack('js')
-</body>
 <script src="{{ asset('js/app.js') }}"></script>
 <script type="text/javascript">
     new Vue({
@@ -329,4 +325,8 @@ $('#snackbar-user-status label').click(function() {
         },
     })
 </script>
+
+
+@stack('js')
+</body>
 </html>

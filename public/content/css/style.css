@@ -773,6 +773,36 @@ label.star:before {
     border-radius: 6px !important;
 }
 
+.schedule-view{
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.12) !important;
+}
+
+#date-selected {
+	background-color:#f0f0f0;
+	padding:5%;
+	text-align:center;
+	color:black
+}
+
+#schedule-list {
+	background-color:#f7f7f7;
+	height: 55vh;
+	overflow-y: scroll;
+	-ms-overflow-style: none;
+    scrollbar-width: none;
+}
+#schedule-list::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+}
+
+.schedule-list-item {
+	padding:5% 10%;
+	background-color:#fff;
+	height: 10vh;
+	display: block;
+	border-bottom: 1px solid rgb(223, 223, 223);
+}
+
 /* Sign In Button Media Queries */
 @media (max-width: 768px) {
 	.header-widget .log-in-button span { display: none; }

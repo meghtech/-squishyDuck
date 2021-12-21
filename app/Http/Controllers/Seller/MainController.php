@@ -203,4 +203,10 @@ class MainController extends Controller
         return view('seller.createSchedule', compact('id'));
      }
 
+    public function viewSchedule(){
+        $userId = auth()->guard('seller')->user()->id;
+        $scheduleDates = Order::where('seller_id', $userId)->pluck('schedule_date')->toArray();
+        return view('seller.schedules', compact('scheduleDates'));
+    }
+
 }

@@ -139,7 +139,11 @@
 			this.show();
 		}
 	};
-
+	var appointedDates = document.getElementsByName('appointedDates[]');
+	var scheduleDates = [];
+	for (let index = 0; index < appointedDates.length; index++) {
+		scheduleDates.push(appointedDates[index].value);
+	}
 	Datepicker.prototype = {
 		constructor: Datepicker,
 
@@ -803,7 +807,14 @@
 				}
 
 				clsName = $.unique(clsName);
-				html.push('<td class="'+clsName.join(' ')+'"' + (tooltip ? ' title="'+tooltip+'"' : '') + '>'+prevMonth.getUTCDate() + '</td>');
+				// -------------------------------------------------------
+				var thisDate = prevMonth.format("yyyy-mm-dd");
+				if(scheduleDates.includes(thisDate)){
+					html.push('<td class="'+clsName.join(' ')+'"' + (tooltip ? ' title="'+tooltip+'"' : '') + '>'+prevMonth.getUTCDate() + '<i class="fa fa-circle" style="position: relative; top: 14px; right: 11px; font-size: 8px; color: #AD9B0D;"></i></td>');
+				} else {
+					html.push('<td class="'+clsName.join(' ')+'"' + (tooltip ? ' title="'+tooltip+'"' : '') + '>'+prevMonth.getUTCDate() + '</td>');
+				}
+
 				if (prevMonth.getUTCDay() === this.o.weekEnd){
 					html.push('</tr>');
 				}
@@ -1827,7 +1838,7 @@ $(function(){
 	$(".b-notes").notes(".b-notes");
 
 	$("#calendar").datepicker({
-		todayHighlight: false,
+		todayHighlight: true,
 		weekStart: 1
 	}).on({
 
@@ -1848,7 +1859,27 @@ $(function(){
 
 	function setCelendarDay(milliseconds){
 		var date = new Date(milliseconds).format("yyyy/mm/dd");
-		document.getElementById('selectedDate').value = date;
+		var asideDate = document.getElementById('clickedDate').value = new Date(milliseconds).format("dddd, mmmm d");
+		axios({
+			method: 'post',
+			url: '/getSchedules',
+			data: {
+			  date: date,
+			}
+		}).then(response => {
+			document.getElementById('date-selected').innerHTML = asideDate;
+			  if(response.data.length > 0){
+				var scheduleInfo = response.data;
+				var scheduleViewElement = document.getElementById('schedule-list');
+				  for (let index = 0; index<scheduleInfo.length;index++) {
+					scheduleViewElement.insertAdjacentHTML('beforeend',`<div class="schedule-list-item"><div>${scheduleInfo[index].morningTime ? (scheduleInfo[index].afternoonTime ? scheduleInfo[index].morningTime+' - '+scheduleInfo[index].afternoonTime : scheduleInfo[index].morningTime) : (scheduleInfo[index].afternoonTime ? scheduleInfo[index].afternoonTime : '')}</div></div>`);
+					console.log(scheduleInfo[index]);
+				  }
+			  } else {
+				document.getElementById('schedule-list').innerHTML = null
+			  }
+		});
+
 		var formatTitle = new Date(milliseconds).format("dddd, <b>d mmmm</b>");
 		var list = $(".b-notes__list");
 		var title = $(".b-app__title");

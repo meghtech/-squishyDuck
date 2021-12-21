@@ -29,6 +29,7 @@ use App\Http\Controllers\Seller\MsgController as SellerMsgController;
 use App\Http\Controllers\Seller\ServiceController;
 
 use App\Http\Controllers\ChatController;
+use App\Http\Controllers\MainController as RootMainController;
 
 
 /*
@@ -218,6 +219,9 @@ Route::get('/seller/service', [SellerServiceController::class, 'index'])->name('
 Route::get('/seller/create-service', [SellerServiceController::class, 'createService'])->name('seller.createService');
 Route::get('/seller/services', [SellerServiceController::class, 'viewServices'])->name('seller.viewServices');
 Route::post('/seller/post-service', [SellerServiceController::class, 'postService'])->name('seller.postService');
+
+Route::get('/seller/view-schedule', [SellerMainController::class, 'viewSchedule'])->name('seller.viewSchedule');
+Route::post('/getSchedules', [RootMainController::class, 'getSchedules'])->name('getSchedules');
 
 // Start Message Routes
 Route::get('/chat/{id}', [ChatController::class, 'index'])->middleware('auth:seller')->name('sellerChat');

@@ -796,11 +796,10 @@ label.star:before {
 }
 
 .schedule-list-item {
-	padding:5% 10%;
-	background-color:#fff;
-	height: 10vh;
-	display: block;
-	border-bottom: 1px solid rgb(223, 223, 223);
+    padding: 20px 20px;
+    background-color: #fff;
+    display: block;
+    border-bottom: 1px solid rgb(223, 223, 223);
 }
 
 /* Sign In Button Media Queries */

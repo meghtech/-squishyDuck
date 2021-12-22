@@ -1884,7 +1884,7 @@ $(function(){
 									? scheduleInfo[index].afternoonTime
 									: ''
 								)
-							))+'<br>'+
+							))+
 							(scheduleInfo[index].seller1
 								? (scheduleInfo[index].seller1.id == authUserId
 									? (scheduleInfo[index].customer1
@@ -1896,7 +1896,7 @@ $(function(){
 										? scheduleInfo[index].customer1.name
 										: scheduleInfo[index].customer2.name )
 									: scheduleInfo[index].seller2.name
-							)+'<br>'+
+							)+
 							'</div>'
 					);
 				  }

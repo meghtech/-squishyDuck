@@ -134,6 +134,12 @@ class MainController extends Controller
 		return $data;
     }
 
+	public function viewSchedule(){
+        $userId = auth()->guard('customer')->user()->id;
+        $scheduleDates = Order::where('seller_id', $userId)->pluck('schedule_date')->toArray();
+        return view('customer.schedules', compact('scheduleDates'));
+    }
+
 
     public function jobPost()
     {

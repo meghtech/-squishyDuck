@@ -260,6 +260,8 @@ Route::get('/buyer/market', [BuyerMarketController::class, 'index'])->name('buye
 Route::get('/buyer/create-schedule/{id}', [BuyerMainController::class, 'createSchedule'])->name('buyer.createSchedule');
 Route::get('/buyer/market/{slug}', [BuyerMarketController::class, 'viewDetail'])->name('buyer.market.detail');
 
+Route::get('/buyer/view-schedule', [BuyerMainController::class, 'viewSchedule'])->name('buyer.viewSchedule');
+
 Route::get('/buyer/messages', [MassageController::class, 'index']);
 Route::get('/buyer/file-share', [MassageController::class, 'fileShare'])->name('file.share');
 Route::get('/buyer/file-share-user/{id}', [MassageController::class, 'fileShareUser'])->name('file.shareUser');

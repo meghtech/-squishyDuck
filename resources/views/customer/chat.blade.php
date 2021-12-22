@@ -33,12 +33,13 @@
                         <i class="fa fa-ellipsis-v" style="font-size:24px; color:#aaa;"></i>
                     </div>
                 </div>
-                <div class="container-fluid messages" style="">
+                <div class="container-fluid messages" id="viewMessages">
                         <div class="col-sm-12 row m-0 p-3 pl-4" v-for="(message, messageIndex) in messages">
                             <div class="user-avatar d-inline m-0 mt-2" :class="{ 'status-online': checkIfOnline(message, 'chat')}"><img src="{{ asset('storage/upload/profile') }}" alt=""></div>
                             <div class="col-10 col-sm-10 pr-0">
-                                <h5 class="text-black d-inline mr-4"><b>@{{getMsgSenderInfo(message, 'name')}}</b></h5><span class="text-gray" style="font-size:.8rem">11:54 AM</span>
-                                <h6 class="text-black">@{{message.msg}}</h6>
+                                <h5 class="text-black d-inline mr-4"><b>@{{getMsgSenderInfo(message, 'name')}}</b></h5><span class="text-gray" style="font-size:.8rem">@{{formatTime(message.created_at)}}</span>
+                                <h6 class="text-black" v-if="message.message_type==1">@{{message.msg}}</h6>
+                                <img class="d-block" :src="getImage(message.file)" height="150px" width="auto" v-else>
                             </div>
                         </div>
                 </div>
@@ -47,7 +48,7 @@
                         <img class="mt-3" height="25px" src="{{ asset('content/images/autoResponder.svg') }}" alt="Auto respond">
                     </div>
                     <div class="uploadButton col-1 col-sm-1 m-0 p-0">
-						<input name="image" class="uploadButton-input" type="file" accept="image/*, application/pdf" id="upload">
+						<input name="image" class="uploadButton-input" type="file" accept="image/*, application/pdf" id="upload" @change="selectFile">
 						<label class="uploadButton-button ripple-effect mb-0 text-center" for="upload">
                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" fill="currentColor"
                             class="bi bi-paperclip" viewBox="0 0 16 16">
@@ -56,8 +57,11 @@
                             </svg>
                         </label>
 					</div>
+                    <div class="uploadButton col-1 col-sm-1 m-0 p-0" v-if="messageType==2">
+						<label class="uploadButton-button ripple-effect mb-0 text-center" @click="removeFile()">X</label>
+					</div>
                     <!-- <span class="uploadButton-file-name mb-0 col-9 col-sm-9 pl-4"></span> -->
-                    <input type="text" class="message-box mb-0 col-10 col-sm-10 pl-4" placeholder="Start typing ..." v-model="message" @keyup.enter="sendMessage()">
+                    <input type="text" class="message-box mb-0 col-10 col-sm-10 pl-4" id="message-box" placeholder="Start typing ..." v-model="message" @keyup.enter="sendMessage()" :disabled="messageType==2">
                     <div class="send-button col-1 col-sm-1 mb-0 p-0 text-center" @click="sendMessage()">
                     <img class="mt-3" height="25px" src="{{ asset('content/images/send.svg') }}" alt="Send">
                     </div>
@@ -80,6 +84,7 @@
             chatTo: '',
             chatToId: '',
             authUser:'',
+            file: '',
             messageType: 1,
             activeUser: false,
             typingTimer: false,
@@ -89,6 +94,12 @@
                 this.chatList.sort( (b,a) => {
                     return new Date(a.created_at) - new Date(b.created_at);
                 });
+            },
+            scrollToBottom(){
+                var container = document.getElementById("viewMessages");
+                setTimeout(() => {
+                    container.scrollTop = container.scrollHeight
+                }, 10);
             },
             getChatUserInfo(list, param){
                 if(list.user_id == this.authUser.id){
@@ -145,6 +156,20 @@
             convertDate(date){
                 return moment(date).fromNow();
             },
+            formatTime(date){
+                return moment(date).format('hh:mm A');
+            },
+            selectFile(e) {
+                this.file = e.target.files[0];
+                this.messageType = 2;
+                this.message = this.file.name;
+                document.getElementById("message-box").classList.add('message-box-flex');
+            },
+            removeFile(){
+                this.file = '';
+                this.messageType = 1;
+                this.message = '';
+            },
             fetchMessage(chatTo, userId){
                 var options = {
                         method: 'post',
@@ -156,22 +181,44 @@
                 };
                 axios(options).then( (response) => {
                     this.messages = response.data;
+                    this.scrollToBottom();
                 });
             },
+            getImage(file){
+                asset = @json(asset('/content/images/message\/'));
+                return asset+file
+            },
             sendMessage(){
-                var options = {
-                        method: 'post',
-                        url: '/sendCustomerMessage',
-                        data: {
-                            msg: this.message,
-                            receiver_id: this.chatToId,
-                            user_id: this.authUser.id,
-                            message_type: this.messageType,
-                        }
-                };
-                axios(options).then( (response) => {
-                    this.message = '';
-                })
+                if (this.messages.length > 0) {
+                    if(this.messageType == 1){
+                        var options = {
+                            method: 'post',
+                            url: '/sendCustomerMessage',
+                            data: {
+                                msg: this.message,
+                                receiver_id: this.chatToId,
+                                user_id: this.authUser.id,
+                                message_type: this.messageType,
+                            }
+                        };
+                        axios(options).then( (response) => {
+                            this.message = '';
+                        })
+                    } else if(this.messageType == 2){
+                        var formData = new FormData();
+                        formData.append("file", this.file);
+                        formData.append("user_id", this.authUser.id);
+                        formData.append("receiver_id", this.chatToId);
+                        formData.append("message_type", this.messageType);
+                        axios.post('/sendCustomerMessage', formData, {
+                            headers: {
+                            'Content-Type': 'multipart/form-data'
+                            }
+                        }).then( (response) => {
+                            this.removeFile();
+                        })
+                    }
+                }
             },
         },
         mounted() {
@@ -202,7 +249,9 @@
                     this.users = this.users.filter(u => u.id != user.id);
                 })
                 .listen('.NewMessage',(event) => {
+
                     event.message.user = event.user;
+                    console.log(event.user);
                     this.messages.push(event.message);
                     this.message = '';
                 })
@@ -215,7 +264,7 @@
                         this.activeUser = false;
                     }, 1000);
                 })
-
+            this.scrollToBottom();
         },
     })
 </script>

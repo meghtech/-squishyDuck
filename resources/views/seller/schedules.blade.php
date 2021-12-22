@@ -1,6 +1,5 @@
 @extends('layouts.seller')
 @push('css')
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
 <link href="{{asset('bootstrap/calender/style.css')}}" rel="stylesheet">
 <style>
     .card-header i {
@@ -53,6 +52,7 @@
                 </div>
             </div>
         </div>
+        <input type="hidden" id="authUserId" value="{{Auth::guard('seller')->user()->id}}">
         <input type="hidden" id="clickedDate">
         <input type="hidden" id="scheduleList">
         @foreach ($scheduleDates as $key=>$date)

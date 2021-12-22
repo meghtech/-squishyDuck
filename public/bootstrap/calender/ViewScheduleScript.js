@@ -144,6 +144,7 @@
 	for (let index = 0; index < appointedDates.length; index++) {
 		scheduleDates.push(appointedDates[index].value);
 	}
+	var authUserId = document.getElementById('authUserId').value;
 	Datepicker.prototype = {
 		constructor: Datepicker,
 
@@ -1871,12 +1872,36 @@ $(function(){
 			  if(response.data.length > 0){
 				var scheduleInfo = response.data;
 				var scheduleViewElement = document.getElementById('schedule-list');
+				scheduleViewElement.innerHTML = null;
 				  for (let index = 0; index<scheduleInfo.length;index++) {
-					scheduleViewElement.insertAdjacentHTML('beforeend',`<div class="schedule-list-item"><div>${scheduleInfo[index].morningTime ? (scheduleInfo[index].afternoonTime ? scheduleInfo[index].morningTime+' - '+scheduleInfo[index].afternoonTime : scheduleInfo[index].morningTime) : (scheduleInfo[index].afternoonTime ? scheduleInfo[index].afternoonTime : '')}</div></div>`);
-					console.log(scheduleInfo[index]);
+					scheduleViewElement.insertAdjacentHTML('beforeend',
+						'<div class="schedule-list-item">'+
+						(scheduleInfo[index].morningTime && scheduleInfo[index].afternoonTime
+							? scheduleInfo[index].morningTime+' - '+scheduleInfo[index].afternoonTime
+							: (scheduleInfo[index].morningTime && !scheduleInfo[index].afternoonTime
+								? scheduleInfo[index].morningTime
+								: (!scheduleInfo[index].morningTime && scheduleInfo[index].afternoonTime
+									? scheduleInfo[index].afternoonTime
+									: ''
+								)
+							))+'<br>'+
+							(scheduleInfo[index].seller1
+								? (scheduleInfo[index].seller1.id == authUserId
+									? (scheduleInfo[index].customer1
+										? scheduleInfo[index].customer1.name
+										: scheduleInfo[index].customer2.name)
+									: scheduleInfo[index].seller1.name)
+								: (scheduleInfo[index].seller2.id == authUserId)
+									? (scheduleInfo[index].customer1
+										? scheduleInfo[index].customer1.name
+										: scheduleInfo[index].customer2.name )
+									: scheduleInfo[index].seller2.name
+							)+'<br>'+
+							'</div>'
+					);
 				  }
 			  } else {
-				document.getElementById('schedule-list').innerHTML = null
+				document.getElementById('schedule-list').innerHTML = null;
 			  }
 		});
 

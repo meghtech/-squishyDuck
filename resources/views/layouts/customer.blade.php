@@ -173,7 +173,7 @@
 							<li><a href="{{ route('buyer.inventory') }}" class="{{ Request::is('buyer/inventory*') ? 'text-primary' : '' }}">
 							<i class="icon-material-outline-assignment {{ Request::is('buyer/inventory*') ? 'text-primary' : '' }}"></i>Current Inventory</a></li>
 							<li><a href="{{ route('buyer.listing') }}" class="{{ Request::is('buyer/listing*') ? 'text-primary' : '' }}"><i class="fa fa-home mr-2 {{ Request::is('buyer/listing*') ? 'text-primary' : '' }}"></i>Current Listing</a></li>
-							<li><a href="#"><i class="fa fa-wrench mr-2"></i>Manage</a></li>
+							<li><a href="{{ route('buyer.manageItems') }}" class="{{ Request::is('buyer/manage*') ? 'text-primary' : '' }}"><i class="fa fa-wrench mr-2"></i>Manage</a></li>
 						</ul>
 						<ul data-submenu-title="Services">
 							<li><a href="#"><i class="icon-material-outline-assignment"></i>Received Services</a></li>
@@ -245,90 +245,6 @@ $('#snackbar-user-status label').click(function() {
 });
 </script>
 
-<!-- Chart.js // documentation: http://www.chartjs.org/docs/latest/ -->
-<!-- <script src="js/chart.min.js"></script>
-<script>
-	Chart.defaults.global.defaultFontFamily = "Nunito";
-	Chart.defaults.global.defaultFontColor = '#888';
-	Chart.defaults.global.defaultFontSize = '14';
-
-	var ctx = document.getElementById('chart').getContext('2d');
-
-	var chart = new Chart(ctx, {
-		type: 'line',
-
-		// The data for our dataset
-		data: {
-			labels: ["January", "February", "March", "April", "May", "June"],
-			// Information about the dataset
-	   		datasets: [{
-				label: "Views",
-				backgroundColor: 'rgba(42,65,232,0.08)',
-				borderColor: '#2a41e8',
-				borderWidth: "3",
-				data: [196,132,215,362,210,252],
-				pointRadius: 5,
-				pointHoverRadius:5,
-				pointHitRadius: 10,
-				pointBackgroundColor: "#fff",
-				pointHoverBackgroundColor: "#fff",
-				pointBorderWidth: "2",
-			}]
-		},
-
-		// Configuration options
-		options: {
-
-		    layout: {
-		      padding: 10,
-		  	},
-
-			legend: { display: false },
-			title:  { display: false },
-
-			scales: {
-				yAxes: [{
-					scaleLabel: {
-						display: false
-					},
-					gridLines: {
-						 borderDash: [6, 10],
-						 color: "#d8d8d8",
-						 lineWidth: 1,
-	            	},
-				}],
-				xAxes: [{
-					scaleLabel: { display: false },
-					gridLines:  { display: false },
-				}],
-			},
-
-		    tooltips: {
-		      backgroundColor: '#333',
-		      titleFontSize: 13,
-		      titleFontColor: '#fff',
-		      bodyFontColor: '#fff',
-		      bodyFontSize: 13,
-		      displayColors: false,
-		      xPadding: 10,
-		      yPadding: 10,
-		      intersect: false
-		    }
-		},
-
-
-});
-
-</script> -->
-<script src="{{ asset('js/app.js') }}"></script>
-<script type="text/javascript">
-    new Vue({
-        el: '#app',
-        mounted() {
-            Echo.join('chat')
-        },
-    })
-</script>
 @stack('js')
 </body>
 </html>

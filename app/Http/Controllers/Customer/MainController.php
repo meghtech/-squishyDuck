@@ -15,6 +15,7 @@ use App\Models\BidderPost;
 use App\Mail\OrderEmail;
 use App\Models\Category;
 use App\Models\Customer;
+use App\Models\Listings;
 use App\Models\JobPost;
 use App\Models\Message;
 use App\Models\General;
@@ -107,6 +108,29 @@ class MainController extends Controller
             ->orderBy('id', 'DESC')
             ->get();
 		}
+		return $data;
+    }
+
+    public function manageItems(){
+      $inventory = Listings::where('type', 'market')->where('user_id', auth()->id())
+      ->with('order')
+			->orderBy('id', 'DESC')
+      ->get();
+      return view('customer.manageItem', compact('inventory'));
+    }
+
+    public function manageItemData(Request $request){
+		$data = Listings::where('type', $request->type)->where('user_id', $request->id)
+	  		->with('order')
+			->orderBy('id', 'DESC')
+    		->get();
+		return $data;
+    }
+
+    public function updateInventory(Request $request){
+		$data = Listings::where('id', $request->id)->first();
+		$data->status = $request->status;
+		$data->save();
 		return $data;
     }
 

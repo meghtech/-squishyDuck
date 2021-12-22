@@ -42,6 +42,7 @@ class CreateListingsTable extends Migration
             $table->string('zip_code')->nullable();
             $table->text('delivery_detail')->nullable();
             $table->text('photos')->nullable();
+            $table->tinyInteger('status')->nullable();
             $table->timestamps();
         });
     }

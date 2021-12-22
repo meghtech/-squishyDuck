@@ -292,6 +292,10 @@ Route::get('/buyer/recent-orders', [BuyerMainController::class, 'recentOrder'])-
 Route::post('/buyer/getOrder', [BuyerMainController::class, 'getOrder'])->name('buyer.getOrder');
 Route::post('/buyer/updateOrder', [BuyerMainController::class, 'updateOrder'])->name('buyer.updateOrder');
 
+Route::get('/buyer/manage', [BuyerMainController::class, 'manageItems'])->name('buyer.manageItems');
+Route::post('/buyer/manageItemData', [BuyerMainController::class, 'manageItemData'])->name('buyer.manageItemData');
+Route::post('/buyer/updateInventory', [BuyerMainController::class, 'updateInventory'])->name('buyer.updateInventory');
+
 
 
 ///setting

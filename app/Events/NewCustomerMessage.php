@@ -10,11 +10,11 @@ use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Broadcasting\PresenceChannel;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
-use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
+use Illuminate\Contracts\Broadcasting\ShouldBroadcastNow;
 use Illuminate\Support\Facades\Log;
 
 
-class NewCustomerMessage implements ShouldBroadcast
+class NewCustomerMessage implements ShouldBroadcastNow
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
@@ -26,6 +26,7 @@ class NewCustomerMessage implements ShouldBroadcast
      */
     public function __construct(Customer $user, Message $message)
     {
+        log::info("Customer");
         $this->user = $user;
         $this->message = $message;
     }
@@ -38,7 +39,6 @@ class NewCustomerMessage implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        log::info("Customer");
         return new PresenceChannel('chat');
     }
 

@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\File;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Log;
 use App\Events\NewCustomerMessage;
-use App\Events\NewSellerMessage;
+use App\Events\NewMessage;
 use Illuminate\Http\Request;
 use App\Models\Customer;
 use App\Models\Message;
@@ -80,6 +80,10 @@ class ChatController extends Controller
             $guardName = "seller";
             $user = auth()->guard('seller')->user();
         }
+        $receiver = Seller::find($request->receiver_id);
+        if(!$receiver){
+            $receiver = Customer::find($request->receiver_id);
+        }
         if($request->message_type == 1){
             $message = $user->messages()->create([
                 'user_id' => $request->user_id,
@@ -109,12 +113,13 @@ class ChatController extends Controller
                 'file' => $file_name,
             ]);
         }
-
-        if($guardName == "customer"){
-            broadcast(new NewCustomerMessage($user, $message))->toOthers();
-        } else {
-            broadcast(new NewSellerMessage($user, $message))->toOthers();
-        }
+        $message->user1 =  $user;
+        $message->receiver1 =  $receiver;
+        $message->user2 =  null;
+        $message->receiver2 =  null;
+        log::info($message);
+        broadcast(new NewMessage($user, $message))->toOthers();
+        return $message;
     }
 
     private function message($a, $b){

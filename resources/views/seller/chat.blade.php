@@ -2,7 +2,7 @@
 @section('content')
 <!-- Chat Content
 	================================================== -->
-	<div class="container-fluid full-page-content-inner pt-0 pl-0 pr-0 chat-page" style="max-height:100%; max-width:100%;" id="chatPage">
+	<div class="container-fluid full-page-content-inner pt-0 pl-0 pr-0 chat-page" style="max-height:100%; max-width:100%;" id="sellerChatPage">
         <section class="col-sm-12 col-md-3 col-lg-3 pl-0 pr-0 pb-0 chatSection">
                 <div class="col-12 col-md-3 col-lg-3 mt-4 mb-4 search-message"  style="position:fixed;">
                     <div class="input-with-icon">
@@ -75,7 +75,7 @@
 <script src="{{ asset('js/app.js') }}"></script>
 <script type="text/javascript">
     new Vue({
-        el: '#chatPage',
+        el: '#sellerChatPage',
         data: {
             users: [],
             messages: [],
@@ -103,13 +103,25 @@
             },
             getChatUserInfo(list, param){
                 if(list.user_id == this.authUser.id){
-                    return list.receiver1 != null ? list.receiver1[param] : list.receiver2[param];
+                    if(list.receiver1){
+                        return list.receiver1[param];
+                    } else if (list.receiver2){
+                        return list.receiver2[param];
+                    }
                 } else {
-                    return list.user1 != null ? list.user1[param] : list.user2[param];
+                    if(list.user1){
+                        return list.user1[param];
+                    } else if (list.user2){
+                        return list.user2[param];
+                    }
                 }
             },
             getMsgSenderInfo(list, param){
-                return list.user1 != null ? list.user1[param] : list.user2[param];
+                if(list.user1){
+                    return list.user1[param]
+                } else if (list.user2){
+                    return list.user2[param];
+                }
             },
             checkIfOnline(list, param){
                 if(param == 'chatList'){
@@ -189,7 +201,7 @@
                 return asset+file
             },
             sendMessage(){
-                if (this.messages.length > 0) {
+                if (this.message.length > 0) {
                     if(this.messageType == 1){
                         var options = {
                             method: 'post',
@@ -224,7 +236,7 @@
         mounted() {
             this.authUser = @json($authUser);
             this.chatList = @json($chatList);
-            this.messages = @json($messages);
+            @json($messages) ? this.messages = @json($messages) : '';
             this.chatToId = @json($chatTo->id);
             this.chatList.map(user => {
                 if(user.user_id == this.authUser.id){
@@ -249,11 +261,8 @@
                     this.users = this.users.filter(u => u.id != user.id);
                 })
                 .listen('.NewMessage',(event) => {
-
-                    event.message.user = event.user;
-                    console.log(event.user);
                     this.messages.push(event.message);
-                    this.message = '';
+                    this.scrollToBottom();
                 })
                 .listenForWhisper('typing', user => {
                     this.activeUser = user;

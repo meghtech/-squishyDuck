@@ -1,11 +1,11 @@
 @extends('layouts.seller')
 @section('content')
 
-    <!-- Market Content
+   <!-- Market Content
 	================================================== -->
     <div class="container-fluid full-page-content-inner" id="app">
         <div class="row">
-            <form action="{{ route('seller.market.search') }}" method="GET" id="searchForm">
+            <form action="{{ route('seller.service.search') }}" method="GET" id="searchForm">
                 <input type="hidden" :value="sortBy" name="sortBy">
                 <input type="hidden" :value="seachCity" name="seachCity">
                 <input type="hidden" :value="seachItem" name="seachItem">
@@ -58,7 +58,7 @@
                     <div class="row">
                         <div class="col-12">
                             <p class="float-left">Buy Results</p>
-                            {{ $data->links('seller/market/pagination') }}
+                            {{ $data->links('customer/market/pagination') }}
                         </div>
                     </div>
                 </div>
@@ -112,7 +112,7 @@
             search(){
                 setTimeout(function(){
                     document.getElementById('searchForm').submit();
-                }, 0.00000001);
+                }, 0.000001);
             },
         },
         mounted() {

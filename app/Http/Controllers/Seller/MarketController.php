@@ -104,8 +104,10 @@ class MarketController extends Controller
 
         if($seachCity && !$seachItem){
             $data = Listings::where('type', 'market')
-            ->where('city', 'LIKE', "%{$seachCity}%")
-            ->orWhere('zip_code', 'LIKE', "%{$seachCity}%")
+            ->where(function($query) use ($seachCity){
+                $query->where('city', 'LIKE', "%{$seachCity}%")
+                ->orWhere('zip_code', 'LIKE', "%{$seachCity}%");
+            })
             ->orderBy('price', $sortBy)
             ->paginate(1)
             ->appends(request()->query());

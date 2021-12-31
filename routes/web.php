@@ -184,11 +184,12 @@ Route::post('/seller/storeCustomOffer', [SellerMainController::class, 'storeCust
 
 Route::get('/seller/reviews', [SellerMainController::class, 'sellerReviews']);
 
-
+Route::get('/seller/services/search', [ServiceController::class, 'searchService'])->name('seller.service.search');
 Route::get('/seller/messages', [SellerMsgController::class, 'index']);
 Route::get('/seller/messages-details/{id}', [SellerMsgController::class, 'msgDetails']);
 Route::resource('/seller/services', ServiceController::class);
 Route::get('/seller/services-status/{id}', [ServiceController::class, 'servicesStatus'])->name('services.status');
+
 //SellerMainController
 Route::get('/seller/SellerPayment', [SellerMainController::class, 'SellerPayment'])->name('seller.payment');
 

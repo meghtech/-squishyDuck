@@ -7,7 +7,7 @@
         <div class="row">
             <form action="{{ route('buyer.listings.search') }}" method="GET" id="searchForm">
                 <input type="hidden" :value="sortBy" name="sortBy">
-                <input type="hidden" :value="seachCity" name="seachCity">
+                <input type="hidden" :value="seachCity" name="seachCity" id="citySearch">
                 <input type="hidden" :value="seachItem" name="seachItem">
             </form>
             <div class="col-sm-3 col-md-3 col-lg-3 bg-light">
@@ -41,9 +41,16 @@
                     </div>
                 </div>
                 <div class="col-12 mt-4 mb-4">
-                    <div class="input-with-icon">
-                        <input id="autocomplete-input" type="text" placeholder="Search City of Zip Code" v-model="seachCity" @keyup.enter="search">
+                <div class="input-with-icon">
+                        <input id="autocomplete-input" type="text" placeholder="Search City of Zip Code" v-model="seachCity" @keyup="getCitySuggestion" @keyup.enter="search">
                         <i style="font-size: 25px;" class="text-dark icon-material-outline-search"></i>
+                    </div>
+                    <div class="search-suggestions">
+                        <ul class="list">
+                            <li v-for="(suggestion, index) in searchSuggestions" @click="selectSuggestion(index)">
+                                @{{suggestion}}
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -107,12 +114,31 @@
             sortBy: '',
             seachCity: '',
             seachItem: '',
+            searchSuggestions: [],
         },
         methods: {
             search(){
                 setTimeout(function(){
                     document.getElementById('searchForm').submit();
                 }, 0.00000001);
+            },
+            getCitySuggestion(){
+                var options = {
+                            method: 'post',
+                            url: '/getCitySuggestion',
+                            data: {
+                                search: this.seachCity,
+                                searchFor: 'listing',
+                            }
+                        };
+                        axios(options).then( (response) => {
+                            this.searchSuggestions = response.data;
+                        })
+            },
+            selectSuggestion(index){
+                this.seachCity = this.searchSuggestions[index];
+                document.getElementById("citySearch").value= this.seachCity;
+                this.search();
             },
         },
         mounted() {

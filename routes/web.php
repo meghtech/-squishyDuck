@@ -223,6 +223,7 @@ Route::post('/seller/post-service', [SellerServiceController::class, 'postServic
 
 Route::get('/seller/view-schedule', [SellerMainController::class, 'viewSchedule'])->name('seller.viewSchedule');
 Route::post('/getSchedules', [RootMainController::class, 'getSchedules'])->name('getSchedules');
+Route::post('/getCitySuggestion', [RootMainController::class, 'getCitySuggestion'])->name('getCitySuggestion');
 
 // Start Message Routes
 Route::get('/chat/{id}', [ChatController::class, 'index'])->middleware('auth:seller')->name('sellerChat');

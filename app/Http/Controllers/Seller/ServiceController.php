@@ -91,7 +91,6 @@ class ServiceController extends Controller
     }
 
     public function searchService(Request $request){
-        log::info($request->sortBy);
         $sortBy = $request->sortBy;
         $seachCity = $request->seachCity;
         $seachItem =  $request->seachItem;

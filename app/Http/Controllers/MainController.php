@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Order;
+use App\Models\Listings;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 
@@ -21,5 +22,19 @@ class MainController extends Controller
         ->where('schedule_date', $request->date)
         ->with('seller1', 'seller2', 'customer1', 'customer2')->get();
         return json_encode($schedules);
+    }
+
+    public function getCitySuggestion(Request $request){
+        $data = Listings::where('type', $request->searchFor)
+        ->where('city', 'LIKE', "%{$request->search}%")
+        ->take(4)
+        ->pluck("city");
+        if($data->isEmpty()){
+            $data = Listings::where('type', $request->searchFor)
+            ->where('zip_code', 'LIKE', "%{$request->search}%")
+            ->take(4)
+            ->pluck("zip_code");
+        }
+        return json_encode($data);
     }
 }

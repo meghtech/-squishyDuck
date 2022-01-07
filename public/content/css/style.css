@@ -119,66 +119,6 @@
 /* Forms Reset & Styles
 ------------------------------------- */
 
-.floting_menu{
-	display: flex;
-	  flex-direction: column;
-	  justify-content: space-around;
-	  flex-direction: column;
-	  color: #007bff;
-  }
-  
-  .floting_menu .f_op_name{
-	    border-bottom: 1px solid #777;
-  }
-  .f_op_btn{
-	  color: red;
-	  padding: .5rem;
-  }
- .auto_res > ul{
-	margin-top:5rem;
-	position:relative;
-	cursor:default;
-  }
- .auto_res ul li{
-	list-style:none;
-	color:#fff;
-	font-family:arial;
-	border-radius:5px;
-	
-	display:inline-block;
-  }
-  .auto_res ul li div{
-	
-		background-color: white;
-		color: #5f96cc;
-		padding: 10px;
-		border-radius: 5px;
-		position: absolute;
-		width: 20rem;
-		display: none;
-		margin-top: -8rem;
-		margin-left: -21rem;
-		border: 2px solid black;
-		box-shadow: 5px 5px 2px 1px rgba(45, 45, 49, 0.582);
-  }
- .auto_res ul div:before{
-	content:'';
-	height:3px;
-	width:0;
-	border:7px solid transparent;
-	border-left-color: #1d1d1d;
-	position:absolute;
-	right:-20px;
-	top:45%;
-	
-  }
- .auto_res div a{
-	color:#1884BC;
-	text-decoration:none;
-  }
-
-
-
 input,
 input[type="text"],
 input[type="password"],
@@ -879,6 +819,30 @@ label.star:before {
 	cursor: pointer;
 }
 
+.floting_menu{
+	position: absolute;
+	background-color: #fff;
+	color: #007bff;
+	margin: -184px 0 0 5px;
+	padding: 1%;
+	width: 330px;
+	border-radius: 4%;
+	border: 1px solid gray;
+}
+
+.f_op_name{
+	border-bottom: 1px solid #777;
+	padding: 0 2%;
+	font-size: 1rem;
+	cursor: pointer;
+}
+.f_op_btn{
+	color: red;
+	padding: 0 35%;
+	cursor: pointer;
+	margin: 0;
+}
+
 /* Sign In Button Media Queries */
 @media (max-width: 768px) {
 	.header-widget .log-in-button span { display: none; }
@@ -919,6 +883,19 @@ label.star:before {
 
 	.chat-page .auto-respond.col-1, .chat-page .auto-respond.col-sm-1, .chat-page .uploadButton.col-sm-1, .chat-page .uploadButton.auto-respond.col-sm-1, .chat-page .send-button.col-sm-1 , .chat-page .send-button.col-sm-1 {
 		max-width: 8.333%;
+	}
+
+	.floting_menu{
+		margin: -208px 0 0 5px;
+		width: 315px;
+	}
+
+	.f_op_name{
+		padding: 2%;
+	}
+	.message-box-flex {
+		display: flex;
+		flex: 0 0 75%;
 	}
 
 }
@@ -16200,5 +16177,8 @@ ul.dashboard-box-list > li:hover {
 		}
 		.chatSection{
 			min-height:100vh;
+		}
+		.floting_menu{
+			width: 340px;
 		}
 	}

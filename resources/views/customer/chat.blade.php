@@ -44,8 +44,13 @@
                         </div>
                 </div>
                 <div class="row m-0 p-0" style="width:100%; margin-bottom:0;background-color:#f2f2f2;">
-                    <div class="auto-respond col-1 col-sm-1 mb-0 p-0 text-center">
+                    <div class="auto-respond col-1 col-sm-1 mb-0 p-0 text-center" @click="toggleQuickRespond()">
                         <img class="mt-3" height="25px" src="{{ asset('content/images/autoResponder.svg') }}" alt="Auto respond">
+                    </div>
+                    <div v-if="quickRespond"
+                            style="z-index:2000" class="floting_menu">
+                                <p class="f_op_name" v-for="(respond, respond_index) in responds" @click="sendResponse(respond_index)">@{{respond}}</p>
+                                <p @click="toggleQuickRespond()" class="f_op_btn">Cancel</p>
                     </div>
                     <div class="uploadButton col-1 col-sm-1 m-0 p-0">
 						<input name="image" class="uploadButton-input" type="file" accept="image/*, application/pdf" id="upload" @change="selectFile">
@@ -88,6 +93,8 @@
             messageType: 1,
             activeUser: false,
             typingTimer: false,
+            quickRespond: false,
+            responds: ["I'm driving, and I'm 20 minutes from you.", "I'm driving, and I'm 10 minutes from you.", "I'm driving, and I'm 5 minutes from you."],
         },
         methods: {
             orderChatList(){
@@ -235,6 +242,16 @@
                         })
                     }
                 }
+            },
+            toggleQuickRespond(){
+                this.quickRespond ? this.quickRespond = false : this.quickRespond = true;
+            },
+            sendResponse(index){
+                this.message = this.responds[index];
+                this.file = '';
+                this.messageType = 1;
+                this.toggleQuickRespond();
+                this.sendMessage();
             },
         },
         mounted() {

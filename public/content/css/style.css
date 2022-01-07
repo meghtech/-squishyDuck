@@ -821,13 +821,26 @@ label.star:before {
 
 .floting_menu{
 	position: absolute;
-	background-color: #fff;
-	color: #007bff;
-	margin: -184px 0 0 5px;
-	padding: 1%;
-	width: 330px;
-	border-radius: 4%;
-	border: 1px solid gray;
+    background-color: #fff;
+    color: #007bff;
+    padding: 1%;
+    width: 330px;
+    border-radius: 4%;
+    border: 1px solid gray;
+    bottom: -4rem;
+    right: 99%;
+}
+
+.respond_container1::before{
+	content: '';
+    height: 3px;
+    width: 0;
+    border: 7px solid transparent;
+    border-left-color: #1d1d1d;
+    position: absolute;
+    left: 1%;
+   
+   
 }
 
 .f_op_name{
@@ -885,9 +898,16 @@ label.star:before {
 		max-width: 8.333%;
 	}
 
-	.floting_menu{
-		margin: -208px 0 0 5px;
-		width: 315px;
+	.floting_menu {
+		position: absolute;
+		background-color: #fff;
+		color: #007bff;
+		padding: 1%;
+		width: 330px;
+		border-radius: 4%;
+		border: 1px solid gray;
+		bottom: 6rem;
+		left: 10%;
 	}
 
 	.f_op_name{

@@ -202,6 +202,7 @@
                 this.file = '';
                 this.messageType = 1;
                 this.message = '';
+                document.getElementById("message-box").classList.remove('message-box-flex');
             },
             fetchMessage(chatTo, userId) {
                 var options = {

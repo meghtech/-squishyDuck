@@ -597,6 +597,10 @@ label.star:before {
 	transform: translateY(-2px);
 }
 
+.chat-page {
+	overflow: hidden;
+}
+
 .chat-page .user-avatar {
 	width: 35px;
 	height: 35px;
@@ -830,17 +834,31 @@ label.star:before {
     bottom: -4rem;
     right: 99%;
 }
+.floting_menu:after,
+.floting_menu:before {
+  left: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
 
-.respond_container1::before{
-	content: '';
-    height: 3px;
-    width: 0;
-    border: 7px solid transparent;
-    border-left-color: #1d1d1d;
-    position: absolute;
-    left: 1%;
-   
-   
+.floting_menu::after{
+	border-color: rgba(136, 183, 213, 0);
+	border-left-color: white;
+	border-width: 9px;
+	margin-top: -10px;
+
+}
+
+.floting_menu::before{
+	border-color: rgba(194, 225, 245, 0);
+	border-left-color: gray;
+	border-width: 11px;
+	margin-top: -12px;
 }
 
 .f_op_name{
@@ -851,7 +869,7 @@ label.star:before {
 }
 .f_op_btn{
 	color: red;
-	padding: 0 35%;
+	padding: 0 40%;
 	cursor: pointer;
 	margin: 0;
 }
@@ -906,16 +924,37 @@ label.star:before {
 		width: 330px;
 		border-radius: 4%;
 		border: 1px solid gray;
-		bottom: 6rem;
-		left: 10%;
+		bottom: 4rem;
+		left: 2%;
 	}
 
 	.f_op_name{
 		padding: 2%;
 	}
+	.chat-page .message-box {
+		max-width: 75%;
+	}
 	.message-box-flex {
-		display: flex;
-		flex: 0 0 75%;
+		flex: 0 0 66.6%;
+	}
+	.floting_menu:after,
+	.floting_menu:before {
+  		left: 3%;
+  		top: 105%;
+	}
+
+	.floting_menu::after{
+		border-color: rgba(136, 183, 213, 0);
+		border-top-color: white;
+		border-width: 10px;
+		margin-right: -10px;
+	}
+
+	.floting_menu::before{
+		border-color: rgba(194, 225, 245, 0);
+		border-top-color: gray;
+		border-width: 10px;
+		margin-top: -9px;
 	}
 
 }
@@ -4530,7 +4569,6 @@ span.blog-item-tag {
 
 /* Small Footer */
 .small-footer {
-	border-top: 1px solid #e0e0e0;
 	padding-top: 0px;
 	width: calc(100% + 80px);
 	left: -40px;
@@ -16196,9 +16234,12 @@ ul.dashboard-box-list > li:hover {
 			height:80.5vh;
 		}
 		.chatSection{
-			min-height:100vh;
+			min-height:103.5vh;
 		}
 		.floting_menu{
 			width: 340px;
+		}
+		.f_op_btn{
+			padding: 0 40%;
 		}
 	}

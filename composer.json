@@ -21,7 +21,8 @@
         "pusher/pusher-php-server": "~4.0",
         "srmklive/paypal": "~1.0",
         "stripe/stripe-php": "^7.77",
-        "torann/geoip": "^3.0"
+        "torann/geoip": "^3.0",
+        "twilio/sdk": "^6.33"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

@@ -10,6 +10,7 @@ use App\Events\NewMessage;
 use Illuminate\Http\Request;
 use App\Models\Customer;
 use App\Models\Message;
+use Twilio\Rest\Client;
 use App\Models\Seller;
 
 class ChatController extends Controller
@@ -91,6 +92,7 @@ class ChatController extends Controller
                 'message_type' => $request->message_type,
                 'msg' => $request->msg,
             ]);
+            $txtMessage = $user->name.": ".$message->msg;
         } elseif($request->message_type == 2){
             if($request->file()){
                 //get filename with extension
@@ -112,14 +114,26 @@ class ChatController extends Controller
                 'message_type' => $request->message_type,
                 'file' => $file_name,
             ]);
+            $txtMessage = $user->name." sent an image";
         }
         $message->user1 =  $user;
         $message->receiver1 =  $receiver;
         $message->user2 =  null;
         $message->receiver2 =  null;
-        log::info($message);
+        // log::info($message);
         broadcast(new NewMessage($user, $message))->toOthers();
+        if($receiver->phone){
+            $this->sendSMS($txtMessage, $receiver->phone);
+        }
         return $message;
+    }
+
+    private function sendSMS($message, $recipient) {
+            $sid = env("TWILIO_SID");
+            $token = env("TWILIO_TOKEN");
+            $twilio_number = env("TWILIO_NUMBER");
+            $client = new Client($sid, $token);
+            $client->messages->create($recipient, ['from' => $twilio_number, 'body' => $message]);
     }
 
     private function message($a, $b){
@@ -135,7 +149,5 @@ class ChatController extends Controller
         ->select('id', 'user_id', 'receiver_id','message_type', 'msg','file', 'created_at')
         ->with('user1','user2','receiver1','receiver2')
         ->get();
-
-
     }
 }

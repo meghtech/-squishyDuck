@@ -38,7 +38,6 @@ class NewMessage implements ShouldBroadcastNow
      */
     public function broadcastOn()
     {
-        log::info($this->message);
         return new PresenceChannel('chat');
     }
 

@@ -20,7 +20,7 @@ class MarketController extends Controller
         $sortBy="asc";
         $seachCity="";
         $seachItem="";
-        $data = Listings::where('type', 'market')
+        $data = Listings::where('type', 'market')->orWhere('type','listing')
         ->orderBy('price', $sortBy)
         ->paginate(1)
         ->appends(request()->query());
@@ -104,7 +104,7 @@ class MarketController extends Controller
         $seachItem =  $request->seachItem;
 
         if($seachCity && !$seachItem){
-            $data = Listings::where('type', 'market')
+            $data = Listings::where('type', 'market')->orWhere('type','listing')
             ->where(function($query) use ($seachCity){
                 $query->where('city', 'LIKE', "%{$seachCity}%")
                 ->orWhere('zip_code', 'LIKE', "%{$seachCity}%");
@@ -114,12 +114,12 @@ class MarketController extends Controller
             ->appends(request()->query());
         } elseif(!$seachCity && $seachItem){
             $data = Listings::where('type', 'market')
-            ->where('title', 'LIKE', "%{$seachItem}%")
+            ->where('title', 'LIKE', "%{$seachItem}%")->orWhere('type','listing')
             ->orderBy('price', $sortBy)
             ->paginate(1)
             ->appends(request()->query());
         } elseif($seachCity && $seachItem) {
-            $data = Listings::where('type', 'market')
+            $data = Listings::where('type', 'market')->orWhere('type','listing')
             ->where('title', 'LIKE', "%{$seachItem}%")
             ->where(function($query) use ($seachCity) {
                 $query->where('city', 'LIKE', "%{$seachCity}%")
@@ -129,7 +129,7 @@ class MarketController extends Controller
             ->paginate(1)
             ->appends(request()->query());
         } else {
-            $data = Listings::where('type', 'market')
+            $data = Listings::where('type', 'market')->orWhere('type','listing')
             ->orderBy('price', $sortBy)
             ->paginate(1)
             ->appends(request()->query());

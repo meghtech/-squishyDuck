@@ -52,7 +52,7 @@
                     <ul id="responsive">
                         <li><a href="{{ route('seller.market') }}" class="{{ Request::is('seller/market*') ? 'text-success' : '' }}">Market</a></li>
                         <li><a href="{{ route('seller.viewServices') }}" class="{{ Request::is('seller/services*') ? 'text-success' : '' }}">Service</a></li>
-                        <li><a href="{{ route('seller.listing') }}" class="{{ Request::is('seller/listing*') ? 'text-success' : '' }}">Listing</a></li>
+                        <li><a href="{{ route('seller.listing') }}" class="{{ Request::is('seller/listing*') ? 'text-success' : '' }}">Rentals</a></li>
                     </ul>
                 </nav>
 				<div class="clearfix"></div>

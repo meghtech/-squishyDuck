@@ -16,25 +16,6 @@ class ListingController extends Controller
         $this->middleware('auth:customer');
     }
 
-    public function index(){
-        $data = Listings::where('type', 'listing')
-        ->where('user_id', auth()->user()->id)
-        ->latest()
-        ->paginate(1)
-        ->appends(request()->query());
-        return view('customer.listing.listing', compact('data'));
-    }
-
-    public function viewListing(){
-        $sortBy="asc";
-        $seachCity="";
-        $seachItem="";
-        $data = Listings::where('type', 'listing')
-        ->orderBy('price', $sortBy)
-        ->paginate(1)
-        ->appends(request()->query());
-        return view('customer.listing.viewListing', compact('data', 'sortBy', 'seachCity', 'seachItem'));
-    }
 
     public function searchListing(Request $request){
         log::info($request->sortBy);

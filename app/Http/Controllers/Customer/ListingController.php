@@ -30,13 +30,13 @@ class ListingController extends Controller
                 ->orWhere('zip_code', 'LIKE', "%{$seachCity}%");
             })
             ->orderBy('price', $sortBy)
-            ->paginate(1)
+            ->paginate(6)
             ->appends(request()->query());
         } elseif(!$seachCity && $seachItem){
             $data = Listings::where('type', 'listing')
             ->where('title', 'LIKE', "%{$seachItem}%")
             ->orderBy('price', $sortBy)
-            ->paginate(1)
+            ->paginate(6)
             ->appends(request()->query());
         } elseif($seachCity && $seachItem) {
             $data = Listings::where('type', 'listing')
@@ -46,12 +46,12 @@ class ListingController extends Controller
                 ->orWhere('zip_code', 'LIKE', "%{$seachCity}%");
             })
             ->orderBy('price', $sortBy)
-            ->paginate(1)
+            ->paginate(6)
             ->appends(request()->query());
         } else {
             $data = Listings::where('type', 'listing')
             ->orderBy('price', $sortBy)
-            ->paginate(1)
+            ->paginate(6)
             ->appends(request()->query());
         }
         return view('customer.listing.viewListing', compact('data', 'sortBy', 'seachCity', 'seachItem'));

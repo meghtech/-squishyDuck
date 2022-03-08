@@ -87,7 +87,7 @@
                                     <div class="user-avatar status-online"><img src="{{asset('storage/upload/profile')}}/{{ Auth::guard('customer')->user()->profile  }}" alt=""></div>
                                     <div class="user-name">
                                   {{ Auth::guard('customer')->user()->name  }}
-                                         <span>Freelancer</span>
+                                         <span>Buyer</span>
                                     </div>
                                 </div>
                                   @endisset

@@ -22,7 +22,7 @@ class MarketController extends Controller
         $seachItem="";
         $data = Listings::where('type', 'market')
         ->orderBy('price', $sortBy)
-        ->paginate(1)
+        ->paginate(6)
         ->appends(request()->query());
         return view('seller.market.market', compact('data', 'sortBy', 'seachCity', 'seachItem'));
     }

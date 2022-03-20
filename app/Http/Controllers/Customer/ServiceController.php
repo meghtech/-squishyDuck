@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Http\Request;
 use App\Models\Listings;
+use App\Models\Order;
 
 class ServiceController extends Controller
 {
@@ -26,6 +27,41 @@ class ServiceController extends Controller
         ->appends(request()->query());
         return view('customer.service.viewServices', compact('data', 'sortBy', 'seachCity', 'seachItem'));
     }
+
+    public function serviceHistory(){
+
+        return view('customer.service.servicesHistory');
+       }
+       
+       public function getserviceHistory(){
+
+        // $requests = Order::where('seller_id', auth()->id())->with('customer1', 'customer2', 'listing')
+        // ->orderBy('id', 'DESC')
+        // ->get();
+
+        // return $requests;
+        $data = Order::where('customer_id', auth()->id())
+			->with('seller1', 'seller2', 'customer1', 'customer2', 'listing')
+            ->orderBy('id', 'DESC')
+            ->get();
+		
+		return $data;
+     
+    }
+    public function updateOrderSeller(Request $request)
+    {
+		$key = $request->field;
+		$update = Order::where('id',$request->id)->with('seller1', 'seller2', 'customer1', 'customer2', 'listing')->first();
+		$update->$key = $request->value;
+		if($request->field == 'is_accept_seller' && $request->orderConfirmed == 0){
+			$update->payment_status = 0;
+		}
+		$update->save();
+    
+    
+    return $update;
+    }
+
 
 
     public function viewDetail($id){

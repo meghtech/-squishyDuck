@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Http\Request;
 use App\Models\Listings;
+use App\Models\Order;
 
 class ServiceController extends Controller
 {
@@ -21,6 +22,81 @@ class ServiceController extends Controller
         return view('seller.service.service', compact('data'));
     }
 
+    public function getserviceHistory(){
+
+        // $requests = Order::where('seller_id', auth()->id())->with('customer1', 'customer2', 'listing')
+        // ->orderBy('id', 'DESC')
+        // ->get();
+
+        // return $requests;
+        $data = Order::where('seller_id', auth()->id())
+			->with('seller1', 'seller2', 'customer1', 'customer2', 'listing')
+            ->orderBy('id', 'DESC')
+            ->get();
+		
+		return $data;
+       
+
+    // return view('seller.servicesHistory', compact('requests'));
+    }
+    public function serviceHistory(){
+
+     return view('seller.servicesHistory');
+    }
+    public function addImg($id){
+
+
+        return view('seller.uploadImage',['id'=> $id]);
+    }
+
+    public function storeImage(Request $request){
+
+        $imageList = [];
+        for ($i=0; $i < $request->photoLength; $i++) {
+            $fileNo = "image-".$i;
+            $image = $request->$fileNo;
+            $filenamewithextension = $request->$fileNo->getClientOriginalName();
+            //get filename without extension
+            $filename = pathinfo($filenamewithextension, PATHINFO_FILENAME);
+            //get file extension
+            $extension = $request->$fileNo->getClientOriginalExtension();
+            //filename to store
+            $filenametostore = $filename . '_' . time() . '.webp' ;
+            if (!File::exists(public_path() . "/content/images/service")) {
+                File::makeDirectory(public_path() . "/content/images/service", 0777, true);
+            }
+            $originalPath = public_path() . '/content/images/service';
+            $thumbnailImage = Image::make($image)->encode('webp', 100);
+            $thumbnailImage->resize(500, 500, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save($originalPath.'/'. $filenametostore);
+            $imageList[] = $filenametostore;
+        }
+
+        $list = new Listings();
+        $list->photos = json_encode($imageList);
+        $list->save();
+
+        return redirect()->route('seller.serviceHistory');
+
+    }
+    
+    public function updateOrderSeller(Request $request)
+    {
+		$key = $request->field;
+		$update = Order::where('id',$request->id)->with('seller1', 'seller2', 'customer1', 'customer2', 'listing')->first();
+		$update->$key = $request->value;
+		if($request->field == 'is_accept_seller' && $request->orderConfirmed == 0){
+			$update->payment_status = 0;
+		}
+		$update->save();
+    
+    
+    return $update;
+    }
+
+
+
     public function viewDetail($id){
         $data = Listings::where('id', $id)->first();
         return view('seller.service.detail', compact('data'));
@@ -31,7 +107,7 @@ class ServiceController extends Controller
     }
 
     public function postService(Request $request){
-        log::info($request);
+        // log::info($request);
         $imageList = [];
         for ($i=0; $i < $request->photoLength; $i++) {
             $fileNo = "image-".$i;

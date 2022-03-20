@@ -171,7 +171,7 @@
 						</ul>
 						<ul data-submenu-title="Organize and Manage Services">
 							<li><a href="{{ route('seller.service') }}" class="{{ Request::is('seller/service*') ? 'text-primary' : '' }}"><i class="icon-material-outline-assignment {{ Request::is('seller/service*') ? 'text-primary' : '' }}"></i> Services</a></li>
-							<li><a href="#">
+							<li><a href="{{ route('seller.serviceHistory') }}" class="{{ Request::is('seller/history*') ? 'text-primary' : '' }}">
 								<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-up-right pt-1 mr-2" width="18" height="18" viewBox="0 0 18 13">
 								    <path fill-rule="evenodd"
 								        d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z" />

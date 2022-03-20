@@ -54,7 +54,9 @@
 					<div class="job-listing-details">
 						<!-- Logo -->
 						<div class="job-listing-company-logo">
-							<img src="{{asset('storage/upload/Gig')}}/{{$v_cat->image}}" alt="">
+
+						
+							<img src="{{asset('content/website/img')}}/{{$v_cat->image}}" alt="">
 						</div>
 
 						<!-- Details -->

@@ -29,9 +29,9 @@
     <!-- Dashboard Content
 	================================================== -->
     <div class="dashboard-content-container" data-simplebar>
-        <div class="dashboard-content-inner" >
+        <div   class="dashboard-content-inner" >
             <!-- Dashboard Headline -->
-            <div class="dashboard-headline">
+            <div style="margin-left: 7rem" class="dashboard-headline">
                 <h3>{{$getUser->name}}</h3>
                 <span>We are glad to see you again!</span>
 
@@ -44,84 +44,68 @@
                 </nav>
             </div>
 
+           
             <!-- Fun Facts Container -->
-            <div class="fun-facts-container">
+            <div style="display:flex;justify-content: center" class="fun-facts-container">
                 <div class="fun-fact" data-fun-fact-color="#36bd78">
                     <div class="fun-fact-text">
-                        <span>Complate Project</span>
-                        <h4>{{$data['sellerOrder']}}</h4>
+                        <span>Services</span>
+                        <h4>{{$data['services']}}</h4>
                     </div>
                     <div class="fun-fact-icon"><i class="icon-material-outline-gavel"></i></div>
                 </div>
                 <div class="fun-fact" data-fun-fact-color="#efa80f">
                     <div class="fun-fact-text">
-                        <span>Reviews</span>
-                        <h4>{{$data['sellerReview']}}</h4>
+                        <span>Schedule</span>
+                        <h4>{{$data['schedule']}} today</h4>
                     </div>
                     <div class="fun-fact-icon"><i class="icon-material-outline-rate-review"></i></div>
                 </div>
 
                 <!-- Last one has to be hidden below 1600px, sorry :( -->
-                <div class="fun-fact" data-fun-fact-color="#2a41e6">
-                    <div class="fun-fact-text">
-                        <span>This Month Earning</span>
-                        <h4>987</h4>
-                    </div>
-                    <div class="fun-fact-icon"><i class="icon-feather-trending-up"></i></div>
-                </div>
+               
             </div>
             <br>
-            <div class="fun-facts-container">
-                <div class="fun-fact" data-fun-fact-color="#36bd78">
+
+            {{--  --}}
+            <div style="display:flex;justify-content: center" class="fun-facts-container">
+               
+                <!-- Last one has to be hidden below 1600px, sorry :( -->
+                <div  class="fun-fact" data-fun-fact-color="#2a41e6">
                     <div class="fun-fact-text">
-                        <span>Complate Project</span>
-                        <h4>{{$data['sellerOrder']}}</h4>
+                        <span>This Month Earning</span>
+                        <h4>$2,450</h4>
                     </div>
-                    <div class="fun-fact-icon"><i class="icon-material-outline-gavel"></i></div>
+                    <div class="fun-fact-icon"><i class="icon-feather-trending-up"></i></div>
                 </div>
+
                 <div class="fun-fact" data-fun-fact-color="#efa80f">
+                    <div class="fun-fact-text">
+                        <span>Incoming Requests</span>
+                        <h4>{{$data['incommingRq']}}</h4>
+                    </div>
+                    <div class="fun-fact-icon"><i class="icon-material-outline-rate-review"></i></div>
+                </div>
+                 
+               
+            </div>
+
+            <div style="margin-top: 2rem;display:flex;justify-content: center" class="fun-facts-container">
+               
+                <!-- Last one has to be hidden below 1600px, sorry :( -->
+               
+                <div  class="fun-fact" data-fun-fact-color="#efa80f">
                     <div class="fun-fact-text">
                         <span>Reviews</span>
                         <h4>{{$data['sellerReview']}}</h4>
                     </div>
                     <div class="fun-fact-icon"><i class="icon-material-outline-rate-review"></i></div>
                 </div>
-
-                <!-- Last one has to be hidden below 1600px, sorry :( -->
-                <div class="fun-fact" data-fun-fact-color="#2a41e6">
-                    <div class="fun-fact-text">
-                        <span>This Month Earning</span>
-                        <h4>987</h4>
-                    </div>
-                    <div class="fun-fact-icon"><i class="icon-feather-trending-up"></i></div>
-                </div>
+               
+            
             </div>
-            <br>
-            <div class="fun-facts-container">
-                <div class="fun-fact" data-fun-fact-color="#36bd78">
-                    <div class="fun-fact-text">
-                        <span>Complate Project</span>
-                        <h4>{{$data['sellerOrder']}}</h4>
-                    </div>
-                    <div class="fun-fact-icon"><i class="icon-material-outline-gavel"></i></div>
-                </div>
-                <div class="fun-fact" data-fun-fact-color="#efa80f">
-                    <div class="fun-fact-text">
-                        <span>Reviews</span>
-                        <h4>{{$data['sellerReview']}}</h4>
-                    </div>
-                    <div class="fun-fact-icon"><i class="icon-material-outline-rate-review"></i></div>
-                </div>
 
-                <!-- Last one has to be hidden below 1600px, sorry :( -->
-                <div class="fun-fact" data-fun-fact-color="#2a41e6">
-                    <div class="fun-fact-text">
-                        <span>This Month Earning</span>
-                        <h4>987</h4>
-                    </div>
-                    <div class="fun-fact-icon"><i class="icon-feather-trending-up"></i></div>
-                </div>
-            </div>
+           
 
             <!-- Footer -->
             <div class="dashboard-footer-spacer"></div>

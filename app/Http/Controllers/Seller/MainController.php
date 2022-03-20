@@ -14,9 +14,12 @@ use App\Models\Order;
 use App\Models\Review;
 use App\Models\MessagePerson;
 use App\Models\CustomOffer;
+use App\Models\Listings;
 use App\Models\User;
 use App\Models\PaymentSeller;
+use Carbon\Carbon;
 use Image;
+
 class MainController extends Controller
 {
 
@@ -32,7 +35,7 @@ class MainController extends Controller
         $getGig = Gig::where('seller_id', auth()->id())
             ->where('status', 1)
             ->get();
-        return view('front.buyerJobPost', compact('jobPost','bidderCHeck','getGig'));
+        return view('front.buyerJobPost', compact('jobPost', 'bidderCHeck', 'getGig'));
     }
 
     function bidRequest(Request $request)
@@ -53,21 +56,29 @@ class MainController extends Controller
     public function sellerIndex()
     {
         $data = [];
-        $getUser = Seller::where('id',auth()->id())->first();
+        $getUser = Seller::where('id', auth()->id())->first();
 
         $data['sellerGig'] = Gig::where('seller_id', auth()->id())
             ->where('status', 1)
             ->count();
         $data['sellerReview'] = Review::where('seller_id', auth()->id())->count();
-        $data['sellerOrder'] = Order::where('is_accept_seller',1)
+        $data['sellerOrder'] = Order::where('is_accept_seller', 1)
             ->where('seller_id', auth()->id())
             ->count();
-        $data['sellerOn'] = Order::where('is_accept_seller',0)
+        $data['sellerOn'] = Order::where('is_accept_seller', 0)
             ->where('seller_id', auth()->id())
             ->count();
 
+        $data['services'] = Listings::where('user_id', auth()->id())->count();
 
-        return view('seller.dashboard', compact('data','getUser'));
+
+        $today = Carbon::today();
+        $data['schedule'] = Order::where('seller_id', auth()->id())->whereDate('schedule_date', '=', $today->format('Y-m-d'))->count();
+        $data['incommingRq'] = Order::where('seller_id', auth()->id())->whereDate('schedule_date', '>=', $today->format('Y-m-d'))->count();
+
+        
+       
+        return view('seller.dashboard', compact('data', 'getUser'));
     }
 
     public function incomingRequests()
@@ -135,7 +146,7 @@ class MainController extends Controller
     {
         $this->validate($request, [
             'name' => 'required|string|max:20',
-            'email' => 'required|string|email|max:255|unique:sellers,email,'.$request->seller_id,
+            'email' => 'required|string|email|max:255|unique:sellers,email,' . $request->seller_id,
             'tagline' => 'required|string|max:50',
             'about' => 'required|string|max:800',
             'country' => 'required|string|max:20'
@@ -143,15 +154,15 @@ class MainController extends Controller
 
         $seller_id = $request->seller_id;
         $sellerInfo = Seller::findOrfail($seller_id);
-        $userInfo = User::where('seller_id',$seller_id)->first();
+        $userInfo = User::where('seller_id', $seller_id)->first();
 
-        if($request->has('profile')){
+        if ($request->has('profile')) {
             $image = $request->file('profile');
 
-            $imageName = 'profile'.'-'.time().'.'.$image->getClientOriginalExtension();
-            $post = Image::make($image)->resize(200,180)->save('storage/upload/profile/'.$imageName)->encode('jpg', 75);
+            $imageName = 'profile' . '-' . time() . '.' . $image->getClientOriginalExtension();
+            $post = Image::make($image)->resize(200, 180)->save('storage/upload/profile/' . $imageName)->encode('jpg', 75);
             $sellerInfo->profile = $imageName;
-        }else {
+        } else {
             $sellerInfo->profile = $sellerInfo->profile;
         }
 
@@ -174,7 +185,7 @@ class MainController extends Controller
 
     public function sellerSettingSavepass(Request $request)
     {
-        $this->validate($request,[
+        $this->validate($request, [
             'old_password' => 'required',
             'password' => 'required|confirmed'
 
@@ -182,31 +193,32 @@ class MainController extends Controller
 
         $hashPassword = Auth::user()->password;
 
-        if(Hash::check($request->old_password,$hashPassword)){
-            if(!Hash::check($request->password,$hashPassword)){
+        if (Hash::check($request->old_password, $hashPassword)) {
+            if (!Hash::check($request->password, $hashPassword)) {
                 $user = Seller::find(Auth::id());
                 $user->password = Hash::make($request->password);
                 $user->save();
                 Auth::logout();
                 return redirect()->back()->with('status', 'Your Password has been Change');
-            }else{
+            } else {
                 return redirect()->back()->with('status', 'NEw Password can not be same old password:)');
             }
-        }else{
+        } else {
             return redirect()->back()->with('status', 'You pu wrong Password try aging');
         }
 
         return view('admin.profile');
     }
 
-    public function createSchedule($id){
+    public function createSchedule($id)
+    {
         return view('seller.createSchedule', compact('id'));
-     }
+    }
 
-    public function viewSchedule(){
+    public function viewSchedule()
+    {
         $userId = auth()->guard('seller')->user()->id;
         $scheduleDates = Order::where('seller_id', $userId)->pluck('schedule_date')->toArray();
         return view('seller.schedules', compact('scheduleDates'));
     }
-
 }

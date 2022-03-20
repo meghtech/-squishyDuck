@@ -17,6 +17,16 @@ class ListingController extends Controller
     }
 
 
+    public function index(){
+
+        $data = Listings::where('type', 'listing')
+        ->where('user_id', auth()->user()->id)
+        ->latest()
+        ->paginate(1)
+        ->appends(request()->query());
+        return view('customer.listing.listing', compact('data'));
+
+    }
     public function searchListing(Request $request){
         log::info($request->sortBy);
         $sortBy = $request->sortBy;

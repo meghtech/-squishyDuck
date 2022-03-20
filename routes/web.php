@@ -190,6 +190,8 @@ Route::get('/seller/messages-details/{id}', [SellerMsgController::class, 'msgDet
 Route::resource('/seller/services', ServiceController::class);
 Route::get('/seller/services-status/{id}', [ServiceController::class, 'servicesStatus'])->name('services.status');
 
+Route::post('/seller/updateOrder', [SellerServiceController::class, 'updateOrderSeller'])->name('seller.updateOrderSeller');
+
 //SellerMainController
 Route::get('/seller/SellerPayment', [SellerMainController::class, 'SellerPayment'])->name('seller.payment');
 
@@ -217,9 +219,15 @@ Route::get('/seller/listing/search', [SellerListingController::class, 'searchLis
 Route::get('/seller/listing', [SellerListingController::class, 'index'])->name('seller.listing');
 
 Route::get('/seller/service', [SellerServiceController::class, 'index'])->name('seller.service');
+Route::get('/seller/history', [SellerServiceController::class, 'serviceHistory'])->name('seller.serviceHistory');
+Route::get('/seller/history-addImg/{id}',[SellerServiceController::class,'addImg'])->name('seller.addImgtoService');
+
+
+Route::get('/seller/gethistory', [SellerServiceController::class, 'getserviceHistory'])->name('seller.getserviceHistory');
 Route::get('/seller/create-service', [SellerServiceController::class, 'createService'])->name('seller.createService');
 Route::get('/seller/services', [SellerServiceController::class, 'viewServices'])->name('seller.viewServices');
 Route::post('/seller/post-service', [SellerServiceController::class, 'postService'])->name('seller.postService');
+Route::post('/seller/add-historyImg', [SellerServiceController::class, 'storeImage'])->name('seller.storeImage');
 
 Route::get('/seller/view-schedule', [SellerMainController::class, 'viewSchedule'])->name('seller.viewSchedule');
 Route::post('/getSchedules', [RootMainController::class, 'getSchedules'])->name('getSchedules');
@@ -270,6 +278,9 @@ Route::get('/buyer/file-share-user/{id}', [MassageController::class, 'fileShareU
 Route::post('/buyer/file-share-store', [MassageController::class, 'fileShareStore'])->name('file.shareStore');
 Route::get('/buyer/messages-details/{id}', [MassageController::class, 'msgDetails']);
 
+Route::get('/buyer/history', [BuyerServiceController::class, 'serviceHistory'])->name('buyer.serviceHistory');
+Route::get('/buyer/gethistory', [BuyerServiceController::class, 'getserviceHistory'])->name('seller.getserviceHistory');
+Route::post('/buyer/updateOrder', [BuyerServiceController::class, 'updateOrderSeller'])->name('buyer.updateOrderSeller');
 
 
 
@@ -295,6 +306,7 @@ Route::get('/buyer/payment', [BuyerMainController::class, 'BuyerPayment'])->name
 Route::get('/buyer/recent-orders', [BuyerMainController::class, 'recentOrder'])->name('buyer.recentOrder');
 Route::post('/buyer/getOrder', [BuyerMainController::class, 'getOrder'])->name('buyer.getOrder');
 Route::post('/buyer/updateOrder', [BuyerMainController::class, 'updateOrder'])->name('buyer.updateOrder');
+
 
 Route::get('/buyer/manage', [BuyerMainController::class, 'manageItems'])->name('buyer.manageItems');
 Route::post('/buyer/manageItemData', [BuyerMainController::class, 'manageItemData'])->name('buyer.manageItemData');

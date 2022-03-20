@@ -55,6 +55,7 @@ class MainController extends Controller
      function serviceShow($slug)
     {
          $category = Category::where('slug',$slug)->with('gigs')->withCount('gigs')->first();
+        
         return view('front.serviceShow', compact('category'));
     }
 

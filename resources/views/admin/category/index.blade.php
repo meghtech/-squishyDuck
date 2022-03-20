@@ -56,7 +56,7 @@
             <tr>
                 <th>No.</th>
                 <th>Category Name</th>
-                <!-- <th>Total Services</th> -->
+                <!-- <th>Total </th> -->
                 <th>Status</th>
                 <th>Updated At</th>
                 <th>Action</th>

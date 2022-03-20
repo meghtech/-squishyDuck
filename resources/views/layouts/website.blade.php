@@ -56,6 +56,8 @@
                         <li><a href="{{url('/service-show')}}/{{$v_cat->slug}}">{{$v_cat->name}}</a>
                         </li>
                         @endforeach
+                        {{-- <li><a href="{{url('/service-show/buy')}}">Market</a>
+                        <li><a href="{{url('/service-show')}}/{{$v_cat->slug}}">{{$v_cat->name}}</a> --}}
                     </ul>
                 </nav>
                 <div class="clearfix"></div>
@@ -112,7 +114,7 @@
                                 </form>
                         </div>
                        @elseif(Auth::guard('seller')->check())
-      <div class="header-notifications-trigger">
+                         <div class="header-notifications-trigger">
                             <a href="#" style="font-size: 14px!important"><i class="icon-feather-log-in"></i>Profile</a>
                         </div>
 

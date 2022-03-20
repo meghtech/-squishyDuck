@@ -13970,6 +13970,7 @@ a.dashboard-responsive-nav-trigger { display: none; }
 /* Fun Facts
 ------------------------------------- */
 .fun-facts-container {
+	
 	display: flex;
     flex-wrap: wrap;
 	width: calc(100% + 30px);
@@ -13986,7 +13987,9 @@ a.dashboard-responsive-nav-trigger { display: none; }
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-	flex: 1 1 calc(25% - 30px);
+	flex: 2 2 1;
+	
+	width: 40%;
     height: auto;
     cursor: default;
     transition: 0.3s;

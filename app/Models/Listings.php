@@ -18,6 +18,11 @@ class Listings extends Model
     public function user()
     {
         
-    	return $this->belongsTo(User::class,'user_id');
+    	return $this->hasOne(User::class,'customer_id','user_id');
+    }
+    public function userSeller()
+    {
+        
+    	return $this->hasOne(User::class,'seller_id','user_id');
     }
 }

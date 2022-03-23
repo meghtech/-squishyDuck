@@ -26,8 +26,10 @@ class ServiceController extends Controller
         $seachItem="";
         $data = Listings::where('type', 'service')
         ->orderBy('price', $sortBy)
+        ->with('userSeller')
         ->paginate(6)
         ->appends(request()->query());
+      
         return view('customer.service.viewServices', compact('data', 'sortBy', 'seachCity', 'seachItem'));
     }
 

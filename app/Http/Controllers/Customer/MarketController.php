@@ -25,6 +25,7 @@ class MarketController extends Controller
         $seachItem="";
         $data = Listings::where('type', 'market')->orWhere('type','listing')
         ->orderBy('price', $sortBy)
+        ->with('user')
         ->paginate(6)
         ->appends(request()->query());
         return view('customer.market.market', compact('data', 'sortBy', 'seachCity', 'seachItem'));

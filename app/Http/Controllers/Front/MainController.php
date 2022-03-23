@@ -23,6 +23,8 @@ use App\Models\Listings;
 use Response;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
+use Exception;
+
 class MainController extends Controller
 {
     function index()
@@ -191,7 +193,20 @@ class MainController extends Controller
         'amount' => $product->price,
         'schedule_date' => date('Y-m-d', strtotime($request->date)),
       ]);
-      $user = User::where('seller_id', $order->customer_id)->orWhere('customer_id', $order->customer_id)->first();
+
+      $c_id=(int)$order->customer_id;
+      $user=null;
+      try{
+        $user =Seller::where('id', $c_id)->first();
+        if(!$user){
+          $user =Customer::where('id', $c_id)->first();
+        }
+
+      }catch(Exception $e){
+
+      }
+      
+      
       $title = "New order from ".$user->name;
       Mail::send(new OrderEmail($order, $user, $product,  $title, $type= "newOrder"));
       return redirect()->back();

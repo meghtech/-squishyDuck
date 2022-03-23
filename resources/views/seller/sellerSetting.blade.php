@@ -50,7 +50,8 @@
 
 								<div class="col-auto">
 									<div class="avatar-wrapper" data-tippy-placement="bottom" title="Change Avatar">
-										<img class="profile-pic" src="{{asset('storage/upload/profile')}}/{{$sellerInfo->profile}}" alt="" />
+										
+										<img class="profile-pic" src="{{asset('content/images')}}/{{$sellerInfo->profile}}" alt="" />
 										<div class="upload-button"></div>
 										<input class="file-upload" name="profile" type="file"/>
 										<!-- <input type="file" name="profile"> -->

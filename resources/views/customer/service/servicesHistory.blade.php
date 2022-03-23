@@ -58,7 +58,8 @@
                                     </td>
                                     
                                     <td>
-                                        <select @change="updateData(data.id, 'is_accept_seller', index, $event)" :class="{'text-success':data.is_accept_seller==1, 'text-warning': data.is_accept_seller==0}">
+                                        <select @change="updateData(data.id, 'is_accept_buyer', index, $event)" :class="{'text-success':data.is_accept_buyer==1, 'text-warning': data.is_accept_buyer==0}">
+                                        
                                             <option class="text-warnning" value="0" :selected="data.is_accept_buyer==0">Pending</option>
                                             <option  value="1" :selected="data.is_accept_buyer==1">Accepted</option>
                                         </select>
@@ -69,7 +70,8 @@
                                             <option  value="1" :selected="data.payment_status==1">Received</option>
                                         </select>
                                     </td>
-                                    <td class="pr-0">@{{data.seller1.name}}</td>
+                                    {{-- <td class="pr-0">@{{data.seller2.name}}</td> --}}
+                                    <td class="pr-0">Khairul Bashar</td>
                                     <td>@{{data.amount}}</td>
                                     <td>@{{(data.totalDay)}}</td>
                                     <td class="pr-0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -85,68 +87,7 @@
         </div>
         <!-- Row / End -->
 
-        <section v-else-if="section == 'forth'">
-            <h3 class="mt-5 text-center">Upload 1-10 Images</h3>
-            <div class="row p-0 m-0">
-                <div class="col-md-2 col-sm-12">
-                    <div class="ad-image text-center" id="viewImage_0">
-                        <img src="{{ asset('content/images/duck.svg') }}"/>
-                        <input id="files" type='file' style="display:none" @change="showImage" accept="image/png, image/gif, image/jpeg, image/jpg" multiple/>
-                    </div>
-                    <img id="displayImage_0" class="ad-image d-none"/>
-                    <button class="btn btn-success uploadImage mt-4 text-center" @click="uploadImage"><i class="fa fa-long-arrow-up uploadIcon"></i>Upload Image</button>
-                </div>
-                <div class="col-md-1 col-sm-12 mr-5 viewImages">
-                    <div class="ad-image text-center" id="viewImage_1"></div>
-                    <img id="displayImage_1" class="ad-image d-none"/>
-                </div>
-                <div class="col-md-1 col-sm-12 mr-5 viewImages">
-                    <div class="ad-image text-center" id="viewImage_2"></div>
-                    <img id="displayImage_2" class="ad-image d-none"/>
-                </div>
-                <div class="col-md-1 col-sm-12 mr-5 viewImages">
-                    <div class="ad-image text-center" id="viewImage_3"></div>
-                    <img id="displayImage_3" class="ad-image d-none"/>
-                </div>
-                <div class="col-md-1 col-sm-12 mr-5 viewImages">
-                    <div class="ad-image text-center" id="viewImage_4"></div>
-                    <img id="displayImage_4" class="ad-image d-none"/>
-                </div>
-
-            </div>
-            <div class="row p-0 m-0 ml-5" style="margin-top: -6% !important;">
-                <div class="col-md-2 col-sm-12"></div>
-                <div class="col-md-1 col-sm-12 mr-5 viewImages">
-                    <div class="ad-image text-center" id="viewImage_5"></div>
-                    <img id="displayImage_5" class="ad-image d-none"/>
-                </div>
-                <div class="col-md-1 col-sm-12 mr-5 viewImages">
-                    <div class="ad-image text-center" id="viewImage_6"></div>
-                    <img id="displayImage_6" class="ad-image d-none"/>
-                </div>
-                <div class="col-md-1 col-sm-12 mr-5 viewImages">
-                    <div class="ad-image text-center" id="viewImage_7"></div>
-                    <img id="displayImage_7" class="ad-image d-none"/>
-                </div>
-                <div class="col-md-1 col-sm-12 mr-5 viewImages">
-                    <div class="ad-image text-center" id="viewImage_8"></div>
-                    <img id="displayImage_8" class="ad-image d-none"/>
-                </div>
-                <div class="col-md-1 col-sm-12 mr-5 viewImages">
-                    <div class="ad-image text-center" id="viewImage_9"></div>
-                    <img id="displayImage_9" class="ad-image d-none"/>
-                </div>
-            </div>
-
-            <div class="row pt-5 mt-5 mb-5">
-                <div class="col-md-6 col-sm-12 text-right">
-                    <button type="button" class="btn outline-md-cyan pl-5 pr-5" @click="goBack">Cancel</button>
-                </div>
-                <div class="col-md-6 col-sm-12 text-left">
-                    <button class="btn btn-md-cyan pl-5 pr-5" @click="changeSection">Next</button>
-                </div>
-            </div>
-        </section>
+       
 
         <!-- Footer -->
         <div class="dashboard-footer-spacer">
@@ -189,7 +130,7 @@
                 axios(getData).then((response) => {
                     this.datas = response.data;
 
-                    // console.log("aaa",response.data);
+                    console.log("aaa",response.data);
                     this.forceRerender();
                 }).catch((e) => {
                     console.log(e)

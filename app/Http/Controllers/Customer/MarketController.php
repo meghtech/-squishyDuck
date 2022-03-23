@@ -8,12 +8,15 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Http\Request;
 use App\Models\Listings;
+use Illuminate\Support\Facades\Auth;
 
 class MarketController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth:customer');
+        $this->middleware('auth:customer',['except' => [
+            'index'
+        ]]);
     }
 
     public function index(){
@@ -34,10 +37,11 @@ class MarketController extends Controller
 
     public function inventory(){
         $data = Listings::where('type', 'market')
-        ->where('user_id', auth()->user()->id)
+        ->where('user_id', Auth::user()->id)
         ->latest()
-        ->paginate(1)
+        ->paginate(6)
         ->appends(request()->query());
+      
         return view('customer.inventory.inventory', compact('data'));
     }
 

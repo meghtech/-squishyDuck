@@ -13,7 +13,9 @@ class MarketController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth:seller');
+        $this->middleware('auth:seller',['except' => [
+            'index'
+        ]]);
     }
 
     public function index(){
@@ -22,8 +24,11 @@ class MarketController extends Controller
         $seachItem="";
         $data = Listings::where('type', 'market')
         ->orderBy('price', $sortBy)
+        ->with('user')
         ->paginate(6)
         ->appends(request()->query());
+
+        // dd($data);
         return view('seller.market.market', compact('data', 'sortBy', 'seachCity', 'seachItem'));
     }
 

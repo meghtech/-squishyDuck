@@ -13973,7 +13973,7 @@ a.dashboard-responsive-nav-trigger { display: none; }
 	
 	display: flex;
     flex-wrap: wrap;
-	width: calc(100% + 30px);
+	width: calc(100%);
 	margin-bottom: -30px;
 }
 
@@ -13987,7 +13987,7 @@ a.dashboard-responsive-nav-trigger { display: none; }
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-	flex: 2 2 1;
+	
 	
 	width: 40%;
     height: auto;
@@ -14788,7 +14788,7 @@ ul.dashboard-box-list > li:hover {
 /* Dashbaord Media Queries
 ------------------------------------- */
 @media (min-width: 1365px) and (max-width: 1600px) {
-	.fun-fact:last-child { display: none; }
+	/* .fun-fact:last-child { display: flex; } */
 }
 
 @media (max-width: 1365px) {

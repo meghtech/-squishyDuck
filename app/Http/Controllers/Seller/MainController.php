@@ -140,6 +140,7 @@ class MainController extends Controller
         $seller_id = auth()->id();
 
         $sellerInfo = Seller::findOrfail($seller_id);
+        
         return view('seller.sellerSetting', compact('sellerInfo'));
     }
     public function sellerSettingSave(Request $request)
@@ -159,15 +160,15 @@ class MainController extends Controller
         if ($request->has('profile')) {
             $image = $request->file('profile');
 
-            $imageName = 'profile' . '-' . time() . '.' . $image->getClientOriginalExtension();
-            $post = Image::make($image)->resize(200, 180)->save('storage/upload/profile/' . $imageName)->encode('jpg', 75);
-            $sellerInfo->profile = $imageName;
+            $imageName = '-' . time() . '.' . $image->getClientOriginalExtension();
+            $post = Image::make($image)->resize(200, 180)->save('content/images/profile' . $imageName)->encode('jpg', 75);
+            $sellerInfo->profile = 'profile'.$imageName;
         } else {
             $sellerInfo->profile = $sellerInfo->profile;
         }
 
-        $userInfo->name = $request->name;
-        $userInfo->email = $request->email;
+        // $userInfo->name = $request->name;
+        // $userInfo->email = $request->email;
 
 
 

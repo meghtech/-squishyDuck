@@ -78,7 +78,7 @@
                             <div class="job-listing-details">
                                 <!-- Logo -->
                                 <div class="job-listing-company-logo">
-                                    <img src="{{asset('/content/images/service/'.json_decode($s_data->photos, true)[0])}}" alt="">
+                                    <img src="{{asset('/content/images/inventory/'.json_decode($s_data->photos, true)[0])}}" alt="">
                                 </div>
                             </div>
                             <!-- Job Listing Footer -->
@@ -96,7 +96,7 @@
                             </div>
                             <div style="background-color:#f9f9f9; padding-left:30px">
                                 <img class="bg-md-cyan border rounded-circle" alt="user" height="30px" width="30px">
-                                <span class="text-md-cyan" style="font-size:14px">{{Auth::user()->name}}</span>
+                                {{-- <span class="text-md-cyan" style="font-size:14px">{{Auth::user()->name}}</span> --}}
                                 <p class="d-inline" style="float:right; padding-right:25px; color:gray; font-size:14px;">More Details <i class="fa fa-angle-right"></i></p>
                                 <p style="font-size:10px; padding-left:35px; margin-top:-10px;color:gray;"><i class="icon-material-outline-access-time"></i>1 day</p>
                             </div>

@@ -9,12 +9,15 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Http\Request;
 use App\Models\Listings;
 use App\Models\Order;
+use Illuminate\Support\Facades\Auth;
 
 class ServiceController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth:customer');
+        $this->middleware('auth:customer',['except' => [
+            'index'
+        ]]);
     }
 
     public function index(){
@@ -40,7 +43,7 @@ class ServiceController extends Controller
         // ->get();
 
         // return $requests;
-        $data = Order::where('customer_id', auth()->id())
+        $data = Order::where('customer_id', Auth::user()->id)
 			->with('seller1', 'seller2', 'customer1', 'customer2', 'listing')
             ->orderBy('id', 'DESC')
             ->get();

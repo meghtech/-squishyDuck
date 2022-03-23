@@ -246,7 +246,7 @@
             city: '',
             state: '',
             zip: '',
-            type: 'listing',
+            type: 'market',
             deliveryDetails: '',
             images: [],
             thumbnail: '',

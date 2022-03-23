@@ -72,7 +72,7 @@
 					<!-- Messages -->
 					<div class="header-notifications user-menu">
 						<div class="header-notifications-trigger">
-							<a href="#"><div class="user-avatar status-online"><img src="{{asset('storage/upload/profile')}}/{{ Auth::guard('customer')->user()->profile  }}" alt=""></div></a>
+							{{-- <a href="#"><div class="user-avatar status-online"><img src="{{asset('storage/upload/profile')}}/{{ Auth::guard('customer')->user()->profile  }}" alt=""></div></a> --}}
 						</div>
 
 						<!-- Dropdown -->
@@ -176,7 +176,7 @@
 							<li><a href="{{ route('buyer.manageItems') }}" class="{{ Request::is('buyer/manage*') ? 'text-primary' : '' }}"><i class="fa fa-wrench mr-2"></i>Manage</a></li>
 						</ul>
 						<ul data-submenu-title="Services">
-							<li><a href="{{ route('buyer.serviceHistory') }}"><i class="icon-material-outline-assignment"></i>Received Services</a></li>
+							<li><a href="{{ route('buyer.serviceHistory') }}" class="{{ Request::is('buyer/history*') ? 'text-primary' : '' }}"><i class="icon-material-outline-assignment"></i>Received Services</a></li>
 						</ul>
 						<ul data-submenu-title="Orders">
 							<li><a href="{{ route('buyer.recentOrder') }}" class="{{ Request::is('buyer/recent-order*') ? 'text-primary' : '' }}"><i class="icon-material-outline-assignment {{ Request::is('buyer/recent-order*') ? 'text-primary' : '' }}"></i>Recent Orders</a></li>

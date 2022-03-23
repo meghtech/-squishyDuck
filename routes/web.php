@@ -60,7 +60,7 @@ Route::get('zoom-call-user/{any}', function () {
 
 Route::get('/', [MainController::class, 'index'])->name('main');
 
-Route::get('/service-show/{slug}', [MainController::class, 'serviceShow']);
+Route::get('/buyer1/{slug}', [MainController::class, 'serviceShow']);
 Route::get('/service-details/{slug}', [MainController::class, 'serviceDetails']);
 Route::post('/user-register', [RegisterController::class, 'storeData'])->name('user.register');
 
@@ -279,7 +279,7 @@ Route::post('/buyer/file-share-store', [MassageController::class, 'fileShareStor
 Route::get('/buyer/messages-details/{id}', [MassageController::class, 'msgDetails']);
 
 Route::get('/buyer/history', [BuyerServiceController::class, 'serviceHistory'])->name('buyer.serviceHistory');
-Route::get('/buyer/gethistory', [BuyerServiceController::class, 'getserviceHistory'])->name('seller.getserviceHistory');
+Route::get('/buyer/gethistory', [BuyerServiceController::class, 'getserviceHistory'])->name('buyer.getserviceHistory');
 Route::post('/buyer/updateOrder', [BuyerServiceController::class, 'updateOrderSeller'])->name('buyer.updateOrderSeller');
 
 

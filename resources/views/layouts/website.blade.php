@@ -53,8 +53,9 @@
                 <nav id="navigation">
                     <ul id="responsive">
                         @foreach($cat as $v_cat)
-                        <li><a href="{{url('/service-show')}}/{{$v_cat->slug}}">{{$v_cat->name}}</a>
+                        <li><a href="{{url('/buyer')}}/{{$v_cat->slug}}">{{$v_cat->name}}</a>
                         </li>
+                        
                         @endforeach
                         {{-- <li><a href="{{url('/service-show/buy')}}">Market</a>
                         <li><a href="{{url('/service-show')}}/{{$v_cat->slug}}">{{$v_cat->name}}</a> --}}

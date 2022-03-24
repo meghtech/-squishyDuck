@@ -93,7 +93,7 @@
                                 @isset(Auth::guard('customer')->user()->name)
                                 <!-- User Name / Avatar -->
                                 <div class="user-details">
-                                    <div class="user-avatar status-online"><img src="{{asset('storage/upload/profile')}}/{{ Auth::guard('customer')->user()->profile  }}" alt=""></div>
+                                    <div class="user-avatar status-online"><img src="{{asset('content/images')}}/{{ Auth::guard('customer')->user()->profile  }}" alt=""></div>
                                     <div class="user-name">
                                   {{ Auth::guard('customer')->user()->name  }}
                                          <span>Buyer</span>
@@ -127,7 +127,7 @@
                                 @isset(Auth::guard('seller')->user()->name)
                                 <!-- User Name / Avatar -->
                                 <div class="user-details">
-                                    <div class="user-avatar status-online"><img src="{{asset('storage/upload/profile')}}/{{ Auth::guard('seller')->user()->profile  }}" alt=""></div>
+                                    <div class="user-avatar status-online"><img src="{{asset('content/images')}}/{{ Auth::guard('seller')->user()->profile  }}" alt=""></div>
                                     <div class="user-name">
                                   {{ Auth::guard('seller')->user()->name  }}
                                          <span>Freelancer</span>

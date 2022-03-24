@@ -51,7 +51,7 @@
                 <nav id="navigation">
                     <ul id="responsive">
                         <li><a href="{{ route('buyer.market') }}" class="{{ Request::is('buyer/market*') ? 'text-success' : '' }}">Market</a></li>
-                        <li><a href="{{ route('buyer.service') }}" class="{{ Request::is('buyer/service*') ? 'text-success' : '' }}">Service</a></li>
+                        <li><a href="{{ route('buyer.service') }}" class="{{ Request::is('buyer/service*') ? 'text-success' : '' }}">Services</a></li>
                         {{-- <li><a href="{{ route('buyer.listings') }}" class="{{ Request::is('buyer/listings*') ? 'text-success' : '' }}">Listing</a></li> --}}
                     </ul>
                 </nav>
@@ -84,7 +84,7 @@
                                 @isset(Auth::guard('customer')->user()->name)
                                 <!-- User Name / Avatar -->
                                 <div class="user-details">
-                                    <div class="user-avatar status-online"><img src="{{asset('storage/upload/profile')}}/{{ Auth::guard('customer')->user()->profile  }}" alt=""></div>
+                                    <div class="user-avatar status-online"><img src="{{asset('content/images')}}/{{ Auth::guard('customer')->user()->profile  }}" alt=""></div>
                                     <div class="user-name">
                                   {{ Auth::guard('customer')->user()->name  }}
                                          <span>Buyer</span>
@@ -183,7 +183,9 @@
 						</ul>
 						<ul data-submenu-title="Account">
 							<li><a href="{{url('/buyer/setting')}}"><i class="icon-material-outline-settings mr-2"></i>Settings</a></li>
-							<li><a href="#"><i class="icon-material-outline-power-settings-new"></i> Logout</a></li>
+							<li><a href="{{ route('logout') }}"
+								onclick="event.preventDefault();
+												  document.getElementById('logout-form').submit();"><i class="icon-material-outline-power-settings-new"></i> Logout</a></li>
 						</ul>
 						<ul data-submenu-title="Other">
 							<li><a href="#">

@@ -15,13 +15,40 @@
             background-color: #006171;
             border-color: #b8daff;
         }
+        .toaster{
+            position: absolute;
+            width: 24rem;
+            height: 5rem;
+            background-color: rgba(68, 197, 68, 0.397);
+            float: left;
+            margin-top: 2rem;
+            z-index: 10000;
+            visibility: hidden;
+        }
+        .t_container{
+            width: 100rem;
+            z-index: 20000;
+            background-color: red
+        }
     </style>
 @endpush
 
 @section('content')
     <!-- Dashboard Content
 	================================================== -->
-    <div id="app" class="dashboard-content-container create-service pl-5 pr-5 ml-6 mr-5">
+
+    
+    <div style="position: relative" id="app" class="dashboard-content-container create-service pl-5 pr-5 ml-6 mr-5">
+        
+        <div class="t_container" >
+            <div id="aa" class="toaster">
+ 
+                <div class="" style="margin-left: 1rem">
+                    <h1 style="color: white">Success!</h1>
+                <p>Your Post is Submitted</p>
+                </div>
+            </div>
+        </div>
         <div class="dashboard-content-inner">
             <section v-if="section == 'first'">
                 <div class="row">
@@ -132,10 +159,11 @@
                     <div class="col-md-2 col-sm-12">
                         <div class="ad-image text-center" id="viewImage_0">
                             <img src="{{ asset('content/images/duck.svg') }}"/>
-                            <input id="files" type='file' style="display:none" @change="showImage" accept="image/png, image/gif, image/jpeg, image/jpg" multiple/>
+                            <input id="files" type='file'  @change="showImage" accept="image/png, image/gif, image/jpeg, image/jpg" multiple/>
                         </div>
                         <img id="displayImage_0" class="ad-image d-none"/>
-                        <button class="btn btn-success uploadImage mt-4 text-center" @click="uploadImage"><i class="fa fa-long-arrow-up uploadIcon"></i>Upload Image</button>
+                        {{-- <button class="btn btn-success uploadImage mt-4 text-center" @click="uploadImage"><i class="fa fa-long-arrow-up uploadIcon"></i>Upload Image</button> --}}
+                        <button @click="uploadImage"> Upload Image</button>
                     </div>
                     <div class="col-md-1 col-sm-12 mr-5 viewImages">
                         <div class="ad-image text-center" id="viewImage_1"></div>
@@ -220,8 +248,15 @@
     </div>
     <!-- Dashboard Content / End -->
     @include('layouts.large-footer')
-<script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ asset('js/app.js') }}"
+></script>
 <script>
+    import { defineComponent } from 'vue';
+    import { createToast } from 'mosha-vue-toastify';
+    import 'mosha-vue-toastify/dist/style.css';
+</script>
+<script>
+    
     new Vue({
         el: '#app',
         data: {
@@ -250,6 +285,13 @@
             thumbnail: '',
         },
         methods: {
+
+           
+            hideToast(){
+                setTimeout(() => {   document.getElementById("aa").style.visibility = "hidden"; }, 3000);
+   
+
+            },
             changeSection(){
                 window.scrollTo(0,0);
                 if (this.section == 'first') {
@@ -341,12 +383,18 @@
                     }
                 }).then((response) => {
                     console.log(response.data);
+                    document.getElementById("aa").style.visibility = "visible";
+                    this.hideToast();
+
+                    
                 });
             }
         },
         mounted() {
             console.log("Mounted");
         },
+      
+       
     });
 </script>
 @endsection

@@ -67,7 +67,7 @@
 					<!-- Messages -->
 					<div class="header-notifications user-menu">
 						<div class="header-notifications-trigger">
-							<a href="#"><div class="user-avatar status-online"><img src="{{asset('storage/upload/profile')}}/{{ Auth::guard('seller')->user()->profile  }}" alt=""></div></a>
+							<a href="#"><div class="user-avatar status-online"><img src="{{asset('content/images')}}/{{ Auth::guard('seller')->user()->profile  }}" alt=""></div></a>
 						</div>
 
 						<!-- Dropdown -->
@@ -79,7 +79,7 @@
                                 @isset(Auth::guard('seller')->user()->name)
                                 <!-- User Name / Avatar -->
                                 <div class="user-details">
-                                    <div class="user-avatar status-online"><img src="{{asset('storage/upload/profile')}}/{{ Auth::guard('seller')->user()->profile  }}" alt=""></div>
+                                    <div class="user-avatar status-online"><img src="{{asset('content/images')}}/{{ Auth::guard('seller')->user()->profile  }}" alt=""></div>
                                     <div class="user-name">
                                   {{ Auth::guard('seller')->user()->name  }}
                                          <span>Freelancer</span>
@@ -165,7 +165,9 @@
 						</ul>
 						<ul data-submenu-title="Account">
 							<li><a href="{{url('/seller/setting')}}"><i class="icon-material-outline-settings"></i> Settings</a></li>
-							<li><a href="#"><i class="icon-material-outline-power-settings-new"></i> Logout</a></li>
+							<li><a href="{{ route('logout') }}"
+								onclick="event.preventDefault();
+												  document.getElementById('logout-form').submit();"><i class="icon-material-outline-power-settings-new"></i> Logout</a></li>
 						</ul>
 						<ul data-submenu-title="Other">
 							<li><a href="{{ route('seller.incomingRequests') }}"><i class="icon-material-outline-assignment"></i>Report Incident</a></li>

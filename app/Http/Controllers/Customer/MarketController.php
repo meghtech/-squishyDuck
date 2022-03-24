@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Http\Request;
 use App\Models\Listings;
+use Exception;
 use Illuminate\Support\Facades\Auth;
 
 class MarketController extends Controller
@@ -15,7 +16,7 @@ class MarketController extends Controller
     public function __construct()
     {
         $this->middleware('auth:customer',['except' => [
-            'index'
+            'index','viewDetail'
         ]]);
     }
 
@@ -32,8 +33,10 @@ class MarketController extends Controller
     }
 
     public function viewDetail($id){
-        $data = Listings::where('id', $id)->first();
-        return view('customer.market.detail', compact('data'));
+        $data = Listings::where('id', $id)->with('user')->first();
+        $similar= Listings::where('title', 'like', '%' . $data->title . '%')
+        ->where('id' ,'!=', $data->id)->take(2)->get();
+        return view('customer.market.detail', compact('data','similar'));
     }
 
     public function inventory(){
@@ -75,7 +78,9 @@ class MarketController extends Controller
             $imageList[] = $filenametostore;
         }
 
-        $list = new Listings();
+       
+        try{
+            $list = new Listings();
         $list->user_id = auth()->user()->id;
         $list->title = $request->title;
         $list->price = $request->price;
@@ -97,7 +102,18 @@ class MarketController extends Controller
         $list->delivery_detail = $request->deliveryDetails;
         $list->type = $request->type;
         $list->photos = json_encode($imageList);
-        $list->save();
+        $list->save(); 
+     
+
+       
+       
+
+        } catch(Exception $e){
+
+        }
+
+
+       
 
         return "Success!";
     }

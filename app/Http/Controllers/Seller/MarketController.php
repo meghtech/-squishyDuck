@@ -14,7 +14,7 @@ class MarketController extends Controller
     public function __construct()
     {
         $this->middleware('auth:seller',['except' => [
-            'index'
+            'index','viewDetail'
         ]]);
     }
 
@@ -33,7 +33,7 @@ class MarketController extends Controller
     }
 
     public function viewDetail($id){
-        $data = Listings::where('id', $id)->first();
+        $data = Listings::where('id', $id) ->with('user')->first();
         return view('seller.market.detail', compact('data'));
     }
 

@@ -76,7 +76,7 @@
  @foreach($getAllCategory as $v_cat)
 			<div class="col-xl-3 col-md-6">
 				<!-- Photo Box -->
-				<a href="{{url('/service-show')}}/{{$v_cat->slug}}" class="photo-box small" data-background-image="" style="background: #252525;">
+				<a href="{{url('/buyer')}}/{{$v_cat->slug}}" class="photo-box small" data-background-image="" style="background: #252525;">
 					<div class="photo-box-content">
 						<h3>{{$v_cat->name}}</h3>
 						<span>{{$v_cat->gigs_count}}</span>

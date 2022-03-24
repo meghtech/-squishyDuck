@@ -51,7 +51,7 @@
                 <nav id="navigation">
                     <ul id="responsive">
                         <li><a href="{{ route('seller.market') }}" class="{{ Request::is('seller/market*') ? 'text-success' : '' }}">Market</a></li>
-                        <li><a href="{{ route('seller.viewServices') }}" class="{{ Request::is('seller/services*') ? 'text-success' : '' }}">Service</a></li>
+                        <li><a href="{{ route('seller.viewServices') }}" class="{{ Request::is('seller/services*') ? 'text-success' : '' }}">Services</a></li>
                         <li><a href="{{ route('seller.listing') }}" class="{{ Request::is('seller/listing*') ? 'text-success' : '' }}">Rentals</a></li>
                     </ul>
                 </nav>
@@ -72,7 +72,7 @@
 					<!-- Messages -->
 					<div class="header-notifications user-menu">
 						<div class="header-notifications-trigger">
-							<a href="#"><div class="user-avatar status-online"><img src="{{asset('storage/upload/profile')}}/{{ Auth::guard('seller')->user()->profile  }}" alt=""></div></a>
+							<a href="#"><div class="user-avatar status-online"><img src="{{asset('content/images')}}/{{ Auth::guard('seller')->user()->profile  }}" alt=""></div></a>
 						</div>
 
 						<!-- Dropdown -->
@@ -84,7 +84,7 @@
                                 @isset(Auth::guard('seller')->user()->name)
                                 <!-- User Name / Avatar -->
                                 <div class="user-details">
-                                    <div class="user-avatar status-online"><img src="{{asset('storage/upload/profile')}}/{{ Auth::guard('seller')->user()->profile  }}" alt=""></div>
+                                    <div class="user-avatar status-online"><img src="{{asset('content/images')}}/{{ Auth::guard('seller')->user()->profile  }}" alt=""></div>
                                     <div class="user-name">
                                   {{ Auth::guard('seller')->user()->name  }}
                                          <span>Freelancer</span>

@@ -16,6 +16,21 @@
         background-color: #006171;
         border-color: #b8daff;
     }
+    .toaster{
+            position: absolute;
+            width: 24rem;
+            height: 5rem;
+            background-color: rgba(68, 197, 68, 0.397);
+            float: left;
+            margin-top: 2rem;
+            z-index: 10000;
+            visibility: hidden;
+        }
+        .t_container{
+            width: 100rem;
+            z-index: 20000;
+            background-color: red
+        }
 </style>
 @endpush
 
@@ -23,6 +38,15 @@
 <!-- Dashboard Content
 	================================================== -->
 <div id="app" class="dashboard-content-container create-service pl-5 pr-5 ml-6 mr-5">
+    <div class="t_container" >
+        <div id="aa" class="toaster">
+
+            <div class="" style="margin-left: 1rem">
+                <h1 style="color: white">Success!</h1>
+            <p>Your Service is Submitted</p>
+            </div>
+        </div>
+    </div>
     <div class="dashboard-content-inner">
         <section v-if="section == 'first'">
             <div class="row">
@@ -311,6 +335,12 @@
             thumbnail: '',
         },
         methods: {
+            
+            hideToast(){
+                setTimeout(() => {   document.getElementById("aa").style.visibility = "hidden"; }, 3000);
+   
+
+            },
             changeSection() {
                 window.scrollTo(0, 0);
                 if (this.section == 'first') {
@@ -339,9 +369,12 @@
             },
 
             selectDay(day) {
+                console.log(this.availableDays.includes(day));
                 if (this.availableDays.includes(day)) {
-                    this.availableDays = this.availableDCompanyays.filter(item => item !== day);
-                    delete this.dayAndTime.day;
+                 
+
+                    this.availableDays= this.availableDays.filter(item => item !== day);  
+                   
                 } else {
                     this.availableDays.push(day);
                     this.dayAndTime[day] = {
@@ -353,6 +386,7 @@
                         toMeridiem: 'AM'
                     }
                 }
+                console.log(this.availableDays);
             },
 
             changeMeridiem(day, param) {
@@ -466,6 +500,8 @@
                     }
                 }).then((response) => {
                     // console.log(response.data);
+                    document.getElementById("aa").style.visibility = "visible";
+                    this.hideToast();
                 });
             }
         },

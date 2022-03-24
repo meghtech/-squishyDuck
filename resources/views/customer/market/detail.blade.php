@@ -11,14 +11,14 @@
                     <div class="left-side">
                         <div class="header-image">
                             <a href="single-company-profile.html">
-                                <img src="{{asset('/content/images/service/'.json_decode($data->photos, true)[0])}}" alt="">
+                                <img src="{{asset('/content/images/inventory/'.json_decode($data->photos, true)[0])}}" alt="">
                             </a>
                         </div>
                         <div class="header-details">
                             <h3>{{ $data->title }}</h3><i style="font-size:14px;" class="ml-2 icon-material-outline-access-time"></i>1 day
                             <div>
                                 <img class="bg-md-cyan border rounded-circle" alt="user" height="30px" width="30px">
-                                <span class="text-md-cyan" style="font-size:18px">John Doe</span>
+                                <span class="text-md-cyan" style="font-size:18px">{{ $data->user->name }}</span>
                             </div>
                             <!-- <h5><a href="url('/user')/John Doe">John Doe</a></h5> -->
                             <ul>
@@ -68,15 +68,15 @@
             <div class="single-page-section">
                 <h3 class="margin-bottom-25">Similar Jobs</h3>
 
-                <!-- Listings Container -->
-                <div class="listings-container grid-layout">
+                <div class="listings-container grid-layout margin-top-35">
                     <!-- Job Listing -->
-                    <a href="{{ route('buyer.market.detail', 'office-chair-for-sale') }}" class="job-listing">
+                    @foreach($similar as $s_data)
+                        <a href="{{ route('buyer.market.detail', $s_data->id) }}" class="job-listing">
                             <!-- Job Listing Details -->
                             <div class="job-listing-details">
                                 <!-- Logo -->
                                 <div class="job-listing-company-logo">
-                                    <img src="{{asset('storage/upload/Gig/Gig-1619457919.png')}}" alt="">
+                                    <img src="{{asset('/content/images/inventory/'.json_decode($s_data->photos, true)[0])}}" alt="">
                                 </div>
                             </div>
                             <!-- Job Listing Footer -->
@@ -84,49 +84,23 @@
                                 <span class="bookmark-icon"></span>
                                 <ul>
                                     <li>
-                                        <h5>Do Web Design &amp; Development</h5>
+                                        <h5>{{ $s_data->title }}</h5>
                                     </li>
                                     <li>
-                                        <h3 class="text-success">$123.00</h3>
+                                        <h3 class="text-success">${{ $s_data->price }}</h3>
                                     </li>
                                     <br>
                                 </ul>
                             </div>
                             <div style="background-color:#f9f9f9; padding-left:30px">
                                 <img class="bg-md-cyan border rounded-circle" alt="user" height="30px" width="30px">
-                                <span class="text-md-cyan" style="font-size:14px">John Doe</span>
+                                {{-- <span class="text-md-cyan" style="font-size:14px">{{Auth::user()->name}}</span> --}}
+                                <span class="text-md-cyan" style="font-size:14px">{{ $s_data->user->name }}</span>
                                 <p class="d-inline" style="float:right; padding-right:25px; color:gray; font-size:14px;">More Details <i class="fa fa-angle-right"></i></p>
                                 <p style="font-size:10px; padding-left:35px; margin-top:-10px;color:gray;"><i class="icon-material-outline-access-time"></i>1 day</p>
                             </div>
-                    </a>
-                    <a href="{{ route('buyer.market.detail', 'office-chair-for-sale') }}" class="job-listing">
-                            <!-- Job Listing Details -->
-                            <div class="job-listing-details">
-                                <!-- Logo -->
-                                <div class="job-listing-company-logo">
-                                    <img src="{{asset('storage/upload/Gig/Gig-1619457919.png')}}" alt="">
-                                </div>
-                            </div>
-                            <!-- Job Listing Footer -->
-                            <div class="job-listing-footer">
-                                <span class="bookmark-icon"></span>
-                                <ul>
-                                    <li>
-                                        <h5>Do Web Design &amp; Development</h5>
-                                    </li>
-                                    <li>
-                                        <h3 class="text-success">$123.00</h3>
-                                    </li>
-                                    <br>
-                                </ul>
-                            </div>
-                            <div style="background-color:#f9f9f9; padding-left:30px">
-                                <img class="bg-md-cyan border rounded-circle" alt="user" height="30px" width="30px">
-                                <span class="text-md-cyan" style="font-size:14px">John Doe</span>
-                                <p class="d-inline" style="float:right; padding-right:25px; color:gray; font-size:14px;">More Details <i class="fa fa-angle-right"></i></p>
-                                <p style="font-size:10px; padding-left:35px; margin-top:-10px;color:gray;"><i class="icon-material-outline-access-time"></i>1 day</p>
-                            </div>
-                    </a>
+                        </a>
+                    @endforeach
                 </div>
                 <!-- Listings Container / End -->
 

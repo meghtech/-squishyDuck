@@ -120,7 +120,7 @@ class ServiceController extends Controller
             //filename to store
             $filenametostore = $filename . '_' . time() . '.webp' ;
             if (!File::exists(public_path() . "/content/images/service")) {
-                File::makeDirectory(public_path() . "/content/images/service", 0777, true);
+                File::makeDirectory(public_path() . "/content/images/inventory", 0777, true);
             }
             $originalPath = public_path() . '/content/images/service';
             $thumbnailImage = Image::make($image)->encode('webp', 100);

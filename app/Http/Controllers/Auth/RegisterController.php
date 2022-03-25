@@ -87,6 +87,7 @@ class RegisterController extends Controller
                 'phone_number' => '8564',
                 'password' => Hash::make($data['password']),
                 'customer_id' => $data['id'],
+                'seller_id' => $data['id'],  //optional as it is a customer
                 'remember_token' => Str::random(10),
             ]); 
 
@@ -109,6 +110,7 @@ class RegisterController extends Controller
                 'phone_number' => '8564',
                 'password' => Hash::make($data['password']),
                 'seller_id' => $data['id'],
+                'customer_id' => $data['id'], // optional as it is a seller
                 'remember_token' => Str::random(10),
             ]); 
             return $data;

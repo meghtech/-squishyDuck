@@ -25,11 +25,22 @@
             z-index: 10000;
             visibility: hidden;
         }
+        .toasterE{
+            position: absolute;
+            width: 24rem;
+            height: 5rem;
+            background-color: rgba(224, 29, 29, 0.671);
+            float: left;
+            margin-top: 2rem;
+            z-index: 10000;
+            visibility: hidden;
+        }
         .t_container{
             width: 100rem;
             z-index: 20000;
             background-color: red
         }
+
     </style>
 @endpush
 
@@ -46,6 +57,15 @@
                 <div class="" style="margin-left: 1rem">
                     <h1 style="color: white">Success!</h1>
                 <p>Your Post is Submitted</p>
+                </div>
+            </div>
+        </div>
+        <div class="t_container" >
+            <div id="bb" class="toasterE">
+ 
+                <div class="" style="margin-left: 1rem">
+                    <h1 style="color: white">Error!</h1>
+                <p>Please Insert Image of this Post</p>
                 </div>
             </div>
         </div>
@@ -158,12 +178,13 @@
                 <div class="row p-0 m-0">
                     <div class="col-md-2 col-sm-12">
                         <div class="ad-image text-center" id="viewImage_0">
-                            <img src="{{ asset('content/images/duck.svg') }}"/>
-                            <input id="files" type='file'  @change="showImage" accept="image/png, image/gif, image/jpeg, image/jpg" multiple/>
+                            <img src="{{ asset('content/images/duck.svg') }}" />
+                            <input id="files" type='file' style="display:none" @change="showImage"
+                                accept="image/png, image/gif, image/jpeg, image/jpg" multiple />
                         </div>
-                        <img id="displayImage_0" class="ad-image d-none"/>
-                        {{-- <button class="btn btn-success uploadImage mt-4 text-center" @click="uploadImage"><i class="fa fa-long-arrow-up uploadIcon"></i>Upload Image</button> --}}
-                        <button @click="uploadImage"> Upload Image</button>
+                        <img id="displayImage_0" class="ad-image d-none" />
+                        <button class="btn btn-success uploadImage mt-4 text-center" @click="uploadImage"><i
+                                class="fa fa-long-arrow-up uploadIcon"></i>Upload Image</button>
                     </div>
                     <div class="col-md-1 col-sm-12 mr-5 viewImages">
                         <div class="ad-image text-center" id="viewImage_1"></div>
@@ -292,6 +313,11 @@
    
 
             },
+            hideToastE(){
+                setTimeout(() => {   document.getElementById("bb").style.visibility = "hidden"; }, 2000);
+   
+
+            },
             changeSection(){
                 window.scrollTo(0,0);
                 if (this.section == 'first') {
@@ -370,6 +396,12 @@
                 formData.append('type', this.type);
                 formData.append('deliveryDetails', this.deliveryDetails);
 
+                if(this.images.length < 1){
+
+                    document.getElementById("bb").style.visibility = "visible";
+                    this.hideToastE();
+                    return;
+                }
                 if(this.images.length > 0){
                     this.images.forEach((value, key) => {
                         formData.append('image-'+key, value);

@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Http\Request;
 use App\Models\Listings;
 use App\Models\Order;
+use Illuminate\Support\Facades\Auth;
 
 class ServiceController extends Controller
 {
@@ -18,7 +19,8 @@ class ServiceController extends Controller
     }
 
     public function index(){
-        $data = Listings::where('type', 'service')->paginate(6);
+        
+        $data = Listings::where('user_id',Auth::user()->id)->where('type', 'service')->paginate(6);
         return view('seller.service.service', compact('data'));
     }
 

@@ -14,7 +14,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
 
 
 <link rel="icon" type="image/png" sizes="32x32" href="{{asset('storage/upload/logo')}}/{{$general->fav_icon}}" />
@@ -52,7 +52,7 @@
                     <ul id="responsive">
                         <li><a href="{{ route('seller.market') }}" class="{{ Request::is('seller/market*') ? 'text-success' : '' }}">Market</a></li>
                         <li><a href="{{ route('seller.viewServices') }}" class="{{ Request::is('seller/services*') ? 'text-success' : '' }}">Services</a></li>
-                        <li><a href="{{ route('seller.listing') }}" class="{{ Request::is('seller/listing*') ? 'text-success' : '' }}">Rentals</a></li>
+                        {{-- <li><a href="{{ route('seller.listing') }}" class="{{ Request::is('seller/listing*') ? 'text-success' : '' }}">Rentals</a></li> --}}
                     </ul>
                 </nav>
 				<div class="clearfix"></div>
@@ -208,7 +208,9 @@
 <!-- Wrapper / End -->
 
 <!-- Scripts
+	
 ================================================== -->
+
 <script src="{{asset('content')}}/js/jquery-3.3.1.min.js"></script>
 <script src="{{asset('content')}}/js/jquery-migrate-3.0.0.min.js"></script>
 <script src="{{asset('content')}}/js/mmenu.min.js"></script>
@@ -227,6 +229,7 @@
 <script src="{{asset('content')}}/js/custom.js"></script>
 <!-- Snackbar // documentation: https://www.polonel.com/snackbar/ -->
 <script>
+	
 // Snackbar for user status switcher
 $('#snackbar-user-status label').click(function() {
 	Snackbar.show({
@@ -240,6 +243,8 @@ $('#snackbar-user-status label').click(function() {
 	});
 });
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 @stack('js')
 </body>
 </html>

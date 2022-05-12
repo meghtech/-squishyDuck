@@ -73,17 +73,28 @@
 			
 			
 		
- @foreach($getAllCategory as $v_cat)
-			<div class="col-xl-3 col-md-6">
-				<!-- Photo Box -->
-				<a href="{{url('/buyer')}}/{{$v_cat->slug}}" class="photo-box small" data-background-image="" style="background: #252525;">
-					<div class="photo-box-content">
-						<h3>{{$v_cat->name}}</h3>
-						<span>{{$v_cat->gigs_count}}</span>
-					</div>
-				</a>
+ {{-- @foreach($getAllCategory as $v_cat) --}}
+			<div class="" style="display:flex;justify-content: center;width:100%">
+				<div class="col-xl-3 col-md-6">
+					<!-- Photo Box -->
+					<a href="{{url('/buyer')}}/market" class="photo-box small" data-background-image="" style="background: #252525;">
+						<div class="photo-box-content">
+							<h3>{{'Market'}}</h3>
+							<span>{{$getMarketCount}}</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-xl-3 col-md-6">
+					<!-- Photo Box -->
+					<a href="{{url('/buyer')}}/service" class="photo-box small" data-background-image="" style="background: #252525;">
+						<div class="photo-box-content">
+							<h3>{{'Services'}}</h3>
+							<span>{{$getServiceCount}}</span>
+						</div>
+					</a>
+				</div>
 			</div>
-@endforeach
+{{-- @endforeach --}}
 
 			
 

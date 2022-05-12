@@ -57,7 +57,7 @@
                 <div class="fun-fact" data-fun-fact-color="#efa80f">
                     <div class="fun-fact-text">
                         <span>Schedule</span>
-                        <h4>{{$data['schedule']}} today</h4>
+                        <h4>{{$data['schedule']}}</h4>
                     </div>
                     <div class="fun-fact-icon"><i class="icon-material-outline-rate-review"></i></div>
                 </div>
@@ -74,7 +74,7 @@
                 <div  class="fun-fact" data-fun-fact-color="#2a41e6">
                     <div class="fun-fact-text">
                         <span>This Month Earning</span>
-                        <h4>$2,450</h4>
+                        <h4>{{  '2,450'}} </h4>
                     </div>
                     <div class="fun-fact-icon"><i class="icon-feather-trending-up"></i></div>
                 </div>

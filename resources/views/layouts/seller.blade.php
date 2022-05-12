@@ -225,7 +225,6 @@
 <script src="{{asset('content')}}/js/counterup.min.js"></script>
 <script src="{{asset('content')}}/js/magnific-popup.min.js"></script>
 <script src="{{asset('content')}}/js/slick.min.js"></script>
-<script src="{{ asset('js/app.js') }}"></script>
 <script src="{{asset('content')}}/js/custom.js"></script>
 <!-- Snackbar // documentation: https://www.polonel.com/snackbar/ -->
 <script>
@@ -243,8 +242,6 @@ $('#snackbar-user-status label').click(function() {
 	});
 });
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 @stack('js')
 </body>
 </html>

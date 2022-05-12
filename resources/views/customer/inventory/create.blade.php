@@ -173,8 +173,12 @@
                     </div>
                 </div>
             </section>
-            <section v-else-if="section == 'third'">
+            <!-- v-else-if="section == 'third'" -->
+            <section >
                 <h3 class="mt-5 text-center">Upload 1-10 Images</h3>
+                <div class="row p-0 m-0">
+                   
+                </div>
                 <div class="row p-0 m-0">
                     <div class="col-md-2 col-sm-12">
                         <div class="ad-image text-center" id="viewImage_0">
@@ -183,8 +187,7 @@
                                 accept="image/png, image/gif, image/jpeg, image/jpg" multiple />
                         </div>
                         <img id="displayImage_0" class="ad-image d-none" />
-                        <button class="btn btn-success uploadImage mt-4 text-center" @click="uploadImage"><i
-                                class="fa fa-long-arrow-up uploadIcon"></i>Upload Image</button>
+                        
                     </div>
                     <div class="col-md-1 col-sm-12 mr-5 viewImages">
                         <div class="ad-image text-center" id="viewImage_1"></div>
@@ -202,9 +205,13 @@
                         <div class="ad-image text-center" id="viewImage_4"></div>
                         <img id="displayImage_4" class="ad-image d-none"/>
                     </div>
+                    <div class="">
+                        <button class="btn btn-success uploadImage mt-4 text-center" @click="uploadImage"><i
+                            class="fa fa-long-arrow-up uploadIcon"></i>Upload Image</button>
+                    </div>
 
                 </div>
-                <div class="row p-0 m-0 ml-5" style="margin-top: -6% !important;">
+                <div class="row p-0 m-0 ml-5" style="margin-top: 1% !important;">
                     <div class="col-md-2 col-sm-12"></div>
                     <div class="col-md-1 col-sm-12 mr-5 viewImages">
                         <div class="ad-image text-center" id="viewImage_5"></div>

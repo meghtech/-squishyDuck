@@ -62,9 +62,11 @@
                     <select name="item" v-model="itemType">
                         <option value="" disabled>Type</option>
                         <option value="Flat">Flat</option>
-                        <option value="Electronics">Electronics</option>
-                        <option value="Car">Car</option>
-                        <option value="Food">Food</option>
+                        <!-- <option value="Electronics">Electronics</option>
+                        <option value="Car">Variable</option>
+                        <option value="Food">Food</option> -->
+                        <option value="Recurring">Recurring</option>
+                        <option value="Variable">Variable</option>
                     </select>
                 </div>
             </div>
@@ -188,9 +190,9 @@
                         <select name="state" v-model="state">
                             <option value="" disabled>State</option>
                             <option value="co">CO</option>
-                            <option value="ca">CA</option>
+                            <!-- <option value="ca">CA</option>
                             <option value="la">LA</option>
-                            <option value="fl">FL</option>
+                            <option value="fl">FL</option> -->
                         </select>
                     </div>
                     <div class="col-md-2 col-sm-12">
@@ -214,11 +216,11 @@
                 <div class="col-md-2 col-sm-12">
                     <div class="ad-image text-center" id="viewImage_0">
                         <img src="{{ asset('content/images/duck.svg') }}" />
-                        <input id="files" type='file' style="display:none" @change="showImage"
+                        <input id="files" type='file' style="display:none" onchange="showImage()"
                             accept="image/png, image/gif, image/jpeg, image/jpg" multiple />
                     </div>
                     <img id="displayImage_0" class="ad-image d-none" />
-                    <button class="btn btn-success uploadImage mt-4 text-center" @click="uploadImage"><i
+                    <button class="btn btn-success uploadImage mt-4 text-center" onclick="uploadImage()"><i
                             class="fa fa-long-arrow-up uploadIcon"></i>Upload Image</button>
                 </div>
                 <div class="col-md-1 col-sm-12 mr-5 viewImages">
@@ -307,6 +309,37 @@
 <!-- Dashboard Content / End -->
 @include('layouts.large-footer')
 <script src="{{ asset('js/app.js') }}"></script>
+<script>
+    function uploadImage(){
+        document.getElementById('files').click();
+    }
+    
+    let images = [];
+    function showImage(){
+        var src = document.getElementById("files").files;
+        src.length > 10 ? src.length = 10 : '';
+        for (let index = 0; index < src.length; index++) {
+            var fr=new FileReader();
+            fr.readAsDataURL(src[index]);
+            fr.onload = (function(index, event) {
+                images.push(event.target.result);
+                
+            }).bind(event, index);
+        }
+        setTimeout(()=>{
+            for(let i=0; i<images.length; i++){
+                    console.log(i);
+                    var displayImage = document.getElementById('displayImage_'+i);
+                    displayImage.src = images[i];
+                    displayImage.classList.remove('d-none');
+                    if(i=='0') {
+                        this.thumbnail = images[i];
+                    }
+                    document.getElementById('viewImage_'+i).classList.add('d-none');
+                }
+        }, 100);
+    }
+</script>
 <script>
     new Vue({
         el: '#app',
@@ -487,11 +520,17 @@
                 formData.append('type', this.type);
                 formData.append('dayAndTime', JSON.stringify(this.dayAndTime));
 
-                if (this.images.length > 0) {
-                    this.images.forEach((value, key) => {
-                        formData.append('image-' + key, value);
+                // if (this.images.length > 0) {
+                //     this.images.forEach((value, key) => {
+                //         formData.append('image-' + key, value);
+                //     });
+                //     formData.append('photoLength', this.images.length);
+                // }
+                if(images.length > 0){
+                    images.forEach((value, key) => {
+                        formData.append('image_'+key, value);
                     });
-                    formData.append('photoLength', this.images.length);
+                    formData.append('photoLength', images.length);
                 }
 
                 axios.post('/seller/post-service', formData, {
@@ -502,6 +541,7 @@
                     // console.log(response.data);
                     document.getElementById("aa").style.visibility = "visible";
                     this.hideToast();
+                    window.location.replace('/seller/market')
                 });
             }
         },

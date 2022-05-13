@@ -54,28 +54,33 @@ class MarketController extends Controller
     }
 
     public function postInventory(Request $request){
-        log::info($request);
+        // log::info($request);
 
         $imageList = [];
-        for ($i=0; $i < $request->photoLength; $i++) {
-            $fileNo = "image-".$i;
+        // for ($i=0; $i < $request->photoLength; $i++) {
+        //     $fileNo = "image-".$i;
+        //     $image = $request->$fileNo;
+        //     $filenamewithextension = $request->$fileNo->getClientOriginalName();
+        //     //get filename without extension
+        //     $filename = pathinfo($filenamewithextension, PATHINFO_FILENAME);
+        //     //get file extension
+        //     $extension = $request->$fileNo->getClientOriginalExtension();
+        //     //filename to store
+        //     $filenametostore = $filename . '_' . time() . '.webp' ;
+        //     if (!File::exists(public_path() . "/content/images/inventory")) {
+        //         File::makeDirectory(public_path() . "/content/images/inventory", 0777, true);
+        //     }
+        //     $originalPath = public_path() . '/content/images/inventory';
+        //     $thumbnailImage = Image::make($image)->encode('webp', 100);
+        //     $thumbnailImage->resize(500, 500, function ($constraint) {
+        //         $constraint->aspectRatio();
+        //     })->save($originalPath.'/'. $filenametostore);
+        //     $imageList[] = $filenametostore;
+        // }
+        for ($i=0; $i<$request->photoLength; $i++){
+            $fileNo = "image_".$i;
             $image = $request->$fileNo;
-            $filenamewithextension = $request->$fileNo->getClientOriginalName();
-            //get filename without extension
-            $filename = pathinfo($filenamewithextension, PATHINFO_FILENAME);
-            //get file extension
-            $extension = $request->$fileNo->getClientOriginalExtension();
-            //filename to store
-            $filenametostore = $filename . '_' . time() . '.webp' ;
-            if (!File::exists(public_path() . "/content/images/inventory")) {
-                File::makeDirectory(public_path() . "/content/images/inventory", 0777, true);
-            }
-            $originalPath = public_path() . '/content/images/inventory';
-            $thumbnailImage = Image::make($image)->encode('webp', 100);
-            $thumbnailImage->resize(500, 500, function ($constraint) {
-                $constraint->aspectRatio();
-            })->save($originalPath.'/'. $filenametostore);
-            $imageList[] = $filenametostore;
+            $imageList[] = uploadImage($image, 'inventory');
         }
 
        

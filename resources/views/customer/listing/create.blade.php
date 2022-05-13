@@ -99,9 +99,9 @@
                             <select name="state" v-model="state">
                                 <option value="" disabled>State</option>
                                 <option value="CO">CO</option>
-                                <option value="CA">CA</option>
+                                <!-- <option value="CA">CA</option>
                                 <option value="LA">LA</option>
-                                <option value="FL">FL</option>
+                                <option value="FL">FL</option> -->
                             </select>
                         </div>
                         <div class="col-md-2">
@@ -341,7 +341,8 @@
                     'Content-Type': 'multipart/form-data'
                     }
                 }).then((response) => {
-                    // console.log(response.data);
+                    // alert(response.data);
+                    window.location.replace('/buyer/market');
                 });
             }
         },

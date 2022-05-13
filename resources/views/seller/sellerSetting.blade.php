@@ -123,7 +123,7 @@
 
 									<div class="col-xl-6">
 										<div class="submit-field">
-											<h5>Nationality</h5>
+											<h5>Neighborhood</h5>
 											<input type="text" name="country" class="with-border" value="{{$sellerInfo->country}}">
 										</div>
 									</div>

@@ -241,7 +241,7 @@
                 </div>
 
             </div>
-            <div class="row p-0 m-0 ml-5" style="margin-top: -6% !important;">
+            <div class="row p-0 m-0 ml-5" style="margin-top: -6% !important; margin-left:10rem !important;">
                 <div class="col-md-2 col-sm-12"></div>
                 <div class="col-md-1 col-sm-12 mr-5 viewImages">
                     <div class="ad-image text-center" id="viewImage_5"></div>

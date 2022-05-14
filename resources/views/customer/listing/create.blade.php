@@ -132,7 +132,7 @@
                             <input id="files" type='file' style="display:none" @change="showImage" accept="image/png, image/gif, image/jpeg, image/jpg" multiple/>
                         </div>
                         <img id="displayImage_0" class="ad-image d-none"/>
-                        <button class="btn btn-success uploadImage mt-4 text-center" @click="uploadImage"><i class="fa fa-long-arrow-up uploadIcon"></i>Upload Image</button>
+                        <button class="btn btn-success uploadImage mt-4 text-center" @click="uploadImage"><i class="fa fa-long-arrow-up uploadIcon"></i>Upload Image2</button>
                     </div>
                     <div class="col-md-1 col-sm-12 mr-5 viewImages p-0">
                         <div class="ad-image text-center" id="viewImage_1"></div>

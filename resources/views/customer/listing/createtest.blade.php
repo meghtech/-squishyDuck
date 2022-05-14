@@ -132,7 +132,7 @@
                             <input id="files" type='file' style="display:none" onchange="showImage()" accept="image/png, image/gif, image/jpeg, image/jpg" multiple/>
                         </div>
                         <img id="displayImage_0" class="ad-image d-none"/>
-                        <button class="btn btn-success uploadImage mt-4 text-center" onclick="uploadImage()"><i class="fa fa-long-arrow-up uploadIcon"></i>Upload Image</button>
+                        <button class="btn btn-success uploadImage mt-4 text-center" onclick="uploadImage()"><i class="fa fa-long-arrow-up uploadIcon"></i>Upload Image2</button>
                     </div>
                     <div class="col-md-1 col-sm-12 mr-5 viewImages p-0">
                         <div class="ad-image text-center" id="viewImage_1"></div>
@@ -152,8 +152,8 @@
                     </div>
 
                 </div>
-                <div class="row p-0 m-0 ml-5" style="margin-top: -6% !important;">
-                    <div class="col-md-2 col-sm-12"></div>
+                <div class="row p-0 m-0 ml-5" style="margin-top: -6% !important; margin-left:10rem !important;">
+                    <div class="col-md-2 col-sm-12 "></div>
                     <div class="col-md-1 col-sm-12 mr-5 viewImages p-0">
                         <div class="ad-image text-center" id="viewImage_5"></div>
                         <img id="displayImage_5" class="ad-image d-none"/>

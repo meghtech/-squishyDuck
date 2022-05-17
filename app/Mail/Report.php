@@ -32,7 +32,7 @@ class Report extends Mailable
      */
     public function build()
     {
-        return $this->text('reportEmail')
+        return $this->view('reportEmail')->with(['body'=>$this->message])
             ->from($this->email)
             ->to('squishy2@mtl.com')
             ->subject($this->subject);

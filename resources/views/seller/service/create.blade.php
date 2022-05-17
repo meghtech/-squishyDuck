@@ -270,7 +270,7 @@
                     <button type="button" class="btn outline-md-cyan pl-5 pr-5" @click="goBack">Cancel</button>
                 </div>
                 <div class="col-md-6 col-sm-12 text-left">
-                    <button class="btn btn-md-cyan pl-5 pr-5" @click="changeSection">Next</button>
+                    <button class="btn btn-md-cyan pl-5 pr-5" style="color:white" @click="changeSection">Next</button>
                 </div>
             </div>
         </section>
@@ -299,7 +299,7 @@
                     <button type="button" class="btn outline-md-cyan pl-5 pr-5" @click="goBack">Cancel</button>
                 </div>
                 <div class="col-md-6 col-sm-12 text-left">
-                    <button class="btn btn-md-cyan pl-5 pr-5" @click="postData">Next</button>
+                    <button class="btn btn-md-cyan pl-5 pr-5" style="color:white" @click="postData">Next</button>
                 </div>
             </div>
         </section>

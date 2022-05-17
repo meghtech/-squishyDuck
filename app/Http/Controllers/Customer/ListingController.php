@@ -75,7 +75,7 @@ class ListingController extends Controller
     }
 
     public function createListing(){
-       return view('customer.listing.createtest');
+       return view('customer.listing.create');
     }
 
     public function postListing(Request $request){

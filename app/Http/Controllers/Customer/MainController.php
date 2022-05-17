@@ -13,6 +13,7 @@ use Illuminate\Http\Request;
 use App\Models\CustomOffer;
 use App\Models\BidderPost;
 use App\Mail\OrderEmail;
+use App\Mail\Report;
 use App\Models\Category;
 use App\Models\Customer;
 use App\Models\Listings;
@@ -378,20 +379,8 @@ class MainController extends Controller
     return view('customer.BuyerPayment', compact('paymentCustomer'));
   }
 
-
+  
   ///fileShare
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   public function buyersetting()
@@ -465,5 +454,23 @@ class MainController extends Controller
   public function createSchedule($id)
   {
     return view('customer.createSchedule', compact('id'));
+  }
+
+
+
+  //report
+  public function showReportPage(){
+    return view('customer.report');
+  }
+  public function mailReport(Request $request){
+    // dd($request->input());
+    $this->validate($request, [
+      'subject' => 'required',
+      'message' => 'required'
+    ]);
+    
+    Mail::send(new Report($request->subject, $request->message, auth()->user()->email));
+    return back()->with('status', 'Mail send');
+
   }
 }

@@ -129,10 +129,10 @@
                     <div class="col-md-2 col-sm-12 p-0">
                         <div class="ad-image text-center" id="viewImage_0">
                             <img src="{{ asset('content/images/duck.svg') }}"/>
-                            <input id="files" type='file' style="display:none" @change="showImage" accept="image/png, image/gif, image/jpeg, image/jpg" multiple/>
+                            <input id="files" type='file' style="display:none" onchange="showImage()" accept="image/png, image/gif, image/jpeg, image/jpg" multiple/>
                         </div>
                         <img id="displayImage_0" class="ad-image d-none"/>
-                        <button class="btn btn-success uploadImage mt-4 text-center" @click="uploadImage"><i class="fa fa-long-arrow-up uploadIcon"></i>Upload Image2</button>
+                        <button class="btn btn-success uploadImage mt-4 text-center" onclick="uploadImage()"><i class="fa fa-long-arrow-up uploadIcon"></i>Upload Image</button>
                     </div>
                     <div class="col-md-1 col-sm-12 mr-5 viewImages p-0">
                         <div class="ad-image text-center" id="viewImage_1"></div>
@@ -152,8 +152,8 @@
                     </div>
 
                 </div>
-                <div class="row p-0 m-0 ml-5" style="margin-top: -6% !important;">
-                    <div class="col-md-2 col-sm-12"></div>
+                <div class="row p-0 m-0 ml-5" style="margin-top: -6% !important; margin-left:10rem !important;">
+                    <div class="col-md-2 col-sm-12 "></div>
                     <div class="col-md-1 col-sm-12 mr-5 viewImages p-0">
                         <div class="ad-image text-center" id="viewImage_5"></div>
                         <img id="displayImage_5" class="ad-image d-none"/>
@@ -225,6 +225,38 @@
     @include('layouts.large-footer')
 <script src="{{ asset('js/app.js') }}"></script>
 <script>
+    function uploadImage(){
+        document.getElementById('files').click();
+    }
+    
+    let images = [];
+    function showImage(){
+        var src = document.getElementById("files").files;
+        src.length > 10 ? src.length = 10 : '';
+        for (let index = 0; index < src.length; index++) {
+            var fr=new FileReader();
+            fr.readAsDataURL(src[index]);
+            fr.onload = (function(index, event) {
+                images.push(event.target.result);
+                
+            }).bind(event, index);
+        }
+        setTimeout(()=>{
+            for(let i=0; i<images.length; i++){
+                    console.log(i);
+                    var displayImage = document.getElementById('displayImage_'+i);
+                    displayImage.src = images[i];
+                    displayImage.classList.remove('d-none');
+                    if(i=='0') {
+                        this.thumbnail = images[i];
+                    }
+                    document.getElementById('viewImage_'+i).classList.add('d-none');
+                }
+        }, 100);
+    }
+</script>
+
+<script>
     new Vue({
         el: '#app',
         data: {
@@ -280,28 +312,33 @@
             },
 
             showImage() {
-                this.images = [];
+                // let images = [];
                 var src = document.getElementById("files").files;
                 src.length > 10 ? src.length = 10 : '';
-                if(src.length < 10) {
-                    for (let i=src.length; i < 10; i++) {
-                        document.getElementById('displayImage_'+i).removeAttribute("src");
-                    }
-                }
+                let lastIndx = this.images.length;
                 for (let index = 0; index < src.length; index++) {
+                    
                     var fr=new FileReader();
                     fr.readAsDataURL(src[index]);
                     fr.onload = (function(index, event) {
-                        var displayImage = document.getElementById('displayImage_'+index);
-                        displayImage.src = event.target.result;
-                        displayImage.classList.remove('d-none');
-                        if(index=='0') {
-                            this.thumbnail = event.target.result;
-                        }
+                        this.images[lastIndx+index]=event.target.result;
+                        
                     }).bind(event, index);
-                    this.images[index] = src[index];
-                    document.getElementById('viewImage_'+index).classList.add('d-none');
                 }
+                setTimeout(()=>{
+                    console.log(this.images.length)
+                    let images = this.images;
+                    for(let i=0; i<images.length; i++){
+                            console.log(i);
+                            // var displayImage = document.getElementById('displayImage_'+i);
+                            // displayImage.src = images[i];
+                            // displayImage.classList.remove('d-none');
+                            // if(i=='0') {
+                            //     this.thumbnail = images[i];
+                            // }
+                            // document.getElementById('viewImage_'+i).classList.add('d-none');
+                        }
+                }, 500);
             },
 
             addSrc() {
@@ -329,11 +366,17 @@
                 formData.append('type', this.type);
                 formData.append('deliveryDetails', this.deliveryDetails);
 
-                if(this.images.length > 0){
-                    this.images.forEach((value, key) => {
-                        formData.append('image-'+key, value);
+                // if(this.images.length > 0){
+                //     this.images.forEach((value, key) => {
+                //         formData.append('image-'+key, value);
+                //     });
+                //     formData.append('photoLength', this.images.length);
+                // }
+                if(images.length > 0){
+                    images.forEach((value, key) => {
+                        formData.append('image_'+key, value);
                     });
-                    formData.append('photoLength', this.images.length);
+                    formData.append('photoLength', images.length);
                 }
 
                 axios.post('/buyer/post-listing', formData, {
@@ -341,7 +384,7 @@
                     'Content-Type': 'multipart/form-data'
                     }
                 }).then((response) => {
-                    // alert(response.data);
+                    console.log(response.data);
                     window.location.replace('/buyer/market');
                 });
             }

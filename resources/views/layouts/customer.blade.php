@@ -188,7 +188,7 @@
 												  document.getElementById('logout-form').submit();"><i class="icon-material-outline-power-settings-new"></i> Logout</a></li>
 						</ul>
 						<ul data-submenu-title="Other">
-							<li><a href="#">
+							<li><a href="{{route('showReportPage')}}">
 								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-flag pt-1 mr-2"
 								    viewBox="0 0 18 13">
 								    <path

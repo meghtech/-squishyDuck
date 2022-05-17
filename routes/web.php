@@ -320,6 +320,9 @@ Route::get('/buyer/setting', [BuyerMainController::class, 'buyersetting']);
 Route::post('/buyer/setting-save', [BuyerMainController::class, 'buyerSettingSave'])->name('setting.save');
 Route::post('/buyer/change-password', [BuyerMainController::class, 'buyerSettingSavepass']);
 
+Route::get('/buyer/report-incident', [BuyerMainController::class, 'showReportPage'])->name('showReportPage');
+Route::post('/buyer/report-incident', [BuyerMainController::class, 'mailReport'])->name('mailReport');
+
 
 
 

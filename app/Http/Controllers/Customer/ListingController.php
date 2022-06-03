@@ -79,7 +79,12 @@ class ListingController extends Controller
     }
 
     public function postListing(Request $request){
-        log::info($request);
+
+       
+        $this->validate(request(), [
+            'photoLength' => 'required | min:1',
+                
+            ]);
 
         $imageList = [];
         // for ($i=0; $i < $request->photoLength; $i++) {
@@ -105,7 +110,7 @@ class ListingController extends Controller
         for ($i=0; $i<$request->photoLength; $i++){
             $fileNo = "image_".$i;
             $image = $request->$fileNo;
-            $imageList[] = uploadImage($image, 'listing');
+            $imageList[] = uploadImage($image, 'inventory');
         }
 
         $list = new Listings();

@@ -26,6 +26,16 @@
             z-index: 10000;
             visibility: hidden;
         }
+        .toasterError{
+            position: absolute;
+            width: 24rem;
+            height: 5rem;
+            background-color: rgba(245, 28, 28, 0.397);
+            float: left;
+            margin-top: 2rem;
+            z-index: 10000;
+            visibility: hidden;
+        }
         .t_container{
             width: 100rem;
             z-index: 20000;
@@ -44,6 +54,14 @@
             <div class="" style="margin-left: 1rem">
                 <h1 style="color: white">Success!</h1>
             <p>Your Service is Submitted</p>
+            </div>
+        </div>
+
+        <div id="errorToast" class="toasterError">
+
+            <div class="" style="margin-left: 1rem">
+                <h1 style="color: white">Error!</h1>
+            <p>Please Insert All Data</p>
             </div>
         </div>
     </div>
@@ -369,8 +387,10 @@
         },
         methods: {
             
-            hideToast(){
-                setTimeout(() => {   document.getElementById("aa").style.visibility = "hidden"; }, 3000);
+            hideToast(id){
+                setTimeout(() => {   (id).visibility = "hidden";
+                    (id).style.visibility = "hidden";
+            }, 3000);
    
 
             },
@@ -539,10 +559,18 @@
                     }
                 }).then((response) => {
                     // console.log(response.data);
-                    document.getElementById("aa").style.visibility = "visible";
+                    var success=document.getElementById("aa");
+                    success.style.visibility = "visible"
                     this.hideToast();
                     window.location.replace('/seller/market')
-                });
+                }).catch(error => {
+
+                   var errorId= document.getElementById("errorToast");
+                   errorId.style.visibility = "visible";
+                    this.hideToast(errorId);
+
+     console.log(error.response.data.message)
+  });
             }
         },
         mounted() {

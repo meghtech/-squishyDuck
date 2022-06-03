@@ -56,7 +56,7 @@
                                 <div class="job-listing-details">
                                     <!-- Logo -->
                                     <div class="job-listing-company-logo">
-                                    <img src="{{asset('/content/images/listing/'.json_decode($s_data->photos, true)[0])}}" alt="">
+                                    <img src="{{asset('/content/images/inventory/'.json_decode($s_data->photos, true)[0])}}" alt="">
                                     </div>
                                 </div>
                                 <!-- Job Listing Footer -->

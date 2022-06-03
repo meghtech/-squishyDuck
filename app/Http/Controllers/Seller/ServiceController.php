@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use App\Models\Listings;
 use App\Models\Order;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 
 class ServiceController extends Controller
 {
@@ -108,8 +109,20 @@ class ServiceController extends Controller
        return view('seller.service.create');
     }
 
+
     public function postService(Request $request){
         // log::info($request);
+
+       
+            
+            $this->validate(request(), [
+            'photoLength' => 'required | min:1',
+                
+            ]);
+        
+       
+    
+
         $imageList = [];
         // for ($i=0; $i < $request->photoLength; $i++) {
         //     $fileNo = "image-".$i;
@@ -134,7 +147,7 @@ class ServiceController extends Controller
         for ($i=0; $i<$request->photoLength; $i++){
             $fileNo = "image_".$i;
             $image = $request->$fileNo;
-            $imageList[] = uploadImage($image, 'inventory');
+            $imageList[] = uploadImage($image, 'service');
         }
 
         $list = new Listings();

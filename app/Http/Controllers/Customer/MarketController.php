@@ -54,7 +54,9 @@ class MarketController extends Controller
     }
 
     public function postInventory(Request $request){
-        // log::info($request);
+
+       
+        log::info($request);
 
         $imageList = [];
         // for ($i=0; $i < $request->photoLength; $i++) {

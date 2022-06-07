@@ -11,18 +11,19 @@ class Report extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $subject, $message, $email;
+    public $subject, $message, $emailFrom, $emailTo;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($subject, $message, $email)
+    public function __construct($subject, $message, $emailFrom, $emailTo)
     {
         $this->subject = $subject;
         $this->message = $message;
-        $this->email = $email;
+        $this->emailFrom = $emailFrom;
+        $this->emailTo = $emailTo;
     }
 
     /**
@@ -33,8 +34,8 @@ class Report extends Mailable
     public function build()
     {
         return $this->view('reportEmail')->with(['body'=>$this->message])
-            ->from($this->email)
-            ->to('squishy2@mtl.com')
+            ->from($this->emailFrom)
+            ->to($this->emailTo)
             ->subject($this->subject);
     }
 }

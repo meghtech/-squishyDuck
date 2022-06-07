@@ -23,9 +23,21 @@
 	================================================== -->
     <div class="dashboard-content-container service" data-simplebar>
         <div class="dashboard-content-inner" >
+            <div class="d-flex flex-row justify-content-between">
+        <h2>Current Inventory</h2>
+        <nav id="breadcrumbs" class="dark" style="z-index: 50; position: static;">
+            <ul>
+                <li><a href="../">Home</a></li>
+                <li><a href="../buyer/dashboard">Dashboard</a></li>
+                <li>Current Inventory</li>
+            </ul>
+        </nav>
+    </div>
+            
             <!-- Dashboard Headline -->
             <div class="row mb-4 p-0">
-                <h2 class="col-md-6 col-sm-12 text-left">Current Inventory</h2>
+                
+                <h2 class="col-md-6 col-sm-12 text-left"></h2>
                 <h4 class="col-md-5 col-sm-12 text-right pr-2 ml-5">
                     <a href="{{ route('buyer.createInventory') }}" style="color:gray">Add Something</a>
                 </h4>

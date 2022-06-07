@@ -23,11 +23,17 @@
 	================================================== -->
     <div class="dashboard-content-container service" data-simplebar>
         <div class="dashboard-content-inner" >
-            <!-- Dashboard Headline -->
-            <div class="row mb-4 p-0">
-                <h2 class="col-md-6 col-sm-12 text-left">Report Incident</h2>
-               
-            </div>
+            <div class="d-flex flex-row justify-content-between">
+        <h2>Report Incident</h2>
+        <nav id="breadcrumbs" class="dark" style="z-index: 50; position: static;">
+            <ul>
+                <li><a href="../">Home</a></li>
+                <li><a href="../buyer/dashboard">Dashboard</a></li>
+                <li>Report Incident</li>
+            </ul>
+        </nav>
+    </div>
+            
 <form action="{{route('mailReport')}}" method="POST">
     @csrf
             <section v-if="section == 'first'">

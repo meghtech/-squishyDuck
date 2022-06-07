@@ -51,7 +51,7 @@
                 </div>
                     
                 <!-- Form -->
-                <form method="Post" action="{{ route("register")  }}" id="register-account-form">
+                <form method="Post" action="{{ route("user.register")  }}" id="register-account-form">
                     @csrf
                     <div class="input-with-icon-left">
                         <i class="icon-material-baseline-mail-outline"></i>

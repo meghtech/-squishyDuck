@@ -38,7 +38,7 @@
 				<!-- Dashboard Box -->
 				<div class="col-xl-12">
 					<div class="dashboard-box margin-top-0">
-<input type="hidden" name="seller_id" value="{{$sellerInfo->id}}">
+						<input type="hidden" name="seller_id" value="{{$sellerInfo->id}}">
 						<!-- Headline -->
 						<div class="headline">
 							<h3><i class="icon-material-outline-account-circle"></i> My Account</h3>

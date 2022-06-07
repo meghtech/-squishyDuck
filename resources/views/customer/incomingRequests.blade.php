@@ -18,8 +18,15 @@
     <div class="dashboard-content-inner" style="background-color: #f2f2f2;">
 
         <!-- Dashboard Headline -->
-        <div class="dashboard-headline">
+        <div class="dashboard-headline d-flex flex-row justify-content-between">
             <h3>Incoming Requests</h3>
+            <nav id="breadcrumbs" class="dark" style="z-index: 50; position: static;">
+            <ul>
+                <li><a href="../">Home</a></li>
+                <li><a href="../buyer/dashboard">Dashboard</a></li>
+                <li>Incoming Requests</li>
+            </ul>
+        </nav>
 
         </div>
 

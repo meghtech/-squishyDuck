@@ -169,53 +169,57 @@
             <section v-else-if="section == 'third'">
                 <h3 class="mt-5 text-center">Upload 1-10 Images</h3>
                 <div class="row p-0 m-0">
-                    <div class="col-md-2 col-sm-12 p-0">
+                    <div class="col-md-2 col-sm-12">
                         <div class="ad-image text-center" id="viewImage_0">
-                            <img src="{{ asset('content/images/duck.svg') }}"/>
-                            <input id="files" type='file' style="display:none" onchange="showImage()" accept="image/png, image/gif, image/jpeg, image/jpg" multiple/>
+                            <img src="{{ asset('content/images/duck.svg') }}" />
+                            <input id="files" type='file' style="display:none" @change="showImage"
+                                accept="image/png, image/gif, image/jpeg, image/jpg" multiple />
+                                
                         </div>
-                        <img id="displayImage_0" class="ad-image d-none"/>
-                        <button class="btn btn-success uploadImage mt-4 text-center" onclick="uploadImage()"><i class="fa fa-long-arrow-up uploadIcon"></i>Upload Image</button>
+                        <img id="displayImage_0" class="ad-image d-none" />
+                        <label for="files" class="btn btn-success uploadImage mt-4 text-center"><i
+                                class="fa fa-long-arrow-up uploadIcon"></i>Upload Image</label>
                     </div>
-                    <div class="col-md-1 col-sm-12 mr-5 viewImages p-0">
+                    <div id="preview"></div>
+                    <div class="col-md-1 col-sm-12 mr-5 viewImages">
                         <div class="ad-image text-center" id="viewImage_1"></div>
-                        <img id="displayImage_1" class="ad-image d-none"/>
+                        <img id="displayImage_1" class="ad-image d-none" />
                     </div>
-                    <div class="col-md-1 col-sm-12 mr-5 viewImages p-0">
+                    <div class="col-md-1 col-sm-12 mr-5 viewImages">
                         <div class="ad-image text-center" id="viewImage_2"></div>
-                        <img id="displayImage_2" class="ad-image d-none"/>
+                        <img id="displayImage_2" class="ad-image d-none" />
                     </div>
-                    <div class="col-md-1 col-sm-12 mr-5 viewImages p-0">
+                    <div class="col-md-1 col-sm-12 mr-5 viewImages">
                         <div class="ad-image text-center" id="viewImage_3"></div>
-                        <img id="displayImage_3" class="ad-image d-none"/>
+                        <img id="displayImage_3" class="ad-image d-none" />
                     </div>
-                    <div class="col-md-1 col-sm-12 mr-5 viewImages p-0">
+                    <div class="col-md-1 col-sm-12 mr-5 viewImages">
                         <div class="ad-image text-center" id="viewImage_4"></div>
-                        <img id="displayImage_4" class="ad-image d-none"/>
+                        <img id="displayImage_4" class="ad-image d-none" />
                     </div>
 
                 </div>
                 <div class="row p-0 m-0 ml-5" style="margin-top: -6% !important; margin-left:10rem !important;">
-                    <div class="col-md-2 col-sm-12 "></div>
-                    <div class="col-md-1 col-sm-12 mr-5 viewImages p-0">
+                    <div class="col-md-2 col-sm-12"></div>
+                    <div class="col-md-1 col-sm-12 mr-5 viewImages">
                         <div class="ad-image text-center" id="viewImage_5"></div>
-                        <img id="displayImage_5" class="ad-image d-none"/>
+                        <img id="displayImage_5" class="ad-image d-none" />
                     </div>
-                    <div class="col-md-1 col-sm-12 mr-5 viewImages p-0">
+                    <div class="col-md-1 col-sm-12 mr-5 viewImages">
                         <div class="ad-image text-center" id="viewImage_6"></div>
-                        <img id="displayImage_6" class="ad-image d-none"/>
+                        <img id="displayImage_6" class="ad-image d-none" />
                     </div>
-                    <div class="col-md-1 col-sm-12 mr-5 viewImages p-0">
+                    <div class="col-md-1 col-sm-12 mr-5 viewImages">
                         <div class="ad-image text-center" id="viewImage_7"></div>
-                        <img id="displayImage_7" class="ad-image d-none"/>
+                        <img id="displayImage_7" class="ad-image d-none" />
                     </div>
-                    <div class="col-md-1 col-sm-12 mr-5 viewImages p-0">
+                    <div class="col-md-1 col-sm-12 mr-5 viewImages">
                         <div class="ad-image text-center" id="viewImage_8"></div>
-                        <img id="displayImage_8" class="ad-image d-none"/>
+                        <img id="displayImage_8" class="ad-image d-none" />
                     </div>
-                    <div class="col-md-1 col-sm-12 mr-5 viewImages p-0">
+                    <div class="col-md-1 col-sm-12 mr-5 viewImages">
                         <div class="ad-image text-center" id="viewImage_9"></div>
-                        <img id="displayImage_9" class="ad-image d-none"/>
+                        <img id="displayImage_9" class="ad-image d-none" />
                     </div>
                 </div>
 
@@ -224,7 +228,7 @@
                         <button type="button" class="btn outline-md-cyan pl-5 pr-5" @click="goBack">Cancel</button>
                     </div>
                     <div class="col-md-6 col-sm-12 text-left">
-                        <button class="btn btn-md-cyan pl-5 pr-5" style="color:white" @click="changeSection">Next</button>
+                        <button class="btn btn-md-cyan pl-5 pr-5" style="color:white" @click="changeSection" >Next</button>
                     </div>
                 </div>
             </section>
@@ -257,10 +261,13 @@
                         <button type="button" class="btn outline-md-cyan pl-5 pr-5" @click="goBack">Cancel</button>
                     </div>
                     <div class="col-md-6 col-sm-12 text-left">
-                        <button class="btn btn-md-cyan pl-5 pr-5" style="color:white" @click="postData">Next</button>
+                        <button class="btn btn-md-cyan pl-5 pr-5" style="color:white" @click="postData" onclick="showProgress()">Submit</button>
                     </div>
                 </div>
             </section>
+            <div class="progress" style="height: 30px; display:none" id="progressBar">
+                <div class="progress-bar progress-bar-striped progress-bar-animated text-left pl-3" style="width:100%">Submiting</div>
+            </div>
         </div>
             <!-- Fun Facts Container -->
     </div>
@@ -268,35 +275,9 @@
     @include('layouts.large-footer')
 <script src="{{ asset('js/app.js') }}"></script>
 <script>
-    function uploadImage(){
-        document.getElementById('files').click();
-    }
-    
-    let images = [];
-    function showImage(){
-        var src = document.getElementById("files").files;
-        src.length > 10 ? src.length = 10 : '';
-        for (let index = 0; index < src.length; index++) {
-            var fr=new FileReader();
-            fr.readAsDataURL(src[index]);
-            fr.onload = (function(index, event) {
-                images.push(event.target.result);
-                
-            }).bind(event, index);
-        }
-        setTimeout(()=>{
-            for(let i=0; i<images.length; i++){
-                    console.log(i);
-                    var displayImage = document.getElementById('displayImage_'+i);
-                    displayImage.src = images[i];
-                    displayImage.classList.remove('d-none');
-                    if(i=='0') {
-                        this.thumbnail = images[i];
-                    }
-                    document.getElementById('viewImage_'+i).classList.add('d-none');
-                }
-        }, 100);
-    }
+    function showProgress(){
+    document.getElementById("progressBar").style.display="block";
+}
 </script>
 
 <script>
@@ -367,34 +348,35 @@
                 document.getElementById('files').click();
             },
 
-            showImage() {
-                // let images = [];
+            async showImage() {
+                imgLen = this.images.length;
                 var src = document.getElementById("files").files;
-                src.length > 10 ? src.length = 10 : '';
-                let lastIndx = this.images.length;
                 for (let index = 0; index < src.length; index++) {
-                    
-                    var fr=new FileReader();
-                    fr.readAsDataURL(src[index]);
-                    fr.onload = (function(index, event) {
-                        this.images[lastIndx+index]=event.target.result;
-                        
-                    }).bind(event, index);
-                }
-                setTimeout(()=>{
-                    console.log(this.images.length)
-                    let images = this.images;
-                    for(let i=0; i<images.length; i++){
-                            console.log(i);
-                            // var displayImage = document.getElementById('displayImage_'+i);
-                            // displayImage.src = images[i];
-                            // displayImage.classList.remove('d-none');
-                            // if(i=='0') {
-                            //     this.thumbnail = images[i];
-                            // }
-                            // document.getElementById('viewImage_'+i).classList.add('d-none');
+                    var fr = new FileReader();
+                    await fr.readAsDataURL(src[index]);
+                    let imgStr = ''
+                    fr.onload = await (function (index, event) {
+                        var displayImage = document.getElementById('displayImage_' + (index+imgLen));
+                        displayImage.src = event.target.result;
+                        // console.log(displayImage.src);
+                        imgStr = event.target.result;
+                        displayImage.classList.remove('d-none');
+                        if (index == '0') {
+                            this.thumbnail = event.target.result;
                         }
-                }, 500);
+                    }).bind(event, index);
+
+                    await setTimeout(() => {
+                        this.images[index+imgLen] = imgStr;
+                        // console.log("img Len: "+this.images.length)
+                    }, 200);
+                    
+                    document.getElementById('viewImage_' + (index+imgLen)).classList.add('d-none');
+                    if(imgLen+index ===9){
+                        break;
+                    }
+                }
+                // console.log(this.images);
             },
 
             addSrc() {
@@ -422,18 +404,18 @@
                 formData.append('type', this.type);
                 formData.append('deliveryDetails', this.deliveryDetails);
 
-                // if(this.images.length > 0){
-                //     this.images.forEach((value, key) => {
-                //         formData.append('image-'+key, value);
-                //     });
-                //     formData.append('photoLength', this.images.length);
-                // }
-                if(images.length > 0){
-                    images.forEach((value, key) => {
+                if(this.images.length > 0){
+                    this.images.forEach((value, key) => {
                         formData.append('image_'+key, value);
                     });
-                    formData.append('photoLength', images.length);
+                    formData.append('photoLength', this.images.length);
                 }
+                // if(images.length > 0){
+                //     images.forEach((value, key) => {
+                //         formData.append('image_'+key, value);
+                //     });
+                //     formData.append('photoLength', images.length);
+                // }
 
                 axios.post('/buyer/post-listing', formData, {
                     headers: {
@@ -444,12 +426,13 @@
                     window.location.replace('/buyer/market');
                 }).catch(error => {
 
-var errorId= document.getElementById("errorToast");
-errorId.style.visibility = "visible";
- this.hideToast(errorId);
+                    var errorId= document.getElementById("errorToast");
+                    errorId.style.visibility = "visible";
+                    this.hideToast(errorId);
+                    document.getElementById("progressBar").style.display="none";
 
-console.log(error.response.data.message)
-});
+                    console.log(error.response.data.message)
+                });
             }
         },
         mounted() {

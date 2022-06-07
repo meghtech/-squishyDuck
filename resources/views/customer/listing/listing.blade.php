@@ -24,8 +24,18 @@
     <div class="dashboard-content-container service" data-simplebar>
         <div class="dashboard-content-inner" >
             <!-- Dashboard Headline -->
+            <div class="d-flex flex-row justify-content-between">
+        <h2>Current Listing</h2>
+        <nav id="breadcrumbs" class="dark" style="z-index: 50; position: static;">
+            <ul>
+                <li><a href="../">Home</a></li>
+                <li><a href="../buyer/dashboard">Dashboard</a></li>
+                <li>Current Listing</li>
+            </ul>
+        </nav>
+    </div>
             <div class="row mb-4 p-0">
-                <h2 class="col-md-6 col-sm-12 text-left">Current Listing</h2>
+                <h2 class="col-md-6 col-sm-12 text-left"></h2>
                 <h4 class="col-md-5 col-sm-12 text-right pr-2 ml-5">
                     <a href="{{ route('buyer.createListing') }}" style="color:gray">Add Something</a>
                 </h4>

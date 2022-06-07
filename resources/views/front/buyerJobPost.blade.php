@@ -10,7 +10,8 @@
 				<div class="single-page-header-inner">
 					<div class="left-side">
 						<div class="header-details">
-							<h3>All Buyer Job Post</h3>
+							<!-- <h3>All Buyer Job Post</h3> -->
+							<h3>Fulfill or bid on active buyer requests</h3>
 						</div>
 					</div>
 					<div class="right-side">

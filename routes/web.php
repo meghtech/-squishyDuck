@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\GeneralController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\SubCategoryController;
 use App\Http\Controllers\Admin\BannerController;
+use App\Http\Controllers\Auth\RegistrationController;
 use App\Http\Controllers\Front\MainController;
 use App\Http\Controllers\Front\PaymentController;
 use App\Http\Controllers\RegisterController;
@@ -58,11 +59,13 @@ Route::get('zoom-call-user/{any}', function () {
     return view('app');
 })->where('any','.*');
 
+Route::post('/user-register', [RegistrationController::class, 'register'])->name('user.register');
+
 Route::get('/', [MainController::class, 'index'])->name('main');
 
 Route::get('/buyer1/{slug}', [MainController::class, 'serviceShow']);
 Route::get('/service-details/{slug}', [MainController::class, 'serviceDetails']);
-Route::post('/user-register', [RegisterController::class, 'storeData'])->name('user.register');
+// Route::post('/user-register', [RegisterController::class, 'storeData'])->name('user.register');
 
 Route::get('/payment-page', [PaymentController::class, 'paymnetIndex']);
 Route::get('/payment-conform', [PaymentController::class, 'paymentConform'])->name('payment.conform');
@@ -91,7 +94,7 @@ Route::post('/stripe-payment/{order}', [StripeController::class, 'handlePost'])-
 
 ///only for seller this
 
-Route::get('/buyer-job-post', [SellerMainController::class, 'buyerJobPost']);
+Route::get('/buyer-job-post', [SellerMainController::class, 'buyerJobPost'])->name('buyer-job-post');
 Route::post('/bid-request', [SellerMainController::class, 'bidRequest'])->name('bid.request');
 
 
@@ -157,7 +160,7 @@ Route::get('/buyer', [App\Http\Controllers\Customer\LoginController::class, 'sho
 
 Route::post('/buyer', [App\Http\Controllers\Customer\LoginController::class, 'login']);
 
-Route::get('/customer/dashboard', [App\Http\Controllers\Customer\MainController::class, 'BuyerIndex']);
+Route::get('/customer/dashboard', [App\Http\Controllers\Customer\MainController::class, 'BuyerIndex'])->name('customer.dashboard');
 
 ///seller
 
@@ -249,7 +252,7 @@ Route::post('/sendCustomerMessage', [ChatController::class, 'sendMessage'])->mid
 Route::get('/buyer/dashboard', [BuyerMainController::class, 'BuyerIndex'])->name('buyer.dashboard');
 Route::get('/buyer/incoming-requests', [BuyerMainController::class, 'incomingRequests'])->name('buyer.incomingRequests');
 
-Route::get('/buyer/job-post', [BuyerMainController::class, 'jobPost']);
+Route::get('/buyer/job-post', [BuyerMainController::class, 'jobPost'])->name('buyer.jobpost');
 Route::post('/buyer/job-post-save', [BuyerMainController::class, 'jobPostSave'])->name('job.postSave');
 Route::get('/buyer/jobPostDelete/{id}', [BuyerMainController::class, 'jobPostDelete'])->name('job.jobPostDelete');
 

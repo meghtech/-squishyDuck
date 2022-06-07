@@ -14,6 +14,16 @@
   ================================================== -->
 <div class="dashboard-content-container incoming-request" data-simplebar>
     <div class="dashboard-content-inner" style="background-color: #f2f2f2;" id="app">
+    <div class="d-flex flex-row justify-content-between">
+        <h2></h2>
+        <nav id="breadcrumbs" class="dark" style="z-index: 50; position: static;">
+            <ul>
+                <li><a href="../">Home</a></li>
+                <li><a href="../buyer/dashboard">Dashboard</a></li>
+                <li>Manage</li>
+            </ul>
+        </nav>
+    </div>
 
         <!-- Dashboard Headline -->
         <div class="dashboard-headline row">

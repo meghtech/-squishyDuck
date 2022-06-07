@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Seller;
 
 use App\Http\Controllers\Controller;
+use App\Mail\Report;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
@@ -18,6 +19,7 @@ use App\Models\Listings;
 use App\Models\User;
 use App\Models\PaymentSeller;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Mail;
 use Image;
 
 class MainController extends Controller
@@ -200,6 +202,9 @@ class MainController extends Controller
                 $user->password = Hash::make($request->password);
                 $user->save();
                 Auth::logout();
+                $message="The password for your Squishy Duck account has successfully been changed. If you didn't change your password, please contact our support team.";
+                Mail::send(new Report("Password successfully changed", $message, "squishtduck@mail.com", $user->email));
+                
                 return redirect()->back()->with('status', 'Your Password has been Change');
             } else {
                 return redirect()->back()->with('status', 'NEw Password can not be same old password:)');

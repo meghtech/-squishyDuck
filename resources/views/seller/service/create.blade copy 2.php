@@ -10,7 +10,6 @@
         border: 1px solid transparent;
         border-radius: .25rem;
     }
-
     .alert-primary {
         color: #f7f7f7;
         background-color: #006171;
@@ -21,16 +20,6 @@
             width: 24rem;
             height: 5rem;
             background-color: rgba(68, 197, 68, 0.397);
-            float: left;
-            margin-top: 2rem;
-            z-index: 10000;
-            visibility: hidden;
-        }
-        .toasterError{
-            position: absolute;
-            width: 24rem;
-            height: 5rem;
-            background-color: rgba(245, 28, 28, 0.397);
             float: left;
             margin-top: 2rem;
             z-index: 10000;
@@ -56,14 +45,6 @@
             <p>Your Service is Submitted</p>
             </div>
         </div>
-
-        <div id="errorToast" class="toasterError">
-
-            <div class="" style="margin-left: 1rem">
-                <h1 style="color: white">Error!</h1>
-            <p>Please Insert All Data</p>
-            </div>
-        </div>
     </div>
     <div class="dashboard-content-inner">
         <section v-if="section == 'first'">
@@ -80,11 +61,9 @@
                     <select name="item" v-model="itemType">
                         <option value="" disabled>Type</option>
                         <option value="Flat">Flat</option>
-                        <!-- <option value="Electronics">Electronics</option>
-                        <option value="Car">Variable</option>
-                        <option value="Food">Food</option> -->
-                        <option value="Recurring">Recurring</option>
-                        <option value="Variable">Variable</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Car">Car</option>
+                        <option value="Food">Food</option>
                     </select>
                 </div>
             </div>
@@ -208,9 +187,9 @@
                         <select name="state" v-model="state">
                             <option value="" disabled>State</option>
                             <option value="co">CO</option>
-                            <!-- <option value="ca">CA</option>
+                            <option value="ca">CA</option>
                             <option value="la">LA</option>
-                            <option value="fl">FL</option> -->
+                            <option value="fl">FL</option>
                         </select>
                     </div>
                     <div class="col-md-2 col-sm-12">
@@ -236,13 +215,11 @@
                         <img src="{{ asset('content/images/duck.svg') }}" />
                         <input id="files" type='file' style="display:none" @change="showImage"
                             accept="image/png, image/gif, image/jpeg, image/jpg" multiple />
-                            
                     </div>
                     <img id="displayImage_0" class="ad-image d-none" />
-                    <label for="files" class="btn btn-success uploadImage mt-4 text-center"><i
-                            class="fa fa-long-arrow-up uploadIcon"></i>Upload Image</label>
+                    <button class="btn btn-success uploadImage mt-4 text-center" @click="uploadImage"><i
+                            class="fa fa-long-arrow-up uploadIcon"></i>Upload Image</button>
                 </div>
-                <div id="preview"></div>
                 <div class="col-md-1 col-sm-12 mr-5 viewImages">
                     <div class="ad-image text-center" id="viewImage_1"></div>
                     <img id="displayImage_1" class="ad-image d-none" />
@@ -261,7 +238,7 @@
                 </div>
 
             </div>
-            <div class="row p-0 m-0 ml-5" style="margin-top: -6% !important; margin-left:10rem !important;">
+            <div class="row p-0 m-0 ml-5" style="margin-top: -6% !important;">
                 <div class="col-md-2 col-sm-12"></div>
                 <div class="col-md-1 col-sm-12 mr-5 viewImages">
                     <div class="ad-image text-center" id="viewImage_5"></div>
@@ -290,7 +267,7 @@
                     <button type="button" class="btn outline-md-cyan pl-5 pr-5" @click="goBack">Cancel</button>
                 </div>
                 <div class="col-md-6 col-sm-12 text-left">
-                    <button class="btn btn-md-cyan pl-5 pr-5" style="color:white" @click="changeSection" >Next</button>
+                    <button class="btn btn-md-cyan pl-5 pr-5" @click="changeSection">Next</button>
                 </div>
             </div>
         </section>
@@ -319,11 +296,8 @@
                     <button type="button" class="btn outline-md-cyan pl-5 pr-5" @click="goBack">Cancel</button>
                 </div>
                 <div class="col-md-6 col-sm-12 text-left">
-                    <button class="btn btn-md-cyan pl-5 pr-5" style="color:white" @click="postData" onclick="showProgress()">Submit</button>
+                    <button class="btn btn-md-cyan pl-5 pr-5" @click="postData">Next</button>
                 </div>
-            </div>
-            <div class="progress" style="height: 30px; display:none" id="progressBar">
-                <div class="progress-bar progress-bar-striped progress-bar-animated text-left pl-3" style="width:100%">Submiting</div>
             </div>
         </section>
     </div>
@@ -333,19 +307,11 @@
 @include('layouts.large-footer')
 <script src="{{ asset('js/app.js') }}"></script>
 <script>
-
-
-function showProgress(){
-    document.getElementById("progressBar").style.display="block";
-}
-</script>
-
-<script>
     new Vue({
         el: '#app',
         data: {
             renderComponent: true,
-            section: 'first',
+            section: 'forth',
             title: '',
             price: '',
             itemType: '',
@@ -369,12 +335,9 @@ function showProgress(){
         },
         methods: {
             
-            hideToast(id){
-                setTimeout(() => {   (id).visibility = "hidden";
-                    (id).style.visibility = "hidden";
-            }, 3000);
+            hideToast(){
+                setTimeout(() => {   document.getElementById("aa").style.visibility = "hidden"; }, 3000);
    
-
             },
             changeSection() {
                 window.scrollTo(0, 0);
@@ -389,7 +352,6 @@ function showProgress(){
                     this.section = 'fifth';
                 }
             },
-
             goBack() {
                 window.scrollTo(0, 0);
                 if (this.section == 'second') {
@@ -402,12 +364,10 @@ function showProgress(){
                     this.section = 'forth';
                 }
             },
-
             selectDay(day) {
                 console.log(this.availableDays.includes(day));
                 if (this.availableDays.includes(day)) {
                  
-
                     this.availableDays= this.availableDays.filter(item => item !== day);  
                    
                 } else {
@@ -423,7 +383,6 @@ function showProgress(){
                 }
                 console.log(this.availableDays);
             },
-
             changeMeridiem(day, param) {
                 if (param == 'to') {
                     this.dayAndTime[day].toMeridiem == "AM" ? this.dayAndTime[day].toMeridiem = "PM" : this.dayAndTime[day].toMeridiem = "AM";
@@ -432,7 +391,6 @@ function showProgress(){
                 }
                 this.forceRerender();
             },
-
             forceRerender() {
                 // Remove component from the DOM
                 this.renderComponent = false;
@@ -441,7 +399,6 @@ function showProgress(){
                     this.renderComponent = true;
                 });
             },
-
             isNumberKey(evt, day) {
                 evt = (evt) ? evt : window.event;
                 var charCode = (evt.which) ? evt.which : evt.keyCode;
@@ -468,48 +425,42 @@ function showProgress(){
                     evt.preventDefault();
                 }
             },
-
             uploadImage() {
                 document.getElementById('files').click();
             },
-
             async showImage() {
                 imgLen = this.images.length;
+                this.images = [];
                 var src = document.getElementById("files").files;
+                // src.length > 10 ? src.length = 10 : '';
+                // if (src.length < 10) {
+                //     for (let i = src.length; i < 10; i++) {
+                //         document.getElementById('displayImage_' + i).removeAttribute("src");
+                //     }
+                // }
                 for (let index = 0; index < src.length; index++) {
+                    console.log(index);
                     var fr = new FileReader();
-                    await fr.readAsDataURL(src[index]);
-                    let imgStr = ''
+                 await fr.readAsDataURL(src[index]);
                     fr.onload = await (function (index, event) {
                         var displayImage = document.getElementById('displayImage_' + (index+imgLen));
                         displayImage.src = event.target.result;
-                        // console.log(displayImage.src);
-                        imgStr = event.target.result;
                         displayImage.classList.remove('d-none');
                         if (index == '0') {
                             this.thumbnail = event.target.result;
                         }
                     }).bind(event, index);
-
-                    await setTimeout(() => {
-                        this.images[index+imgLen] = imgStr;
-                        // console.log("img Len: "+this.images.length)
-                    }, 200);
-                    
+                    this.images[index+imgLen] = src[index];
                     document.getElementById('viewImage_' + (index+imgLen)).classList.add('d-none');
                     if(imgLen+index ===9){
                         break;
                     }
                 }
-                // console.log(this.images);
+                // console.log(imgLen);
             },
-
             addSrc() {
-                
-                document.getElementById('displayImage_11d').src = this.thumbnail;
-                // console.log("Hiiiiiiiii")
+                document.getElementById('displayImage_11').src = this.thumbnail;
             },
-
             postData() {
                 let formData = new FormData();
                 formData.append('title', this.title);
@@ -529,37 +480,20 @@ function showProgress(){
                 formData.append('zip', this.zip);
                 formData.append('type', this.type);
                 formData.append('dayAndTime', JSON.stringify(this.dayAndTime));
-
                 if (this.images.length > 0) {
                     this.images.forEach((value, key) => {
-                        formData.append('image_' + key, value);
+                        formData.append('image-' + key, value);
                     });
                     formData.append('photoLength', this.images.length);
                 }
-                // if(this.images.length > 0){
-                //     this.images.forEach((value, key) => {
-                //         formData.append('image_'+key, value);
-                //     });
-                //     formData.append('photoLength', images.length);
-                // }
-
                 axios.post('/seller/post-service', formData, {
                     headers: {
                         'Content-Type': 'multipart/form-data'
-                    },
-                    onUploadProgress: progressEvent => console.log(progressEvent.loaded)
+                    }
                 }).then((response) => {
-                    var success=document.getElementById("aa");
-                    success.style.visibility = "visible"
+                    // console.log(response.data);
+                    document.getElementById("aa").style.visibility = "visible";
                     this.hideToast();
-                    window.location.replace('/seller/services')
-                }).catch(error => {
-
-                   var errorId= document.getElementById("errorToast");
-                   errorId.style.visibility = "visible";
-                    this.hideToast(errorId);
-                    document.getElementById("progressBar").style.display="none";
-                    console.log(error.response.data.message)
                 });
             }
         },

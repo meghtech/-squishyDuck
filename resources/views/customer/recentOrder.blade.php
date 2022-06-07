@@ -14,11 +14,20 @@
   ================================================== -->
 <div class="dashboard-content-container incoming-request" data-simplebar>
     <div class="dashboard-content-inner" style="background-color: #f2f2f2;" id="app">
+    <div class="d-flex flex-row justify-content-between">
+        <h2>Incoming Requests</h2>
+        <nav id="breadcrumbs" class="dark" style="z-index: 50; position: static;">
+            <ul>
+                <li><a href="../">Home</a></li>
+                <li><a href="../buyer/dashboard">Dashboard</a></li>
+                <li>Incoming Requests</li>
+            </ul>
+        </nav>
+    </div>
 
         <!-- Dashboard Headline -->
-        <div class="dashboard-headline row">
-            <h3 class="text-left col-4 d-inline">Incoming Requests</h3>
-            <div class="col-8 ml-5 text-right d-inline-block pr-0">
+        <div class="dashboard-headline">
+            <div class="col-8 ml-5 text-right d-inline-block pr-0" style="float:right">
                 <select class="col-3 d-inline-block" @change="changeData($event)">
                     <option value="1" :selected="dataOf==1">Bought</option>
                     <option value="2" :selected="dataOf==2">Sold</option>

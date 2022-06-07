@@ -30,7 +30,6 @@ protected $guarded = [];
      */
     protected $hidden = [
         'password',
-        'remember_token',
     ];
 
     /**

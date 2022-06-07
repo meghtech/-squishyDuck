@@ -23,9 +23,19 @@
 	================================================== -->
     <div class="dashboard-content-container service" data-simplebar>
         <div class="dashboard-content-inner" >
+            <div class="d-flex flex-row justify-content-between">
+        <h2>Services</h2>
+        <nav id="breadcrumbs" class="dark" style="z-index: 50; position: static;">
+            <ul>
+                <li><a href="../">Home</a></li>
+                <li><a href="../seller/dashboard">Dashboard</a></li>
+                <li>Services</li>
+            </ul>
+        </nav>
+    </div>
             <!-- Dashboard Headline -->
             <div class="row mb-4 p-0">
-                <h2 class="col-md-6 col-sm-12 text-left">Services</h2>
+                <h2 class="col-md-6 col-sm-12 text-left"></h2>
                 <h4 class="col-md-5 col-sm-12 text-right pr-2 ml-5">
                     <a href="{{ route('seller.createService') }}" style="color:gray">New Service</a>
                 </h4>

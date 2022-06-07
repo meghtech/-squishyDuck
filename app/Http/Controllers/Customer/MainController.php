@@ -440,6 +440,11 @@ class MainController extends Controller
         $user->password = Hash::make($request->password);
         $user->save();
         Auth::logout();
+
+        //@toDo: send mail
+        $message="The password for your Squishy Duck account has successfully been changed. If you didn't change your password, please contact our support team.";
+        Mail::send(new Report("Password successfully changed", $message, "squishtduck@mail.com", $user->email));
+
         return redirect()->back()->with('status', 'Your Password has been Change');
       } else {
         return redirect()->back()->with('status', 'NEw Password can not be same old password:)');
@@ -469,7 +474,7 @@ class MainController extends Controller
       'message' => 'required'
     ]);
     
-    Mail::send(new Report($request->subject, $request->message, auth()->user()->email));
+    Mail::send(new Report($request->subject, $request->message, auth()->user()->email, "squishtduck@mail.com"));
     return back()->with('status', 'Mail send');
 
   }

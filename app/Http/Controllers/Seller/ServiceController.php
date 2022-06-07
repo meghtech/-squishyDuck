@@ -144,10 +144,15 @@ class ServiceController extends Controller
         //     })->save($originalPath.'/'. $filenametostore);
         //     $imageList[] = $filenametostore;
         // }
+        Log::info("Image :".$request->photoLength);
+        
+        // return 0;
         for ($i=0; $i<$request->photoLength; $i++){
             $fileNo = "image_".$i;
-            $image = $request->$fileNo;
-            $imageList[] = uploadImage($image, 'service');
+            if($request->$fileNo){
+                $image = $request->$fileNo;
+                $imageList[] = uploadImage($image, 'service');
+            }
         }
 
         $list = new Listings();
@@ -184,6 +189,7 @@ class ServiceController extends Controller
         ->with('userSeller')
         ->paginate(6)
         ->appends(request()->query());
+        // dd($data->userSe);
        
         return view('seller.service.viewServices', compact('data', 'sortBy', 'seachCity', 'seachItem'));
     }

@@ -10,7 +10,8 @@
 			
 			<!-- Dashboard Headline -->
 			<div class="dashboard-headline">
-				<h3>My Active Bids</h3>
+				<!-- <h3>My Active Bids</h3> -->
+				<h3>What do you need done? send an active request to the community</h3>
 
 				<!-- Breadcrumbs -->
 				<nav id="breadcrumbs" class="dark">
@@ -164,8 +165,8 @@
 						<div class="bidding-fields">
 							<div class="bidding-field">
 								<div class="submit-field">
-									<h5>Total Days</h5>
-										<input type="number" name="totalDay" id="getNumberMain" class="with-border" placeholder="Enter Total Day">
+									<h5>Time Frame</h5>
+										<input type="number" name="totalDay" id="getNumberMain" class="with-border" placeholder="Enter Time Frame">
 								</div>
 							</div>
 						</div>

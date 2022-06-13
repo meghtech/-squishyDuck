@@ -51,6 +51,11 @@ Route::get('login', function(){
     return redirect('/');
 })->name('login');
 
+Route::get('/forgot-password', [App\Http\Controllers\Customer\LoginController::class, 'forgotPassword'])->name('forgotPassword');
+Route::post('/send-reset-password-link', [App\Http\Controllers\Customer\LoginController::class, 'sendPassResetLink'])->name('sendPassResetLink');
+Route::get('/reset-password', [App\Http\Controllers\Customer\LoginController::class, 'resetPasswordShow'])->name('resetPassword');
+Route::post('/reset-password', [App\Http\Controllers\Customer\LoginController::class, 'resetPassword']);
+
 
 Route::get('/zoom-call-user', function(){
 	return view('app');
@@ -314,6 +319,8 @@ Route::post('/buyer/updateOrder', [BuyerMainController::class, 'updateOrder'])->
 Route::get('/buyer/manage', [BuyerMainController::class, 'manageItems'])->name('buyer.manageItems');
 Route::post('/buyer/manageItemData', [BuyerMainController::class, 'manageItemData'])->name('buyer.manageItemData');
 Route::post('/buyer/updateInventory', [BuyerMainController::class, 'updateInventory'])->name('buyer.updateInventory');
+Route::get('/buyer/post-service', [BuyerMainController::class, 'postService'])->name('buyer.postService');
+Route::get('/buyer/redirect-to-signup', [BuyerMainController::class, 'redirectToSignup'])->name('buyer.redirectToSignup');
 
 
 

@@ -478,4 +478,12 @@ class MainController extends Controller
     return back()->with('status', 'Mail send');
 
   }
+
+  public function postService(){
+    return view('customer.post.post-service');
+  }
+  public function redirectToSignup(){
+    auth()->logout();
+    return redirect()->route('register');
+  }
 }

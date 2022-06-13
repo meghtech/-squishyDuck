@@ -177,6 +177,11 @@
 							
 							<li><a href="{{ route('buyer.inventory') }}" class="{{ Request::is('buyer/inventory*') ? 'text-primary' : '' }}">
 							<i class="icon-material-outline-assignment {{ Request::is('buyer/inventory*') ? 'text-primary' : '' }}"></i>Current Inventory</a></li>
+
+							<li><a href={{route('buyer.postService')}} class="{{ Request::is('buyer/post-service*') ? 'text-primary' : '' }}">
+							<i class="fa fa-edit {{ Request::is('buyer/post-service*') ? 'text-primary' : '' }}"></i>
+							Post Service</a></li>
+							
 							<li><a href="{{ route('buyer.listing') }}" class="{{ Request::is('buyer/listing*') ? 'text-primary' : '' }}"><i class="fa fa-home mr-2 {{ Request::is('buyer/listing*') ? 'text-primary' : '' }}"></i>Current Listing</a></li>
 							<li><a href="{{ route('buyer.manageItems') }}" class="{{ Request::is('buyer/manage*') ? 'text-primary' : '' }}"><i class="fa fa-wrench mr-2"></i>Manage</a></li>
 						</ul>
@@ -254,6 +259,7 @@ $('#snackbar-user-status label').click(function() {
 		backgroundColor: '#383838'
 	});
 });
+
 </script>
 
 @stack('js')

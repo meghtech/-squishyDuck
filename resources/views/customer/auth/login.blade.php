@@ -54,6 +54,18 @@
                 <!-- Form -->
                 <form method="POST" id="login-form" action="{{ route('login.customer') }}">
                         @csrf
+                        <div class="input-with-icon-left">
+                            @if(session()->has('message'))
+                            <div class="alert alert-success">
+                                {{ session()->get('message') }}
+                            </div>
+                        @endif
+                        @if(session()->has('error'))
+                            <div class="alert alert-danger">
+                                {{ session()->get('error') }}
+                            </div>
+                        @endif
+                        </div>
                     <div class="input-with-icon-left">
                         <i class="icon-material-baseline-mail-outline"></i>
                         <input id="email" type="email" class="input-text with-border @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email" autofocus  placeholder="Email Address" required/>
@@ -68,7 +80,7 @@
                         <i class="icon-material-outline-lock"></i>
                         <input id="password" type="password" class="input-text with-border @error('password') is-invalid @enderror"  name="password" placeholder="Password" required/>
                     </div>
-                    <a href="#" class="forgot-password">Forgot Password?</a>
+                    <a href={{route('forgotPassword')}} class="forgot-password">Forgot Password?</a>
                     <!-- Button -->
                 <button class="button full-width button-sliding-icon ripple-effect margin-top-10" type="submit" form="login-form">Log In <i class="icon-material-outline-arrow-right-alt"></i></button>
                 </form>

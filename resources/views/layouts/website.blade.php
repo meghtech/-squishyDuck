@@ -281,7 +281,7 @@
                     <div class="footer-links">
                         <h3>For Candidates</h3>
                         <ul>
-                            <li><a href="#"><span>Browse Buyer Request</span></a></li>
+                            <li><a href="#"><span>Duck It</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -292,7 +292,7 @@
                     <div class="footer-links">
                         <h3>For Buyer</h3>
                         <ul>
-                            <li><a href="{{url('/buyer/job-post')}}"><span>Post a Job Post</span></a></li>
+                            <li><a href="{{url('/buyer/job-post')}}"><span>Duck It</span></a></li>
                         </ul>
                     </div>
                 </div>

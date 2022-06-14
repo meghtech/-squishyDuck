@@ -88,6 +88,7 @@ class MainController extends Controller
         $requests = Order::where('seller_id', auth()->id())->with('customer1', 'customer2', 'listing')
             ->orderBy('id', 'DESC')
             ->get();
+            // dd($requests);
         return view('seller.incomingRequests', compact('requests'));
     }
 

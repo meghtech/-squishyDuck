@@ -212,7 +212,7 @@ class MainController extends Controller
       
       $title = "New order from ".$user->name;
       Mail::send(new OrderEmail($order, $user, $product,  $title, $type= "newOrder"));
-      return redirect()->back();
+      return redirect()->route('buyer.service');
     }
 
 }

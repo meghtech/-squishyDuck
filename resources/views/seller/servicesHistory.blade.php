@@ -149,7 +149,7 @@
                 axios(getData).then((response) => {
                     this.datas = response.data;
 
-                    // console.log("aaa",response.data);
+                    console.log(response.data);
                     this.forceRerender();
                 }).catch((e) => {
                     console.log(e)

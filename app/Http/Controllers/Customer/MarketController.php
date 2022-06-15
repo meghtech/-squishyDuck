@@ -55,7 +55,11 @@ class MarketController extends Controller
 
     public function postInventory(Request $request){
 
-       
+       $this->validate(request(), [
+            'photoLength' => 'required | min:1',
+            'title' => 'required'
+                
+            ]);
         // log::info($request);
 
         $imageList = [];

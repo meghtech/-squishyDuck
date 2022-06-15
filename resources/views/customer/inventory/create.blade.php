@@ -447,10 +447,13 @@
                     this.hideToast();
                     window.location.replace('/buyer/market')
                 }).catch(error => {
-                   var errorId= document.getElementById("errorToast");
-                   errorId.style.visibility = "visible";
+                    console.log(error.response.status);
+                    document.getElementById("bb").style.visibility = "visible";
+                    this.hideToastE();
+                    var errorId= document.getElementById("errorToast");
+                    errorId.style.visibility = "visible";
                     this.hideToast(errorId);
-                    document.getElementById("progressBar1").style.display="none";
+                    document.getElementById("progressBar").style.display="none";
                     console.log(error.response.data.message)
                 });
             }

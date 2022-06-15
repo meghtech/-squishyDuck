@@ -55,32 +55,41 @@ class ServiceController extends Controller
     public function storeImage(Request $request){
 
         $imageList = [];
-        for ($i=0; $i < $request->photoLength; $i++) {
-            $fileNo = "image-".$i;
-            $image = $request->$fileNo;
-            $filenamewithextension = $request->$fileNo->getClientOriginalName();
-            //get filename without extension
-            $filename = pathinfo($filenamewithextension, PATHINFO_FILENAME);
-            //get file extension
-            $extension = $request->$fileNo->getClientOriginalExtension();
-            //filename to store
-            $filenametostore = $filename . '_' . time() . '.webp' ;
-            if (!File::exists(public_path() . "/content/images/service")) {
-                File::makeDirectory(public_path() . "/content/images/service", 0777, true);
+        // for ($i=0; $i < $request->photoLength; $i++) {
+        //     $fileNo = "image-".$i;
+        //     $image = $request->$fileNo;
+        //     $filenamewithextension = $request->$fileNo->getClientOriginalName();
+        //     //get filename without extension
+        //     $filename = pathinfo($filenamewithextension, PATHINFO_FILENAME);
+        //     //get file extension
+        //     $extension = $request->$fileNo->getClientOriginalExtension();
+        //     //filename to store
+        //     $filenametostore = $filename . '_' . time() . '.webp' ;
+        //     if (!File::exists(public_path() . "/content/images/service")) {
+        //         File::makeDirectory(public_path() . "/content/images/service", 0777, true);
+        //     }
+        //     $originalPath = public_path() . '/content/images/service';
+        //     $thumbnailImage = Image::make($image)->encode('webp', 100);
+        //     $thumbnailImage->resize(500, 500, function ($constraint) {
+        //         $constraint->aspectRatio();
+        //     })->save($originalPath.'/'. $filenametostore);
+        //     $imageList[] = $filenametostore;
+        // }
+        for ($i=0; $i<$request->photoLength; $i++){
+            $fileNo = "image_".$i;
+            if($request->$fileNo){
+                $image = $request->$fileNo;
+                $imageList[] = uploadImage($image, 'service');
             }
-            $originalPath = public_path() . '/content/images/service';
-            $thumbnailImage = Image::make($image)->encode('webp', 100);
-            $thumbnailImage->resize(500, 500, function ($constraint) {
-                $constraint->aspectRatio();
-            })->save($originalPath.'/'. $filenametostore);
-            $imageList[] = $filenametostore;
         }
 
-        $list = new Listings();
-        $list->photos = json_encode($imageList);
+        $list = Listings::find($request->id);
+        $photos = json_decode($list->photos);
+        $list->photos = json_encode(array_merge($photos, $imageList));
         $list->save();
+        return "success";
 
-        return redirect()->route('seller.serviceHistory');
+        // return redirect()->route('seller.serviceHistory');
 
     }
     
@@ -117,6 +126,7 @@ class ServiceController extends Controller
             
             $this->validate(request(), [
             'photoLength' => 'required | min:1',
+            'title' => 'required'
                 
             ]);
         
@@ -144,7 +154,7 @@ class ServiceController extends Controller
         //     })->save($originalPath.'/'. $filenametostore);
         //     $imageList[] = $filenametostore;
         // }
-        Log::info("Image :".$request->photoLength);
+        // Log::info("Image :".$request->photoLength);
         
         // return 0;
         for ($i=0; $i<$request->photoLength; $i++){

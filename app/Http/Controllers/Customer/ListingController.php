@@ -83,6 +83,7 @@ class ListingController extends Controller
        
         $this->validate(request(), [
             'photoLength' => 'required | min:1',
+            'title' => 'required'
                 
             ]);
 

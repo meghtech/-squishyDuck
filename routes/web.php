@@ -229,13 +229,13 @@ Route::get('/seller/listing', [SellerListingController::class, 'index'])->name('
 Route::get('/seller/service', [SellerServiceController::class, 'index'])->name('seller.service');
 Route::get('/seller/history', [SellerServiceController::class, 'serviceHistory'])->name('seller.serviceHistory');
 Route::get('/seller/history-addImg/{id}',[SellerServiceController::class,'addImg'])->name('seller.addImgtoService');
+Route::post('/seller/add-historyImg', [SellerServiceController::class, 'storeImage'])->name('seller.storeImage');
 
 
 Route::get('/seller/gethistory', [SellerServiceController::class, 'getserviceHistory'])->name('seller.getserviceHistory');
 Route::get('/seller/create-service', [SellerServiceController::class, 'createService'])->name('seller.createService');
 Route::get('/seller/services', [SellerServiceController::class, 'viewServices'])->name('seller.viewServices');
 Route::post('/seller/post-service', [SellerServiceController::class, 'postService'])->name('seller.postService');
-Route::post('/seller/add-historyImg', [SellerServiceController::class, 'storeImage'])->name('seller.storeImage');
 
 Route::get('/seller/view-schedule', [SellerMainController::class, 'viewSchedule'])->name('seller.viewSchedule');
 Route::post('/getSchedules', [RootMainController::class, 'getSchedules'])->name('getSchedules');

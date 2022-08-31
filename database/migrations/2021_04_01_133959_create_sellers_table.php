@@ -26,6 +26,10 @@ class CreateSellersTable extends Migration
             $table->string('password');
             $table->boolean('is_online')->default(0);
             $table->string('last_activity')->nullable();
+            $table->decimal('hour_rate')->nullable();
+            $table->string('tagline')->nullable();
+            $table->longText('about')->nullable();
+            $table->string('country')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

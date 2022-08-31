@@ -21,11 +21,13 @@ class CreateCustomersTable extends Migration
             $table->string('phone')->nullable();
             $table->string('address')->nullable();
             $table->string('stripe_acc')->nullable();
-            $table->string('profile')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
              $table->boolean('is_online')->default(0);
             $table->string('last_activity')->nullable();
+            $table->longText('about')->nullable();
+            $table->string('country')->nullable();
+            $table->longText('profile')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

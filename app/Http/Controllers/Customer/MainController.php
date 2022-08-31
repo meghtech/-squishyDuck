@@ -418,6 +418,7 @@ class MainController extends Controller
     $sellerInfo->email = $request->email;
     $sellerInfo->about = $request->about;
     $sellerInfo->country = $request->country;
+    $sellerInfo->profile = $request->profile;
     $sellerInfo->save();
 
     return back();

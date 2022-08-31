@@ -34,7 +34,7 @@
                 <!-- Welcome Text -->
                 <div class="welcome-text">
                     <h3 style="font-size: 26px;">Let's create your account!</h3>
-                    <span>Already have an account? <a href="pages-login.html">Log In!</a></span>
+                    <span>Already have an account? <a href="{{ route("login.seller")  }}">Log In!</a></span>
                 </div>
 
                 <!-- Account Type -->

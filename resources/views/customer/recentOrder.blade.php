@@ -37,10 +37,10 @@
         </div>
 
         <!-- Row -->
-        <div class="row">
+        <div class="row" style="width:100%">
 
             <!-- Dashboard Box -->
-            <div class="col-xl-12">
+            <div class="col-xl-12mm" >
                 @if (session('status'))
                 <div class="alert alert-success">
                     {{ session('status') }}

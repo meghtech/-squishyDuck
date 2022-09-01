@@ -41,6 +41,7 @@ class MainController extends Controller
     
     $data = [];
     $getUser = Customer::where('id', auth()->id())->first();
+    
 
 
     $data['sellerReview'] = Review::where('customer_id', auth()->id())->count();
@@ -50,17 +51,30 @@ class MainController extends Controller
     $data['sellerOn'] = Order::where('is_accept_seller', 0)
       ->where('customer_id', auth()->id())
       ->count();
+      
 
       $today = Carbon::today();
       $data['inventory'] = Listings::where('user_id', auth()->id())->where('type','market')->count();
       $data['listing'] = Listings::where('user_id', auth()->id())->where('type','listing')->count();
+
       $data['incommingRq'] = Order::where('customer_id', auth()->id())
-      ->whereDate('schedule_date', '>=', $today->format('Y-m-d'))->count();
+        ->whereDate('schedule_date', $today->format('Y-m-d'))
+        ->where('payment_status', 0)
+        ->count();
+
       $data['schedule'] = Order::where('customer_id', auth()->id())
-      ->whereDate('schedule_date', '=', $today->format('Y-m-d'))->count();
+        // ->whereDate('schedule_date', '=', $today->format('Y-m-d'))
+        ->where('payment_status', 0)
+        ->count();
 
       $data['recentOrder'] = Order::where('customer_id', auth()->id())
       ->count();
+      
+      $data['thisMonthEarning'] = Order::where('customer_id', auth()->id())
+        ->where('payment_status', 0)
+        ->whereMonth('schedule_date', Carbon::now()->month)
+        ->whereYear('schedule_date', Carbon::now()->year)
+        ->sum('amount');
 
 
     return view('customer.dashboard', compact('data', 'getUser'));

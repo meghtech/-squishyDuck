@@ -91,7 +91,7 @@
                                         </select>
                                     </td>
                                     {{-- <td class="pr-0">@{{data.customer2.name}}</td> --}}
-                                    <td>Bell Livingston</td>
+                                    <td>@{{ data.customer2.name || data.customer1.name }}</td>
                                     <td>@{{data.amount}}</td>
                                     <td>@{{(data.totalDay)}}</td>
                                     <td class="pr-0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"

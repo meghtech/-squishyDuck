@@ -73,10 +73,22 @@ class MainController extends Controller
 
         $data['services'] = Listings::where('user_id', auth()->id())->count();
 
-
         $today = Carbon::today();
-        $data['schedule'] = Order::where('seller_id', auth()->id())->whereDate('schedule_date', '=', $today->format('Y-m-d'))->count();
-        $data['incommingRq'] = Order::where('seller_id', auth()->id())->whereDate('schedule_date', '>=', $today->format('Y-m-d'))->count();
+        $data['schedule'] = Order::where('seller_id', auth()->id())
+            ->whereDate('schedule_date', '=', $today->format('Y-m-d'))
+            ->where('is_accept_seller', 0)
+            ->count();
+
+        $data['incommingRq'] = Order::where('seller_id', auth()->id())
+            ->whereDate('schedule_date', '>=', $today->format('Y-m-d'))
+            ->count();
+
+        $data['thisMonthEarning'] = Order::where('seller_id', auth()->id())
+            ->where('is_accept_seller', 1)
+            ->whereMonth('schedule_date', Carbon::now()->month)
+            ->whereYear('schedule_date', Carbon::now()->year)
+            ->sum('amount');
+
 
         
        

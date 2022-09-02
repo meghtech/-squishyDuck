@@ -84,6 +84,7 @@ class MainController extends Controller
   {
     $requests = Order::where('seller_id', auth()->id())
       ->with('seller1', 'seller2', 'customer1', 'customer2', 'listing')
+      ->where('gig_type', 1) //0=service, 1=market/listing
       ->orderBy('id', 'DESC')
       ->get();
     return view('customer.incomingRequests', compact('requests'));

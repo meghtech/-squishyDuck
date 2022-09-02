@@ -14,12 +14,12 @@
 <div class="dashboard-content-container incoming-request" data-simplebar>
     <div class="dashboard-content-inner" style="background-color: #f2f2f2;" id="app">
 <div class="d-flex flex-row justify-content-between">
-        <h2>Incoming Requests</h2>
+        <h2>Received Services</h2>
         <nav id="breadcrumbs" class="dark" style="z-index: 50; position: static;">
             <ul>
                 <li><a href="../">Home</a></li>
                 <li><a href="../buyer/dashboard">Dashboard</a></li>
-                <li>Incoming Requests</li>
+                <li>Received Services</li>
             </ul>
         </nav>
     </div>
@@ -53,7 +53,7 @@
                                   
                                     <th>Payment</th>
                                     <th>Service</th>
-                                    <th>Customer</th>
+                                    <th>Seller</th>
                                     <th>Compensation</th>
                                     <th>Hours</th>
                                     <th>Scheduled Date</th>
@@ -77,8 +77,8 @@
                                             <option  value="1" :selected="data.payment_status==1">Received</option>
                                         </select>
                                     </td>
-                                    {{-- <td class="pr-0">@{{data.seller2.name}}</td> --}}
-                                    <td class="pr-0">Khairul Bashar</td>
+                                    <td class="pr-0">@{{data.seller1.name}}</td>
+                                    <!-- <td class="pr-0">Khairul Bashar</td> -->
                                     <td>@{{data.amount}}</td>
                                     <td>@{{(data.totalDay)}}</td>
                                     <td class="pr-0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"

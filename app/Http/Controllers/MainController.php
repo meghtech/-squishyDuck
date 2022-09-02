@@ -11,14 +11,17 @@ class MainController extends Controller
 {
     public function getSchedules(Request $request){
         $authUser = auth()->guard('customer')->user();
+        $gigType=1;
         if(!$authUser){
             $authUser = auth()->guard('seller')->user();
+            $gigType=0;
         }
         $userId = $authUser->id;
         $schedules = Order::where(function($query) use ($userId) {
             $query->where('seller_id', $userId)
                   ->orWhere('customer_id', $userId);
         })
+        ->where('gig_type', $gigType)
         ->where('schedule_date', $request->date)
         ->with('seller1', 'seller2', 'customer1', 'customer2')->get();
         return json_encode($schedules);

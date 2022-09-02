@@ -1897,7 +1897,7 @@ $(function(){
 										: scheduleInfo[index].customer2.name )
 									: scheduleInfo[index].seller2.name
 							)+
-							'meskat</div>'
+							'</div>'
 					);
 				  }
 			  } else {

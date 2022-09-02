@@ -195,6 +195,7 @@ class MainController extends Controller
         'des' => $request->msg,
         'amount' => $product->price,
         'schedule_date' => date('Y-m-d', strtotime($request->date)),
+        'gig_type' => $product->type=="service"?0:1,
       ]);
 
       $c_id=(int)$order->customer_id;

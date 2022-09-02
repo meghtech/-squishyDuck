@@ -33,6 +33,7 @@ class ServiceController extends Controller
 
         // return $requests;
         $data = Order::where('seller_id', auth()->id())
+            ->where('gig_type', 0) //0=service, 1=market/listing
 			->with('seller1', 'seller2', 'customer1', 'customer2', 'listing')
             ->orderBy('id', 'DESC')
             ->get();

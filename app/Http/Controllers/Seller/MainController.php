@@ -97,7 +97,9 @@ class MainController extends Controller
 
     public function incomingRequests()
     {
-        $requests = Order::where('seller_id', auth()->id())->with('customer1', 'customer2', 'listing')
+        $requests = Order::where('seller_id', auth()->id())
+            ->with('customer1', 'customer2', 'listing')
+            ->where('gig_type', 0) //0=service, 1=market/listing
             ->orderBy('id', 'DESC')
             ->get();
             // dd($requests);

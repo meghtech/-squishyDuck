@@ -84,7 +84,9 @@ class MainController extends Controller
             ->count();
 
         $data['thisMonthEarning'] = Order::where('seller_id', auth()->id())
+            ->where('gig_type', 0) //0=service, 1=market/listing
             ->where('is_accept_seller', 1)
+            ->where('payment_status', 1)
             ->whereMonth('schedule_date', Carbon::now()->month)
             ->whereYear('schedule_date', Carbon::now()->year)
             ->sum('amount');

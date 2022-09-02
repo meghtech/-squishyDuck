@@ -82,7 +82,7 @@
                                         </select>
                                     </td>
                                     <td>@{{data.amount}}</td>
-                                    <td class="pr-0">@{{ dataOf == 1 ? (data.seller1 ? data.seller1.name : data.seller2.name) : (data.customer1 ? data.customer1.name : data.customer2.name)}}</td>
+                                    <td class="pr-0">@{{ data.gig_type===0? data.seller1.name :data.seller2.name }}</td>
                                     <td class="pr-0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                             fill="currentColor" class="bi bi-calendar mr-2" viewBox="0 0 16 16">
                                             <path

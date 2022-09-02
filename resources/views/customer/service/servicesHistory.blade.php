@@ -77,7 +77,9 @@
                                             <option  value="1" :selected="data.payment_status==1">Received</option>
                                         </select>
                                     </td>
-                                    <td class="pr-0">@{{data.seller1.name}}</td>
+                                    <td class="pr-0">@{{
+                                        data.gig_type===0 ? data.seller1.name : data.seller2.name
+                                    }}</td>
                                     <!-- <td class="pr-0">Khairul Bashar</td> -->
                                     <td>@{{data.amount}}</td>
                                     <td>@{{(data.totalDay)}}</td>

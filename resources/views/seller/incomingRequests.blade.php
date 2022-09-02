@@ -19,13 +19,20 @@
         <!-- Dashboard Headline -->
         <div class="dashboard-headline d-flex row-h1 flex-row justify-content-between">
             <h3>Incoming Requests</h3>
-<nav id="breadcrumbs" class="dark" style="z-index: 50; position: static;">
-            <ul>
-                <li><a href="../">Home</a></li>
-                <li><a href="../seller/dashboard">Dashboard</a></li>
-                <li>Incoming Requests</li>
-            </ul>
-        </nav>
+            <nav id="breadcrumbs" class="dark" style="z-index: 50; position: static;">
+                <ul>
+                    <li><a href="../">Home</a></li>
+                    <li><a href="../seller/dashboard">Dashboard</a></li>
+                    <li>Incoming Requests</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="d-flex row-h1 flex-row justify-content-end mb-4">
+            <button  type="button" class="btn btn-lg btn-success mr-2"> <i class="fa fa-plus-circle"></i> Accept</button>
+            <button onclick="reload()" type="button" class="btn btn-lg btn-dark"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:12px; height:12px">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+            </svg>
+            Refresh</button>
         </div>
 
         <!-- Row -->
@@ -86,6 +93,12 @@
 <!-- Dashboard Content / End -->
 @endsection
 @push('js')
-        <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script>
+        function reload(){
+            console.log('reload')
+            location.reload();
+        }
+    </script>
 
 @endpush

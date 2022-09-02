@@ -1869,6 +1869,7 @@ $(function(){
 			}
 		}).then(response => {
 			document.getElementById('date-selected').innerHTML = asideDate;
+			console.log(response.data)
 			  if(response.data.length > 0){
 				var scheduleInfo = response.data;
 				var scheduleViewElement = document.getElementById('schedule-list');
@@ -1896,7 +1897,8 @@ $(function(){
 										? scheduleInfo[index].customer1.name
 										: scheduleInfo[index].customer2.name )
 									: scheduleInfo[index].seller2.name
-							)+
+						) +
+						`<br/>${scheduleInfo[index].gig.title}<br/>`+
 							'</div>'
 					);
 				  }

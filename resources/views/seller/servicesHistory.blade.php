@@ -25,14 +25,14 @@
     </div>
     
         <!-- Dashboard Headline -->
-        <div class="dashboard-headline">
+        <div class="dashboard-headline mb-5">
             <div class="col-8 ml-5 text-right d-inline-block pr-0" style="float:right">
                 <a href="{{route('seller.serviceHistory')}}" class="apply-now-button col-2 ml-4 mb-0 d-inline" style="padding: 12px 20px;"><i class="fa fa-repeat"></i> Refresh</a>
             </div>
         </div>
 
         <!-- Row -->
-        <div class="row">
+        <div class="row mt-5" style="width:100%">
 
             <!-- Dashboard Box -->
             <div class="col-xl-12">

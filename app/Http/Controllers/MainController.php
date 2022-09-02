@@ -23,7 +23,7 @@ class MainController extends Controller
         })
         ->where('gig_type', $gigType)
         ->where('schedule_date', $request->date)
-        ->with('seller1', 'seller2', 'customer1', 'customer2')->get();
+        ->with(['seller1', 'seller2', 'customer1', 'customer2', 'gig'])->get();
         return json_encode($schedules);
     }
 

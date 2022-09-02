@@ -51,10 +51,12 @@
         <!-- Content -->
         <div class="col-xl-8 col-lg-8 content-right-offset">
 
+        @if($data->type != 'service')
             <div class="single-page-section">
                 <p class="margin-bottom-25">Condition: <span class="text-success">{{ $data->condition }}</span></p>
                 <p>{{ $data->size }}</p>
             </div>
+        @endif
 
             <div class="single-page-section">
                 <h3 class="margin-bottom-25">Item Description</h3>

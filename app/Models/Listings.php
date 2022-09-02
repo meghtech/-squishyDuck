@@ -20,6 +20,7 @@ class Listings extends Model
         
     	return $this->hasOne(User::class,'customer_id','user_id');
     }
+    
     public function userSeller()
     {
         

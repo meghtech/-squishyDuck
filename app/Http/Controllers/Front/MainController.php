@@ -31,7 +31,7 @@ class MainController extends Controller
     {
         $setting = General::find(1);
         $getAllCategory = Category::where('status',1)->withCount('gigs')->get();
-        $getMarketCount=Listings::where('type','market')->count();
+        $getMarketCount=Listings::where('type','market')->orWhere('type', 'listing')->count();
         $getServiceCount=Listings::where('type','service')->count();
        
         return view('front.index', compact('getAllCategory','setting','getMarketCount','getServiceCount'));

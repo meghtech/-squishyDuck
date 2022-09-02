@@ -94,6 +94,7 @@
                                 </ul>
                             </div>
                             <div style="background-color:#f9f9f9; padding-left:30px">
+                                
                                 <img class="bg-md-cyan border rounded-circle" alt="user" height="30px" width="30px">
                                  <span class="text-md-cyan" style="font-size:14px">{{ $s_data->userSeller->name }}</span>
                                 <p class="d-inline" style="float:right; padding-right:25px; color:gray; font-size:14px;">More Details <i class="fa fa-angle-right"></i></p>

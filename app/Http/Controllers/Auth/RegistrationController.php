@@ -28,14 +28,15 @@ class RegistrationController extends Controller
                 'email' => $request['email'],
                 'password' => Hash::make($request['password']),
                 'remember_token' => Str::random(10),
-             ]); 
+             ]);
+             
             User::insert([
                 'name' => $request['name'],
                 'email' => $request['email'],
                 'phone_number' => '8564',
                 'password' => Hash::make($request['password']),
                 'customer_id' => $customer['id'],
-                'seller_id' => $customer['id'],  //optional as it is a customer
+                // 'seller_id' => $customer['id'],  //optional as it is a customer
                 'remember_token' => Str::random(10),
             ]); 
 
@@ -63,7 +64,7 @@ class RegistrationController extends Controller
                 'phone_number' => '8564',
                 'password' => Hash::make($request['password']),
                 'seller_id' => $seller->id,
-                'customer_id' => $seller->id, // optional as it is a seller
+                // 'customer_id' => $seller->id, // optional as it is a seller
                 'remember_token' => Str::random(10),
             ]); 
             

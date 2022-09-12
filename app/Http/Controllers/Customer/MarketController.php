@@ -16,7 +16,7 @@ class MarketController extends Controller
     public function __construct()
     {
         $this->middleware('auth:customer',['except' => [
-            'index','viewDetail'
+            'index','viewDetail', 'searchProduct'
         ]]);
     }
 
@@ -130,7 +130,7 @@ class MarketController extends Controller
     }
 
     public function searchProduct(Request $request){
-        log::info($request->sortBy);
+        // log::info($request->sortBy);
         $sortBy = $request->sortBy;
         $seachCity = $request->seachCity;
         $seachItem =  $request->seachItem;

@@ -492,7 +492,7 @@ class MainController extends Controller
       'message' => 'required'
     ]);
     
-    Mail::send(new Report($request->subject, $request->message, auth()->user()->email, "squishtduck@mail.com"));
+    // Mail::send(new Report($request->subject, $request->message, auth()->user()->email, "squishtduck@mail.com"));
     return back()->with('status', 'Mail send');
 
   }

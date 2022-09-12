@@ -32,7 +32,7 @@
         </div>
 
         <!-- Row -->
-        <div class="row mt-5" style="width:100%">
+        <div class="row mt-6" style="width:100%">
 
             <!-- Dashboard Box -->
             <div class="col-xl-12">
@@ -42,7 +42,7 @@
                 </div>
                 @endif
 
-                <div class="input-with-icon">
+                <div class="input-with-icon mt-5">
                     <input id="autocomplete-input" type="text" placeholder="Search a service or customer...">
                     <i style="font-size: 30px;" class="textchat-page-dark icon-material-outline-search"></i>
                 </div>

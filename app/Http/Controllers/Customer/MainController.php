@@ -89,6 +89,7 @@ class MainController extends Controller
       ->where('gig_type', 1) //0=service, 1=market/listing
       ->orderBy('id', 'DESC')
       ->get();
+      // $requests = [];
     return view('customer.incomingRequests', compact('requests'));
   }
 

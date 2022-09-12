@@ -1,4 +1,10 @@
-@extends('layouts.customer')
+@if(Auth::guard('seller')->check())
+    @extends('layouts.seller')
+@else
+    @extends('layouts.customer')
+@endif
+
+
 
 @push('css')
 

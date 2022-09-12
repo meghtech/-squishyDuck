@@ -94,11 +94,15 @@
                                     <td>@{{ data.customer2.name || data.customer1.name }}</td>
                                     <td>@{{data.amount}}</td>
                                     <td>@{{(data.totalDay)}}</td>
-                                    <td class="pr-0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    <td class="pr-0">
+                                        <!---
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                             fill="currentColor" class="bi bi-calendar mr-2" viewBox="0 0 16 16">
                                             <path
                                                 d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
-                                    </svg> @{{ format_date(data.schedule_date) }}</td>
+                                    </svg> -->
+                                    <input @change="updateSchedule(data.id, $event)" type="date" :value="data.schedule_date" >
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -157,7 +161,7 @@
             },
 
             format_date(value){
-                return moment(String(value)).format('MM/DD/YYYY');
+                return moment(String(value)).format('DD/MM/YYYY');
             },
 
             updateData(id, field, index, event){
@@ -179,6 +183,22 @@
 
                     console.log(response.data);
                     this.forceRerender();
+                })
+            },
+            updateSchedule(id, event){
+                // console.log(id);
+                // console.log(event.target.value);
+                var update = {
+                    method: 'put',
+                    url: '/seller/history',
+                    data: {
+                        id: id,
+                        scDate:event.target.value,
+                    }
+                };
+                axios(update).then((response) => {
+
+                    console.log(response);
                 })
             }
         },

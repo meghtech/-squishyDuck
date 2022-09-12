@@ -47,6 +47,18 @@ class ServiceController extends Controller
 
      return view('seller.servicesHistory');
     }
+    public function serviceHistoryUpdateSc(Request $request){
+        // return $request->input();
+        try {
+            $order = Order::find($request->id);
+            $order->update([
+                'schedule_date' => $request->scDate
+            ]);
+            return "success";
+        } catch (\Throwable $th) {
+            return response()->json(['msg'=>'failed'], 500);
+        }
+    }
     public function addImg($id){
 
 

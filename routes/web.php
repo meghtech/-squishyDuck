@@ -228,6 +228,7 @@ Route::get('/seller/listing', [SellerListingController::class, 'index'])->name('
 
 Route::get('/seller/service', [SellerServiceController::class, 'index'])->name('seller.service');
 Route::get('/seller/history', [SellerServiceController::class, 'serviceHistory'])->name('seller.serviceHistory');
+Route::put('/seller/history', [SellerServiceController::class, 'serviceHistoryUpdateSc']);
 Route::get('/seller/history-addImg/{id}',[SellerServiceController::class,'addImg'])->name('seller.addImgtoService');
 Route::post('/seller/add-historyImg', [SellerServiceController::class, 'storeImage'])->name('seller.storeImage');
 
@@ -330,8 +331,8 @@ Route::get('/buyer/setting', [BuyerMainController::class, 'buyersetting']);
 Route::post('/buyer/setting-save', [BuyerMainController::class, 'buyerSettingSave'])->name('setting.save');
 Route::post('/buyer/change-password', [BuyerMainController::class, 'buyerSettingSavepass']);
 
-Route::get('/buyer/report-incident', [BuyerMainController::class, 'showReportPage'])->name('showReportPage');
-Route::post('/buyer/report-incident', [BuyerMainController::class, 'mailReport'])->name('mailReport');
+Route::get('/report-incident', [BuyerMainController::class, 'showReportPage'])->name('showReportPage');
+Route::post('/report-incident', [BuyerMainController::class, 'mailReport'])->name('mailReport');
 
 
 

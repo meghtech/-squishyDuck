@@ -87,13 +87,13 @@ class ServiceController extends Controller
                 ->orWhere('zip_code', 'LIKE', "%{$seachCity}%");
             })
             ->orderBy('price', $sortBy)
-            ->paginate(1)
+            ->paginate(6)
             ->appends(request()->query());
         } elseif(!$seachCity && $seachItem){
             $data = Listings::where('type', 'service')
             ->where('title', 'LIKE', "%{$seachItem}%")
             ->orderBy('price', $sortBy)
-            ->paginate(1)
+            ->paginate(6)
             ->appends(request()->query());
         } elseif($seachCity && $seachItem) {
             $data = Listings::where('type', 'service')
@@ -103,12 +103,12 @@ class ServiceController extends Controller
                 ->orWhere('zip_code', 'LIKE', "%{$seachCity}%");
             })
             ->orderBy('price', $sortBy)
-            ->paginate(1)
+            ->paginate(6)
             ->appends(request()->query());
         } else {
             $data = Listings::where('type', 'service')
             ->orderBy('price', $sortBy)
-            ->paginate(1)
+            ->paginate(6)
             ->appends(request()->query());
         }
         return view('customer.service.viewServices', compact('data', 'sortBy', 'seachCity', 'seachItem'));

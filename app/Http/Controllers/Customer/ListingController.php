@@ -24,7 +24,7 @@ class ListingController extends Controller
         $data = Listings::where('type', 'listing')
         ->where('user_id', auth()->user()->id)
         ->latest()
-        ->paginate(1)
+        ->paginate(6)
         ->appends(request()->query());
         return view('customer.listing.listing', compact('data'));
 

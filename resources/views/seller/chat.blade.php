@@ -216,7 +216,8 @@
                 axios(options).then((response) => {
                     this.messages = response.data;
                     this.scrollToBottom();
-                });
+          
+              });
             },
             getImage(file) {
                 asset = @json(asset('/content/images/message\/'));
@@ -236,7 +237,9 @@
                             }
                         };
                         axios(options).then((response) => {
+                            this.messages.push(response.data);
                             this.message = '';
+                            this.scrollToBottom();
                         })
                     } else if (this.messageType == 2) {
                         var formData = new FormData();

@@ -70,8 +70,11 @@ class ServiceController extends Controller
 
 
     public function viewDetail($id){
+        $data = Listings::where('id', $id)->with('userSeller')->first();
+        $similar= Listings::where('title', 'like', '%' . $data->title . '%')
+        ->where('id' ,'!=', $data->id)->take(2)->get();
+        return view('customer.service.detail', compact('data','similar'));
         $data = Listings::where('id', $id)->first();
-        return view('customer.service.detail', compact('data'));
     }
 
     public function searchService(Request $request){

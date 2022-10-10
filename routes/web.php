@@ -274,6 +274,7 @@ Route::get('/buyer/create-listing', [BuyerListingController::class, 'createListi
 Route::post('/buyer/post-listing', [BuyerListingController::class, 'postListing'])->name('buyer.postListing');
 Route::get('/buyer/service/search', [BuyerServiceController::class, 'searchService'])->name('buyer.service.search');
 Route::get('/buyer/service', [BuyerServiceController::class, 'index'])->name('buyer.service');
+Route::get('/buyer/service/{slug}', [BuyerServiceController::class, 'viewDetail'])->name('buyer.service.detail');
 
 Route::get('/buyer/market/search', [BuyerMarketController::class, 'searchProduct'])->name('buyer.market.search');
 Route::get('/buyer/market', [BuyerMarketController::class, 'index'])->name('buyer.market');

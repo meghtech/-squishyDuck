@@ -231,6 +231,7 @@ Route::get('/seller/history', [SellerServiceController::class, 'serviceHistory']
 Route::put('/seller/history', [SellerServiceController::class, 'serviceHistoryUpdateSc']);
 Route::get('/seller/history-addImg/{id}',[SellerServiceController::class,'addImg'])->name('seller.addImgtoService');
 Route::post('/seller/add-historyImg', [SellerServiceController::class, 'storeImage'])->name('seller.storeImage');
+Route::get('/seller/services/{slug}', [SellerServiceController::class, 'show'])->name('seller.services.detail');
 
 
 Route::get('/seller/gethistory', [SellerServiceController::class, 'getserviceHistory'])->name('seller.getserviceHistory');

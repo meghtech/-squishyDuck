@@ -122,6 +122,12 @@ class ServiceController extends Controller
 
 
 
+    public function show($id){
+        $data = Listings::where('id', $id)->with('userSeller')->first();
+        return view('seller.service.detail', compact('data'));
+    }
+
+
     public function viewDetail($id){
         $data = Listings::where('id', $id)->first();
         return view('seller.service.detail', compact('data'));

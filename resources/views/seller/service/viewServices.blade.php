@@ -72,7 +72,7 @@
                 <div class="listings-container grid-layout margin-top-35">
                     <!-- Job Listing -->
                     @foreach($data as $s_data)
-                        <a href="{{ route('seller.market.detail', $s_data->id) }}" class="job-listing">
+                        <a href="{{ route('seller.services.detail', $s_data->id) }}" class="job-listing">
                             <!-- Job Listing Details -->
                             <div class="job-listing-details">
                                 <!-- Logo -->

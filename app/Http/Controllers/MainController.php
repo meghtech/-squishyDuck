@@ -6,6 +6,7 @@ use App\Models\Order;
 use App\Models\Listings;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Auth;
 
 class MainController extends Controller
 {

@@ -244,11 +244,11 @@ Route::post('/getSchedules', [RootMainController::class, 'getSchedules'])->name(
 Route::post('/getCitySuggestion', [RootMainController::class, 'getCitySuggestion'])->name('getCitySuggestion');
 
 // Start Message Routes
-Route::get('/chat/{id}', [ChatController::class, 'index'])->middleware('auth:seller')->name('sellerChat');
+Route::get('/chat/{id}/{type}', [ChatController::class, 'index'])->middleware('auth:seller')->name('sellerChat');
 Route::post('/fetchSellerMessage', [ChatController::class, 'fetchMessage'])->middleware( 'auth:seller')->name('fetchSellerMessage');
 Route::post('/sendSellerMessage', [ChatController::class, 'sendMessage'])->middleware( 'auth:seller')->name('sendSellerMessage');
 
-Route::get('/customerChat/{id}', [ChatController::class, 'index'])->middleware('auth:customer')->name('customerChat');
+Route::get('/customerChat/{id}/{type}', [ChatController::class, 'index'])->middleware('auth:customer')->name('customerChat');
 Route::post('/fetchCustomerMessage', [ChatController::class, 'fetchMessage'])->middleware( 'auth:customer')->name('fetchCustomerMessage');
 Route::post('/sendCustomerMessage', [ChatController::class, 'sendMessage'])->middleware( 'auth:customer')->name('sendCustomerMessage');
 // End Message Routes

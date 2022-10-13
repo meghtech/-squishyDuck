@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Log;
@@ -15,21 +16,23 @@ use App\Models\Seller;
 
 class ChatController extends Controller
 {
-    public function index($id)
+    public function index($id, $type)
     {
-        $authUser = auth()->guard('customer')->user();
-        if(!$authUser){
-            $authUser = auth()->guard('seller')->user();
-        }
-        $chatTo = Seller::find($id);
-        if(!$chatTo){
+        $sender_type = "customer";
+        $receiver_type = $type === "buyer" ? "customer" : "seller";
+        $authUser = auth()->user();
+        $sender_type = Auth::getDefaultDriver();
+        $chatTo = ["id"=> null];
+        if($receiver_type === "customer") {
             $chatTo = Customer::find($id);
+        } elseif ($receiver_type === "seller") {
+            $chatTo = Seller::find($id);
         }
-        $chatArray = $this->getChatList($authUser->id, (int)$id);
+        $chatArray = $this->getChatList($authUser->id, $chatTo->id, $sender_type);
         $chatedWith = $chatArray['chatList'];
         $chatList = collect();
         foreach($chatedWith as $key=>$user){
-            $messages = $this->message($authUser->id, $user);
+            $messages = $this->message($authUser->id, $sender_type, $user, $receiver_type);
             $chatList->push($messages->last());
         }
         $newChat = null;
@@ -37,7 +40,9 @@ class ChatController extends Controller
         if(!$chatArray['oldUser']){
             $newChat = collect([
                 "user_id" => $authUser->id,
+                "sender_type" => $sender_type,
                 "receiver_id" => $chatTo->id,
+                "receiver_type" => $receiver_type,
                 "msg" => null,
                 "message_type" => 0,
                 "created_at" => now(),
@@ -49,19 +54,19 @@ class ChatController extends Controller
             $chatList = $chatList->push($newChat);
             $messages = null;
         } else {
-            $messages = $this->message($authUser->id, $chatTo->id);
+            $messages = $this->message($authUser->id, $sender_type, $chatTo->id, $receiver_type);
         }
-        if(auth()->guard('seller')->check()){
-            return view('seller.chat', compact('chatList', 'chatTo', 'authUser', 'messages'));
+        if(Auth::guard('seller')->check()){
+            return view('seller.chat', compact('chatList', 'chatTo', 'authUser', 'messages', 'receiver_type'));
         }
         else{
-            return view('customer.chat', compact('chatList', 'chatTo', 'authUser', 'messages'));
+            return view('customer.chat', compact('chatList', 'chatTo', 'authUser', 'messages', 'receiver_type'));
         }
     }
 
-    private function getChatList($authId, $id){
-        $receivers = Message::orderBy('id', 'desc')->where('user_id', $authId )->pluck('receiver_id')->toArray();
-        $senders = Message::orderBy('id', 'desc')->where('receiver_id', $authId )->pluck('user_id')->toArray();
+    private function getChatList($authId, $id, $type){
+        $receivers = Message::orderBy('id', 'desc')->where('user_id', $authId )->where('sender_type', $type)->pluck('receiver_id')->toArray();
+        $senders = Message::orderBy('id', 'desc')->where('receiver_id', $authId)->where('receiver_type', $type)->pluck('user_id')->toArray();
         $chatList = array_unique(array_merge($receivers, $senders));
         $oldUser = in_array($id, $chatList);
         return [
@@ -71,24 +76,33 @@ class ChatController extends Controller
     }
 
     public function fetchMessage(Request $request){
-        return $this->message($request->a, $request->b);
+        return $this->message($request->a, $request->sender_type, $request->b, $request->receiver_type);
     }
 
     public function sendMessage(Request $request){
-        $user = auth()->guard('customer')->user();
+        $user = Auth::guard('customer')->user();
         $guardName = "customer";
+        $sender_type = $request->sender_type;
+        $receiver = ["id"=> null];
+        ;
+
+        $receiver_type = $request->receiver_type;
         if(!$user){
             $guardName = "seller";
-            $user = auth()->guard('seller')->user();
+            $user = Auth::guard('seller')->user();
         }
-        $receiver = Seller::find($request->receiver_id);
-        if(!$receiver){
+
+        if($receiver_type === "seller") {
+            $receiver = Seller::find($request->receiver_id);
+        } elseif ($receiver_type === "customer") {
             $receiver = Customer::find($request->receiver_id);
         }
         if($request->message_type == 1){
             $message = $user->messages()->create([
                 'user_id' => $request->user_id,
+                'sender_type' => $sender_type,
                 'receiver_id' => $request->receiver_id,
+                'receiver_type' => $receiver_type,
                 'message_type' => $request->message_type,
                 'msg' => $request->msg,
             ]);
@@ -110,7 +124,9 @@ class ChatController extends Controller
             }
             $message = $user->messages()->create([
                 'user_id' => $request->user_id,
+                'sender_type' => $sender_type,
                 'receiver_id' => $request->receiver_id,
+                'receiver_type' => $receiver_type,
                 'message_type' => $request->message_type,
                 'file' => $file_name,
             ]);
@@ -120,7 +136,6 @@ class ChatController extends Controller
         $message->receiver1 =  $receiver;
         $message->user2 =  null;
         $message->receiver2 =  null;
-        // log::info($message);
         broadcast(new NewMessage($user, $message))->toOthers();
         if($receiver->phone){
             $this->sendSMS($txtMessage, $receiver->phone);
@@ -136,18 +151,23 @@ class ChatController extends Controller
             $client->messages->create($recipient, ['from' => $twilio_number, 'body' => $message]);
     }
 
-    private function message($a, $b){
-        return Message::where(function ($query) use ($a, $b) {
-            $query->where('user_id', '=', $a)
-            ->where('receiver_id', '=', $b);
+    private function message($a, $sender_type, $b, $receiver_type){
+        return Message::
+        where(function ($query) use ($a, $sender_type, $b, $receiver_type) {
+            $query->where('user_id', $a)
+            ->where('sender_type', $sender_type)
+            ->where('receiver_id', $b)
+            ->where('receiver_type',$receiver_type);
         })
-        ->orWhere(function ($query) use ($a, $b) {
+        ->orWhere(function ($query) use ($a, $sender_type, $b, $receiver_type) {
             $query->where('user_id', '=', $b)
-            ->where('receiver_id', '=', $a);
+            ->where('sender_type', '=', $receiver_type)
+            ->where('receiver_id', '=', $a)
+            ->where('receiver_type', '=', $sender_type);
         })
         ->orderBy('created_at', 'ASC')
-        ->select('id', 'user_id', 'receiver_id','message_type', 'msg','file', 'created_at')
-        ->with('user1','user2','receiver1','receiver2')
+        ->select('id', 'user_id', 'sender_type', 'receiver_id', 'receiver_type', 'message_type', 'msg','file', 'created_at')
+        ->with('user1', 'user2', 'receiver1', 'receiver2')
         ->get();
     }
 }

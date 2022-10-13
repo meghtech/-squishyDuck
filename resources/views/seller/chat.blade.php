@@ -104,6 +104,7 @@
             chatToId: '',
             authUser: '',
             file: '',
+            receiver_type: '',
             messageType: 1,
             activeUser: false,
             typingTimer: false,
@@ -123,24 +124,20 @@
                 }, 10);
             },
             getChatUserInfo(list, param) {
-                if (list.user_id == this.authUser.id) {
-                    if (list.receiver1) {
+                if (list.user_id == this.authUser.id && list.sender_type === "seller") {
+                    if (list.receiver_type === "seller") {
                         return list.receiver1[param];
-                    } else if (list.receiver2) {
+                    } else if (list.receiver_type === "customer") {
                         return list.receiver2[param];
                     }
                 } else {
-                    if (list.user1) {
-                        return list.user1[param];
-                    } else if (list.user2) {
                         return list.user2[param];
-                    }
                 }
             },
             getMsgSenderInfo(list, param) {
-                if (list.user1) {
+                if (list.sender_type === "seller") {
                     return list.user1[param]
-                } else if (list.user2) {
+                } else if (list.sender_type === "customer") {
                     return list.user2[param];
                 }
             },
@@ -178,12 +175,14 @@
             },
             changeChatTo(user) {
                 this.chatTo = user;
-                if (user.receiver_id == this.authUser.id) {
+                if (user.receiver_id == this.authUser.id && user.sender_type === 'customer') {
                     this.chatToId = user.user_id;
-                    this.fetchMessage(this.chatToId, this.authUser.id);
+                    this.receiver_type = user.sender_type
+                    this.fetchMessage(this.authUser.id, this.chatToId);
                 } else {
                     this.chatToId = user.receiver_id;
-                    this.fetchMessage(this.chatToId, this.authUser.id);
+                    this.receiver_type = user.receiver_type
+                    this.fetchMessage(this.authUser.id, this.chatToId);
                 }
             },
             convertDate(date) {
@@ -204,13 +203,15 @@
                 this.message = '';
                 document.getElementById("message-box").classList.remove('message-box-flex');
             },
-            fetchMessage(chatTo, userId) {
+            fetchMessage(userId, chatTo) {
                 var options = {
                     method: 'post',
                     url: '/fetchSellerMessage',
                     data: {
-                        a: chatTo,
-                        b: userId,
+                        a: userId,
+                        sender_type: "seller",
+                        b: chatTo,
+                        receiver_type: this.receiver_type,
                     }
                 };
                 axios(options).then((response) => {
@@ -232,7 +233,9 @@
                             data: {
                                 msg: this.message,
                                 receiver_id: this.chatToId,
+                                receiver_type: this.receiver_type,
                                 user_id: this.authUser.id,
+                                sender_type: 'seller',
                                 message_type: this.messageType,
                             }
                         };
@@ -245,7 +248,9 @@
                         var formData = new FormData();
                         formData.append("file", this.file);
                         formData.append("user_id", this.authUser.id);
+                        formData.append("sender_type", 'seller');
                         formData.append("receiver_id", this.chatToId);
+                        formData.append("receiver_type", this.receiver_type);
                         formData.append("message_type", this.messageType);
                         axios.post('/sendSellerMessage', formData, {
                             headers: {
@@ -271,7 +276,8 @@
         mounted() {
             this.authUser = @json($authUser);
             this.chatList = @json($chatList);
-            @json($messages) ?this.messages = @json($messages) : '';
+            this.receiver_type = @json($receiver_type);
+            @json($messages) ? this.messages = @json($messages) : '';
             this.chatToId = @json($chatTo -> id);
             this.chatList.map(user => {
                 if (user.user_id == this.authUser.id) {

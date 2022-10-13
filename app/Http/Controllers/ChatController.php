@@ -46,10 +46,10 @@ class ChatController extends Controller
                 "msg" => null,
                 "message_type" => 0,
                 "created_at" => now(),
-                "user1" => $authUser,
-                "receiver1" => $chatTo,
-                "user2" => null,
-                "receiver2" => null,
+                "user1" =>  $sender_type = "seller" ? $authUser : null,
+                "receiver1" => $receiver_type = "seller" ? $chatTo : null,
+                "user2" => $sender_type = "customer" ? $authUser : null,
+                "receiver2" => $receiver_type = "customer" ? $chatTo : null,
             ]);
             $chatList = $chatList->push($newChat);
             $messages = null;
@@ -80,17 +80,10 @@ class ChatController extends Controller
     }
 
     public function sendMessage(Request $request){
-        $user = Auth::guard('customer')->user();
-        $guardName = "customer";
+        $user = auth()->user();
         $sender_type = $request->sender_type;
-        $receiver = ["id"=> null];
-        ;
-
+        $receiver = null;
         $receiver_type = $request->receiver_type;
-        if(!$user){
-            $guardName = "seller";
-            $user = Auth::guard('seller')->user();
-        }
 
         if($receiver_type === "seller") {
             $receiver = Seller::find($request->receiver_id);
@@ -132,10 +125,10 @@ class ChatController extends Controller
             ]);
             $txtMessage = $user->name." sent an image";
         }
-        $message->user1 =  $user;
-        $message->receiver1 =  $receiver;
-        $message->user2 =  null;
-        $message->receiver2 =  null;
+        $message->user1 =  $sender_type = "seller" ? $user : null;
+        $message->receiver1 =  $receiver_type = "seller" ? $receiver : null;
+        $message->user2 =  $sender_type = "customer" ? $user : null;
+        $message->receiver2 =  $receiver_type = "customer" ? $user : null;
         broadcast(new NewMessage($user, $message))->toOthers();
         if($receiver->phone){
             $this->sendSMS($txtMessage, $receiver->phone);

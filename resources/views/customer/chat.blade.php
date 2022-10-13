@@ -45,7 +45,7 @@
                     <h5 class="text-black d-inline mr-4"><b>@{{getMsgSenderInfo(message, 'name')}}</b></h5><span
                         class="text-gray" style="font-size:.8rem">@{{formatTime(message.created_at)}}</span>
                     <h6 class="text-black" v-if="message.message_type==1">@{{message.msg}}</h6>
-                    <img class="d-block" :src="getImage(message.file)" height="150px" width="auto" v-else>
+                    <img class="d-block" :src="getImage(message.file)" height="150px" width="auto" v-else-if="message.message_type==2">
                 </div>
             </div>
         </div>
@@ -79,7 +79,7 @@
             </div>
             <!-- <span class="uploadButton-file-name mb-0 col-9 col-sm-9 pl-4"></span> -->
             <input type="text" class="message-box mb-0 col-10 col-sm-10 pl-4" id="message-box"
-                placeholder="Start typing ..." v-model="message" @keyup.enter="sendMessage()"
+                placeholder="Start typing ..." v-model="message" @keyup.enter="sendMessage"
                 :disabled="messageType==2">
             <div class="send-button col-1 col-sm-1 mb-0 p-0 text-center" @click="sendMessage()">
                 <img class="mt-3" height="25px" src="{{ asset('content/images/send.svg') }}" alt="Send">
@@ -238,12 +238,12 @@
                                 message_type: this.messageType,
                             }
                         };
-                        axios(options).then( (response) => {
+                        axios(options).then((response) => {
                             this.messages.push(response.data);
                             this.message = '';
                             this.scrollToBottom();
                         })
-                    } else if(this.messageType == 2){
+                    } else if (this.messageType == 2) {
                         var formData = new FormData();
                         formData.append("file", this.file);
                         formData.append("user_id", this.authUser.id);
@@ -253,12 +253,12 @@
                         formData.append("message_type", this.messageType);
                         axios.post('/sendCustomerMessage', formData, {
                             headers: {
-                            'Content-Type': 'multipart/form-data'
+                                'Content-Type': 'multipart/form-data'
                             }
-                        }).then( (response) => {
+                        }).then((response) => {
                             this.messages.push(response.data);
-                            this.scrollToBottom();
                             this.removeFile();
+                            this.scrollToBottom();
                         })
                     }
                 }

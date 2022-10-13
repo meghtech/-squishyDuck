@@ -257,7 +257,9 @@
                                 'Content-Type': 'multipart/form-data'
                             }
                         }).then((response) => {
+                            this.messages.push(response.data);
                             this.removeFile();
+                            this.scrollToBottom();
                         })
                     }
                 }
@@ -279,6 +281,7 @@
             this.receiver_type = @json($receiver_type);
             @json($messages) ? this.messages = @json($messages) : '';
             this.chatToId = @json($chatTo -> id);
+            this.scrollToBottom();
             this.chatList.map(user => {
                 if (user.user_id == this.authUser.id) {
                     if (user.receiver_id == this.chatToId) {

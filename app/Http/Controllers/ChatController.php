@@ -22,7 +22,7 @@ class ChatController extends Controller
         $receiver_type = $type === "buyer" ? "customer" : "seller";
         $authUser = auth()->user();
         $sender_type = Auth::getDefaultDriver();
-        $chatTo = ["id"=> null];
+        $chatTo = ["id"=> $id];
         if($receiver_type === "customer") {
             $chatTo = Customer::find($id);
         } elseif ($receiver_type === "seller") {
@@ -31,8 +31,8 @@ class ChatController extends Controller
         $chatArray = $this->getChatList($authUser->id, $chatTo->id, $sender_type);
         $chatedWith = $chatArray['chatList'];
         $chatList = collect();
-        foreach($chatedWith as $key=>$user){
-            $messages = $this->message($authUser->id, $sender_type, $user, $receiver_type);
+        foreach($chatedWith as $user_type => $user){
+            $messages = $this->message($authUser->id, $sender_type, $user, $user_type);
             $chatList->push($messages->last());
         }
         $newChat = null;
@@ -57,7 +57,6 @@ class ChatController extends Controller
             $messages = $this->message($authUser->id, $sender_type, $chatTo->id, $receiver_type);
         }
         if(Auth::guard('seller')->check()){
-            log::info($receiver_type);
             return view('seller.chat', compact('chatList', 'chatTo', 'authUser', 'messages', 'receiver_type'));
         }
         else{
@@ -66,8 +65,8 @@ class ChatController extends Controller
     }
 
     private function getChatList($authId, $id, $type){
-        $receivers = Message::orderBy('id', 'desc')->where('user_id', $authId )->where('sender_type', $type)->pluck('receiver_id')->toArray();
-        $senders = Message::orderBy('id', 'desc')->where('receiver_id', $authId)->where('receiver_type', $type)->pluck('user_id')->toArray();
+        $receivers = Message::orderBy('id', 'desc')->where('user_id', $authId )->where('sender_type', $type)->pluck('receiver_id', 'receiver_type')->toArray();
+        $senders = Message::orderBy('id', 'desc')->where('receiver_id', $authId)->where('receiver_type', $type)->pluck('user_id', 'sender_type')->toArray();
         $chatList = array_unique(array_merge($receivers, $senders));
         $oldUser = in_array($id, $chatList);
         return [

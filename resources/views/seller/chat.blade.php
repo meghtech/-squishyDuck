@@ -130,7 +130,8 @@
                     } else if (list.receiver_type === "customer") {
                         return list.receiver2[param];
                     }
-                } else {
+                } 
+                else {
                         return list.user2[param];
                 }
             },

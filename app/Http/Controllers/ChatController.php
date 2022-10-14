@@ -46,10 +46,10 @@ class ChatController extends Controller
                 "msg" => null,
                 "message_type" => 0,
                 "created_at" => now(),
-                "user1" =>  $sender_type = "seller" ? $authUser : null,
-                "receiver1" => $receiver_type = "seller" ? $chatTo : null,
-                "user2" => $sender_type = "customer" ? $authUser : null,
-                "receiver2" => $receiver_type = "customer" ? $chatTo : null,
+                "user1" =>  $sender_type == "seller" ? $authUser : null,
+                "receiver1" => $receiver_type == "seller" ? $chatTo : null,
+                "user2" => $sender_type == "customer" ? $authUser : null,
+                "receiver2" => $receiver_type == "customer" ? $chatTo : null,
             ]);
             $chatList = $chatList->push($newChat);
             $messages = null;
@@ -57,6 +57,7 @@ class ChatController extends Controller
             $messages = $this->message($authUser->id, $sender_type, $chatTo->id, $receiver_type);
         }
         if(Auth::guard('seller')->check()){
+            log::info($receiver_type);
             return view('seller.chat', compact('chatList', 'chatTo', 'authUser', 'messages', 'receiver_type'));
         }
         else{
@@ -125,10 +126,10 @@ class ChatController extends Controller
             ]);
             $txtMessage = $user->name." sent an image";
         }
-        $message->user1 =  $sender_type = "seller" ? $user : null;
-        $message->receiver1 =  $receiver_type = "seller" ? $receiver : null;
-        $message->user2 =  $sender_type = "customer" ? $user : null;
-        $message->receiver2 =  $receiver_type = "customer" ? $user : null;
+        $message->user1 =  $sender_type == "seller" ? $user : null;
+        $message->receiver1 =  $receiver_type == "seller" ? $receiver : null;
+        $message->user2 =  $sender_type == "customer" ? $user : null;
+        $message->receiver2 =  $receiver_type == "customer" ? $user : null;
         broadcast(new NewMessage($user, $message))->toOthers();
         if($receiver->phone){
             $this->sendSMS($txtMessage, $receiver->phone);

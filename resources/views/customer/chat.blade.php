@@ -17,7 +17,7 @@
                 <div class="user-avatar d-inline m-0" :class="{ 'status-online': checkIfOnline(list, 'chatList') }"><img
                         src="{{ asset('storage/upload/profile') }}" alt=""></div>
                 <div class="col-8 col-sm-7 pr-0">
-                    <h4 class="text-white"><b>@{{getChatUserInfo(list, 'name')}}</b></h4>
+                    <h4 class="text-white"><b>@{{list && getChatUserInfo(list, 'name')}}</b></h4>
                     <h5 class="text-white">@{{list.msg}}</h5>
                 </div>
                 <div class="col-2 col-sm-2 ml-3">
@@ -31,7 +31,7 @@
         <div class="col-12 m-0 mt-3 mb-0 chat-top-section row pr-0">
             <div class="col-10 mb-3">
                 <span class="d-inline-block bookmark-icon"></span>
-                <h3 class="d-inline-block ml-3"><b>@{{getChatUserInfo(chatTo, 'name')}}</b></h3>
+                <h3 class="d-inline-block ml-3"><b>@{{chatTo && getChatUserInfo(chatTo, 'name')}}</b></h3>
             </div>
             <div class="col-2 text-right mt-3 pr-5">
                 <i class="fa fa-ellipsis-v" style="font-size:24px; color:#aaa;"></i>

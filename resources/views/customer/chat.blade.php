@@ -239,6 +239,11 @@
                             }
                         };
                         axios(options).then((response) => {
+                            this.chatList.map((list, index) => {
+                                if((list.user_id === this.chatToId && list.sender_type === this.receiver_type) || (list.receiver_id === this.chatToId && list.receiver_type === this.receiver_type)) {
+                                    this.chatList[index].msg = this.message;
+                                }
+                            })
                             this.messages.push(response.data);
                             this.message = '';
                             this.scrollToBottom();
@@ -303,8 +308,25 @@
                     this.users = this.users.filter(u => u.id != user.id);
                 })
                 .listen('.NewMessage', (event) => {
-                    this.messages.push(event.message);
-                    this.scrollToBottom();
+                    if(event.message.receiver_id === this.authUser.id && event.message.receiver_type === 'customer') {
+                        let userInList = false;
+                        let userInListIndex = null;
+                        this.chatList.map((list, index) => {
+                            if((list.user_id === event.message.user_id && list.sender_type === event.message.sender_type) || (list.receiver_id === event.message.user_id && list.receiver_type === event.message.sender_type)) {
+                                userInList = true
+                                userInListIndex = index;
+                            }
+                        })
+                        if(userInList) {
+                            this.chatList[userInListIndex].msg = event.message.msg
+                        } else {
+                            this.chatList.unshift(event.message)
+                        }
+                        if(this.chatTo.receiver_id === event.message.user_id) {
+                            this.messages.push(event.message);
+                            this.scrollToBottom();
+                        }
+                    }
                 })
                 .listenForWhisper('typing', user => {
                     this.activeUser = user;
